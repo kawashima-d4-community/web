@@ -125,6 +125,40 @@
     .event-list li { padding: 12px 14px; border: 1px solid var(--border); border-radius: 14px; background: #fff; color: var(--muted); }
     .event-list strong { color: var(--ink); }
 
+    .festival-highlight {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      padding: 34px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(255,255,255,0.24), transparent 28%),
+        linear-gradient(135deg, #7f1d1d 0%, #dc2626 52%, #f97316 120%);
+      box-shadow: var(--shadow);
+    }
+    .festival-highlight::after {
+      content: "祭";
+      position: absolute;
+      right: 20px;
+      bottom: -34px;
+      font-size: 150px;
+      line-height: 1;
+      font-weight: 900;
+      color: rgba(255,255,255,0.12);
+      pointer-events: none;
+    }
+    .festival-highlight h2 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 48px); line-height: 1.15; letter-spacing: -0.04em; }
+    .festival-highlight p { color: rgba(255,255,255,0.88); margin: 0 0 14px; }
+    .festival-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 22px; position: relative; z-index: 1; align-items: start; }
+    .festival-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+    .festival-point { padding: 14px; border-radius: 18px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.24); }
+    .festival-point b { display: block; font-size: 16px; margin-bottom: 4px; }
+    .festival-point span { display: block; font-size: 13px; color: rgba(255,255,255,0.84); }
+    .festival-card { background: rgba(255,255,255,0.96); color: var(--ink); border-radius: 24px; padding: 22px; }
+    .festival-card h3 { margin: 0 0 10px; font-size: 20px; }
+    .festival-card ul { margin: 0; padding-left: 1.2em; color: var(--muted); }
+    .festival-card li { margin: 6px 0; }
+
     .contact-card { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 22px; align-items: stretch; background: #7f1d1d; color: #fff; border-radius: 30px; padding: 28px; box-shadow: var(--shadow); }
     .contact-card p, .contact-card li { color: rgba(255,255,255,0.82); }
     .contact-panel { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); border-radius: 22px; padding: 22px; }
@@ -243,6 +277,12 @@
       #events .event-list { gap: 8px; }
       #events .event-list li { padding: 10px; font-size: 14px; }
 
+      .festival-highlight { padding: 20px; border-radius: 24px; }
+      .festival-grid { grid-template-columns: 1fr; gap: 16px; }
+      .festival-points { grid-template-columns: 1fr; gap: 8px; }
+      .festival-highlight::after { font-size: 96px; right: 10px; bottom: -20px; }
+      .festival-card { padding: 16px; border-radius: 18px; }
+
       .greeting-layout { gap: 16px; }
       .greeting-layout figure { text-align: center; }
       .president-photo { width: 150px; border-radius: 20px; }
@@ -279,6 +319,7 @@
         <a href="#greeting">会長あいさつ</a>
         <a href="#basic">基本情報</a>
         <a href="#events">行事予定</a>
+        <a href="#festival">夏祭り</a>
         <a href="#safety">防災・防犯</a>
         <a href="#children">子ども会</a>
         <a href="#join">加入案内</a>
@@ -297,7 +338,8 @@
             川島第四町内会のホームページへようこそ。当町内会は、約400世帯が暮らす地域です。『一致団結』の精神を大切に、子育て世代からご年配の方まで、誰もが「この街に住んでよかった」と思える温かいコミュニティづくりを進めています。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#join">町内会に加入する</a>
+            <a class="button button-primary" href="#festival">夏祭り情報を見る</a>
+            <a class="button button-secondary" href="#join">町内会に加入する</a>
             <a class="button button-secondary" href="#events">行事予定を見る</a>
           </div>
         </div>
@@ -312,6 +354,38 @@
               <div class="stat"><b>約400世帯</b><span>地域の暮らしを支える</span></div>
               <div class="stat"><b>23班</b><span>班ごとの輪番運営</span></div>
               <div class="stat"><b>5カ所</b><span>いっとき避難場所</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="festival">
+      <div class="container">
+        <div class="festival-highlight">
+          <div class="festival-grid">
+            <div>
+              <span class="eyebrow" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.34);color:#fff;">町内会の一大イベント</span>
+              <h2>川島第四町内会 夏祭り</h2>
+              <p>
+                地域の皆様が集まり、子どもから大人まで楽しめる夏の恒例行事です。模擬店や素人演芸、神輿・山車巡業などを通じて、地域のつながりを深めます。
+              </p>
+              <div class="festival-points">
+                <div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
+                <div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
+                <div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
+              </div>
+            </div>
+            <div class="festival-card">
+              <h3>主な内容</h3>
+              <ul>
+                <li>模擬店の出店</li>
+                <li>素人演芸</li>
+                <li>13日午前：神輿・山車巡業</li>
+                <li>子ども会による演芸参加予定</li>
+                <li>地域の皆様の交流の場</li>
+              </ul>
+              <p class="small-note">※開催内容・時間・雨天時対応などの詳細は、決まり次第、回覧板・掲示・ホームページでお知らせします。</p>
             </div>
           </div>
         </div>
