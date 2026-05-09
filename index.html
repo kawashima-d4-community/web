@@ -159,6 +159,105 @@
       .schedule td { border-bottom: 0; padding: 8px 16px; }
       .schedule td::before { content: attr(data-label); display: block; color: var(--muted); font-size: 12px; font-weight: 900; }
     }
+  
+    /* スマートフォン表示の最適化 */
+    .mobile-hint { display: none; }
+
+    @media (max-width: 760px) {
+      body { line-height: 1.68; }
+      .container { width: min(100% - 24px, var(--max)); }
+
+      header { position: sticky; }
+      .brand { gap: 9px; }
+      .brand-mark { width: 38px; height: 38px; border-radius: 12px; font-size: 18px; }
+      .brand small { font-size: 10.5px; }
+
+      section { padding: 34px 0; }
+      .hero { padding: 30px 0 22px; }
+      .eyebrow { font-size: 12px; padding: 5px 10px; }
+      h1 { font-size: clamp(32px, 10vw, 42px); margin: 14px 0 12px; }
+      .hero p { font-size: 15.5px; }
+      .hero-actions { margin-top: 18px; gap: 9px; }
+      .button { width: 100%; min-height: 44px; padding: 9px 14px; }
+
+      .visual-card { min-height: auto; padding: 18px; border-radius: 24px; }
+      .visual-inner { gap: 14px; }
+      .community-icon { width: 58px; height: 58px; border-radius: 18px; font-size: 30px; }
+      .visual-card h2 { font-size: 20px; }
+      .visual-card p { font-size: 14px; }
+      .stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .stat { padding: 8px; border-radius: 12px; }
+      .stat b { font-size: 13px; }
+      .stat span { font-size: 10px; line-height: 1.35; }
+
+      .section-head { margin-bottom: 16px; gap: 8px; }
+      .section-head h2 { font-size: 24px; }
+      .section-head p { font-size: 14px; }
+      .badge { font-size: 11px; }
+
+      .card,
+      .lead-box,
+      .quote-card,
+      .contact-card,
+      .contact-panel {
+        padding: 16px;
+        border-radius: 18px;
+      }
+      .lead-box h3,
+      .card h3 { font-size: 18px; }
+      .card p,
+      .card li,
+      .lead-box p { font-size: 14.5px; }
+      .icon { width: 44px; height: 44px; border-radius: 14px; font-size: 22px; margin-bottom: 10px; }
+
+      .mobile-hint {
+        display: block;
+        margin: -6px 0 12px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      #about .grid-3,
+      #events .grid-3,
+      #cleaning .grid-3 {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 0 2px 10px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #about .grid-3 > *,
+      #events .grid-3 > *,
+      #cleaning .grid-3 > * {
+        min-width: 86%;
+        scroll-snap-align: start;
+      }
+
+      #events .event-list { gap: 8px; }
+      #events .event-list li { padding: 10px; font-size: 14px; }
+
+      .greeting-layout { gap: 16px; }
+      .greeting-layout figure { text-align: center; }
+      .president-photo { width: 150px; border-radius: 20px; }
+      .photo-caption { font-size: 13px; }
+      .quote-card h3 { font-size: 18px; }
+      .quote-card p { font-size: 14.5px; }
+      .quote-card .signature { text-align: left; }
+
+      .info-row { padding: 12px 14px; }
+      .info-row dt,
+      .info-row dd { font-size: 14.5px; }
+
+      .qr-box { gap: 12px; padding: 14px; }
+      .qr-box img { width: 140px; height: 140px; }
+      .qr-box p { font-size: 14px; }
+
+      footer { padding: 24px 0; }
+      .footer-inner { gap: 8px; }
+    }
   </style>
 </head>
 <body>
@@ -229,6 +328,7 @@
           <p>こんにちは！私たち川島第四町内会ホームページへようこそ。</p>
           <p>当町内会は、約400世帯が暮らす活気ある地域です。私たちは『一致団結』の精神を大切に、お子様からご年配の方まで、誰もが「この街に住んでよかった」と思えるような、温かく魅力的なコミュニティを目指して活動しています。</p>
         </div>
+        <p class="mobile-hint">スマートフォンでは、カードを左右にスワイプしてご覧ください。</p>
         <div class="grid-3" style="margin-top:18px;">
           <article class="card">
             <div class="icon" aria-hidden="true">🧯</div>
@@ -313,6 +413,7 @@
             <p>地域の皆様が参加できる行事や、川島東部連合町内会の関連イベントをご案内します。</p>
           </div>
         </div>
+        <p class="mobile-hint">スマートフォンでは、春・夏・秋冬のカードを左右にスワイプしてご覧ください。</p>
         <div class="grid-3">
           <article class="card season">
             <h3>🌸 春（4月〜6月）</h3>
@@ -418,6 +519,7 @@
           <p>この活動は、単に街をきれいにするだけでなく、<strong>「作業を通じてご近所同士が挨拶を交わし、人とのつながりを深めること」</strong>を大切な目的としています。</p>
           <p>「普段はなかなか話す機会がないけれど、清掃をきっかけに顔見知りが増えて安心感につながった」というお声もいただいています。</p>
         </div>
+        <p class="mobile-hint">スマートフォンでは、カードを左右にスワイプしてご覧ください。</p>
         <div class="grid-3" style="margin-top:18px;">
           <div class="card"><h3>実施予定</h3><p>年4回、3ヶ月ごとに実施します。</p><ul><li>6月</li><li>9月</li><li>12月</li><li>3月</li></ul></div>
           <div class="card"><h3>街の美化</h3><p>ゴミ拾いや環境整備で、誰もが気持ちよく過ごせる街を目指します。</p></div>
