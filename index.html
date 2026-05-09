@@ -10,6 +10,8 @@
   <meta property="og:description" content="笑顔あふれる、安心の街を目指して。横浜市横浜保土ケ谷区東川島町1番地より21番地までの区域で活動する川島第四町内会のホームページです。" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#d9684f" />
+  <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <link rel="apple-touch-icon" href="./d4-mark2.png" />
   <style>
     :root {
       --bg: #fff8f6;
@@ -45,7 +47,8 @@
     header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(12px); background: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(241,212,212,0.95); }
     .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: 0.02em; }
-    .brand-mark { width: 54px; min-width: 54px; height: 44px; display: grid; place-items: center; border-radius: 14px; color: #fff; background: linear-gradient(135deg, var(--primary), var(--accent)); box-shadow: 0 10px 22px rgba(217,104,79,0.22); font-size: 18px; font-weight: 900; line-height: 1; white-space: nowrap; letter-spacing: -0.08em; }
+    .brand-mark { width: 54px; min-width: 54px; height: 44px; display: grid; place-items: center; border-radius: 14px; color: #fff; background: linear-gradient(135deg, var(--primary), var(--accent)); box-shadow: 0 10px 22px rgba(217,104,79,0.22); font-size: 18px; font-weight: 900; line-height: 1; white-space: nowrap; letter-spacing: -0.08em; overflow: hidden; }
+    .brand-mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .brand small { display: block; color: var(--muted); font-weight: 700; font-size: 12px; line-height: 1.25; }
     .nav-links { display: flex; align-items: center; gap: 2px; font-size: 13px; color: #4b1f1f; }
     .nav-links a { padding: 9px 10px; border-radius: 999px; white-space: nowrap; }
@@ -66,7 +69,8 @@
     .visual-card { position: relative; min-height: 430px; border-radius: 32px; padding: 26px; background: linear-gradient(145deg, #9f4c3c 0%, #d9684f 54%, #f2a65a 115%); box-shadow: var(--shadow); color: #fff; overflow: hidden; }
     .visual-card::after { content: ""; position: absolute; width: 290px; height: 290px; right: -90px; bottom: -80px; border-radius: 50%; background: rgba(255,255,255,0.18); }
     .visual-inner { position: relative; z-index: 1; height: 100%; display: grid; align-content: space-between; gap: 24px; }
-    .community-icon { width: 112px; height: 112px; border-radius: 30px; display: grid; place-items: center; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.34); font-size: 56px; }
+    .community-icon { width: 112px; height: 112px; border-radius: 30px; display: grid; place-items: center; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.34); font-size: 56px; overflow: hidden; }
+    .community-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .visual-card h2 { margin: 0; font-size: 28px; line-height: 1.3; }
     .visual-card p { color: rgba(255,255,255,0.88); margin: 10px 0 0; }
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -158,6 +162,48 @@
     .festival-card h3 { margin: 0 0 10px; font-size: 20px; }
     .festival-card ul { margin: 0; padding-left: 1.2em; color: var(--muted); }
     .festival-card li { margin: 6px 0; }
+
+    .uniform-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: center;
+      border-radius: 30px;
+      padding: 28px;
+      background: linear-gradient(135deg, #fff7e8, #fff4ee);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(159, 76, 60, 0.08);
+    }
+    .uniform-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .uniform-photos figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(159, 76, 60, 0.08);
+    }
+    .uniform-photos img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+    .uniform-photos figcaption {
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .uniform-card h2 { margin: 0 0 12px; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; }
+    .uniform-card p { color: var(--muted); margin: 0 0 12px; }
+    .uniform-points { display: grid; gap: 8px; margin-top: 14px; }
+    .uniform-points div { padding: 10px 12px; border-radius: 14px; background: #fff; border: 1px solid var(--border); color: var(--muted); font-weight: 800; }
 
     .contact-card { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 22px; align-items: stretch; background: #9f4c3c; color: #fff; border-radius: 30px; padding: 28px; box-shadow: var(--shadow); }
     .contact-card p, .contact-card li { color: rgba(255,255,255,0.82); }
@@ -283,6 +329,13 @@
       .festival-highlight::after { font-size: 96px; right: 10px; bottom: -20px; }
       .festival-card { padding: 16px; border-radius: 18px; }
 
+      .uniform-card { grid-template-columns: 1fr; padding: 16px; border-radius: 22px; }
+      .uniform-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .uniform-photos img { aspect-ratio: 3 / 4; }
+      .uniform-card h2 { font-size: 24px; }
+      .uniform-card p,
+      .uniform-points div { font-size: 14.5px; }
+
       .greeting-layout { gap: 16px; }
       .greeting-layout figure { text-align: center; }
       .president-photo { width: 150px; border-radius: 20px; }
@@ -310,7 +363,7 @@
   <header>
     <div class="container nav" aria-label="サイトメニュー">
       <a class="brand" href="#top" aria-label="川島第四町内会 トップへ">
-        <span class="brand-mark">第四</span>
+        <span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span>
         <span>川島第四町内会<small>保土ケ谷区東川島町1番地より21番地までの区域</small></span>
       </a>
       <button class="menu-button" type="button" aria-controls="navLinks" aria-expanded="false">メニュー</button>
@@ -345,7 +398,7 @@
         </div>
         <div class="visual-card" aria-label="川島第四町内会の活動イメージ">
           <div class="visual-inner">
-            <div class="community-icon" aria-hidden="true">🏘️</div>
+            <div class="community-icon" aria-hidden="true"><img src="./d4-mark1.png" alt="" /></div>
             <div>
               <h2>一致団結。顔の見えるつながりで、安心して暮らせるまちへ。</h2>
               <p>防災・防犯、清掃活動、子ども会、地域行事、回覧板。日々の暮らしを地域で支え合います。</p>
