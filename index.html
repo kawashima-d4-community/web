@@ -100,6 +100,9 @@
     .greeting-layout { display: grid; grid-template-columns: 220px 1fr; gap: 26px; align-items: start; }
     .president-photo { width: 220px; border-radius: 24px; border: 5px solid rgba(255,255,255,0.9); box-shadow: 0 16px 34px rgba(0,0,0,0.22); background: #fff; }
     .photo-caption { margin-top: 10px; text-align: center; color: rgba(255,255,255,0.82); font-weight: 800; font-size: 14px; }
+    .hall-photo-card { overflow: hidden; padding: 0; }
+    .hall-photo { display: block; width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+    .hall-photo-caption { padding: 14px 16px 18px; color: var(--muted); font-size: 14px; font-weight: 800; }
     .info-list { display: grid; gap: 10px; }
     .info-row { display: grid; grid-template-columns: 150px 1fr; gap: 12px; padding: 14px 16px; background: #fff; border: 1px solid var(--border); border-radius: 16px; }
     .info-row dt { color: var(--muted); font-weight: 800; }
@@ -137,6 +140,7 @@
       .hero-grid, .grid-2, .grid-3, .grid-4, .contact-card { grid-template-columns: 1fr; }
       .greeting-layout { grid-template-columns: 1fr; }
       .president-photo { width: min(220px, 100%); }
+      .hall-photo { min-height: 220px; }
       .visual-card { min-height: 360px; }
       .section-head { align-items: start; flex-direction: column; }
       .notice-item { grid-template-columns: 1fr; gap: 6px; }
@@ -393,13 +397,19 @@
             <p>川島第四町内会の対象エリア、町内会館、世帯数、班数などです。</p>
           </div>
         </div>
-        <div class="info-list">
-          <dl class="info-row"><dt>対象エリア</dt><dd>保土ケ谷区東川島町1番地より21番地までの区域</dd></dl>
-          <dl class="info-row"><dt>町内会館</dt><dd>川島第四町内会館（東川島町5-7）</dd></dl>
-          <dl class="info-row"><dt>世帯数</dt><dd>約400世帯</dd></dl>
-          <dl class="info-row"><dt>班数</dt><dd>23班</dd></dl>
-          <dl class="info-row"><dt>通学する小・中学校</dt><dd>川島小学校・西谷中学校</dd></dl>
-          <dl class="info-row"><dt>役員体制</dt><dd>役員会で掲載可否を確認します。</dd></dl>
+        <div class="grid-2">
+          <div class="info-list">
+            <dl class="info-row"><dt>対象エリア</dt><dd>保土ケ谷区東川島町1番地より21番地までの区域</dd></dl>
+            <dl class="info-row"><dt>町内会館</dt><dd>川島第四町内会館（東川島町5-7）</dd></dl>
+            <dl class="info-row"><dt>世帯数</dt><dd>約400世帯</dd></dl>
+            <dl class="info-row"><dt>班数</dt><dd>23班</dd></dl>
+            <dl class="info-row"><dt>通学する小・中学校</dt><dd>川島小学校・西谷中学校</dd></dl>
+            <dl class="info-row"><dt>役員体制</dt><dd>役員会で掲載可否を確認します。</dd></dl>
+          </div>
+          <figure class="card hall-photo-card" style="margin:0;">
+            <img class="hall-photo" src="./d4kaikan.jpg" alt="川島第四町内会館の外観写真" />
+            <figcaption class="hall-photo-caption">川島第四町内会館（東川島町5-7）</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -657,7 +667,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会</div>
-      <div>横浜市保土ヶ谷区 東川島町・上星川</div>
+      <div>横浜市保土ヶ谷区 横浜保土ケ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
 
