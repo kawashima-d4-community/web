@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kawashima-d4-community.github.io/web/sitemap.xml
