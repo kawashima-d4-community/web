@@ -53,6 +53,59 @@
     .nav-links { display: flex; align-items: center; gap: 2px; font-size: 13px; color: #4b1f1f; }
     .nav-links a { padding: 9px 10px; border-radius: 999px; white-space: nowrap; }
     .nav-links a:hover { background: var(--soft-red); color: var(--primary-dark); }
+    .nav-group { position: relative; }
+    .nav-group-button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: #4b1f1f;
+      font: inherit;
+      cursor: pointer;
+      padding: 9px 28px 9px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .nav-group-button::after {
+      content: "⌄";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-52%);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .nav-group-button:hover,
+    .nav-group.open .nav-group-button,
+    .nav-group:focus-within .nav-group-button {
+      background: var(--soft-red);
+      color: var(--primary-dark);
+    }
+    .nav-submenu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 190px;
+      display: none;
+      padding: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      z-index: 30;
+    }
+    .nav-group:hover .nav-submenu,
+    .nav-group:focus-within .nav-submenu,
+    .nav-group.open .nav-submenu {
+      display: grid;
+      gap: 2px;
+    }
+    .nav-submenu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: #4b1f1f;
+    }
     .menu-button { display: none; border: 1px solid var(--border); background: #fff; border-radius: 12px; padding: 9px 12px; font-weight: 800; color: var(--ink); }
 
     .hero { padding: 72px 0 36px; overflow: hidden; }
@@ -261,6 +314,35 @@
       .nav-links { position: absolute; left: 16px; right: 16px; top: 72px; display: none; flex-direction: column; align-items: stretch; padding: 10px; background: #fff; border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
       .nav-links.open { display: flex; }
       .nav-links a { padding: 12px; }
+      .nav-group { width: 100%; }
+      .nav-group-button {
+        width: 100%;
+        text-align: left;
+        padding: 12px 38px 12px 12px;
+        border-radius: 12px;
+        font-weight: 800;
+      }
+      .nav-group-button::after { right: 14px; }
+      .nav-submenu {
+        position: static;
+        min-width: 0;
+        margin: 2px 0 8px;
+        padding: 6px;
+        border-radius: 14px;
+        box-shadow: none;
+        background: var(--soft-orange);
+      }
+      .nav-group:hover .nav-submenu,
+      .nav-group:focus-within .nav-submenu {
+        display: none;
+      }
+      .nav-group.open .nav-submenu {
+        display: grid;
+      }
+      .nav-submenu a {
+        padding: 10px 12px;
+        background: rgba(255,255,255,0.72);
+      }
       .hero { padding-top: 42px; }
       .stats { grid-template-columns: 1fr; }
       .info-row { grid-template-columns: 1fr; gap: 2px; }
@@ -396,15 +478,35 @@
       </a>
       <button class="menu-button" type="button" aria-controls="navLinks" aria-expanded="false">メニュー</button>
       <nav id="navLinks" class="nav-links">
-        <a href="#about">町内会紹介</a>
-        <a href="#greeting">会長あいさつ</a>
-        <a href="#basic">基本情報</a>
-        <a href="#events">行事予定</a>
-        <a href="#festival">夏祭り</a>
-        <a href="#safety">防災・防犯</a>
-        <a href="#children">子ども会</a>
-        <a href="#join">加入案内</a>
-        <a href="#living">暮らし</a>
+        <a class="nav-direct" href="#top">トップ</a>
+
+        <div class="nav-group">
+          <button class="nav-group-button" type="button" aria-expanded="false">町内会について</button>
+          <div class="nav-submenu">
+            <a href="#about">活動方針</a>
+            <a href="#greeting">会長あいさつ</a>
+            <a href="#basic">基本情報</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-group-button" type="button" aria-expanded="false">行事・活動</button>
+          <div class="nav-submenu">
+            <a href="#festival">夏祭り</a>
+            <a href="#events">行事予定</a>
+            <a href="#safety">防災・防犯</a>
+            <a href="#cleaning">さわやか清掃</a>
+            <a href="#children">子ども会</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-group-button" type="button" aria-expanded="false">暮らし・加入</button>
+          <div class="nav-submenu">
+            <a href="#join">加入案内</a>
+            <a href="#living">暮らしの案内</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -839,6 +941,23 @@
   <script>
     const menuButton = document.querySelector('.menu-button');
     const navLinks = document.getElementById('navLinks');
+    const navGroupButtons = document.querySelectorAll('.nav-group-button');
+
+    navGroupButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const group = button.closest('.nav-group');
+        const isOpen = group?.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(Boolean(isOpen)));
+
+        navGroupButtons.forEach((otherButton) => {
+          if (otherButton !== button) {
+            otherButton.closest('.nav-group')?.classList.remove('open');
+            otherButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+
     menuButton?.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       menuButton.setAttribute('aria-expanded', String(isOpen));
