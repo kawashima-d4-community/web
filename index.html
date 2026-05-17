@@ -181,6 +181,19 @@
     .event-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
     .event-list li { padding: 12px 14px; border: 1px solid var(--border); border-radius: 14px; background: #fff; color: var(--muted); }
     .event-list strong { color: var(--ink); }
+    .event-photo-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--soft-red);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     .festival-highlight {
       position: relative;
@@ -590,6 +603,11 @@
 
         <div class="notice-list" aria-label="更新情報一覧">
           <article class="notice-item">
+            <time datetime="2026-05-17">2026年5月17日</time>
+            <strong><a href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">ソフトボール大会の写真を掲載しました</a></strong>
+            <span>写真</span>
+          </article>
+          <article class="notice-item">
             <time datetime="2026-05-11">2026年5月11日</time>
             <strong>さわやか清掃の実施日を更新しました</strong>
             <span>清掃活動</span>
@@ -746,7 +764,7 @@
             <h3>🌸 春（4月〜6月）</h3>
             <ul class="event-list">
               <li><strong>4月19日（日）</strong><br />通常総会（町内会）</li>
-              <li><strong>5月17日（日）</strong><br />ソフトボール大会 ＠川島町公園グラウンド</li>
+              <li><strong>5月17日（日）</strong><br />ソフトボール大会 ＠川島町公園グラウンド<br /><a class="event-photo-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る（Googleドライブ）</a></li>
               <li><strong>6月14日（日）</strong><br />川島東部ドッジボール大会 ＠川島小学校体育館</li>
               <li><strong>6月21日（日）</strong><br />わんぱくっ子竹細工・木工細工教室 ＠川島第四町内会館・横広場</li>
             </ul>
