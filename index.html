@@ -170,6 +170,42 @@
     .notice-item time { color: var(--muted); font-weight: 800; font-size: 14px; }
     .notice-item strong { font-size: 16px; }
     .notice-item span { justify-self: end; font-size: 12px; font-weight: 900; color: #92400e; background: var(--soft-orange); border-radius: 999px; padding: 4px 9px; }
+    
+    .meeting-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff4ee, #fff7e8);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(127,29,29,0.06);
+    }
+    .meeting-card h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+    .meeting-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .meeting-date {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 245px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: #fff;
+      color: var(--primary-dark);
+      border: 1px solid var(--border);
+      font-weight: 900;
+      font-size: 18px;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(127,29,29,0.05);
+    }
 
     .schedule { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: var(--radius); background: #fff; box-shadow: 0 10px 26px rgba(127,29,29,0.06); }
     .schedule th, .schedule td { padding: 15px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -343,6 +379,16 @@
       .section-head { align-items: start; flex-direction: column; }
       .notice-item { grid-template-columns: 1fr; gap: 6px; }
       .notice-item span { justify-self: start; }
+      .meeting-card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        border-radius: 18px;
+      }
+      .meeting-date {
+        min-width: 0;
+        width: 100%;
+        font-size: 16px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -587,6 +633,19 @@
               <div class="stat"><b>5カ所</b><span>いっとき避難場所</span></div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="regular-meeting">
+      <div class="container">
+        <div class="meeting-card" aria-label="次回役員定例会">
+          <div>
+            <span class="badge">Regular Meeting</span>
+            <h3>次回 役員定例会</h3>
+            <p>毎月、最後の土曜日 19:00から開催予定です。日付は自動で次回開催日に更新されます。</p>
+          </div>
+          <div class="meeting-date" id="nextMeetingDate">日程を確認中...</div>
         </div>
       </div>
     </section>
@@ -1058,6 +1117,33 @@
         menuButton?.setAttribute('aria-expanded', 'false');
       });
     });
+    function getLastSaturday(year, monthIndex) {
+      const lastDay = new Date(year, monthIndex + 1, 0);
+      const diff = (lastDay.getDay() - 6 + 7) % 7;
+      return new Date(year, monthIndex, lastDay.getDate() - diff, 19, 0, 0);
+    }
+
+    function formatMeetingDate(date) {
+      const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+      return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日（${weekdays[date.getDay()]}）19:00〜`;
+    }
+
+    function updateNextMeetingDate() {
+      const meetingElement = document.getElementById('nextMeetingDate');
+      if (!meetingElement) return;
+
+      const now = new Date();
+      let candidate = getLastSaturday(now.getFullYear(), now.getMonth());
+
+      if (now > candidate) {
+        candidate = getLastSaturday(now.getFullYear(), now.getMonth() + 1);
+      }
+
+      meetingElement.textContent = formatMeetingDate(candidate);
+    }
+
+    updateNextMeetingDate();
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
