@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>川島第四町内会｜横浜市保土ヶ谷区東川島町1番地より21番地までの区域</title>
-  <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。町内会の紹介、会長あいさつ、行事予定、防災・防犯、子ども会、町内会費、加入案内、ごみ出し、回覧板、地区防災計画、定例会日程を掲載しています。" />
+  <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。町内会の紹介、会長あいさつ、行事予定、防災・防犯、子ども会、町内会費、加入案内、ごみ出し、回覧板、地区防災計画などを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第4町内会, 横浜市, 保土ヶ谷区, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収,消防団,保土ヶ谷消防団,第四分団第１班,横浜レンジャー,開港ワイン" />
   <meta property="og:title" content="川島第四町内会｜横浜市保土ヶ谷区東川島町1番地より21番地までの区域" />
   <meta property="og:description" content="笑顔あふれる、安心の街を目指して。横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する川島第四町内会のホームページです。" />
@@ -170,6 +170,57 @@
     .notice-item time { color: var(--muted); font-weight: 800; font-size: 14px; }
     .notice-item strong { font-size: 16px; }
     .notice-item span { justify-self: end; font-size: 12px; font-weight: 900; color: #92400e; background: var(--soft-orange); border-radius: 999px; padding: 4px 9px; }
+    
+    .photo-feature {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+    .photo-feature-card {
+      display: grid;
+      grid-template-columns: 180px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(127,29,29,0.06);
+    }
+    .photo-feature-card img {
+      display: block;
+      width: 180px;
+      height: 112px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+    .photo-feature-card h3 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+    .photo-feature-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .photo-feature-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 900;
+      white-space: nowrap;
+      box-shadow: 0 10px 22px rgba(217,104,79,0.16);
+    }
+    .photo-feature-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
 
     .schedule { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: var(--radius); background: #fff; box-shadow: 0 10px 26px rgba(127,29,29,0.06); }
     .schedule th, .schedule td { padding: 15px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -343,6 +394,33 @@
       .section-head { align-items: start; flex-direction: column; }
       .notice-item { grid-template-columns: 1fr; gap: 6px; }
       .notice-item span { justify-self: start; }
+      .photo-feature {
+        padding-top: 8px;
+        padding-bottom: 24px;
+      }
+      .photo-feature-card {
+        grid-template-columns: 96px 1fr;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 18px;
+      }
+      .photo-feature-card img {
+        width: 96px;
+        height: 72px;
+        border-radius: 14px;
+      }
+      .photo-feature-card h3 {
+        font-size: 16px;
+      }
+      .photo-feature-card p {
+        font-size: 12.5px;
+      }
+      .photo-feature-link {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-height: 40px;
+        font-size: 13px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -587,6 +665,22 @@
               <div class="stat"><b>5カ所</b><span>いっとき避難場所</span></div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-feature" aria-label="ソフトボール大会写真">
+      <div class="container">
+        <div class="photo-feature-card">
+          <a href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener" aria-label="ソフトボール大会の写真をGoogleドライブで開く">
+            <img src="./softball-20260517-thumb.jpg" alt="ソフトボール大会の様子" />
+          </a>
+          <div>
+            <span class="badge">Photo</span>
+            <h3>ソフトボール大会の写真を掲載しました</h3>
+            <p>大会当日の写真をGoogleドライブでご覧いただけます。</p>
+          </div>
+          <a class="photo-feature-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
         </div>
       </div>
     </section>
