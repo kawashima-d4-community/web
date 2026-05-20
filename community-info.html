@@ -157,6 +157,18 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       background: var(--soft-orange);
     }
     .post-actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .post-thumb-link {
+      display: inline-block;
+      margin: 10px 0 8px;
+    }
+    .post-thumb {
+      display: block;
+      width: min(100%, 320px);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.06);
+      background: #fff;
+    }
     .empty-state { display: none; }
     .flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .flow-card { padding: 16px; border-radius: 18px; background: #fff; border: 1px solid var(--border); }
@@ -210,7 +222,10 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
             <span class="post-category">写真</span>
             <div class="post-body">
               <h3>ソフトボール大会の写真を掲載しました</h3>
-              <p>2026年5月17日に開催されたソフトボール大会の写真をGoogleドライブでご覧いただけます。</p>
+              <a class="post-thumb-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">
+                <img class="post-thumb" src="./thumbnails/softball-20260517-thumb.jpg" alt="ソフトボール大会の様子" />
+              </a>
+              <p>2026年5月17日に開催されたソフトボール大会の写真をGoogleドライブでご覧いただけます。サムネイル画像をクリックしても写真一覧へ移動できます。</p>
               <div class="post-meta">
                 <span>掲載開始：2026年5月17日</span>
                 <span>掲載終了：2026年6月30日</span>
