@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>地域からのお知らせ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会・西谷・上星川周辺の地域情報を掲載します。掲載期間を過ぎた情報は自動で非表示になります。" />
+  <title>町内会・地域からのお知らせ｜川島第四町内会</title>
+  <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。" />
   <style>
 
 :root {
@@ -91,6 +91,31 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       flex-wrap: wrap;
       margin-bottom: 16px;
     }
+
+    .board-section {
+      margin-top: 22px;
+    }
+    .board-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .board-section-head p {
+      margin: 0;
+    }
+    .board-label {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--soft-red);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
     .post-list { display: grid; gap: 14px; }
     .community-post {
       display: grid;
@@ -150,8 +175,8 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       <a class="back" href="./index.html">← 川島第四町内会ホームページへ戻る</a>
       <div class="hero">
         <span class="badge">Community Board</span>
-        <h1>地域からのお知らせ</h1>
-        <p>第四町内会・西谷・上星川周辺の地域情報を掲載します。掲載期間を過ぎた情報は自動で非表示になります。</p>
+        <h1>町内会・地域からのお知らせ</h1>
+        <p>川島第四町内会の公式なお知らせと、地域の皆さまから寄せられたお知らせを区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
           <a class="button" href="./posting-request.html">地域情報の掲載を依頼する</a>
           <a class="button secondary" href="./index.html#news">What's Newへ戻る</a>
@@ -165,70 +190,181 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       <div class="board-toolbar">
         <div>
           <h2>掲載中のお知らせ</h2>
-          <p class="small-note">トップページに載せる場合は最大5件、この一覧ページでは最大20件を目安に表示します。</p>
+          <p class="small-note">「町内会からのお知らせ」と「地域からのお知らせ」を分けて掲載します。掲載期限を過ぎた情報は自動で非表示になります。</p>
         </div>
-        <span class="badge" id="postCount">確認中</span>
+        <span class="badge" id="totalPostCount">確認中</span>
       </div>
 
-      <div class="post-list" id="postList">
-        <article class="community-post" data-start="2026-05-20" data-expire="2099-12-31">
-          <span class="post-category">掲載依頼</span>
-          <div class="post-body">
-            <h3>地域情報の掲載依頼を受け付けます</h3>
-            <p>第四町内会・西谷・上星川周辺の地域情報をお寄せください。内容を確認のうえ、問題がなければ期間限定で掲載します。</p>
-            <div class="post-meta">
-              <span>掲載開始：2026年5月20日</span>
-              <span>常設案内</span>
-            </div>
-            <div class="post-actions">
-              <a class="button" href="./posting-request.html">掲載依頼ページへ</a>
-            </div>
+      <div class="board-section" id="chonaikai-news">
+        <div class="board-section-head">
+          <div>
+            <span class="board-label">町内会</span>
+            <h2>町内会からのお知らせ</h2>
+            <p class="small-note">川島第四町内会の行事・活動報告・写真掲載・清掃・防災などの公式なお知らせです。</p>
           </div>
-        </article>
+          <span class="badge" id="chonaikaiPostCount">確認中</span>
+        </div>
 
-        <article class="community-post" data-start="2026-05-17" data-expire="2026-06-30">
-          <span class="post-category">写真</span>
-          <div class="post-body">
-            <h3>ソフトボール大会の写真を掲載しました</h3>
-            <p>2026年5月17日に開催されたソフトボール大会の写真をGoogleドライブでご覧いただけます。</p>
-            <div class="post-meta">
-              <span>掲載開始：2026年5月17日</span>
-              <span>掲載終了：2026年6月30日</span>
+        <div class="post-list" id="chonaikaiPostList">
+          <article class="community-post" data-board="chonaikai" data-start="2026-05-17" data-expire="2026-06-30">
+            <span class="post-category">写真</span>
+            <div class="post-body">
+              <h3>ソフトボール大会の写真を掲載しました</h3>
+              <p>2026年5月17日に開催されたソフトボール大会の写真をGoogleドライブでご覧いただけます。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年5月17日</span>
+                <span>掲載終了：2026年6月30日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+              <div class="post-actions">
+                <a class="button" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
+              </div>
             </div>
-            <div class="post-actions">
-              <a class="button" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="community-post" data-start="2026-05-11" data-expire="2026-06-28">
-          <span class="post-category">清掃活動</span>
-          <div class="post-body">
-            <h3>さわやか清掃の実施日を更新しました</h3>
-            <p>第1回は6月28日（日）午前9時から実施予定です。集合場所は川島第4町内会館です。雨天中止です。</p>
-            <div class="post-meta">
-              <span>掲載開始：2026年5月11日</span>
-              <span>掲載終了：2026年6月28日</span>
+          <article class="community-post" data-board="chonaikai" data-start="2026-05-11" data-expire="2026-06-28">
+            <span class="post-category">清掃活動</span>
+            <div class="post-body">
+              <h3>さわやか清掃の実施日を更新しました</h3>
+              <p>第1回は6月28日（日）午前9時から実施予定です。集合場所は川島第4町内会館です。雨天中止です。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年5月11日</span>
+                <span>掲載終了：2026年6月28日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
 
-        <article class="community-post" data-start="2026-07-01" data-expire="2026-07-08">
-          <span class="post-category">掲載例</span>
-          <div class="post-body">
-            <h3>【掲載例】子ども会：ラジオ体操のお知らせ</h3>
-            <p>これは掲載イメージです。実際の投稿が入ったら、掲載期間中だけ表示されます。</p>
-            <div class="post-meta">
-              <span>掲載開始：2026年7月1日</span>
-              <span>掲載終了：2026年7月8日</span>
-            </div>
-          </div>
-        </article>
+        <div class="card empty-state" id="chonaikaiEmptyState">
+          <h3>現在、掲載中の町内会からのお知らせはありません。</h3>
+          <p>新しい情報が入り次第、こちらに掲載します。</p>
+        </div>
       </div>
 
-      <div class="card empty-state" id="emptyState">
-        <h3>現在、掲載中のお知らせはありません。</h3>
-        <p>新しい情報が入り次第、こちらに掲載します。</p>
+      <div class="board-section" id="local-news">
+        <div class="board-section-head">
+          <div>
+            <span class="board-label">地域</span>
+            <h2>地域からのお知らせ</h2>
+            <p class="small-note">小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載対象です。</p>
+          </div>
+          <span class="badge" id="localPostCount">確認中</span>
+        </div>
+
+        <div class="post-list" id="localPostList">
+          <article class="community-post" data-board="local" data-start="2026-05-20" data-expire="2099-12-31">
+            <span class="post-category">掲載依頼</span>
+            <div class="post-body">
+              <h3>地域情報の掲載依頼を受け付けます</h3>
+              <p>地域に関係するお知らせを幅広く受け付けます。ゴルフコンペ、趣味の集まり、交流会なども掲載対象です。内容を確認のうえ、問題がなければ期間限定で掲載します。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年5月20日</span>
+                <span>常設案内</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+              <div class="post-actions">
+                <a class="button" href="./posting-request.html">掲載依頼ページへ</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】子ども会：ラジオ体操のお知らせ</h3>
+              <p>これは掲載イメージです。実際の投稿が入ったら、掲載期間中だけ表示されます。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】PTA：学校行事サポート募集のお知らせ</h3>
+              <p>小学校・中学校PTAからの地域向けのお知らせを掲載するイメージです。個人名や児童・生徒の個人情報は掲載しません。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】消防団：防火・防災啓発のお知らせ</h3>
+              <p>消防団からの防火・防災に関するお知らせを掲載するイメージです。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】地域スポーツ・習い事：体験会のお知らせ</h3>
+              <p>少年野球、サッカー、バスケットボールなど、地域の子ども向けスポーツ・習い事の体験会や募集案内を掲載するイメージです。過度な営利目的の宣伝は掲載対象外です。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】地域交流：ゴルフコンペのお知らせ</h3>
+              <p>地域の方同士の交流を目的としたゴルフコンペ、趣味の集まり、交流会などのお知らせを掲載するイメージです。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】地域交流：趣味の集まりのお知らせ</h3>
+              <p>ウォーキング、手芸、音楽、学習会など、地域の交流につながる幅広いお知らせを掲載するイメージです。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="community-post" data-board="local" data-start="2026-07-01" data-expire="2026-07-08">
+            <span class="post-category">掲載例</span>
+            <div class="post-body">
+              <h3>【掲載例】地域のお店：地域向けイベントのお知らせ</h3>
+              <p>地域のお店からの地域貢献イベント、営業時間変更、地域向け案内などを掲載するイメージです。過度な宣伝は掲載対象外です。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年7月1日</span>
+                <span>掲載終了：2026年7月8日</span>
+                <span>区分：地域からのお知らせ</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="card empty-state" id="localEmptyState">
+          <h3>現在、掲載中の地域からのお知らせはありません。</h3>
+          <p>地域情報が入り次第、こちらに掲載します。</p>
+        </div>
       </div>
     </section>
 
@@ -254,9 +390,14 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       return new Date(value + suffix);
     }
 
-    function updateCommunityPosts() {
+    function updatePostList(listId, countId, emptyId, limit) {
       const today = new Date();
-      const posts = Array.from(document.querySelectorAll('.community-post'));
+      const list = document.getElementById(listId);
+      const countElement = document.getElementById(countId);
+      const emptyElement = document.getElementById(emptyId);
+      if (!list || !countElement || !emptyElement) return 0;
+
+      const posts = Array.from(list.querySelectorAll('.community-post'));
       const activePosts = [];
 
       posts.forEach((post) => {
@@ -270,16 +411,26 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       activePosts
         .sort((a, b) => (b.dataset.start || '').localeCompare(a.dataset.start || ''))
         .forEach((post, index) => {
-          if (index >= 20) {
+          if (index >= limit) {
             post.style.display = 'none';
           } else {
-            document.getElementById('postList').appendChild(post);
+            list.appendChild(post);
           }
         });
 
-      const visibleCount = activePosts.slice(0, 20).length;
-      document.getElementById('postCount').textContent = `掲載中 ${visibleCount}件`;
-      document.getElementById('emptyState').style.display = visibleCount === 0 ? 'block' : 'none';
+      const visibleCount = activePosts.slice(0, limit).length;
+      countElement.textContent = `掲載中 ${visibleCount}件`;
+      emptyElement.style.display = visibleCount === 0 ? 'block' : 'none';
+      return visibleCount;
+    }
+
+    function updateCommunityPosts() {
+      const chonaikaiCount = updatePostList('chonaikaiPostList', 'chonaikaiPostCount', 'chonaikaiEmptyState', 20);
+      const localCount = updatePostList('localPostList', 'localPostCount', 'localEmptyState', 20);
+      const totalPostCount = document.getElementById('totalPostCount');
+      if (totalPostCount) {
+        totalPostCount.textContent = `掲載中 ${chonaikaiCount + localCount}件`;
+      }
     }
 
     updateCommunityPosts();
