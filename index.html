@@ -170,6 +170,107 @@
     .notice-item time { color: var(--muted); font-weight: 800; font-size: 14px; }
     .notice-item strong { font-size: 16px; }
     .notice-item span { justify-self: end; font-size: 12px; font-weight: 900; color: #92400e; background: var(--soft-orange); border-radius: 999px; padding: 4px 9px; }
+
+    .daily-info {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+    .daily-info-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff4ee, #fff7e8);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(127,29,29,0.06);
+    }
+    .daily-info-main {
+      display: grid;
+      gap: 8px;
+    }
+    .daily-info-main h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+    .daily-info-main p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .weather-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .weather-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .weather-icon {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.05);
+      font-size: 38px;
+    }
+    .weather-source {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .weather-source a {
+      color: var(--primary-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .community-entry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .community-entry-card {
+      display: grid;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff4ee, #fff7e8);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(127,29,29,0.06);
+    }
+    .community-entry-card h3 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+    .community-entry-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .community-entry-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
     
     .photo-feature {
       padding-top: 18px;
@@ -394,6 +495,29 @@
       .section-head { align-items: start; flex-direction: column; }
       .notice-item { grid-template-columns: 1fr; gap: 6px; }
       .notice-item span { justify-self: start; }
+
+      .daily-info {
+        padding-top: 8px;
+        padding-bottom: 18px;
+      }
+      .daily-info-card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        border-radius: 18px;
+      }
+      .weather-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+        font-size: 30px;
+      }
+      .weather-pill {
+        font-size: 12px;
+      }
+
+      .community-entry-grid {
+        grid-template-columns: 1fr;
+      }
       .photo-feature {
         padding-top: 8px;
         padding-bottom: 24px;
@@ -605,6 +729,7 @@
       <nav id="navLinks" class="nav-links">
         <a class="nav-direct" href="#top">トップ</a>
         <a class="nav-direct" href="#news">What's New</a>
+        <a class="nav-direct" href="./community-info.html">地域情報</a>
 
         <div class="nav-group">
           <button class="nav-group-button" type="button" aria-expanded="false">町内会について</button>
@@ -669,6 +794,26 @@
       </div>
     </section>
 
+    <section id="daily-info" class="daily-info" aria-label="今日の地域情報">
+      <div class="container">
+        <div class="daily-info-card">
+          <div class="daily-info-main">
+            <span class="badge">Today</span>
+            <h3 id="todayTitle">今日の川島第四町内会エリア</h3>
+            <p id="todayDate">日付を確認中...</p>
+            <div class="weather-summary" id="weatherSummary">
+              <span class="weather-pill">天気情報を取得中...</span>
+            </div>
+            <div class="weather-source">
+              天気データ：<a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+            </div>
+          </div>
+          <div class="weather-icon" id="weatherIcon" aria-hidden="true">☀️</div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="photo-feature" aria-label="ソフトボール大会写真">
       <div class="container">
         <div class="photo-feature-card">
@@ -684,6 +829,31 @@
         </div>
       </div>
     </section>
+
+
+    <section id="community-entry">
+      <div class="container">
+        <div class="community-entry-grid">
+          <article class="community-entry-card">
+            <span class="badge">Community Board</span>
+            <h3>地域からのお知らせ</h3>
+            <p>第四町内会・西谷・上星川周辺の地域情報を掲載します。掲載期間を過ぎた情報は自動で非表示になります。</p>
+            <div class="community-entry-actions">
+              <a class="button button-primary" href="./community-info.html">掲載中のお知らせを見る</a>
+            </div>
+          </article>
+          <article class="community-entry-card">
+            <span class="badge">Request</span>
+            <h3>地域情報を掲載したい方へ</h3>
+            <p>掲載したい地域情報がある場合は、掲載依頼ページをご確認ください。内容確認後、問題なければ期間限定で掲載します。</p>
+            <div class="community-entry-actions">
+              <a class="button button-secondary" href="./posting-request.html">掲載依頼ページへ</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
 
     <section id="news">
       <div class="container">
@@ -1152,6 +1322,83 @@
         menuButton?.setAttribute('aria-expanded', 'false');
       });
     });
+
+    const weatherCodeMap = {
+      0: ['快晴', '☀️'],
+      1: ['晴れ', '🌤️'],
+      2: ['一部くもり', '⛅'],
+      3: ['くもり', '☁️'],
+      45: ['霧', '🌫️'],
+      48: ['霧氷', '🌫️'],
+      51: ['弱い霧雨', '🌦️'],
+      53: ['霧雨', '🌦️'],
+      55: ['強い霧雨', '🌧️'],
+      61: ['小雨', '🌧️'],
+      63: ['雨', '🌧️'],
+      65: ['強い雨', '🌧️'],
+      71: ['小雪', '🌨️'],
+      73: ['雪', '🌨️'],
+      75: ['強い雪', '❄️'],
+      80: ['にわか雨', '🌦️'],
+      81: ['にわか雨', '🌧️'],
+      82: ['強いにわか雨', '⛈️'],
+      95: ['雷雨', '⛈️'],
+      96: ['雷雨・ひょう', '⛈️'],
+      99: ['強い雷雨・ひょう', '⛈️']
+    };
+
+    function formatJapaneseDate(date) {
+      const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+      return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日（${weekdays[date.getDay()]}）`;
+    }
+
+    function updateTodayDate() {
+      const todayDateElement = document.getElementById('todayDate');
+      if (!todayDateElement) return;
+      todayDateElement.textContent = formatJapaneseDate(new Date());
+    }
+
+    async function updateWeather() {
+      const weatherSummary = document.getElementById('weatherSummary');
+      const weatherIcon = document.getElementById('weatherIcon');
+      if (!weatherSummary || !weatherIcon) return;
+
+      // 川島第四町内会館周辺の概算座標（横浜市保土ヶ谷区東川島町）
+      const latitude = 35.4703;
+      const longitude = 139.5687;
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=1`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Weather API error');
+        const data = await response.json();
+
+        const code = data.current?.weather_code;
+        const [weatherText, icon] = weatherCodeMap[code] || ['天気情報', '🌤️'];
+        const currentTemp = data.current?.temperature_2m;
+        const windSpeed = data.current?.wind_speed_10m;
+        const maxTemp = data.daily?.temperature_2m_max?.[0];
+        const minTemp = data.daily?.temperature_2m_min?.[0];
+        const rainProb = data.daily?.precipitation_probability_max?.[0];
+
+        weatherIcon.textContent = icon;
+        weatherSummary.innerHTML = `
+          <span class="weather-pill">天気：${weatherText}</span>
+          <span class="weather-pill">現在：${Math.round(currentTemp)}℃</span>
+          <span class="weather-pill">最高：${Math.round(maxTemp)}℃</span>
+          <span class="weather-pill">最低：${Math.round(minTemp)}℃</span>
+          <span class="weather-pill">降水確率：${rainProb ?? '-'}%</span>
+          <span class="weather-pill">風速：${Math.round(windSpeed)}m/s</span>
+        `;
+      } catch (error) {
+        weatherIcon.textContent = '🌤️';
+        weatherSummary.innerHTML = '<span class="weather-pill">天気情報を取得できませんでした</span><span class="weather-pill">時間をおいて再度ご確認ください</span>';
+      }
+    }
+
+    updateTodayDate();
+    updateWeather();
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
