@@ -242,6 +242,30 @@
       text-underline-offset: 3px;
     }
 
+    .daily-message {
+      margin-top: 8px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.04);
+    }
+    .daily-message-label {
+      display: inline-flex;
+      margin-bottom: 6px;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+    .daily-message p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+
     .community-entry-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -513,6 +537,13 @@
       }
       .weather-pill {
         font-size: 12px;
+      }
+      .daily-message {
+        padding: 12px 14px;
+        border-radius: 16px;
+      }
+      .daily-message p {
+        font-size: 14px;
       }
 
       .community-entry-grid {
@@ -803,6 +834,10 @@
             <p id="todayDate">日付を確認中...</p>
             <div class="weather-summary" id="weatherSummary">
               <span class="weather-pill">天気情報を取得中...</span>
+            </div>
+            <div class="daily-message" aria-label="今日の地域メッセージ">
+              <span class="daily-message-label">今日の地域メッセージ</span>
+              <p id="dailyMessageText">地域メッセージを準備中...</p>
             </div>
             <div class="weather-source">
               天気データ：<a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
@@ -1398,6 +1433,57 @@
 
     updateTodayDate();
     updateWeather();
+
+    const dailyMessages = [
+      '小さなあいさつが、地域の安心につながります。今日もご近所同士、気持ちよく声をかけ合いましょう。',
+      'ごみ出しは当日の朝に。きれいな街は、一人ひとりの心がけから生まれます。',
+      '雨の日は足元に気をつけて。通学路や横断歩道では、いつもより少しゆとりある行動を。',
+      '防災用品は、気づいた時に少しずつ確認しましょう。備えは日々の小さな積み重ねです。',
+      '見慣れないこと、気になることは、地域で共有することが防犯の第一歩です。',
+      '清掃活動は、街をきれいにするだけでなく、ご近所同士が顔を合わせる大切な機会です。',
+      '子どもたちの元気な声は地域の宝です。通学時間帯はあたたかく見守りましょう。',
+      '暑い日は無理をせず、水分補給を忘れずに。声をかけ合って、体調管理を大切にしましょう。',
+      '夕方以降は早めのライト点灯を。歩行者も自転車も、安全第一で過ごしましょう。',
+      '今日も無理なく、できる範囲で地域に関わっていきましょう。',
+      '回覧板は地域の大切な情報源です。確認したら、次のご家庭へ早めに回しましょう。',
+      '帷子川沿いの自然は地域の魅力です。散歩のついでに、街の変化にも目を向けてみましょう。',
+      '地域の安心は、顔の見える関係から。ちょっとした会話が、いざという時の助け合いにつながります。',
+      '風の強い日は、掲示物やごみの飛散に注意しましょう。小さな気配りが街を守ります。',
+      '体調がすぐれない日は無理をせず、休むことも大切です。地域活動はできる時に、できる範囲で。',
+      '子どもや高齢の方が安心して歩けるよう、車や自転車はゆっくり思いやり運転を心がけましょう。',
+      '防犯パトロールは地域の見守り活動です。普段の散歩や買い物でも、少し周囲に目を向けてみましょう。',
+      '町内会活動は、暮らしを少しずつ良くするための積み重ねです。今日の一歩を大切に。',
+      '玄関先や家の周りを少し整えるだけでも、街全体の印象が明るくなります。',
+      '災害時に大切なのは、日頃のつながりです。ご近所の顔を知ることも、立派な備えです。',
+      '季節の変わり目は体調管理に注意しましょう。無理せず、あたたかく過ごしてください。',
+      '自転車はスピードを控えめに。歩行者とすれ違う時は、思いやりの気持ちを忘れずに。',
+      '地域行事は、参加する人も支える人も主役です。できる形で一緒に楽しみましょう。',
+      'ペットとの暮らしも地域の一部です。散歩マナーを守って、気持ちよい街にしていきましょう。',
+      'ご近所の小さな変化に気づけることは、地域の安心につながります。',
+      '掲示板やホームページを時々確認して、地域の新しい情報にふれてみましょう。',
+      '清掃のあとの「お疲れさま」の一言が、住みよい街づくりへの第一歩です。',
+      '防災訓練は、いざという時のための大切な練習です。家族で避難場所を確認しておきましょう。',
+      '夜道では反射材や明るい服装が安心です。自分の安全も、周りへの思いやりも大切に。',
+      '地域のつながりは、特別なことではなく、日々のあいさつから育っていきます。',
+      '今日も川島第四町内会エリアが、笑顔で安心して過ごせる一日になりますように。'
+    ];
+
+    function getDayOfYear(date) {
+      const start = new Date(date.getFullYear(), 0, 0);
+      const diff = date - start + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000);
+      return Math.floor(diff / (1000 * 60 * 60 * 24));
+    }
+
+    function updateDailyMessage() {
+      const messageElement = document.getElementById('dailyMessageText');
+      if (!messageElement) return;
+
+      const today = new Date();
+      const index = (getDayOfYear(today) - 1) % dailyMessages.length;
+      messageElement.textContent = dailyMessages[index];
+    }
+
+    updateDailyMessage();
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
