@@ -414,12 +414,50 @@
     }
     .festival-highlight h2 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 48px); line-height: 1.15; letter-spacing: -0.04em; }
     .festival-highlight p { color: rgba(255,255,255,0.88); margin: 0 0 14px; }
-    .festival-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 22px; position: relative; z-index: 1; align-items: start; }
-    .festival-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-    .festival-point { padding: 14px; border-radius: 18px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.24); }
+    .festival-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      grid-template-areas:
+        "main card"
+        "points points";
+      gap: 22px;
+      position: relative;
+      z-index: 1;
+      align-items: start;
+    }
+    .festival-main { grid-area: main; min-width: 0; }
+    .festival-media {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 12px;
+    }
+    .festival-points {
+      grid-area: points;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 2px;
+    }
+    .festival-point {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.24);
+      min-height: 88px;
+    }
     .festival-point b { display: block; font-size: 16px; margin-bottom: 4px; }
     .festival-point span { display: block; font-size: 13px; color: rgba(255,255,255,0.84); }
-    .festival-card { background: rgba(255,255,255,0.96); color: var(--ink); border-radius: 24px; padding: 22px; }
+    .festival-card {
+      grid-area: card;
+      background: rgba(255,255,255,0.96);
+      color: var(--ink);
+      border-radius: 24px;
+      padding: 22px;
+      height: 100%;
+      box-sizing: border-box;
+    }
     .festival-card h3 { margin: 0 0 10px; font-size: 20px; }
     .festival-card ul { margin: 0; padding-left: 1.2em; color: var(--muted); }
     .festival-card li { margin: 6px 0; }
@@ -530,6 +568,21 @@
     }
 
     @media (max-width: 980px) {
+      .festival-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "card"
+          "points";
+      }
+      .festival-media {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .festival-points {
+        grid-template-columns: 1fr;
+      }
+
       .hero-grid, .grid-2, .grid-3, .grid-4, .contact-card { grid-template-columns: 1fr; }
       .greeting-layout { grid-template-columns: 1fr; }
       .president-photo { width: min(220px, 100%); }
@@ -607,6 +660,17 @@
     }
 
     @media (max-width: 760px) {
+      .festival-thumb-link {
+        max-width: 220px;
+      }
+      .festival-media {
+        gap: 10px;
+      }
+
+      .festival-thumb-link {
+        max-width: 220px;
+      }
+
       .menu-button { display: inline-flex; }
       .nav { min-height: 64px; }
       .nav-links { position: absolute; left: 16px; right: 16px; top: 72px; display: none; flex-direction: column; align-items: stretch; padding: 10px; background: #fff; border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
@@ -773,6 +837,23 @@
       }
       .back-to-top span { display: none; }
     }
+  
+    .festival-thumb-link {
+      display: inline-block;
+      width: 100%;
+      max-width: 260px;
+      margin: 0;
+    }
+    .festival-thumb {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.32);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+      background: #fff;
+    }
+
   </style>
 </head>
 <body>
@@ -946,19 +1027,17 @@
       <div class="container">
         <div class="festival-highlight">
           <div class="festival-grid">
-            <div>
+            <div class="festival-main">
               <span class="eyebrow" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.34);color:#fff;">町内会の一大イベント</span>
               <h2>川島第四町内会 夏祭り</h2>
               <p>
                 地域の皆様が集まり、子どもから大人まで楽しめる夏の恒例行事です。模擬店や素人演芸、神輿・山車巡業などを通じて、地域のつながりを深めます。
               </p>
-              <a class="festival-thumb-link" href="./thumbnails/summer-festival-thumb.jpg" target="_blank" rel="noopener" aria-label="夏祭りの写真を開く">
-                <img class="festival-thumb" src="./thumbnails/summer-festival-thumb.jpg" alt="川島第四町内会 夏祭りの会場風景" />
-              </a>
-              <div class="festival-points">
-                <div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
-                <div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
-                <div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
+              <div class="festival-media">
+                <a class="festival-thumb-link" href="./thumbnails/summer-festival-thumb.jpg" target="_blank" rel="noopener" aria-label="夏祭りの写真を開く">
+                  <img class="festival-thumb" src="./thumbnails/summer-festival-thumb.jpg" alt="川島第四町内会 夏祭りの会場風景" />
+                </a>
+                <p class="small-note">夏祭りの雰囲気が伝わる写真です。宵宮・本宮ともに、地域の皆様が集まり、にぎわいのある交流の場になります。</p>
               </div>
             </div>
             <div class="festival-card">
@@ -971,6 +1050,11 @@
                 <li>地域の皆様の交流の場</li>
               </ul>
               <p class="small-note">※開催内容・時間・雨天時対応などの詳細は、決まり次第、回覧板・掲示・ホームページでお知らせします。</p>
+            </div>
+            <div class="festival-points">
+              <div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
+              <div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
+              <div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
             </div>
           </div>
         </div>
