@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>地域情報掲載依頼｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会・西谷・上星川周辺の地域情報掲載依頼ページです。内容確認後、問題がなければ期間限定で掲載します。" />
+  <meta name="description" content="川島第四町内会・西谷・上星川周辺の地域情報掲載依頼ページです。Googleフォームから掲載依頼を受け付け、内容確認後に期間限定で掲載します。" />
   <style>
 
 :root {
@@ -80,24 +80,67 @@ section { padding: 28px 0; }
   border-color: var(--border);
 }
 .button:hover { background: var(--primary-dark); color: #fff; }
+.button.disabled {
+  background: #d1d5db;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
 .small-note { color: var(--muted); font-size: 13px; }
 footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-entry-card {
+      display: grid;
+      grid-template-columns: 1fr 190px;
+      gap: 18px;
+      align-items: center;
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff4ee, #fff7e8);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .qr-panel {
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      padding: 14px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+    .qr-panel img {
+      width: 150px;
+      height: 150px;
+      border-radius: 12px;
+    }
     .check-list { color: var(--muted); padding-left: 1.2em; }
     .check-list li { margin: 5px 0; }
     .info-table { width: 100%; border-collapse: collapse; }
     .info-table th, .info-table td { padding: 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
-    .info-table th { width: 170px; color: var(--muted); }
+    .info-table th { width: 190px; color: var(--muted); }
     .flow-list { counter-reset: flow; display: grid; gap: 10px; }
     .flow-item { counter-increment: flow; display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; padding: 12px; border-radius: 14px; background: #fff; border: 1px solid var(--border); }
     .flow-item::before { content: counter(flow); width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; font-size: 13px; }
     .notice { padding: 16px; border-radius: 16px; background: var(--soft-orange); border: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    .setup-note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px dashed var(--primary);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
     @media (max-width: 760px) {
-      .grid-2 { grid-template-columns: 1fr; }
+      .grid-2, .form-entry-card { grid-template-columns: 1fr; }
       .button { width: 100%; }
       .info-table th, .info-table td { display: block; width: 100%; padding: 10px 0; }
       .info-table th { border-bottom: 0; padding-bottom: 2px; }
+      .qr-panel img { width: 132px; height: 132px; }
     }
   </style>
 </head>
@@ -108,16 +151,33 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       <div class="hero">
         <span class="badge">Posting Request</span>
         <h1>地域情報掲載依頼</h1>
-        <p>第四町内会・西谷・上星川周辺の地域情報をお寄せください。町内会側で内容を確認し、問題がなければホームページへ期間限定で掲載します。</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-          <a class="button" href="mailto:kawashimadai4@gmail.com?subject=%E5%9C%B0%E5%9F%9F%E6%83%85%E5%A0%B1%E6%8E%B2%E8%BC%89%E4%BE%9D%E9%A0%BC&body=%E3%80%90%E5%9C%B0%E5%9F%9F%E6%83%85%E5%A0%B1%E6%8E%B2%E8%BC%89%E4%BE%9D%E9%A0%BC%E3%80%91%0A%E6%8A%95%E7%A8%BF%E8%80%85%E6%B0%8F%E5%90%8D%EF%BC%9A%0A%E6%89%80%E5%B1%9E%E3%83%BB%E7%8F%AD%E5%90%8D%E3%83%BB%E5%9B%A3%E4%BD%93%E5%90%8D%EF%BC%9A%0A%E9%80%A3%E7%B5%A1%E5%85%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%EF%BC%9A%0A%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%EF%BC%9A%0A%E6%8E%B2%E8%BC%89%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%EF%BC%9A%0A%E6%8E%B2%E8%BC%89%E3%81%97%E3%81%9F%E3%81%84%E6%9C%AC%E6%96%87%EF%BC%9A%0A%E9%96%8B%E5%82%AC%E6%97%A5%E3%83%BB%E5%AE%9F%E6%96%BD%E6%97%A5%EF%BC%9A%0A%E6%8E%B2%E8%BC%89%E5%B8%8C%E6%9C%9B%E6%9C%9F%E9%96%93%EF%BC%9A%0A%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%88URL%EF%BC%9A%0A%E5%86%99%E7%9C%9F%E3%81%AE%E5%85%B1%E6%9C%89URL%EF%BC%9A%0A%0A%E3%80%90%E7%A2%BA%E8%AA%8D%E4%BA%8B%E9%A0%85%E3%80%91%0A%E3%83%BB%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%80%81%E8%AA%B9%E8%AC%97%E4%B8%AD%E5%82%B7%E3%80%81%E5%96%B6%E5%88%A9%E7%9B%AE%E7%9A%84%E3%80%81%E5%AE%97%E6%95%99%E5%8B%A7%E8%AA%98%E3%80%81%E5%85%AC%E5%BA%8F%E8%89%AF%E4%BF%97%E3%81%AB%E5%8F%8D%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9%E3%81%A7%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%0A%E3%83%BB%E5%86%99%E7%9C%9F%E3%81%AB%E4%BA%BA%E7%89%A9%E3%81%8C%E5%86%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AF%E3%80%81%E6%8E%B2%E8%BC%89%E8%A8%B1%E5%8F%AF%E3%82%92%E5%BE%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0A">メールで掲載依頼する</a>
-          <a class="button secondary" href="./community-info.html">掲載中のお知らせを見る</a>
-        </div>
+        <p>第四町内会・西谷・上星川周辺の地域情報を、スマートフォンからGoogleフォームでお寄せいただけます。町内会側で内容を確認し、問題がなければホームページへ期間限定で掲載します。</p>
       </div>
     </div>
   </header>
 
   <main class="container">
+    <section>
+      <div class="form-entry-card">
+        <div>
+          <span class="badge">Google Form</span>
+          <h2>掲載依頼フォーム</h2>
+          <p>掲載したい内容がある方は、Googleフォームから依頼してください。スマートフォンから入力しやすい形式です。</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+            <a class="button disabled" href="https://forms.gle/FORM_URL_HERE" target="_blank" rel="noopener">Googleフォーム準備中</a>
+            <a class="button secondary" href="./community-info.html">掲載中のお知らせを見る</a>
+          </div>
+          <div class="setup-note">
+            管理者向け：Googleフォーム作成後、このページ内の <code>https://forms.gle/FORM_URL_HERE</code> を実際のフォームURLに置き換えると、ボタンとQRコードを有効化できます。
+          </div>
+        </div>
+        <div class="qr-panel">
+          <img alt="地域情報掲載依頼フォーム QRコード準備中" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fforms.gle%2FFORM_URL_HERE" />
+          <span class="small-note">QRコード準備中</span>
+        </div>
+      </div>
+    </section>
+
     <section class="grid-2">
       <div class="card">
         <h2>掲載できる内容</h2>
@@ -143,14 +203,15 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     </section>
 
     <section class="card">
-      <h2>掲載依頼時に記載してほしい内容</h2>
+      <h2>Googleフォームの項目案</h2>
       <table class="info-table">
-        <tr><th>投稿者情報</th><td>氏名、所属・班名・団体名、連絡先メールアドレス</td></tr>
+        <tr><th>投稿者情報</th><td>氏名、所属・班名・団体名、連絡先</td></tr>
         <tr><th>カテゴリ</th><td>町内会、地域イベント、子ども会、防災・防犯、清掃活動、西谷・上星川情報、写真掲載など</td></tr>
         <tr><th>掲載タイトル</th><td>例：ラジオ体操のお知らせ、地域清掃ボランティア募集 など</td></tr>
         <tr><th>本文</th><td>日時、場所、対象者、内容、問い合わせ方法など</td></tr>
         <tr><th>掲載希望期間</th><td>原則1週間程度。イベント告知は開催日までなど、必要に応じて調整します。</td></tr>
         <tr><th>リンク・写真</th><td>Googleドライブ、公式サイト、案内ページなどのURL</td></tr>
+        <tr><th>同意確認</th><td>個人情報・写真掲載許可・掲載条件への同意</td></tr>
       </table>
     </section>
 
@@ -158,8 +219,8 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       <div class="card">
         <h2>掲載までの流れ</h2>
         <div class="flow-list">
-          <div class="flow-item"><div><strong>掲載依頼</strong><br><span class="small-note">メールで掲載したい内容を送付します。</span></div></div>
-          <div class="flow-item"><div><strong>内容確認</strong><br><span class="small-note">町内会側で内容・個人情報・写真許可を確認します。</span></div></div>
+          <div class="flow-item"><div><strong>Googleフォームから依頼</strong><br><span class="small-note">スマートフォンから掲載したい内容を送信します。</span></div></div>
+          <div class="flow-item"><div><strong>町内会側で内容確認</strong><br><span class="small-note">個人情報・写真許可・内容の妥当性を確認します。</span></div></div>
           <div class="flow-item"><div><strong>期間限定で掲載</strong><br><span class="small-note">問題がなければホームページに掲載します。</span></div></div>
           <div class="flow-item"><div><strong>期限後に非表示</strong><br><span class="small-note">掲載期限を過ぎた情報は画面に表示しません。</span></div></div>
         </div>
@@ -171,7 +232,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           すべての掲載依頼が掲載されるとは限りません。内容確認の結果、掲載を見送る場合や、表現を調整する場合があります。
         </div>
         <p>写真に人物が写る場合は、投稿者の責任で掲載許可を得てください。特にお子様の写真は慎重に取り扱います。</p>
-        <p>このページは初期運用版です。今後、Googleフォーム受付に切り替えることもできます。</p>
+        <p>回答はGoogleスプレッドシートに蓄積されるため、将来的には「公開OK」「掲載開始日」「掲載終了日」を使った自動表示にも発展できます。</p>
       </div>
     </section>
   </main>
