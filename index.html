@@ -939,6 +939,53 @@
       }
     }
 
+  
+    .visitor-counter {
+      padding: 0 0 18px;
+    }
+    .visitor-counter-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 18px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(127,29,29,0.05);
+    }
+    .visitor-counter-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: 14px;
+    }
+    .visitor-counter-values {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .visitor-counter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--soft-orange);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .visitor-counter-note {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
   </style>
 </head>
 <body>
@@ -1041,6 +1088,23 @@
         </div>
       </div>
     </section>
+
+
+    <section id="visitor-counter" class="visitor-counter" aria-label="訪問者カウンター">
+      <div class="container">
+        <div class="visitor-counter-card">
+          <div>
+            <div class="visitor-counter-title">👀 訪問者カウンター</div>
+            <p class="visitor-counter-note">同じブラウザからの訪問は、原則1日1回として集計します。</p>
+          </div>
+          <div class="visitor-counter-values">
+            <span class="visitor-counter-pill">本日 <span id="visitorToday">確認中</span></span>
+            <span class="visitor-counter-pill">累計 <span id="visitorTotal">確認中</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
     <section id="news">
@@ -1685,5 +1749,71 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    /*
+      訪問者カウンター設定
+      Apps ScriptをWebアプリとしてデプロイしたあと、下の VISITOR_COUNTER_API_URL を
+      実際のWebアプリURLに置き換えてください。
+      例：https://script.google.com/macros/s/XXXXXXXXXXXXXXXX/exec
+    */
+    const VISITOR_COUNTER_API_URL = 'https://script.google.com/macros/s/AKfycbxiYJhOkhUC-tkLFMsm--e61K35sLUttHYlukWHTzQ8LHd45tquI9SH3E88aGb89H6xYg/exec';
+
+    function getVisitorId() {
+      const key = 'kawashimaD4VisitorId';
+      let visitorId = localStorage.getItem(key);
+      if (!visitorId) {
+        if (window.crypto && window.crypto.randomUUID) {
+          visitorId = window.crypto.randomUUID();
+        } else {
+          visitorId = 'v-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+        }
+        localStorage.setItem(key, visitorId);
+      }
+      return visitorId;
+    }
+
+    function renderVisitorCounter(payload) {
+      const todayEl = document.getElementById('visitorToday');
+      const totalEl = document.getElementById('visitorTotal');
+      if (!todayEl || !totalEl) return;
+
+      if (!payload || payload.ok !== true) {
+        todayEl.textContent = '取得不可';
+        totalEl.textContent = '取得不可';
+        return;
+      }
+
+      todayEl.textContent = `${Number(payload.today || 0).toLocaleString()}人`;
+      totalEl.textContent = `${Number(payload.total || 0).toLocaleString()}人`;
+    }
+
+    window.renderKawashimaVisitorCounter = renderVisitorCounter;
+
+    function loadVisitorCounter() {
+      const todayEl = document.getElementById('visitorToday');
+      const totalEl = document.getElementById('visitorTotal');
+
+      if (!VISITOR_COUNTER_API_URL || VISITOR_COUNTER_API_URL === 'https://script.google.com/macros/s/AKfycbxiYJhOkhUC-tkLFMsm--e61K35sLUttHYlukWHTzQ8LHd45tquI9SH3E88aGb89H6xYg/exec') {
+        if (todayEl) todayEl.textContent = '未設定';
+        if (totalEl) totalEl.textContent = '未設定';
+        return;
+      }
+
+      const visitorId = encodeURIComponent(getVisitorId());
+      const page = encodeURIComponent(location.pathname || '/');
+      const separator = VISITOR_COUNTER_API_URL.includes('?') ? '&' : '?';
+      const script = document.createElement('script');
+      script.src = `${VISITOR_COUNTER_API_URL}${separator}callback=renderKawashimaVisitorCounter&visitorId=${visitorId}&page=${page}&cacheBust=${Date.now()}`;
+      script.onerror = function () {
+        if (todayEl) todayEl.textContent = '取得不可';
+        if (totalEl) totalEl.textContent = '取得不可';
+      };
+      document.body.appendChild(script);
+    }
+
+    loadVisitorCounter();
+  </script>
+
 </body>
 </html>
