@@ -274,7 +274,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <div>
             <span class="board-label">地域</span>
             <h2>地域からのお知らせ</h2>
-            <p class="small-note">小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載対象です。</p>
+            <p class="small-note">小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載対象としています。</p>
           </div>
           <span class="badge" id="localPostCount">確認中</span>
         </div>
@@ -477,12 +477,11 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
   <script>
     /*
       スプレッドシート連携設定
-      Apps ScriptをWebアプリとしてデプロイしたあと、下の WEB_APP_URL_HERE を
+      Apps ScriptをWebアプリとしてデプロイしたあと、下の https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec を
       実際のWebアプリURLに置き換えてください。
       例：https://script.google.com/macros/s/XXXXXXXXXXXXXXXX/exec
     */
-    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec
-';
+    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec';
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, function (char) {
@@ -588,7 +587,7 @@ ${thumbnail}
     function loadSpreadsheetNotices() {
       const status = document.getElementById('sheetStatus');
 
-      if (!COMMUNITY_NOTICE_API_URL || COMMUNITY_NOTICE_API_URL === 'WEB_APP_URL_HERE') {
+      if (!COMMUNITY_NOTICE_API_URL || COMMUNITY_NOTICE_API_URL === 'https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec') {
         if (status) status.textContent = 'スプレッドシート連携は未設定です。現在はページ内の掲載内容を表示しています。';
         return;
       }
