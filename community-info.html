@@ -446,7 +446,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       Apps ScriptをWebアプリとしてデプロイしたあと、下のURLを実際のWebアプリURLに置き換えてください。
       例：https://script.google.com/macros/s/XXXXXXXXXXXXXXXX/exec
     */
-    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbwH8sRsu0Np0zO6kOWppmiYTLF8N7YTc7PKGpdmYTMq7uSB-fpXYxu_bESqY0QfyjFWDg/exec';
+    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbzE4op9ZfMu8Wg-coBHlBSbzCK6UbGCXXGVvV-RHEhjQ55un2u3AYaivxon3G8af0q8/exec';
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, function (char) {
@@ -541,7 +541,8 @@ ${thumbnail}
 
       if (status) {
         const updatedAt = payload.updatedAt ? ` 最終取得：${escapeHtml(payload.updatedAt)}` : '';
-        status.textContent = `地域からのお知らせはスプレッドシートから公開OKのお知らせを表示しています。町内会からのお知らせは固定掲載です。${updatedAt}`;
+        const cacheText = payload.cache ? ` / cache:${escapeHtml(payload.cache)}` : '';
+        status.textContent = `地域からのお知らせはスプレッドシートから公開OKのお知らせを表示しています。町内会からのお知らせは固定掲載です。${updatedAt}${cacheText}`;
       }
     }
 
