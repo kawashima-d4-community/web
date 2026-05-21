@@ -142,6 +142,66 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       .info-table th { border-bottom: 0; padding-bottom: 2px; }
       .qr-panel img { width: 132px; height: 132px; }
     }
+  
+    /* スマートフォン表示のはみ出し対策 */
+    body {
+      overflow-x: hidden;
+    }
+    .form-entry-card,
+    .card,
+    .hero {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .form-entry-card {
+      align-items: start;
+    }
+    .form-entry-card > div {
+      min-width: 0;
+    }
+    .form-entry-card p,
+    .notice,
+    .small-note {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .button {
+      max-width: 100%;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.45;
+    }
+    .qr-panel {
+      width: 100%;
+      max-width: 190px;
+      justify-self: center;
+    }
+    .qr-panel img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+      .hero,
+      .card,
+      .form-entry-card {
+        padding: 18px;
+        border-radius: 20px;
+      }
+      .form-entry-card {
+        grid-template-columns: 1fr;
+      }
+      .button {
+        width: 100%;
+      }
+      .qr-panel {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -162,13 +222,13 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         <div>
           <span class="badge">Google Form</span>
           <h2>掲載依頼フォーム</h2>
-          <p>掲載したい内容がある方は、Googleフォームから依頼してください。スマートフォンから入力しやすい形式です。</p>
+          <p>掲載したい内容がある方は、Googleフォームから依頼してください。スマートフォンからも入力できます。</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
             <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A/viewform" target="_blank" rel="noopener">Googleフォームを開く</a>
             <a class="button secondary" href="./community-info.html">掲載中のお知らせを見る</a>
           </div>
           <div class="notice">
-            管理者向け：Googleフォーム作成後、このページ内の <code>https://docs.google.com/forms/d/e/1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A/viewform</code> を実際のフォームURLに置き換えると、ボタンとQRコードを有効化できます。
+            Googleフォームから地域情報掲載依頼を送信できます。送信内容は町内会側で確認し、問題がなければ期間限定で掲載します。
           </div>
         </div>
         <div class="qr-panel">
