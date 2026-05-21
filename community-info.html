@@ -217,7 +217,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
         <span class="badge" id="totalPostCount">確認中</span>
       </div>
-      <div class="sheet-status" id="sheetStatus">スプレッドシート連携は未設定です。現在はページ内の掲載内容を表示しています。</div>
+      <div class="sheet-status" id="sheetStatus">スプレッドシート連携データを読み込み中です。</div>
 
       <div class="board-section" id="chonaikai-news">
         <div class="board-section-head">
@@ -481,7 +481,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       実際のWebアプリURLに置き換えてください。
       例：https://script.google.com/macros/s/XXXXXXXXXXXXXXXX/exec
     */
-    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec';
+    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbwH8sRsu0Np0zO6kOWppmiYTLF8N7YTc7PKGpdmYTMq7uSB-fpXYxu_bESqY0QfyjFWDg/exec';
 
     function escapeHtml(value) {
       return String(value ?? '').replace(/[&<>"']/g, function (char) {
@@ -587,16 +587,36 @@ ${thumbnail}
     function loadSpreadsheetNotices() {
       const status = document.getElementById('sheetStatus');
 
-      if (!COMMUNITY_NOTICE_API_URL || COMMUNITY_NOTICE_API_URL === 'https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec') {
-        if (status) status.textContent = 'スプレッドシート連携は未設定です。現在はページ内の掲載内容を表示しています。';
+      if (!COMMUNITY_NOTICE_API_URL || COMMUNITY_NOTICE_API_URL.indexOf('script.google.com/macros/s/') === -1) {
+        if (status) status.textContent = 'スプレッドシート連携URLが未設定です。現在はページ内の掲載内容を表示しています。';
         return;
       }
+
+      if (status) {
+        status.textContent = 'スプレッドシート連携データを読み込み中です。';
+      }
+
+      let loaded = false;
+      const timeoutId = setTimeout(function () {
+        if (!loaded && status) {
+          status.textContent = 'スプレッドシート連携データを読み込めませんでした。Webアプリの公開設定またはURLを確認してください。';
+        }
+      }, 8000);
+
+      const originalCallback = window.renderCommunityNoticesFromSheet;
+      window.renderCommunityNoticesFromSheet = function (payload) {
+        loaded = true;
+        clearTimeout(timeoutId);
+        originalCallback(payload);
+      };
 
       const script = document.createElement('script');
       const separator = COMMUNITY_NOTICE_API_URL.includes('?') ? '&' : '?';
       script.src = `${COMMUNITY_NOTICE_API_URL}${separator}callback=renderCommunityNoticesFromSheet&cacheBust=${Date.now()}`;
       script.onerror = function () {
-        if (status) status.textContent = 'スプレッドシート連携データを読み込めませんでした。ページ内の掲載内容を表示しています。';
+        loaded = true;
+        clearTimeout(timeoutId);
+        if (status) status.textContent = 'スプレッドシート連携データを読み込めませんでした。Webアプリの公開設定またはURLを確認してください。';
       };
       document.body.appendChild(script);
     }
