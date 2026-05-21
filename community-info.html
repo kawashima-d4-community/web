@@ -190,6 +190,21 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       .flow-grid { grid-template-columns: 1fr; }
       .button { width: 100%; }
     }
+  
+    .review-note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .review-note strong {
+      color: var(--primary-dark);
+    }
+
   </style>
 </head>
 <body>
@@ -204,6 +219,9 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <a class="button" href="./posting-request.html">地域情報の掲載を依頼する</a>
           <a class="button secondary" href="./index.html#news">What's Newへ戻る</a>
         </div>
+        <div class="review-note">
+          <strong>掲載依頼について：</strong>掲載には内容確認・審査があるため、公開まで少しお時間をいただく場合があります。
+        </div>
       </div>
     </div>
   </header>
@@ -217,20 +235,50 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
         <span class="badge" id="totalPostCount">確認中</span>
       </div>
-      <div class="sheet-status" id="sheetStatus">スプレッドシート連携データを読み込み中です。</div>
+      <div class="sheet-status" id="sheetStatus">地域からのお知らせをスプレッドシートから読み込み中です。</div>
 
       <div class="board-section" id="chonaikai-news">
         <div class="board-section-head">
           <div>
             <span class="board-label">町内会</span>
             <h2>町内会からのお知らせ</h2>
-            <p class="small-note">川島第四町内会の行事・活動報告・写真掲載・清掃・防災などの公式なお知らせです。掲載期間は原則1か月です。</p>
+            <p class="small-note">川島第四町内会の行事・活動報告・写真掲載・清掃・防災などの公式なお知らせです。町内会からのお知らせは固定掲載として管理します。</p>
           </div>
           <span class="badge" id="chonaikaiPostCount">確認中</span>
         </div>
 
         <div class="post-list" id="chonaikaiPostList">
-        
+          <article id="softball-20260517" class="community-post" data-board="chonaikai" data-start="2026-05-17" data-expire="2026-06-17">
+            <span class="post-category">写真</span>
+            <div class="post-body">
+              <h3>ソフトボール大会の写真を掲載しました</h3>
+              <a class="post-thumb-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">
+                <img class="post-thumb" src="./thumbnails/softball-20260517-thumb.jpg" alt="ソフトボール大会の様子" />
+              </a>
+              <p>2026年5月17日に開催されたソフトボール大会の写真をGoogleドライブでご覧いただけます。サムネイル画像をクリックしても写真一覧へ移動できます。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年5月17日</span>
+                <span>掲載終了：2026年6月17日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+              <div class="post-actions">
+                <a class="button" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
+              </div>
+            </div>
+          </article>
+
+          <article id="sawayaka-cleaning-2026" class="community-post" data-board="chonaikai" data-start="2026-05-21" data-expire="2026-06-29">
+            <span class="post-category">清掃活動</span>
+            <div class="post-body">
+              <h3>さわやか清掃の実施日を更新しました</h3>
+              <p>さわやか清掃は日曜日9時から実施します。集合場所は川島第4町内会館です。雨天中止です。第1回は6月28日、第2回は9月20日、第3回は12月20日、第4回は3月21日を予定しています。</p>
+              <div class="post-meta">
+                <span>掲載開始：2026年5月21日</span>
+                <span>掲載終了：2026年6月29日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+            </div>
+          </article>
         </div>
 
         <div class="card empty-state" id="chonaikaiEmptyState">
@@ -250,7 +298,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
 
         <div class="post-list" id="localPostList">
-        
+
         </div>
 
         <div class="card empty-state" id="localEmptyState">
@@ -418,31 +466,29 @@ ${thumbnail}
 
     function renderSpreadsheetNotices(payload) {
       const status = document.getElementById('sheetStatus');
-      const chonaikaiList = document.getElementById('chonaikaiPostList');
       const localList = document.getElementById('localPostList');
 
       if (!payload || !Array.isArray(payload.items)) {
         if (status) status.textContent = 'スプレッドシート連携データを読み込めませんでした。ページ内の掲載内容を表示しています。';
+        updateCommunityPosts();
         return;
       }
 
-      chonaikaiList.innerHTML = '';
+      // 町内会からのお知らせは静的コンテンツとして管理するため、ここでは地域からのお知らせだけを差し替えます。
       localList.innerHTML = '';
 
-      payload.items.forEach((item) => {
-        const article = createNoticeArticle(item);
-        if (normalizeBoard(item.board) === 'chonaikai') {
-          chonaikaiList.appendChild(article);
-        } else {
+      payload.items
+        .filter((item) => normalizeBoard(item.board) === 'local')
+        .forEach((item) => {
+          const article = createNoticeArticle(item);
           localList.appendChild(article);
-        }
-      });
+        });
 
       updateCommunityPosts();
 
       if (status) {
         const updatedAt = payload.updatedAt ? ` 最終取得：${escapeHtml(payload.updatedAt)}` : '';
-        status.textContent = `スプレッドシートから公開OKのお知らせを表示しています。${updatedAt}`;
+        status.textContent = `地域からのお知らせはスプレッドシートから公開OKのお知らせを表示しています。町内会からのお知らせは固定掲載です。${updatedAt}`;
       }
     }
 
@@ -457,7 +503,7 @@ ${thumbnail}
       }
 
       if (status) {
-        status.textContent = 'スプレッドシート連携データを読み込み中です。';
+        status.textContent = '地域からのお知らせをスプレッドシートから読み込み中です。';
       }
 
       let loaded = false;
