@@ -117,6 +117,17 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       margin-bottom: 8px;
     }
     .post-list { display: grid; gap: 14px; }
+
+    .sheet-status {
+      margin: 12px 0 0;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: var(--soft-orange);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
     .community-post {
       display: grid;
       grid-template-columns: 110px 1fr;
@@ -206,6 +217,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
         <span class="badge" id="totalPostCount">確認中</span>
       </div>
+      <div class="sheet-status" id="sheetStatus">スプレッドシート連携は未設定です。現在はページ内の掲載内容を表示しています。</div>
 
       <div class="board-section" id="chonaikai-news">
         <div class="board-section-head">
@@ -268,24 +280,6 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
 
         <div class="post-list" id="localPostList">
-          <article class="community-post" data-board="local" data-start="2026-05-22" data-expire="2026-06-22">
-            <span class="post-category">その他</span>
-            <div class="post-body">
-              <h3>テスト掲載</h3>
-              <p>これはテストです。</p>
-              <div class="post-actions">
-                <a class="button" href="https://photos.app.goo.gl/esev2R5k4buMbUVP7" target="_blank" rel="noopener">写真を見る</a>
-              </div>
-              <div class="post-meta">
-                <span>開催日：2026年5月21日</span>
-                <span>掲載開始：2026年5月22日</span>
-                <span>掲載終了：2026年6月22日</span>
-                <span>区分：地域からのお知らせ</span>
-              </div>
-            </div>
-          </article>
-
-
           <article class="community-post" data-board="local" data-start="2026-05-20" data-expire="2099-12-31">
             <span class="post-category">掲載依頼</span>
             <div class="post-body">
@@ -479,5 +473,137 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
     updateCommunityPosts();
   </script>
+
+  <script>
+    /*
+      スプレッドシート連携設定
+      Apps ScriptをWebアプリとしてデプロイしたあと、下の WEB_APP_URL_HERE を
+      実際のWebアプリURLに置き換えてください。
+      例：https://script.google.com/macros/s/XXXXXXXXXXXXXXXX/exec
+    */
+    const COMMUNITY_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbzk51jp9D9SpvwdbmDNujTnVhBlOTlI5NRGwm6YeBvhwr7YFDZmT4TmFPPi-oyE-uFYNw/exec
+';
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, function (char) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[char];
+      });
+    }
+
+    function normalizeBoard(value) {
+      return value === 'chonaikai' ? 'chonaikai' : 'local';
+    }
+
+    function createNoticeArticle(item) {
+      const board = normalizeBoard(item.board);
+      const category = escapeHtml(item.category || 'お知らせ');
+      const title = escapeHtml(item.title || 'お知らせ');
+      const body = escapeHtml(item.body || '').replace(/\n/g, '<br />');
+      const startDate = escapeHtml(item.startDate || '');
+      const expireDate = escapeHtml(item.expireDate || '');
+      const startLabel = escapeHtml(item.startLabel || startDate);
+      const expireLabel = escapeHtml(item.expireLabel || expireDate);
+      const boardLabel = board === 'chonaikai' ? '町内会からのお知らせ' : '地域からのお知らせ';
+
+      const article = document.createElement('article');
+      article.className = 'community-post';
+      article.dataset.board = board;
+      if (startDate) article.dataset.start = startDate;
+      if (expireDate) article.dataset.expire = expireDate;
+
+      const thumbnail = item.thumbnailUrl ? `
+              <a class="post-thumb-link" href="${escapeHtml(item.photoUrl || item.linkUrl || item.thumbnailUrl)}" target="_blank" rel="noopener">
+                <img class="post-thumb" src="${escapeHtml(item.thumbnailUrl)}" alt="${title}" />
+              </a>` : '';
+
+      const actions = [];
+      if (item.linkUrl) {
+        actions.push(`<a class="button" href="${escapeHtml(item.linkUrl)}" target="_blank" rel="noopener">詳しく見る</a>`);
+      }
+      if (item.photoUrl) {
+        actions.push(`<a class="button" href="${escapeHtml(item.photoUrl)}" target="_blank" rel="noopener">写真を見る</a>`);
+      }
+      const actionHtml = actions.length ? `
+              <div class="post-actions">
+                ${actions.join('\n                ')}
+              </div>` : '';
+
+      const eventHtml = item.eventLabel ? `<span>開催日：${escapeHtml(item.eventLabel)}</span>` : '';
+
+      article.innerHTML = `
+            <span class="post-category">${category}</span>
+            <div class="post-body">
+              <h3>${title}</h3>
+${thumbnail}
+              <p>${body}</p>${actionHtml}
+              <div class="post-meta">
+                ${eventHtml}
+                <span>掲載開始：${startLabel}</span>
+                <span>掲載終了：${expireLabel}</span>
+                <span>区分：${boardLabel}</span>
+              </div>
+            </div>`;
+
+      return article;
+    }
+
+    function renderSpreadsheetNotices(payload) {
+      const status = document.getElementById('sheetStatus');
+      const chonaikaiList = document.getElementById('chonaikaiPostList');
+      const localList = document.getElementById('localPostList');
+
+      if (!payload || !Array.isArray(payload.items)) {
+        if (status) status.textContent = 'スプレッドシート連携データを読み込めませんでした。ページ内の掲載内容を表示しています。';
+        return;
+      }
+
+      chonaikaiList.innerHTML = '';
+      localList.innerHTML = '';
+
+      payload.items.forEach((item) => {
+        const article = createNoticeArticle(item);
+        if (normalizeBoard(item.board) === 'chonaikai') {
+          chonaikaiList.appendChild(article);
+        } else {
+          localList.appendChild(article);
+        }
+      });
+
+      updateCommunityPosts();
+
+      if (status) {
+        const updatedAt = payload.updatedAt ? ` 最終取得：${escapeHtml(payload.updatedAt)}` : '';
+        status.textContent = `スプレッドシートから公開OKのお知らせを表示しています。${updatedAt}`;
+      }
+    }
+
+    window.renderCommunityNoticesFromSheet = renderSpreadsheetNotices;
+
+    function loadSpreadsheetNotices() {
+      const status = document.getElementById('sheetStatus');
+
+      if (!COMMUNITY_NOTICE_API_URL || COMMUNITY_NOTICE_API_URL === 'WEB_APP_URL_HERE') {
+        if (status) status.textContent = 'スプレッドシート連携は未設定です。現在はページ内の掲載内容を表示しています。';
+        return;
+      }
+
+      const script = document.createElement('script');
+      const separator = COMMUNITY_NOTICE_API_URL.includes('?') ? '&' : '?';
+      script.src = `${COMMUNITY_NOTICE_API_URL}${separator}callback=renderCommunityNoticesFromSheet&cacheBust=${Date.now()}`;
+      script.onerror = function () {
+        if (status) status.textContent = 'スプレッドシート連携データを読み込めませんでした。ページ内の掲載内容を表示しています。';
+      };
+      document.body.appendChild(script);
+    }
+
+    loadSpreadsheetNotices();
+  </script>
+
 </body>
 </html>
