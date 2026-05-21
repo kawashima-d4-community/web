@@ -125,7 +125,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     .flow-item { counter-increment: flow; display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; padding: 12px; border-radius: 14px; background: #fff; border: 1px solid var(--border); }
     .flow-item::before { content: counter(flow); width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; font-size: 13px; }
     .notice { padding: 16px; border-radius: 16px; background: var(--soft-orange); border: 1px solid var(--border); color: var(--muted); font-size: 14px; }
-    .setup-note {
+    .notice {
       margin-top: 12px;
       padding: 12px 14px;
       border-radius: 14px;
@@ -164,16 +164,16 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <h2>掲載依頼フォーム</h2>
           <p>掲載したい内容がある方は、Googleフォームから依頼してください。スマートフォンから入力しやすい形式です。</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-            <a class="button disabled" href="https://forms.gle/FORM_URL_HERE" target="_blank" rel="noopener">Googleフォーム準備中</a>
+            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A/viewform" target="_blank" rel="noopener">Googleフォームを開く</a>
             <a class="button secondary" href="./community-info.html">掲載中のお知らせを見る</a>
           </div>
-          <div class="setup-note">
-            管理者向け：Googleフォーム作成後、このページ内の <code>https://forms.gle/FORM_URL_HERE</code> を実際のフォームURLに置き換えると、ボタンとQRコードを有効化できます。
+          <div class="notice">
+            管理者向け：Googleフォーム作成後、このページ内の <code>https://docs.google.com/forms/d/e/1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A/viewform</code> を実際のフォームURLに置き換えると、ボタンとQRコードを有効化できます。
           </div>
         </div>
         <div class="qr-panel">
-          <img alt="地域情報掲載依頼フォーム QRコード準備中" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fforms.gle%2FFORM_URL_HERE" />
-          <span class="small-note">QRコード準備中</span>
+          <img alt="地域情報掲載依頼フォーム スマホで読み取り" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A%2Fviewform" />
+          <span class="small-note">スマホで読み取り</span>
         </div>
       </div>
     </section>
