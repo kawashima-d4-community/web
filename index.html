@@ -941,7 +941,8 @@
 
   
     .visitor-counter {
-      padding: 0 0 18px;
+      padding: 14px 0 6px;
+      background: rgba(255,248,246,0.72);
     }
     .visitor-counter-card {
       display: flex;
@@ -989,7 +990,23 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">本文へスキップ</a>
+  
+<section id="visitor-counter" class="visitor-counter" aria-label="訪問者カウンター">
+      <div class="container">
+        <div class="visitor-counter-card">
+          <div>
+            <div class="visitor-counter-title">👀 訪問者カウンター</div>
+            <p class="visitor-counter-note">同じブラウザからの訪問は、原則1日1回として集計します。</p>
+          </div>
+          <div class="visitor-counter-values">
+            <span class="visitor-counter-pill">本日 <span id="visitorToday">確認中</span></span>
+            <span class="visitor-counter-pill">累計 <span id="visitorTotal">確認中</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
 
   <header>
     <div class="container nav" aria-label="サイトメニュー">
@@ -1088,25 +1105,6 @@
         </div>
       </div>
     </section>
-
-
-    <section id="visitor-counter" class="visitor-counter" aria-label="訪問者カウンター">
-      <div class="container">
-        <div class="visitor-counter-card">
-          <div>
-            <div class="visitor-counter-title">👀 訪問者カウンター</div>
-            <p class="visitor-counter-note">同じブラウザからの訪問は、原則1日1回として集計します。</p>
-          </div>
-          <div class="visitor-counter-values">
-            <span class="visitor-counter-pill">本日 <span id="visitorToday">確認中</span></span>
-            <span class="visitor-counter-pill">累計 <span id="visitorTotal">確認中</span></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
     <section id="news">
       <div class="container">
         <div class="section-head">
