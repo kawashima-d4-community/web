@@ -1103,6 +1103,63 @@
       }
     }
 
+  
+    /* 季節の花・花言葉 */
+    .season-flower {
+      order: 3;
+      flex: 1 1 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 7px 10px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(238,216,201,0.9);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .season-flower-icon {
+      font-size: 17px;
+      line-height: 1;
+    }
+    .season-flower strong {
+      color: var(--primary-dark);
+      font-weight: 1000;
+    }
+    .season-flower span {
+      min-width: 0;
+    }
+    body.season-spring .hero {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,214,224,0.32), transparent 34%),
+        radial-gradient(circle at 88% 10%, rgba(255,246,205,0.28), transparent 28%);
+    }
+    body.season-summer .hero {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,235,151,0.30), transparent 34%),
+        radial-gradient(circle at 88% 10%, rgba(155,218,255,0.22), transparent 30%);
+    }
+    body.season-autumn .hero {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,198,126,0.30), transparent 34%),
+        radial-gradient(circle at 88% 10%, rgba(217,104,79,0.18), transparent 30%);
+    }
+    body.season-winter .hero {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(220,240,255,0.32), transparent 34%),
+        radial-gradient(circle at 88% 10%, rgba(255,255,255,0.65), transparent 30%);
+    }
+    @media (max-width: 760px) {
+      .season-flower {
+        align-items: flex-start;
+        font-size: 11px;
+        padding: 7px 9px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1156,6 +1213,10 @@
         <div class="top-status-message" aria-label="今日の地域メッセージ">
           <span class="top-status-label">今日の地域メッセージ</span>
           <span id="dailyMessageText">地域メッセージを準備中...</span>
+        </div>
+        <div class="season-flower" aria-label="季節の花と花言葉">
+          <span class="season-flower-icon" id="seasonFlowerIcon" aria-hidden="true">🌸</span>
+          <span id="seasonFlowerText">季節の花を準備中...</span>
         </div>
         <div class="top-status-panel">
           <span class="top-status-pill">
@@ -1849,6 +1910,40 @@
     }
 
     updateDailyMessage();
+
+
+    const seasonalFlowers = [
+      { month: 1, season: 'winter', icon: '🌸', flower: '梅', words: '忍耐・希望', message: '寒さの中にも、春を待つ力を感じる花です。' },
+      { month: 2, season: 'winter', icon: '🌺', flower: '椿', words: '控えめな優しさ', message: '落ち着いた美しさで、冬の地域を彩ります。' },
+      { month: 3, season: 'spring', icon: '🌸', flower: '桜', words: '精神美・新しい始まり', message: '新しい季節の始まりを感じさせてくれる花です。' },
+      { month: 4, season: 'spring', icon: '🌷', flower: 'チューリップ', words: '思いやり', message: '明るい色合いが、地域の春を楽しくしてくれます。' },
+      { month: 5, season: 'spring', icon: '🌿', flower: '菖蒲', words: 'よい便り', message: '初夏を前に、すこやかな毎日を願う花です。' },
+      { month: 6, season: 'summer', icon: '💠', flower: 'あじさい', words: '家族・団らん', message: '雨の季節にも、地域のつながりを感じさせてくれます。' },
+      { month: 7, season: 'summer', icon: '🌺', flower: '朝顔', words: '絆', message: '朝の涼しさとともに、一日の始まりを知らせてくれます。' },
+      { month: 8, season: 'summer', icon: '🌻', flower: 'ひまわり', words: '憧れ・元気', message: '夏の日差しに向かって咲く、元気をくれる花です。' },
+      { month: 9, season: 'autumn', icon: '🌼', flower: 'コスモス', words: '調和', message: '秋風に揺れる姿が、穏やかな地域のつながりを感じさせます。' },
+      { month: 10, season: 'autumn', icon: '🧡', flower: '金木犀', words: '謙虚・気高い人', message: 'ふと香る甘い香りが、秋の訪れを知らせてくれます。' },
+      { month: 11, season: 'autumn', icon: '🌼', flower: '菊', words: '高貴・長寿', message: '落ち着いた季節に、健やかな暮らしを願う花です。' },
+      { month: 12, season: 'winter', icon: '🔴', flower: '南天', words: 'よい家庭', message: '年末の暮らしに、あたたかさと縁起の良さを添えてくれます。' }
+    ];
+
+    function updateSeasonalFlower() {
+      const iconElement = document.getElementById('seasonFlowerIcon');
+      const textElement = document.getElementById('seasonFlowerText');
+      if (!iconElement || !textElement) return;
+
+      const now = new Date();
+      const current = seasonalFlowers[now.getMonth()] || seasonalFlowers[0];
+
+      iconElement.textContent = current.icon;
+      textElement.innerHTML = `季節の花：<strong>${current.flower}</strong>　花言葉：<strong>${current.words}</strong>　${current.message}`;
+
+      document.body.classList.remove('season-spring', 'season-summer', 'season-autumn', 'season-winter');
+      document.body.classList.add(`season-${current.season}`);
+    }
+
+    updateSeasonalFlower();
+
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
