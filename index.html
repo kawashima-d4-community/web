@@ -1113,6 +1113,33 @@
       </nav>
     </div>
   </header>
+
+<section id="daily-info" class="top-status" aria-label="今日の地域情報と訪問者カウンター">
+      <div class="container top-status-inner">
+        <div class="top-status-message" aria-label="今日の地域メッセージ">
+          <span class="top-status-label">今日の地域メッセージ</span>
+          <span id="dailyMessageText">地域メッセージを準備中...</span>
+        </div>
+        <div class="top-status-panel">
+          <span class="top-status-pill">
+            <span class="pill-label">今日</span>
+            <span id="todayDate">日付確認中</span>
+          </span>
+          <span class="top-status-pill weather-compact">
+            <span class="compact-weather-icon" id="weatherIcon" aria-hidden="true">☀️</span>
+            <span class="compact-weather-summary" id="weatherSummary">
+              <span class="weather-pill">天気確認中</span>
+            </span>
+          </span>
+          <span class="top-status-pill counter-compact">
+            <span aria-hidden="true">👀</span>
+            <span>本日 <strong id="visitorToday">確認中</strong></span>
+            <span>累計 <strong id="visitorTotal">確認中</strong></span>
+          </span>
+        </div>
+      </div>
+    </section>
+
 <main id="main">
     <section id="top" class="hero">
       <div class="container hero-grid">
@@ -1144,32 +1171,7 @@
         </div>
       </div>
     </section>
-    <section id="daily-info" class="top-status" aria-label="今日の地域情報と訪問者カウンター">
-      <div class="container top-status-inner">
-        <div class="top-status-message" aria-label="今日の地域メッセージ">
-          <span class="top-status-label">今日の地域メッセージ</span>
-          <span id="dailyMessageText">地域メッセージを準備中...</span>
-        </div>
-        <div class="top-status-panel">
-          <span class="top-status-pill">
-            <span class="pill-label">今日</span>
-            <span id="todayDate">日付確認中</span>
-          </span>
-          <span class="top-status-pill weather-compact">
-            <span class="compact-weather-icon" id="weatherIcon" aria-hidden="true">☀️</span>
-            <span class="compact-weather-summary" id="weatherSummary">
-              <span class="weather-pill">天気確認中</span>
-            </span>
-          </span>
-          <span class="top-status-pill counter-compact">
-            <span aria-hidden="true">👀</span>
-            <span>本日 <strong id="visitorToday">確認中</strong></span>
-            <span>累計 <strong id="visitorTotal">確認中</strong></span>
-          </span>
-        </div>
-      </div>
-    </section>
-    <section id="news">
+<section id="news">
       <div class="container">
         <div class="section-head">
           <div>
