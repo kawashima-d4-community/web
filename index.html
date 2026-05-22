@@ -601,30 +601,23 @@
         grid-column: 1 / -1;
       }
 
-      .daily-info {
-        padding-top: 8px;
-        padding-bottom: 18px;
+      .top-status-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
       }
-      .daily-info-card {
-        grid-template-columns: 1fr;
-        padding: 16px;
-        border-radius: 18px;
+      .top-status-message {
+        max-width: 100%;
+        white-space: normal;
+        font-size: 11px;
       }
-      .weather-icon {
-        width: 56px;
-        height: 56px;
-        border-radius: 18px;
-        font-size: 30px;
+      .top-status-panel {
+        justify-content: flex-start;
+        gap: 5px;
       }
-      .weather-pill {
-        font-size: 12px;
-      }
-      .daily-message {
-        padding: 12px 14px;
-        border-radius: 16px;
-      }
-      .daily-message p {
-        font-size: 14px;
+      .top-status-pill,
+      .top-status .weather-pill {
+        font-size: 10.5px;
       }
 
       .community-entry-grid {
@@ -987,6 +980,92 @@
       font-weight: 700;
     }
 
+  
+    /* 右上コンパクト表示：日付・天気・訪問者カウンター */
+    .top-status {
+      padding: 8px 0 4px;
+      background: rgba(255,248,246,0.72);
+      border-bottom: 1px solid rgba(238,216,201,0.75);
+    }
+    .top-status-inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      min-height: 40px;
+    }
+    .top-status-message {
+      min-width: 0;
+      max-width: 360px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .top-status-label {
+      display: inline-flex;
+      margin-right: 6px;
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+    .top-status-panel {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .top-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 28px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 5px 12px rgba(127,29,29,0.04);
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .pill-label {
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+    .compact-weather-icon {
+      font-size: 16px;
+      line-height: 1;
+    }
+    .compact-weather-summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .top-status .weather-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .counter-compact strong {
+      font-weight: 1000;
+      color: var(--primary-dark);
+    }
+
   </style>
 </head>
 <body>
@@ -1034,23 +1113,6 @@
       </nav>
     </div>
   </header>
-
-  
-<section id="visitor-counter" class="visitor-counter" aria-label="訪問者カウンター">
-      <div class="container">
-        <div class="visitor-counter-card">
-          <div>
-            <div class="visitor-counter-title">👀 訪問者カウンター</div>
-            <p class="visitor-counter-note">同じブラウザからの訪問は、原則1日1回として集計します。</p>
-          </div>
-          <div class="visitor-counter-values">
-            <span class="visitor-counter-pill">本日 <span id="visitorToday">確認中</span></span>
-            <span class="visitor-counter-pill">累計 <span id="visitorTotal">確認中</span></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
 <main id="main">
     <section id="top" class="hero">
       <div class="container hero-grid">
@@ -1082,26 +1144,28 @@
         </div>
       </div>
     </section>
-
-    <section id="daily-info" class="daily-info" aria-label="今日の地域情報">
-      <div class="container">
-        <div class="daily-info-card">
-          <div class="daily-info-main">
-            <span class="badge">Today</span>
-            <h3 id="todayTitle">今日の川島第四町内会エリア</h3>
-            <p id="todayDate">日付を確認中...</p>
-            <div class="weather-summary" id="weatherSummary">
-              <span class="weather-pill">天気情報を取得中...</span>
-            </div>
-            <div class="daily-message" aria-label="今日の地域メッセージ">
-              <span class="daily-message-label">今日の地域メッセージ</span>
-              <p id="dailyMessageText">地域メッセージを準備中...</p>
-            </div>
-            <div class="weather-source">
-              天気データ：<a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
-            </div>
-          </div>
-          <div class="weather-icon" id="weatherIcon" aria-hidden="true">☀️</div>
+    <section id="daily-info" class="top-status" aria-label="今日の地域情報と訪問者カウンター">
+      <div class="container top-status-inner">
+        <div class="top-status-message" aria-label="今日の地域メッセージ">
+          <span class="top-status-label">今日の地域メッセージ</span>
+          <span id="dailyMessageText">地域メッセージを準備中...</span>
+        </div>
+        <div class="top-status-panel">
+          <span class="top-status-pill">
+            <span class="pill-label">今日</span>
+            <span id="todayDate">日付確認中</span>
+          </span>
+          <span class="top-status-pill weather-compact">
+            <span class="compact-weather-icon" id="weatherIcon" aria-hidden="true">☀️</span>
+            <span class="compact-weather-summary" id="weatherSummary">
+              <span class="weather-pill">天気確認中</span>
+            </span>
+          </span>
+          <span class="top-status-pill counter-compact">
+            <span aria-hidden="true">👀</span>
+            <span>本日 <strong id="visitorToday">確認中</strong></span>
+            <span>累計 <strong id="visitorTotal">確認中</strong></span>
+          </span>
         </div>
       </div>
     </section>
