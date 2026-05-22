@@ -996,14 +996,14 @@
     }
     .top-status-message {
       min-width: 0;
-      max-width: 360px;
+      max-width: none;
       color: var(--muted);
       font-size: 11px;
       font-weight: 700;
-      line-height: 1.45;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      line-height: 1.55;
+      overflow: visible;
+      text-overflow: clip;
+      white-space: normal;
     }
     .top-status-label {
       display: inline-flex;
@@ -1064,6 +1064,43 @@
     .counter-compact strong {
       font-weight: 1000;
       color: var(--primary-dark);
+    }
+
+  
+    /* 今日の地域メッセージを省略せず表示 */
+    .top-status-inner {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .top-status-panel {
+      margin-left: auto;
+    }
+    .top-status-message {
+      order: 2;
+      flex: 1 1 100%;
+      max-width: none;
+      width: 100%;
+      overflow: visible;
+      text-overflow: clip;
+      white-space: normal;
+      line-height: 1.55;
+      padding-top: 2px;
+    }
+    .top-status-label {
+      white-space: nowrap;
+    }
+    @media (max-width: 760px) {
+      .top-status-inner {
+        gap: 6px;
+      }
+      .top-status-panel {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .top-status-message {
+        font-size: 11px;
+      }
     }
 
   </style>
