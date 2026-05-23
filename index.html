@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-05-23
-  Update Note: スマホ表示で町内会館写真の看板が見えるように表示位置を調整
+  Update Note: 夏祭りセクションのHTML構造を見直し、PC表示の型崩れを修正
 -->
 <!doctype html>
 <html lang="ja">
@@ -1480,6 +1480,206 @@
       }
     }
 
+  
+    /* 夏祭りセクションのPC表示バランス調整 */
+    .festival-highlight {
+      padding: 30px;
+    }
+    .festival-highlight::after {
+      z-index: 0;
+    }
+    .festival-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+      grid-template-areas:
+        "main image"
+        "points image"
+        "note note";
+      gap: 18px 22px;
+      align-items: start;
+    }
+    .festival-main-content {
+      max-width: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+    }
+    .festival-photo-card {
+      align-self: start;
+      justify-self: end;
+      width: 100%;
+      max-width: 340px;
+      box-sizing: border-box;
+    }
+    .festival-photo-card img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .festival-points {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 0;
+    }
+    .festival-point {
+      min-height: 74px;
+      padding: 12px 13px;
+    }
+    .festival-point b {
+      font-size: 15px;
+    }
+    .festival-point span {
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    #festival .small-note {
+      grid-area: note;
+      grid-column: 1 / -1;
+    }
+    @media (min-width: 981px) {
+      .festival-main h2 {
+        font-size: clamp(34px, 4.2vw, 46px);
+      }
+      .festival-main p {
+        max-width: 760px;
+      }
+    }
+    @media (max-width: 980px) {
+      .festival-highlight {
+        padding: 24px;
+      }
+      .festival-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "image"
+          "points"
+          "note";
+      }
+      .festival-photo-card {
+        justify-self: start;
+        max-width: 360px;
+      }
+      .festival-points {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 560px) {
+      .festival-highlight {
+        padding: 20px;
+        border-radius: 26px;
+      }
+      .festival-photo-card {
+        max-width: 100%;
+      }
+      .festival-main-content {
+        padding: 13px 14px;
+      }
+    }
+
+  
+    /* 夏祭りセクション最終調整：本文左・写真右・日程カードは本文内に固定 */
+    #festival .festival-highlight {
+      padding: 30px;
+    }
+    #festival .festival-highlight::after {
+      z-index: 0;
+    }
+    #festival .festival-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+      grid-template-areas:
+        "main image"
+        "note note";
+      gap: 18px 22px;
+      align-items: start;
+    }
+    #festival .festival-main {
+      grid-area: main;
+      min-width: 0;
+    }
+    #festival .festival-main-content {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+    }
+    #festival .festival-photo-card {
+      grid-area: image;
+      width: 100%;
+      max-width: 320px;
+      justify-self: end;
+      align-self: start;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    #festival .festival-photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center center;
+    }
+    #festival .festival-points {
+      grid-area: auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+    #festival .festival-point {
+      min-height: 0;
+      padding: 12px 13px;
+      border-radius: 16px;
+    }
+    #festival .festival-point b {
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    #festival .festival-point span {
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+    #festival .small-note {
+      grid-area: note;
+      grid-column: auto !important;
+      margin-top: 0 !important;
+    }
+    @media (min-width: 981px) {
+      #festival .festival-main h2 {
+        font-size: clamp(34px, 4.2vw, 46px);
+      }
+      #festival .festival-main p {
+        max-width: 760px;
+      }
+    }
+    @media (max-width: 980px) {
+      #festival .festival-highlight {
+        padding: 24px;
+      }
+      #festival .festival-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "image"
+          "note";
+      }
+      #festival .festival-photo-card {
+        justify-self: start;
+        max-width: 360px;
+      }
+      #festival .festival-points {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 560px) {
+      #festival .festival-highlight {
+        padding: 20px;
+        border-radius: 26px;
+      }
+      #festival .festival-photo-card {
+        max-width: 100%;
+      }
+      #festival .festival-main-content {
+        padding: 13px 14px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -1689,18 +1889,19 @@
                   <li>地域の皆様の交流の場</li>
                 </ul>
               </div>
-            </div>
 
-            <a class="festival-photo-card" href="./thumbnails/summer-festival-thumb.jpg" target="_blank" rel="noopener" aria-label="夏祭りの写真を開く">
-              <img src="./thumbnails/summer-festival-thumb.jpg" alt="川島第四町内会 夏祭りの会場風景" />
-              <span>夏祭りの雰囲気</span>
-            </a>
 
             <div class="festival-points">
               <div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
               <div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
               <div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
             </div>
+            </div>
+
+            <a class="festival-photo-card" href="./thumbnails/summer-festival-thumb.jpg" target="_blank" rel="noopener" aria-label="夏祭りの写真を開く">
+              <img src="./thumbnails/summer-festival-thumb.jpg" alt="川島第四町内会 夏祭りの会場風景" />
+              <span>夏祭りの雰囲気</span>
+            </a>
 
             <p class="small-note" style="grid-column:1 / -1;color:rgba(255,255,255,0.82);margin:0;">
               ※開催内容・時間・雨天時対応などの詳細は、決まり次第、回覧板・掲示・ホームページでお知らせします。
