@@ -301,6 +301,37 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       font-weight: 700;
     }
 
+  
+    /* 町内会からのお知らせ：チラシ・写真サムネイル */
+    .post-visual-link {
+      display: inline-block;
+      margin: 10px 0 12px;
+      text-decoration: none;
+    }
+    .post-visual-thumb {
+      display: block;
+      width: min(220px, 100%);
+      max-height: 260px;
+      object-fit: contain;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(127,29,29,0.08);
+    }
+    .post-visual-caption {
+      display: block;
+      margin-top: 6px;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    @media (max-width: 560px) {
+      .post-visual-thumb {
+        width: min(180px, 100%);
+        max-height: 220px;
+      }
+    }
+
   </style>
 </head>
 <body id="top">
@@ -348,6 +379,10 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
             <span class="post-category">防犯</span>
             <div class="post-body">
               <h3>注意！「強盗殺人事件の捜査をかたるニセ警察詐欺」にご注意ください</h3>
+              <a class="post-visual-link" href="https://drive.google.com/file/d/17hYo4MG23qF-qMtkxPVuZGxWylDNyses/view?usp=sharing" target="_blank" rel="noopener" aria-label="不審者は下見をしています チラシをGoogleドライブで開く">
+                <img class="post-visual-thumb" src="./thumbnails/crime-prevention-20260523-thumb.jpg" alt="不審者は下見をしています 神奈川県警察 防犯啓発チラシ" />
+                <span class="post-visual-caption">防犯啓発チラシを見る（Googleドライブ）</span>
+              </a>
               <p>第四回保土ヶ谷防犯協会からの情報共有です。警察官を名乗り、「栃木県で発生した強盗殺人事件の主犯格があなた名義の口座を知っている」「新しい口座を作り、全財産を移して」などと言う手口が確認されています。</p>
               <p>警察官や公的機関を名乗る電話であっても、口座の作成や資金の移動を求められた場合は、すぐに応じず、いったん電話を切って家族や警察署へ確認してください。地域で声をかけ合い、被害を防ぎましょう。</p>
               <div class="post-meta">
