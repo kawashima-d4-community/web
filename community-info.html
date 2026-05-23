@@ -258,6 +258,49 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       }
     }
 
+  
+    /* 町内会からのお知らせ：見ましたリアクション */
+    .reaction-area {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(238,216,201,0.95);
+    }
+    .reaction-button {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--primary-dark);
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(127,29,29,0.05);
+    }
+    .reaction-button:hover {
+      background: var(--soft-red);
+    }
+    .reaction-button.reacted {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      cursor: default;
+    }
+    .reaction-button:disabled {
+      opacity: 0.72;
+      cursor: default;
+    }
+    .reaction-note {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
   </style>
 </head>
 <body id="top">
@@ -608,6 +651,140 @@ ${thumbnail}
     <a href="#top">↑ トップへ戻る</a>
     <a class="secondary" href="./index.html">ホームページへ戻る</a>
   </div>
+
+
+  <script>
+    const CHONAIKAI_REACTION_API_URL = 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec';
+
+    function getReactionVisitorId() {
+      const key = 'kawashimaD4ReactionVisitorId';
+      let visitorId = localStorage.getItem(key);
+      if (!visitorId) {
+        visitorId = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : 'r-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+        localStorage.setItem(key, visitorId);
+      }
+      return visitorId;
+    }
+
+    function getReactionLocalKey(articleId) {
+      return `kawashimaD4ReactionSeen:${articleId}`;
+    }
+
+    function callReactionApi(params, callback) {
+      if (!CHONAIKAI_REACTION_API_URL || CHONAIKAI_REACTION_API_URL === 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec') {
+        callback({ ok: false, error: 'not_configured' });
+        return;
+      }
+
+      const callbackName = 'reactionCallback_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      params.callback = callbackName;
+
+      let script;
+      window[callbackName] = function(payload) {
+        try {
+          callback(payload || {});
+        } finally {
+          delete window[callbackName];
+          if (script && script.parentNode) script.parentNode.removeChild(script);
+        }
+      };
+
+      const query = Object.keys(params).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(params[key])).join('&');
+      const separator = CHONAIKAI_REACTION_API_URL.includes('?') ? '&' : '?';
+      script = document.createElement('script');
+      script.src = `${CHONAIKAI_REACTION_API_URL}${separator}${query}&cacheBust=${Date.now()}`;
+      script.onerror = function() {
+        callback({ ok: false, error: 'load_error' });
+        delete window[callbackName];
+        if (script && script.parentNode) script.parentNode.removeChild(script);
+      };
+      document.body.appendChild(script);
+    }
+
+    function setReactionButtonState(button, count, reacted) {
+      const safeCount = Number(count || 0).toLocaleString();
+      button.innerHTML = reacted ? `😊 見ました済み <strong>${safeCount}</strong>` : `😊 見ました <strong>${safeCount}</strong>`;
+      button.classList.toggle('reacted', !!reacted);
+      button.disabled = !!reacted;
+    }
+
+    function setupChonaikaiReactions() {
+      const articles = Array.from(document.querySelectorAll('#chonaikaiPostList article.community-post[data-board="chonaikai"][id]'));
+      if (!articles.length) return;
+
+      const articleIds = articles.map((article) => article.id);
+
+      articles.forEach((article) => {
+        if (article.querySelector('.reaction-area')) return;
+
+        const body = article.querySelector('.post-body') || article;
+        const area = document.createElement('div');
+        area.className = 'reaction-area';
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'reaction-button';
+        button.dataset.articleId = article.id;
+
+        const locallyReacted = localStorage.getItem(getReactionLocalKey(article.id)) === '1';
+        setReactionButtonState(button, 0, locallyReacted);
+
+        const note = document.createElement('span');
+        note.className = 'reaction-note';
+        note.textContent = 'この記事を見た方は押してください';
+
+        area.appendChild(button);
+        area.appendChild(note);
+        body.appendChild(area);
+
+        button.addEventListener('click', function() {
+          const articleId = button.dataset.articleId;
+          button.disabled = true;
+          button.textContent = '送信中...';
+
+          callReactionApi({
+            action: 'react',
+            articleId: articleId,
+            visitorId: getReactionVisitorId()
+          }, function(payload) {
+            if (payload && payload.ok) {
+              localStorage.setItem(getReactionLocalKey(articleId), '1');
+              setReactionButtonState(button, payload.count, true);
+            } else {
+              button.disabled = false;
+              button.textContent = '取得できませんでした';
+            }
+          });
+        });
+      });
+
+      callReactionApi({ action: 'summary', articleIds: articleIds.join(',') }, function(payload) {
+        if (!payload || !payload.ok || !payload.counts) {
+          articles.forEach((article) => {
+            const button = article.querySelector('.reaction-button');
+            if (button && CHONAIKAI_REACTION_API_URL === 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec') {
+              button.textContent = '😊 見ました（準備中）';
+              button.disabled = true;
+            }
+          });
+          return;
+        }
+
+        articles.forEach((article) => {
+          const button = article.querySelector('.reaction-button');
+          if (!button) return;
+          const locallyReacted = localStorage.getItem(getReactionLocalKey(article.id)) === '1';
+          setReactionButtonState(button, payload.counts[article.id] || 0, locallyReacted);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupChonaikaiReactions);
+    } else {
+      setupChonaikaiReactions();
+    }
+  </script>
 
 </body>
 </html>
