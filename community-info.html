@@ -760,13 +760,6 @@ ${thumbnail}
 
       callReactionApi({ action: 'summary', articleIds: articleIds.join(',') }, function(payload) {
         if (!payload || !payload.ok || !payload.counts) {
-          articles.forEach((article) => {
-            const button = article.querySelector('.reaction-button');
-            if (button && CHONAIKAI_REACTION_API_URL === 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec') {
-              button.textContent = '😊 見ました（準備中）';
-              button.disabled = true;
-            }
-          });
           return;
         }
 
