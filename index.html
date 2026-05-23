@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-05-23
-  Update Note: 町内会の基本情報セクションをコンパクト表示へ変更
+  Update Note: スマホ表示で町内会館写真の看板が見えるように表示位置を調整
 -->
 <!doctype html>
 <html lang="ja">
@@ -1419,6 +1419,7 @@
       min-height: 142px;
       max-height: 178px;
       object-fit: cover;
+      object-position: center top;
       display: block;
     }
     .basic-hall-mini figcaption {
@@ -1463,6 +1464,19 @@
       .basic-hall-mini img {
         min-height: 118px;
         max-height: 138px;
+      }
+    }
+
+  
+    /* 町内会館写真の看板が切れないように上寄せ表示 */
+    .basic-hall-mini img {
+      object-position: center top;
+    }
+    @media (max-width: 560px) {
+      .basic-hall-mini img {
+        object-position: center top;
+        min-height: 138px;
+        max-height: 156px;
       }
     }
 
