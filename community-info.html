@@ -671,7 +671,7 @@ ${thumbnail}
     }
 
     function callReactionApi(params, callback) {
-      if (!CHONAIKAI_REACTION_API_URL || CHONAIKAI_REACTION_API_URL === 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec') {
+      if (!CHONAIKAI_REACTION_API_URL) {
         callback({ ok: false, error: 'not_configured' });
         return;
       }
@@ -752,7 +752,7 @@ ${thumbnail}
               setReactionButtonState(button, payload.count, true);
             } else {
               button.disabled = false;
-              button.textContent = '取得できませんでした';
+              button.textContent = '😊 見ました（再試行）';
             }
           });
         });
