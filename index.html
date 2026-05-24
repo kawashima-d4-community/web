@@ -1,15 +1,15 @@
 <!--
   川島第四町内会ホームページ index.html
-  Last Updated: 2026-05-23
-  Update Note: 夏祭りセクションのHTML構造を見直し、PC表示の型崩れを修正
+  Last Updated: 2026-05-25
+  Update Note: 暮らしの案内セクションをコンパクト表示へ変更
 -->
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-23" />
-  <meta name="d4-site-version" content="2026-05-23" />
+  <meta name="last-modified" content="2026-05-25" />
+  <meta name="d4-site-version" content="2026-05-25" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -1680,6 +1680,139 @@
       }
     }
 
+  
+    /* 暮らしの案内をコンパクト表示 */
+    .living-compact-section {
+      padding-top: 34px;
+      padding-bottom: 30px;
+    }
+    .living-compact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 14px;
+      padding: 16px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.055);
+    }
+    .living-schedule h3,
+    .living-mini-card h3 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .living-day-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .living-day {
+      min-height: 70px;
+      padding: 9px 7px;
+      border-radius: 14px;
+      background: var(--soft-red);
+      border: 1px solid rgba(238,216,201,0.9);
+      text-align: center;
+    }
+    .living-day b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      margin-bottom: 5px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 1000;
+    }
+    .living-day span {
+      display: block;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .living-day.muted {
+      background: rgba(255,255,255,0.72);
+    }
+    .living-day.muted span {
+      color: var(--muted);
+    }
+    .living-rules {
+      display: grid;
+      gap: 10px;
+    }
+    .living-mini-card {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #fff8f6, #fff);
+      border: 1px solid rgba(238,216,201,0.9);
+    }
+    .living-mini-card ul {
+      margin: 0;
+      padding-left: 1.2em;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .living-mini-card li {
+      margin: 3px 0;
+    }
+    .living-mini-card p {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    @media (max-width: 900px) {
+      .living-compact-card {
+        grid-template-columns: 1fr;
+      }
+      .living-day-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 560px) {
+      .living-compact-section {
+        padding-top: 28px;
+        padding-bottom: 24px;
+      }
+      .living-compact-card {
+        padding: 12px;
+        gap: 10px;
+      }
+      .living-day-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+      .living-day {
+        min-height: 58px;
+        display: grid;
+        grid-template-columns: 32px 1fr;
+        align-items: center;
+        text-align: left;
+        padding: 7px 8px;
+      }
+      .living-day b {
+        margin-bottom: 0;
+      }
+      .living-day span {
+        font-size: 11.5px;
+      }
+      .living-mini-card {
+        padding: 10px 11px;
+      }
+      .living-mini-card ul,
+      .living-mini-card p {
+        font-size: 12.5px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2209,66 +2342,52 @@
       </div>
     </section>
 
-    <section id="living">
+    <section id="living" class="living-compact-section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head compact-section-head">
           <div>
             <span class="badge">Living</span>
             <h2>暮らしの案内</h2>
-            <p>ごみ出し・資源回収カレンダー、回覧板の運用についてご案内します。</p>
+            <p>ごみ出し・資源回収、回覧板の運用をコンパクトにまとめています。</p>
           </div>
         </div>
-        <div class="grid-2">
-          <article class="card">
-            <h3>ごみ出し・資源回収カレンダー</h3>
-            <table class="schedule" aria-label="ごみ出し・資源回収カレンダー">
-              <thead><tr><th>曜日</th><th>回収内容</th></tr></thead>
-              <tbody>
-                <tr><td data-label="曜日">月曜日</td><td data-label="回収内容">プラスチック</td></tr>
-                <tr><td data-label="曜日">火曜日</td><td data-label="回収内容">燃えるゴミ（燃えないゴミ・スプレー缶・電池類）</td></tr>
-                <tr><td data-label="曜日">水曜日</td><td data-label="回収内容">回収なし</td></tr>
-                <tr><td data-label="曜日">木曜日</td><td data-label="回収内容">紙（古紙・段ボールなど）</td></tr>
-                <tr><td data-label="曜日">金曜日</td><td data-label="回収内容">ビン・カン・ペットボトル（小さな金属類）</td></tr>
-                <tr><td data-label="曜日">土曜日</td><td data-label="回収内容">燃えるゴミ（燃えないゴミ・スプレー缶・電池類）</td></tr>
-                <tr><td data-label="曜日">日曜日</td><td data-label="回収内容">回収なし</td></tr>
-              </tbody>
-            </table>
-            <p class="small-note">詳しくはネット検索「保土ヶ谷区の収集曜日」の東川島町をご覧ください。</p>
-          </article>
-          <article class="card">
-            <h3>出し方のルール（厳守）</h3>
-            <ul>
-              <li>ごみは回収日の当日の朝に出してください。</li>
-              <li>前日の夜に出すことは禁止されています。</li>
-              <li>適切なごみの分別にご協力をお願いいたします。</li>
-              <li>段ボールが複数ある場合は、紐でまとめて出してください。</li>
-            </ul>
-            <p class="small-note">【お願い】ごみは当日朝に出してください。分別の徹底をお願いいたします。</p>
-          </article>
-        </div>
-        <div class="card" style="margin-top:18px;">
-          <h3>回覧板の運用について</h3>
-          <p>行政の情報誌や町内会からのお知らせを、以下の流れで各ご家庭へお届けします。</p>
-          <div class="grid-2" style="margin-top:12px;">
-            <div>
-              <h4>配布物（主な内容）</h4>
+
+        <div class="living-compact-card">
+          <div class="living-schedule">
+            <h3>ごみ出し・資源回収</h3>
+            <div class="living-day-grid" aria-label="ごみ出し・資源回収カレンダー">
+              <div class="living-day"><b>月</b><span>プラスチック</span></div>
+              <div class="living-day"><b>火</b><span>燃えるゴミ<br />燃えないゴミ等</span></div>
+              <div class="living-day muted"><b>水</b><span>回収なし</span></div>
+              <div class="living-day"><b>木</b><span>紙・古紙<br />段ボール</span></div>
+              <div class="living-day"><b>金</b><span>ビン・カン<br />ペットボトル</span></div>
+              <div class="living-day"><b>土</b><span>燃えるゴミ<br />燃えないゴミ等</span></div>
+              <div class="living-day muted"><b>日</b><span>回収なし</span></div>
+            </div>
+            <p class="small-note">詳しくはネット検索「保土ヶ谷区の収集曜日」の東川島町をご確認ください。</p>
+          </div>
+
+          <div class="living-rules">
+            <div class="living-mini-card">
+              <h3>出し方のルール</h3>
               <ul>
-                <li>広報よこはま</li>
-                <li>県のたより</li>
-                <li>町内会からの各種ご案内</li>
+                <li>ごみは回収日の当日朝に出してください。</li>
+                <li>前日の夜出しは禁止です。</li>
+                <li>段ボールは紐でまとめてください。</li>
+                <li>分別の徹底にご協力ください。</li>
               </ul>
             </div>
-            <div>
-              <h4>回覧の流れ</h4>
-              <ol>
-                <li>町内会より各エリアの班長へお届けします。</li>
-                <li>班長から班の皆様へ、順次回覧いたします。</li>
-              </ol>
+
+            <div class="living-mini-card">
+              <h3>回覧板</h3>
+              <p>広報よこはま、県のたより、町内会からの各種案内を班長から順次回覧します。</p>
+              <p class="small-note">回覧後は、次のご家庭へ早めにお回しください。</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
   </main>
 
@@ -2276,7 +2395,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-23">2026-05-23</time></span></div>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-25">2026-05-25</time></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
     <div class="container creator-credit">
