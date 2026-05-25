@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-05-25
-  Update Note: フッターリンクの重複表示を修正
+  Update Note: 各種イベントのご案内をコンパクト一覧表示へ変更
 -->
 <!doctype html>
 <html lang="ja">
@@ -1828,6 +1828,137 @@
       text-underline-offset: 3px;
     }
 
+  
+    /* 各種イベントをコンパクト一覧表示 */
+    .events-compact-section {
+      padding-top: 34px;
+      padding-bottom: 28px;
+    }
+    .event-compact-panel {
+      padding: 16px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.055);
+    }
+    .event-compact-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .event-compact-head h3 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .event-compact-head span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .event-compact-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .event-compact-row {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 6px 10px;
+      align-items: center;
+      padding: 9px 10px;
+      border-radius: 14px;
+      background: var(--soft-red);
+      border: 1px solid rgba(238,216,201,0.9);
+      color: var(--ink);
+      text-decoration: none;
+      min-height: 58px;
+    }
+    .event-compact-row:hover {
+      background: #fff8f6;
+    }
+    .event-date {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 4px 7px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 1000;
+      white-space: nowrap;
+      text-align: center;
+    }
+    .event-title {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 1000;
+      line-height: 1.35;
+      min-width: 0;
+    }
+    .event-title small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-top: 1px;
+    }
+    .event-place {
+      grid-column: 2;
+      color: var(--muted);
+      font-size: 11.5px;
+      font-weight: 800;
+      line-height: 1.35;
+      min-width: 0;
+    }
+    .event-highlight {
+      background: linear-gradient(135deg, #fff0dc, #fff8f6);
+      border-color: rgba(242,166,90,0.55);
+    }
+    .event-finished {
+      background: rgba(255,255,255,0.76);
+    }
+    @media (max-width: 900px) {
+      .event-compact-list {
+        grid-template-columns: 1fr;
+      }
+      .event-compact-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+    @media (max-width: 560px) {
+      .events-compact-section {
+        padding-top: 28px;
+        padding-bottom: 24px;
+      }
+      .event-compact-panel {
+        padding: 12px;
+      }
+      .event-compact-row {
+        grid-template-columns: 92px minmax(0, 1fr);
+        min-height: 52px;
+        padding: 8px 9px;
+      }
+      .event-date {
+        font-size: 11px;
+        padding: 4px 6px;
+      }
+      .event-title {
+        font-size: 12.5px;
+      }
+      .event-place {
+        font-size: 11px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2160,53 +2291,119 @@
     </section>
 
 
-    <section id="events">
+    <section id="events" class="events-compact-section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head compact-section-head">
           <div>
             <span class="badge">Events</span>
             <h2>各種イベントのご案内</h2>
-            <p>地域の皆様が参加できる行事や、川島東部連合町内会の関連イベントをご案内します。</p>
+            <p>地域の主な行事予定を、見やすい一覧形式でまとめています。</p>
           </div>
         </div>
-        <p class="mobile-hint">スマートフォンでは、春・夏・秋冬のカードを左右にスワイプしてご覧ください。</p>
-        <div class="grid-3">
-          <article class="card season">
-            <h3>🌸 春（4月〜6月）</h3>
-            <ul class="event-list">
-              <li><strong>4月19日（日）</strong><br />通常総会（町内会）</li>
-              <li><strong>5月17日（日）</strong><br />ソフトボール大会 ＠川島町公園グラウンド（川島第四町内会 第三位）<br /><a class="event-photo-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る（Googleドライブ）</a></li>
-              <li><strong>6月14日（日）</strong><br />川島東部ドッジボール大会 ＠川島小学校体育館</li>
-              <li><strong>6月21日（日）</strong><br />わんぱくっ子竹細工・木工細工教室 ＠川島第四町内会館・横広場</li>
-              <li><strong>6月27日（土）</strong><br />ソフトバレーボール大会 ＠川島小学校体育館</li>
-            </ul>
-          </article>
-          <article class="card season">
-            <h3>🎐 夏（7月〜9月）</h3>
-            <ul class="event-list">
-              <li><strong>7月5日（日）</strong><br />わんぱくっ子紙ヒコーキ大会 ＠川島小学校体育館</li>
-              <li><strong>7月26日（日）</strong><br />わんぱくっ子紙ヒコーキ大会区大会 ＠保土ヶ谷スポーツセンター</li>
-              <li><strong>9月5日（土）</strong><br />ボッチャ大会 ＠川島小学校体育館</li>
-              <li><strong>9月12日（土）・13日（日）</strong><br />夏祭り（宵宮・本宮）＠川島町水道みち公園<br />模擬店、素人演芸あり。13日午前は神輿・山車巡業。</li>
-              <li><strong>9月27日（日）</strong><br />川島小学校地域防災拠点訓練 ＠川島小学校（避難所）</li>
-              <li><strong>9月（時期調整中）</strong><br />敬老のお祝いの集い</li>
-            </ul>
-          </article>
-          <article class="card season">
-            <h3>🍁 秋〜冬（10月〜12月）</h3>
-            <ul class="event-list">
-              <li><strong>10月18日（日）</strong><br />川島東部連合大運動会 ＠川島町公園グラウンド（予備日：25日）</li>
-              <li><strong>11月7日（土）</strong><br />グラウンド・ゴルフ大会（団体戦）＠川島町公園グラウンド（予備日なし）</li>
-              <li><strong>11月3日（火・祝）</strong><br />芋掘り交流会＆わいわいクッキング ＠西谷河原農園・川島地域ケアプラザ</li>
-              <li><strong>11月15日（日）</strong><br />わんぱくっ子デイ・キャンプ（なぞときラリー）＠こども自然公園</li>
-              <li><strong>12月13日（日）</strong><br />オセロ大会 ＠川島第四町内会館</li>
-              <li><strong>12月13日（日）</strong><br />ゴルフ大会区大会 ＠保土ヶ谷公園</li>
-            </ul>
-          </article>
+
+        <div class="event-compact-panel">
+          <div class="event-compact-head">
+            <h3>年間行事予定</h3>
+            <span>日程・会場は変更となる場合があります</span>
+          </div>
+
+          <div class="event-compact-list" aria-label="各種イベント一覧">
+            <a class="event-compact-row event-finished" href="./community-info.html#softball-20260517">
+              <span class="event-date">5/17（日）</span>
+              <span class="event-title">ソフトボール大会 <small>川島第四町内会 第三位</small></span>
+              <span class="event-place">川島町公園グラウンド</span>
+            </a>
+
+            <div class="event-compact-row">
+              <span class="event-date">6/14（日）</span>
+              <span class="event-title">川島東部ドッジボール大会</span>
+              <span class="event-place">川島小学校体育館</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">6/21（日）</span>
+              <span class="event-title">わんぱくっ子竹細工・木工細工教室</span>
+              <span class="event-place">川島第四町内会館・横広場</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">6/27（土）</span>
+              <span class="event-title">ソフトバレーボール大会</span>
+              <span class="event-place">川島小学校体育館</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">7/5（日）</span>
+              <span class="event-title">わんぱくっ子紙ヒコーキ大会</span>
+              <span class="event-place">川島小学校体育館</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">7/26（日）</span>
+              <span class="event-title">わんぱくっ子紙ヒコーキ大会区大会</span>
+              <span class="event-place">保土ヶ谷スポーツセンター</span>
+            </div>
+
+            <div class="event-compact-row event-highlight">
+              <span class="event-date">9/12（土）・13（日）</span>
+              <span class="event-title">夏祭り <small>宵宮・本宮／13日午前 神輿・山車巡業</small></span>
+              <span class="event-place">川島町水道みち公園</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">9/5（土）</span>
+              <span class="event-title">ボッチャ大会</span>
+              <span class="event-place">川島小学校体育館</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">9/27（日）</span>
+              <span class="event-title">川島小学校地域防災拠点訓練</span>
+              <span class="event-place">川島小学校</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">10/18（日）</span>
+              <span class="event-title">川島東部連合大運動会 <small>予備日：10/25</small></span>
+              <span class="event-place">川島町公園グラウンド</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">11/7（土）</span>
+              <span class="event-title">グラウンド・ゴルフ大会（団体戦）</span>
+              <span class="event-place">川島町公園グラウンド</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">11/3（火・祝）</span>
+              <span class="event-title">芋掘り交流会＆わいわいクッキング</span>
+              <span class="event-place">西谷河原農園・川島地域ケアプラザ</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">11/15（日）</span>
+              <span class="event-title">わんぱくっ子デイ・キャンプ</span>
+              <span class="event-place">こども自然公園</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">12/13（日）</span>
+              <span class="event-title">オセロ大会</span>
+              <span class="event-place">川島第四町内会館</span>
+            </div>
+
+            <div class="event-compact-row">
+              <span class="event-date">12/13（日）</span>
+              <span class="event-title">ゴルフ大会区大会</span>
+              <span class="event-place">保土ヶ谷公園</span>
+            </div>
+          </div>
+
+          <p class="small-note">※正式な案内は回覧板・掲示・ホームページのお知らせをご確認ください。</p>
         </div>
-        <p class="small-note">※日程・会場・内容は変更となる場合があります。正式な案内は回覧板・掲示・ホームページのお知らせをご確認ください。</p>
       </div>
     </section>
+
 
     <section id="safety">
       <div class="container">
