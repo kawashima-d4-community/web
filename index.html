@@ -1,15 +1,15 @@
 <!--
   川島第四町内会ホームページ index.html
-  Last Updated: 2026-05-25
-  Update Note: メニュー選択後にメニューが閉じるように修正
+  Last Updated: 2026-05-26
+  Update Note: 終了したイベントをホームページ上で自動非表示にする処理を追加
 -->
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-25" />
-  <meta name="d4-site-version" content="2026-05-25" />
+  <meta name="last-modified" content="2026-05-26" />
+  <meta name="d4-site-version" content="2026-05-26" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -1959,6 +1959,23 @@
       }
     }
 
+  
+    /* 終了したイベントの自動非表示 */
+    .event-compact-row.event-hidden {
+      display: none !important;
+    }
+    .event-empty-message {
+      margin: 10px 0 0;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff8f6;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2308,98 +2325,99 @@
           </div>
 
           <div class="event-compact-list" aria-label="各種イベント一覧">
-            <a class="event-compact-row event-finished" href="./community-info.html#softball-20260517">
+            <a class="event-compact-row event-finished" data-event-end="2026-05-17" href="./community-info.html#softball-20260517">
               <span class="event-date">5/17（日）</span>
               <span class="event-title">ソフトボール大会 <small>川島第四町内会 第三位</small></span>
               <span class="event-place">川島町公園グラウンド</span>
             </a>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-06-14">
               <span class="event-date">6/14（日）</span>
               <span class="event-title">川島東部ドッジボール大会</span>
               <span class="event-place">川島小学校体育館</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-06-21">
               <span class="event-date">6/21（日）</span>
               <span class="event-title">わんぱくっ子竹細工・木工細工教室</span>
               <span class="event-place">川島第四町内会館・横広場</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-06-27">
               <span class="event-date">6/27（土）</span>
               <span class="event-title">ソフトバレーボール大会</span>
               <span class="event-place">川島小学校体育館</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-07-05">
               <span class="event-date">7/5（日）</span>
               <span class="event-title">わんぱくっ子紙ヒコーキ大会</span>
               <span class="event-place">川島小学校体育館</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-07-26">
               <span class="event-date">7/26（日）</span>
               <span class="event-title">わんぱくっ子紙ヒコーキ大会区大会</span>
               <span class="event-place">保土ヶ谷スポーツセンター</span>
             </div>
 
-            <div class="event-compact-row event-highlight">
+            <div class="event-compact-row event-highlight" data-event-end="2026-09-13">
               <span class="event-date">9/12（土）・13（日）</span>
               <span class="event-title">夏祭り <small>宵宮・本宮／13日午前 神輿・山車巡業</small></span>
               <span class="event-place">川島町水道みち公園</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-09-05">
               <span class="event-date">9/5（土）</span>
               <span class="event-title">ボッチャ大会</span>
               <span class="event-place">川島小学校体育館</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-09-27">
               <span class="event-date">9/27（日）</span>
               <span class="event-title">川島小学校地域防災拠点訓練</span>
               <span class="event-place">川島小学校</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-10-18">
               <span class="event-date">10/18（日）</span>
               <span class="event-title">川島東部連合大運動会 <small>予備日：10/25</small></span>
               <span class="event-place">川島町公園グラウンド</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-11-07">
               <span class="event-date">11/7（土）</span>
               <span class="event-title">グラウンド・ゴルフ大会（団体戦）</span>
               <span class="event-place">川島町公園グラウンド</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-11-03">
               <span class="event-date">11/3（火・祝）</span>
               <span class="event-title">芋掘り交流会＆わいわいクッキング</span>
               <span class="event-place">西谷河原農園・川島地域ケアプラザ</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-11-15">
               <span class="event-date">11/15（日）</span>
               <span class="event-title">わんぱくっ子デイ・キャンプ</span>
               <span class="event-place">こども自然公園</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-12-13">
               <span class="event-date">12/13（日）</span>
               <span class="event-title">オセロ大会</span>
               <span class="event-place">川島第四町内会館</span>
             </div>
 
-            <div class="event-compact-row">
+            <div class="event-compact-row" data-event-end="2026-12-13">
               <span class="event-date">12/13（日）</span>
               <span class="event-title">ゴルフ大会区大会</span>
               <span class="event-place">保土ヶ谷公園</span>
             </div>
           </div>
+          <p class="event-empty-message" id="eventEmptyMessage" hidden>現在表示できる今後のイベントはありません。新しい予定が決まり次第お知らせします。</p>
 
-          <p class="small-note">※正式な案内は回覧板・掲示・ホームページのお知らせをご確認ください。</p>
+          <p class="small-note">※終了したイベントは自動的に非表示になります。正式な案内は回覧板・掲示・ホームページのお知らせをご確認ください。</p>
         </div>
       </div>
     </section>
@@ -2609,7 +2627,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-25">2026-05-25</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span><br /></div>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-26">2026-05-26</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span><br /></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
     <div class="container creator-credit">
@@ -2714,6 +2732,36 @@
       return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日（${weekdays[date.getDay()]}）`;
     }
 
+
+    function getLocalTodayDateOnly() {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    }
+
+    function parseLocalDateOnly(dateText) {
+      const parts = String(dateText || '').split('-').map(Number);
+      if (parts.length !== 3 || parts.some(Number.isNaN)) return null;
+      return new Date(parts[0], parts[1] - 1, parts[2]);
+    }
+
+    function hidePastEvents() {
+      const today = getLocalTodayDateOnly();
+      const eventRows = Array.from(document.querySelectorAll('.event-compact-row[data-event-end]'));
+      let visibleCount = 0;
+
+      eventRows.forEach((row) => {
+        const endDate = parseLocalDateOnly(row.dataset.eventEnd);
+        if (!endDate) return;
+        const isPast = endDate < today;
+        row.classList.toggle('event-hidden', isPast);
+        row.setAttribute('aria-hidden', String(isPast));
+        if (!isPast) visibleCount += 1;
+      });
+
+      const emptyMessage = document.getElementById('eventEmptyMessage');
+      if (emptyMessage) emptyMessage.hidden = visibleCount !== 0;
+    }
+
     function updateTodayDate() {
       const todayDateElement = document.getElementById('todayDate');
       if (!todayDateElement) return;
@@ -2759,6 +2807,7 @@
     }
 
     updateTodayDate();
+    hidePastEvents();
     updateWeather();
 
     const dailyMessages = [
