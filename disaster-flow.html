@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="last-modified" content="2026-05-28" />
+  <meta name="d4-site-version" content="2026-05-28" />
+  <title>大規模地震時の初期行動｜川島第四町内会</title>
+  <meta name="description" content="地震が起きたとき、子どもにも分かるように最初の行動をまとめました。" />
+  <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <style>
+    :root { --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,.11); --max:1040px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; color:var(--ink); background:linear-gradient(180deg,#fff5ee 0%,var(--bg) 46%,#fff 100%); line-height:1.8; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(var(--max),calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
+    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:1000; color:var(--ink); }
+    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--soft-red); color:var(--primary-dark); font-weight:1000; }
+    .brand small { display:block; color:var(--muted); font-size:11px; font-weight:800; }
+    .header-actions { display:flex; gap:8px; flex-wrap:wrap; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:8px 14px; border-radius:999px; font-weight:900; background:var(--primary); color:#fff; border:1px solid transparent; }
+    .button.secondary, .button-secondary { background:#fff; color:var(--primary-dark); border-color:var(--border); }
+    .button:hover { background:var(--primary-dark); color:#fff; }
+    main { padding:30px 0 48px; }
+    .hero { padding:28px; border-radius:28px; background:linear-gradient(135deg,#fff4ee,#fff7e8); border:1px solid var(--border); box-shadow:var(--shadow); margin:24px 0 18px; }
+    .badge { display:inline-flex; border-radius:999px; padding:5px 10px; background:var(--soft-red); color:var(--primary-dark); font-size:12px; font-weight:900; }
+    h1 { margin:14px 0 10px; font-size:clamp(30px,5vw,46px); line-height:1.18; letter-spacing:-.03em; }
+    h2 { margin:0 0 12px; font-size:clamp(23px,4vw,32px); line-height:1.25; }
+    h3 { margin:0 0 8px; font-size:19px; line-height:1.35; color:var(--primary-dark); }
+    p { color:var(--muted); }
+    section { padding:18px 0; }
+    .card { padding:20px; border-radius:22px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 26px rgba(127,29,29,.06); }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .note { padding:14px 16px; border-radius:16px; background:#fff8f6; border:1px solid var(--border); color:var(--muted); font-size:14px; font-weight:800; }
+    .small-note { color:var(--muted); font-size:13px; font-weight:800; }
+    ul, ol { margin:8px 0 0; padding-left:1.25em; color:var(--muted); font-weight:800; }
+    li { margin:5px 0; }
+    footer { padding:30px 0; color:var(--muted); font-size:13px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:22px 0 28px; border-top:1px solid var(--border); font-weight:800; }
+    .footer-links { display:inline-flex; gap:10px; flex-wrap:wrap; margin-top:6px; font-size:12px; font-weight:800; }
+    .footer-links a { text-decoration:underline; text-underline-offset:3px; }
+    .back-to-top { position:fixed; right:18px; bottom:18px; z-index:50; display:inline-flex; align-items:center; padding:10px 13px; border-radius:999px; background:var(--primary); color:#fff; font-size:13px; font-weight:900; box-shadow:0 10px 24px rgba(127,29,29,.18); }
+    
+    .flow-steps { display:grid; gap:12px; counter-reset: step; }
+    .flow-step { display:grid; grid-template-columns:52px 1fr; gap:12px; align-items:start; padding:16px; border-radius:20px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 24px rgba(127,29,29,.055); }
+    .flow-step::before { counter-increment:step; content:counter(step); display:grid; place-items:center; width:42px; height:42px; border-radius:999px; background:var(--primary); color:#fff; font-weight:1000; }
+    .flow-branch { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .kids-word { display:inline-flex; padding:2px 8px; border-radius:999px; background:var(--soft-orange); color:var(--primary-dark); font-weight:1000; font-size:12px; }
+    @media (max-width:800px) { .flow-branch { grid-template-columns:1fr; } .flow-step { grid-template-columns:42px 1fr; padding:13px; } }
+
+    @media (max-width:800px) { .grid-3,.grid-2 { grid-template-columns:1fr; } .nav { align-items:flex-start; flex-direction:column; padding:10px 0; } .header-actions { width:100%; } .button { width:100%; } .hero,.card { padding:17px; border-radius:22px; } .back-to-top { right:12px; bottom:12px; } }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./index.html" aria-label="川島第四町内会ホームページへ戻る">
+        <span class="brand-mark">第四</span>
+        <span>川島第四町内会<small>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
+      </a>
+      <div class="header-actions">
+        <a class="button secondary" href="./index.html">ホームページへ戻る</a>
+        <a class="button" href="./disaster-prevention.html">防災・防犯</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <span class="badge">Earthquake Flow</span>
+        <h1>大規模地震時の初期行動</h1>
+        <p>地震が起きたとき、子どもにも分かるように最初の行動をまとめました。</p>
+      </section>
+      
+      <section class="card">
+        <h2>地震が起きたら、まずこの順番で行動します</h2>
+        <p>大きな地震では、あわてずに「自分の安全」「火を出さない」「無事を知らせる」「近所で助け合う」の順番で動きます。</p>
+        <p><a class="button secondary" href="https://drive.google.com/file/d/1Q9rGYYVmttoD2QtuUAPRyIQHK19MWd1Y/view?usp=drive_link" target="_blank" rel="noopener">元のフローチャートGoogleドライブでPDFを見る</a></p>
+      </section>
+
+      <section class="flow-steps" aria-label="大規模地震時の初期行動">
+        <article class="flow-step"><div><h3>まず身を守る</h3><p>机の下に入る、頭を守る、倒れてくる物から離れるなど、まず自分と家族の命を守ります。</p><span class="kids-word">ポイント：あわてて外に飛び出さない</span></div></article>
+        <article class="flow-step"><div><h3>揺れが収まったら、火の元を確認</h3><p>火を消し、できる範囲でブレーカーを落とします。危ないと感じたら無理をせず、まず安全な場所へ移動します。</p></div></article>
+        <article class="flow-step"><div><h3>テレビ・ラジオ・携帯で震度を確認</h3><p>震度5強以上かどうかを確認します。横浜市内で1か所でも震度5強以上を観測した場合は、地域防災拠点の開設準備が始まります。</p></div></article>
+      </section>
+
+      <section class="flow-branch">
+        <article class="card">
+          <h3>震度5弱以下のとき</h3>
+          <p>自宅の安全を確認し、自宅で様子を見ます。ただし、危険を感じる場合は無理をせず避難します。</p>
+        </article>
+        <article class="card">
+          <h3>震度5強以上のとき</h3>
+          <ul>
+            <li>非常持ち出し品を持つ</li>
+            <li>ブレーカーを落とす</li>
+            <li>玄関など見える場所に「無事を知らせるタオル」を出す</li>
+            <li>隣近所に声をかける</li>
+            <li>いっとき避難場所に集合する</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid-2">
+        <article class="card">
+          <h3>班長・次期班長の行動</h3>
+          <p>担当班のタオル掲示を確認し、タオルがないお宅には声をかけます。確認できない場合は記録し、いっとき避難場所で町内会役員へ報告します。</p>
+        </article>
+        <article class="card">
+          <h3>家に住める？住めない？</h3>
+          <p>自宅が安全なら在宅避難を基本にします。倒壊や火災の危険がある場合は、非常持ち出し品を持って川島小学校地域防災拠点などへ避難します。</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h3>火災・倒壊・けが人を見つけたら</h3>
+        <p>大人や近所の人に知らせ、必要に応じて119番・110番へ連絡します。地域で助け合いますが、危険な場所に無理に入らないことが大切です。</p>
+        <p class="small-note">このページは、川島第四町内会の初期行動フローチャートを、子どもにも分かるように整理したものです。</p>
+      </section>
+
+
+        <p class="small-note">※PDF資料はGoogleドライブで開きます。閲覧できない場合は、町内会役員またはホームページ管理担当までお知らせください。</p>
+    </div>
+  </main>
+  <a class="back-to-top" href="#top">↑ トップへ</a>
+  <footer>
+    <div class="container footer-inner">
+      <div>© 川島第四町内会<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
+      <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
+    </div>
+  </footer>
+</body>
+</html>

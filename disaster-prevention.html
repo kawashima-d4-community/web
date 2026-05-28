@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="last-modified" content="2026-05-28" />
+  <meta name="d4-site-version" content="2026-05-28" />
+  <title>防災・防犯｜川島第四町内会</title>
+  <meta name="description" content="大規模地震への備え、避難場所、防災マップ、地区防災計画をまとめています。" />
+  <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <style>
+    :root { --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,.11); --max:1040px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; color:var(--ink); background:linear-gradient(180deg,#fff5ee 0%,var(--bg) 46%,#fff 100%); line-height:1.8; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(var(--max),calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
+    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:1000; color:var(--ink); }
+    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--soft-red); color:var(--primary-dark); font-weight:1000; }
+    .brand small { display:block; color:var(--muted); font-size:11px; font-weight:800; }
+    .header-actions { display:flex; gap:8px; flex-wrap:wrap; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:8px 14px; border-radius:999px; font-weight:900; background:var(--primary); color:#fff; border:1px solid transparent; }
+    .button.secondary, .button-secondary { background:#fff; color:var(--primary-dark); border-color:var(--border); }
+    .button:hover { background:var(--primary-dark); color:#fff; }
+    main { padding:30px 0 48px; }
+    .hero { padding:28px; border-radius:28px; background:linear-gradient(135deg,#fff4ee,#fff7e8); border:1px solid var(--border); box-shadow:var(--shadow); margin:24px 0 18px; }
+    .badge { display:inline-flex; border-radius:999px; padding:5px 10px; background:var(--soft-red); color:var(--primary-dark); font-size:12px; font-weight:900; }
+    h1 { margin:14px 0 10px; font-size:clamp(30px,5vw,46px); line-height:1.18; letter-spacing:-.03em; }
+    h2 { margin:0 0 12px; font-size:clamp(23px,4vw,32px); line-height:1.25; }
+    h3 { margin:0 0 8px; font-size:19px; line-height:1.35; color:var(--primary-dark); }
+    p { color:var(--muted); }
+    section { padding:18px 0; }
+    .card { padding:20px; border-radius:22px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 26px rgba(127,29,29,.06); }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .note { padding:14px 16px; border-radius:16px; background:#fff8f6; border:1px solid var(--border); color:var(--muted); font-size:14px; font-weight:800; }
+    .small-note { color:var(--muted); font-size:13px; font-weight:800; }
+    ul, ol { margin:8px 0 0; padding-left:1.25em; color:var(--muted); font-weight:800; }
+    li { margin:5px 0; }
+    footer { padding:30px 0; color:var(--muted); font-size:13px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:22px 0 28px; border-top:1px solid var(--border); font-weight:800; }
+    .footer-links { display:inline-flex; gap:10px; flex-wrap:wrap; margin-top:6px; font-size:12px; font-weight:800; }
+    .footer-links a { text-decoration:underline; text-underline-offset:3px; }
+    .back-to-top { position:fixed; right:18px; bottom:18px; z-index:50; display:inline-flex; align-items:center; padding:10px 13px; border-radius:999px; background:var(--primary); color:#fff; font-size:13px; font-weight:900; box-shadow:0 10px 24px rgba(127,29,29,.18); }
+    
+    @media (max-width:800px) { .grid-3,.grid-2 { grid-template-columns:1fr; } .nav { align-items:flex-start; flex-direction:column; padding:10px 0; } .header-actions { width:100%; } .button { width:100%; } .hero,.card { padding:17px; border-radius:22px; } .back-to-top { right:12px; bottom:12px; } }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./index.html" aria-label="川島第四町内会ホームページへ戻る">
+        <span class="brand-mark">第四</span>
+        <span>川島第四町内会<small>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
+      </a>
+      <div class="header-actions">
+        <a class="button secondary" href="./index.html">ホームページへ戻る</a>
+        <a class="button" href="./disaster-prevention.html">防災・防犯</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <span class="badge">Safety</span>
+        <h1>防災・防犯</h1>
+        <p>大規模地震への備え、避難場所、防災マップ、地区防災計画をまとめています。</p>
+      </section>
+      
+      <section class="grid-3">
+        <article class="card">
+          <h3>大規模地震時の初期行動</h3>
+          <p>身を守る、火を出さない、タオルで無事を知らせる、いっとき避難場所に集まる流れを分かりやすくまとめています。</p>
+          <p><a class="button" href="./disaster-flow.html">分かりやすい版を見る</a></p>
+        </article>
+        <article class="card">
+          <h3>防災マップ</h3>
+          <p>いっとき避難場所、地域防災拠点、広域避難場所、防災設備などを地図で確認できます。</p>
+          <p><a class="button secondary" href="https://drive.google.com/file/d/11mqCySohRk-QKkR4Z2BJWOJK1p9YveT4/view?usp=sharing" target="_blank" rel="noopener">防災マップGoogleドライブでPDFを見る</a></p>
+        </article>
+        <article class="card">
+          <h3>地区防災計画</h3>
+          <p>町内会の防災組織、安否確認、救助・消火、在宅避難者支援、各家庭の備えをまとめた保存版資料です。</p>
+          <p><a class="button secondary" href="https://drive.google.com/file/d/1edQp1yzIdQ50f5BrlY3xECh5cX82KrXS/view?usp=sharing" target="_blank" rel="noopener">計画書GoogleドライブでPDFを見る</a></p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>災害時の避難場所・避難拠点</h2>
+        <ul>
+          <li><strong>いっとき避難場所：</strong>東川島水道みち公園、東川島わくわく公園</li>
+          <li><strong>地域防災拠点：</strong>横浜市立川島小学校</li>
+          <li><strong>広域避難場所：</strong>笹山団地</li>
+        </ul>
+        <p class="small-note">場所の詳細は、防災マップPDFでご確認ください。</p>
+      </section>
+
+      <section class="grid-2">
+        <article class="card">
+          <h2>町内会の災害時の動き</h2>
+          <ul>
+            <li>各家庭で安否確認用タオルを掲出</li>
+            <li>班長・次期班長が担当班の安否を確認</li>
+            <li>いっとき避難場所で情報を集約</li>
+            <li>救助・消火が必要な場合は地域で協力し、公的機関へ連絡</li>
+            <li>地域防災拠点と連携し、在宅避難者へ情報提供</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>各家庭で大切な4つの備え</h2>
+          <ul>
+            <li>家具の転倒防止</li>
+            <li>感震ブレーカーなど通電火災対策</li>
+            <li>水・食料・簡易トイレの備蓄</li>
+            <li>非常持ち出し品の準備</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>防災備蓄について</h2>
+        <p>町内会では、災害時の共助活動に必要な資機材・物品を管理しています。防犯上の観点から、ホームページ上では詳細な保管場所が特定される表現は控えています。</p>
+      </section>
+
+      <section class="note">
+        <strong>資料の公開について：</strong><br />
+        Google Driveで公開する場合は、このページ内のPDFリンクをGoogle Driveの共有URLへ差し替えることで運用できます。保管場所や個人情報に関わる記載が含まれる資料は、公開前に内容確認をおすすめします。
+      </section>
+
+
+        <p class="small-note">※PDF資料はGoogleドライブで開きます。閲覧できない場合は、町内会役員またはホームページ管理担当までお知らせください。</p>
+    </div>
+  </main>
+  <a class="back-to-top" href="#top">↑ トップへ</a>
+  <footer>
+    <div class="container footer-inner">
+      <div>© 川島第四町内会<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
+      <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
+    </div>
+  </footer>
+</body>
+</html>
