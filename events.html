@@ -2078,6 +2078,22 @@
       .safety-resource-panel { grid-template-columns: 1fr; }
     }
 
+  
+    .event-row.event-hidden {
+      display: none !important;
+    }
+    .event-empty-message {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #fff8f6;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+    }
+
   </style>
 
   <style>
@@ -2245,5 +2261,41 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    function getLocalTodayDateOnly() {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    }
+
+    function parseLocalDateOnly(dateText) {
+      const parts = String(dateText || '').split('-').map(Number);
+      if (parts.length !== 3 || parts.some(Number.isNaN)) return null;
+      return new Date(parts[0], parts[1] - 1, parts[2]);
+    }
+
+    function hidePastEvents() {
+      const today = getLocalTodayDateOnly();
+      const eventRows = Array.from(document.querySelectorAll('.event-row[data-event-end]'));
+      let visibleCount = 0;
+
+      eventRows.forEach((row) => {
+        const endDate = parseLocalDateOnly(row.dataset.eventEnd);
+        if (!endDate) return;
+        const isPast = endDate < today;
+        row.classList.toggle('event-hidden', isPast);
+        row.setAttribute('aria-hidden', String(isPast));
+        if (!isPast) visibleCount += 1;
+      });
+
+      const emptyMessage = document.getElementById('eventEmptyMessage');
+      if (emptyMessage) {
+        emptyMessage.hidden = visibleCount !== 0;
+      }
+    }
+
+    hidePastEvents();
+  </script>
+
 </body>
 </html>
