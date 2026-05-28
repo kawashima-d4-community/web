@@ -2078,22 +2078,6 @@
       .safety-resource-panel { grid-template-columns: 1fr; }
     }
 
-  
-    .event-row.event-hidden {
-      display: none !important;
-    }
-    .event-empty-message {
-      margin-top: 12px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: #fff8f6;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-      text-align: center;
-    }
-
   </style>
 
   <style>
@@ -2156,11 +2140,6 @@
           </div>
 
           <div class="event-compact-list" aria-label="各種イベント一覧">
-            <a class="event-compact-row event-finished" data-event-end="2026-05-17" href="./community-info.html#softball-20260517">
-              <span class="event-date">5/17（日）</span>
-              <span class="event-title">ソフトボール大会 <small>川島第四町内会 第三位</small></span>
-              <span class="event-place">川島町公園グラウンド</span>
-            </a>
 
             <div class="event-compact-row" data-event-end="2026-06-14">
               <span class="event-date">6/14（日）</span>
@@ -2248,7 +2227,7 @@
           </div>
           <p class="event-empty-message" id="eventEmptyMessage" hidden>現在表示できる今後のイベントはありません。新しい予定が決まり次第お知らせします。</p>
 
-          <p class="small-note">※終了したイベントは自動的に非表示になります。正式な案内は回覧板・掲示・ホームページのお知らせをご確認ください。</p>
+          <p class="small-note">※終了したイベントは掲載一覧から非表示になります。正式な案内は回覧板・掲示・ホームページのお知らせをご確認ください。</p>
         </div>
       </div>
     </section>
@@ -2276,7 +2255,7 @@
 
     function hidePastEvents() {
       const today = getLocalTodayDateOnly();
-      const eventRows = Array.from(document.querySelectorAll('.event-row[data-event-end]'));
+      const eventRows = Array.from(document.querySelectorAll('.event-compact-row[data-event-end]'));
       let visibleCount = 0;
 
       eventRows.forEach((row) => {
