@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-05-28" />
   <meta name="d4-site-version" content="2026-05-28" />
-  <title>地区防災計画の要約｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の地区防災計画を、住民の皆さま向けに分かりやすく要約しました。" />
+  <title>大規模地震時の初期行動｜川島第四町内会</title>
+  <meta name="description" content="地震が起きたとき、子どもにも分かるように最初の行動をまとめました。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <style>
     :root { --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,.11); --max:1040px; }
@@ -45,6 +45,13 @@
     .footer-links a { text-decoration:underline; text-underline-offset:3px; }
     .back-to-top { position:fixed; right:18px; bottom:18px; z-index:50; display:inline-flex; align-items:center; padding:10px 13px; border-radius:999px; background:var(--primary); color:#fff; font-size:13px; font-weight:900; box-shadow:0 10px 24px rgba(127,29,29,.18); }
     
+    .flow-steps { display:grid; gap:12px; counter-reset: step; }
+    .flow-step { display:grid; grid-template-columns:52px 1fr; gap:12px; align-items:start; padding:16px; border-radius:20px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 24px rgba(127,29,29,.055); }
+    .flow-step::before { counter-increment:step; content:counter(step); display:grid; place-items:center; width:42px; height:42px; border-radius:999px; background:var(--primary); color:#fff; font-weight:1000; }
+    .flow-branch { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .kids-word { display:inline-flex; padding:2px 8px; border-radius:999px; background:var(--soft-orange); color:var(--primary-dark); font-weight:1000; font-size:12px; }
+    @media (max-width:800px) { .flow-branch { grid-template-columns:1fr; } .flow-step { grid-template-columns:42px 1fr; padding:13px; } }
+
     @media (max-width:800px) { .grid-3,.grid-2 { grid-template-columns:1fr; } .nav { align-items:flex-start; flex-direction:column; padding:10px 0; } .header-actions { width:100%; } .button { width:100%; } .hero,.card { padding:17px; border-radius:22px; } .back-to-top { right:12px; bottom:12px; } }
   
     .site-updated {
@@ -60,13 +67,13 @@
 <body id="top">
   <header>
     <div class="container nav">
-      <a class="brand" href="./index.html">
+      <a class="brand" href="./index.html" aria-label="川島第四町内会ホームページへ戻る">
         <span class="brand-mark">第四</span>
         <span>川島第四町内会<small>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
       </a>
       <div class="header-actions">
-        <a class="button secondary" href="./disaster-prevention.html">防災・防犯へ戻る</a>
         <a class="button secondary" href="./index.html">ホームページへ戻る</a>
+        <a class="button" href="./disaster-prevention.html">防災・防犯</a>
       </div>
     </div>
   </header>
@@ -74,107 +81,64 @@
   <main>
     <div class="container">
       <section class="hero">
-        <span class="badge">Disaster Plan</span>
-        <h1>地区防災計画の要約</h1>
-        <p>川島第四町内会の地区防災計画を、住民の皆さま向けに分かりやすくまとめたページです。詳細はPDF版をご確認ください。</p>
+        <span class="badge">Earthquake Flow</span>
+        <h1>大規模地震時の初期行動</h1>
+        <p>地震が起きたとき、子どもにも分かるように最初の行動をまとめました。</p>
         <p class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></p>
-        <p><a class="button" href="https://drive.google.com/file/d/1edQp1yzIdQ50f5BrlY3xECh5cX82KrXS/view?usp=sharing" target="_blank" rel="noopener">地区防災計画書を見る</a></p>
+      </section>
+      
+      <section class="card">
+        <h2>地震が起きたら、まずこの順番で行動します</h2>
+        <p>大きな地震では、あわてずに「自分の安全」「火を出さない」「無事を知らせる」「近所で助け合う」の順番で動きます。</p>
+        <p><a class="button secondary" href="https://drive.google.com/file/d/1Q9rGYYVmttoD2QtuUAPRyIQHK19MWd1Y/view?usp=drive_link" target="_blank" rel="noopener">詳細な初期行動を見る</a></p>
+      </section>
+
+      <section class="flow-steps" aria-label="大規模地震時の初期行動">
+        <article class="flow-step"><div><h3>まず身を守る</h3><p>机の下に入る、頭を守る、倒れてくる物から離れるなど、まず自分と家族の命を守ります。</p><span class="kids-word">ポイント：あわてて外に飛び出さない</span></div></article>
+        <article class="flow-step"><div><h3>揺れが収まったら、火の元を確認</h3><p>火を消し、できる範囲でブレーカーを落とします。危ないと感じたら無理をせず、まず安全な場所へ移動します。</p></div></article>
+        <article class="flow-step"><div><h3>テレビ・ラジオ・携帯で震度を確認</h3><p>震度5強以上かどうかを確認します。横浜市内で1か所でも震度5強以上を観測した場合は、地域防災拠点の開設準備が始まります。</p></div></article>
+      </section>
+
+      <section class="flow-branch">
+        <article class="card">
+          <h3>震度5弱以下のとき</h3>
+          <p>自宅の安全を確認し、自宅で様子を見ます。ただし、危険を感じる場合は無理をせず避難します。</p>
+        </article>
+        <article class="card">
+          <h3>震度5強以上のとき</h3>
+          <ul>
+            <li>非常持ち出し品を持つ</li>
+            <li>ブレーカーを落とす</li>
+            <li>玄関など見える場所に「無事を知らせるタオル」を出す</li>
+            <li>隣近所に声をかける</li>
+            <li>いっとき避難場所に集合する</li>
+          </ul>
+        </article>
       </section>
 
       <section class="grid-2">
         <article class="card">
-          <h2>大切な考え方</h2>
-          <p>大きな地震の直後は、行政や消防・警察などの支援がすぐに届かない場合があります。そのため、まずは自分と家族を守る「自助」、近所同士で助け合う「共助」が大切です。</p>
-          <p>町内会の防災組織は一部の役員だけではなく、地域に住む全員が関わるものとして考えます。</p>
+          <h3>班長・次期班長の行動</h3>
+          <p>担当班のタオル掲示を確認し、タオルがないお宅には声をかけます。確認できない場合は記録し、いっとき避難場所で町内会役員へ報告します。</p>
         </article>
-
         <article class="card">
-          <h2>まず覚えておくこと</h2>
-          <ul>
-            <li>地震が起きたら、まず身を守る</li>
-            <li>揺れが収まったら、火の元とブレーカーを確認</li>
-            <li>無事を知らせるタオルを見える場所に出す</li>
-            <li>隣近所に声をかけ合う</li>
-            <li>状況に応じて、いっとき避難場所へ向かう</li>
-          </ul>
+          <h3>家に住める？住めない？</h3>
+          <p>自宅が安全なら在宅避難を基本にします。倒壊や火災の危険がある場合は、非常持ち出し品を持って川島小学校地域防災拠点などへ避難します。</p>
         </article>
       </section>
 
       <section class="card">
-        <h2>災害時に使い分ける場所</h2>
-        <ul>
-          <li><strong>いっとき避難場所：</strong>まず近くで安全確認や安否確認を行う場所です。東川島水道みち公園、東川島わくわく公園が対象です。</li>
-          <li><strong>地域防災拠点：</strong>自宅に住むことが難しい場合などに避難生活を行う拠点です。川島小学校が対象です。</li>
-          <li><strong>広域避難場所：</strong>大規模火災などで広い場所へ避難が必要な場合の避難先です。笹山団地が対象です。</li>
-        </ul>
-        <p class="small-note">場所の詳細は、防災マップPDFで確認してください。</p>
-        <p><a class="button secondary" href="https://drive.google.com/file/d/11mqCySohRk-QKkR4Z2BJWOJK1p9YveT4/view?usp=sharing" target="_blank" rel="noopener">防災マップを見る</a></p>
+        <h3>火災・倒壊・けが人を見つけたら</h3>
+        <p>大人や近所の人に知らせ、必要に応じて119番・110番へ連絡します。地域で助け合いますが、危険な場所に無理に入らないことが大切です。</p>
+        <p class="small-note">このページは、川島第四町内会の初期行動フローチャートを、子どもにも分かるように整理したものです。</p>
+        <p><a class="button secondary" href="./disaster-plan.html">地区防災計画の要約を見る</a></p>
       </section>
-
-      <section class="grid-2">
-        <article class="card">
-          <h2>町内会の主な動き</h2>
-          <ul>
-            <li>班長・次期班長と連携し、安否確認を行います。</li>
-            <li>いっとき避難場所で、各班の状況を集約します。</li>
-            <li>救助や初期消火が必要な場合は、地域で協力し、公的機関へ連絡します。</li>
-            <li>地域防災拠点と連携し、在宅避難者への情報提供や支援につなげます。</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>在宅避難者への支援</h2>
-          <ul>
-            <li>地域防災拠点などから得た情報を地域へ伝えます。</li>
-            <li>必要に応じて炊き出しや支援情報の周知を行います。</li>
-            <li>支援が必要な方への声かけや巡回を行います。</li>
-            <li>困りごとを把握し、町内会として可能な範囲で支援します。</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="card">
-        <h2>各家庭で準備しておきたい4つの備え</h2>
-        <div class="grid-2">
-          <div>
-            <h3>1. 家具の転倒防止</h3>
-            <p>タンス、本棚、食器棚などは固定し、寝る場所には倒れてくる家具を置かないようにします。</p>
-          </div>
-          <div>
-            <h3>2. 通電火災対策</h3>
-            <p>強い揺れを感知して電気を止める感震ブレーカーなどで、停電復旧後の火災を防ぎます。</p>
-          </div>
-          <div>
-            <h3>3. 水・食料・トイレ</h3>
-            <p>最低3日分、できれば1週間分を目安に、飲料水・食料・非常用トイレを備えます。</p>
-          </div>
-          <div>
-            <h3>4. 非常持ち出し品</h3>
-            <p>飲料水、簡単な食料、ライト、携帯電話充電器、常備薬、保険証の写しなどをまとめておきます。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>防災訓練と備蓄について</h2>
-        <p>町内会では、安否確認訓練、初期消火訓練、防災講座、地域防災拠点との合同訓練などを計画的に実施します。また、災害時に共助活動を行うための資機材・物品を管理しています。</p>
-        <p class="small-note">防犯上の観点から、ホームページ上では詳細な保管場所が特定される表現は控えています。</p>
-      </section>
-
-      <section class="card">
-        <h2>関連ページ</h2>
-        <p>
-          <a class="button" href="./disaster-flow.html">初期行動を分かりやすく見る</a>
-          <a class="button secondary" href="https://drive.google.com/file/d/1Q9rGYYVmttoD2QtuUAPRyIQHK19MWd1Y/view?usp=drive_link" target="_blank" rel="noopener">詳細な初期行動を見る</a>
-        </p>
-      </section>
-    </div>
+</div>
   </main>
-
   <a class="back-to-top" href="#top">↑ トップへ</a>
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
+      <div>© 川島第四町内会<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
