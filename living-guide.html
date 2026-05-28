@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="last-modified" content="2026-05-28" />
+  <meta name="d4-site-version" content="2026-05-28" />
+  <title>暮らしの案内｜川島第四町内会</title>
+  <meta name="description" content="ごみ出し、資源回収、回覧板など、日々の暮らしに関する情報をまとめています。" />
+  <link rel="icon" type="image/png" href="./d4-mark2.png" />
+
+  <style>
+    :root { --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,.11); --max:1040px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; color:var(--ink); background:linear-gradient(180deg,#fff5ee 0%,var(--bg) 46%,#fff 100%); line-height:1.8; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(var(--max),calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
+    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:1000; color:var(--ink); }
+    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--soft-red); color:var(--primary-dark); font-weight:1000; overflow:hidden; }
+    .brand-mark img { width:100%; height:100%; object-fit:cover; }
+    .brand small { display:block; color:var(--muted); font-size:11px; font-weight:800; }
+    .header-actions { display:flex; gap:8px; flex-wrap:wrap; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:8px 14px; border-radius:999px; font-weight:900; background:var(--primary); color:#fff; border:1px solid transparent; margin:3px; }
+    .button.secondary, .button-secondary { background:#fff; color:var(--primary-dark); border-color:var(--border); }
+    .button:hover { background:var(--primary-dark); color:#fff; }
+    main { padding:30px 0 48px; }
+    .hero { padding:28px; border-radius:28px; background:linear-gradient(135deg,#fff4ee,#fff7e8); border:1px solid var(--border); box-shadow:var(--shadow); margin:24px 0 18px; }
+    .badge { display:inline-flex; border-radius:999px; padding:5px 10px; background:#fff; color:var(--primary-dark); border:1px solid var(--border); font-size:12px; font-weight:1000; }
+    h1 { margin:8px 0 8px; font-size:clamp(28px,5vw,42px); line-height:1.18; }
+    h2 { margin:0 0 10px; color:var(--primary-dark); font-size:23px; }
+    h3 { margin:16px 0 6px; color:var(--primary-dark); font-size:18px; }
+    p { margin:0 0 12px; }
+    .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .card { padding:20px; border-radius:22px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 24px rgba(127,29,29,.055); margin-bottom:16px; }
+    .note { padding:14px 16px; border-radius:16px; background:#fff8f6; border:1px solid var(--border); color:var(--muted); font-weight:800; font-size:14px; }
+    ul, ol { margin-top:6px; padding-left:1.4em; }
+    li { margin:5px 0; }
+    .site-updated { display:inline-block; margin-top:8px; color:var(--muted); font-size:12px; font-weight:700; }
+    .footer-inner { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:22px 0 28px; color:var(--muted); border-top:1px solid var(--border); font-size:13px; font-weight:800; }
+    .footer-links { display:inline-flex; gap:10px; flex-wrap:wrap; margin-top:6px; font-size:12px; font-weight:800; }
+    .footer-links a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+    .back-to-top { position:fixed; right:18px; bottom:18px; z-index:50; display:inline-flex; align-items:center; gap:6px; padding:10px 13px; border-radius:999px; background:var(--primary); color:#fff; text-decoration:none; font-size:13px; font-weight:900; box-shadow:0 10px 24px rgba(127,29,29,.18); }
+    .event-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+    .event-row { display:grid; grid-template-columns:112px 1fr; gap:8px; padding:10px; border-radius:16px; background:var(--soft-red); border:1px solid var(--border); }
+    .event-row b { color:var(--primary-dark); }
+    .event-row span { font-size:13px; font-weight:800; line-height:1.45; }
+    .living-day-grid { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:7px; }
+    .living-day { padding:9px 7px; border-radius:14px; background:var(--soft-red); border:1px solid var(--border); text-align:center; }
+    .living-day b { display:inline-flex; justify-content:center; align-items:center; width:26px; height:26px; border-radius:999px; background:#fff; color:var(--primary-dark); }
+    .living-day span { display:block; margin-top:5px; color:var(--ink); font-size:11px; font-weight:800; line-height:1.35; }
+    .photo { width:100%; border-radius:18px; border:1px solid var(--border); box-shadow:0 8px 20px rgba(127,29,29,.08); }
+    @media (max-width:760px) { .grid-2,.grid-3,.event-list { grid-template-columns:1fr; } .nav { align-items:flex-start; flex-direction:column; padding:10px 0; } .header-actions { width:100%; } .button { flex:1; } .hero,.card { padding:18px; border-radius:22px; } .living-day-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .back-to-top { right:12px; bottom:12px; } }
+  </style>
+
+</head>
+<body id="top">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span>
+        <span>川島第四町内会<small>保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
+      </a>
+      <div class="header-actions"><a class="button secondary" href="./index.html">ホームページへ戻る</a></div>
+    </div>
+  </header>
+  <main><div class="container">
+    <section class="hero"><span class="badge">Living</span><h1>暮らしの案内</h1><p>ごみ出し、資源回収、回覧板など、日々の暮らしに関する情報をまとめています。</p><p class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></p></section>
+
+    <section class="card">
+      <h2>ごみ出し・資源回収</h2>
+      <div class="living-day-grid" aria-label="ごみ出し・資源回収カレンダー">
+        <div class="living-day"><b>月</b><span>プラスチック</span></div><div class="living-day"><b>火</b><span>燃えるゴミ<br />燃えないゴミ等</span></div><div class="living-day"><b>水</b><span>回収なし</span></div><div class="living-day"><b>木</b><span>紙・古紙<br />段ボール</span></div><div class="living-day"><b>金</b><span>ビン・カン<br />ペットボトル</span></div><div class="living-day"><b>土</b><span>燃えるゴミ<br />燃えないゴミ等</span></div><div class="living-day"><b>日</b><span>回収なし</span></div>
+      </div>
+      <p class="note">詳しくはネット検索「保土ヶ谷区の収集曜日」の東川島町をご確認ください。</p>
+    </section>
+    <section class="grid-2"><article class="card"><h2>出し方のルール</h2><ul><li>ごみは回収日の当日朝に出してください。</li><li>前日の夜出しは禁止です。</li><li>段ボールは紐でまとめてください。</li><li>分別の徹底にご協力ください。</li></ul></article><article class="card"><h2>回覧板</h2><p>広報よこはま、県のたより、町内会からの各種案内を班長から順次回覧します。</p><p class="note">回覧後は、次のご家庭へ早めにお回しください。</p></article></section>
+    <section class="card"><h2>地域情報の掲載</h2><p>地域のお知らせを掲載したい場合は、掲載ルールをご確認のうえ、掲載依頼ページからお申し込みください。</p><p><a class="button" href="./posting-request.html">掲載依頼ページへ</a> <a class="button secondary" href="./posting-guidelines.html">掲載ルールを見る</a></p></section>
+
+  </div></main>
+  <a class="back-to-top" href="#top">↑ トップへ</a>
+  <footer><div class="container footer-inner"><div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div><div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div></div></footer>
+</body></html>
