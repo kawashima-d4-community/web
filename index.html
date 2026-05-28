@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-05-28
-  Update Note: 防災マップ・地区防災計画のリンク文言を調整
+  Update Note: 防災・防犯ページへの直接導線を追加
 -->
 <!doctype html>
 <html lang="ja">
@@ -2055,7 +2055,7 @@
     /* 防災・防犯の関連資料リンク */
     .safety-resource-panel {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
       margin: 0 0 18px;
     }
@@ -2082,7 +2082,10 @@
       font-weight: 800;
       line-height: 1.55;
     }
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
+      .safety-resource-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 700px) {
       .safety-resource-panel { grid-template-columns: 1fr; }
     }
 
@@ -2538,12 +2541,19 @@
         <div class="section-head">
           <div>
             <span class="badge">Safety</span>
-            <h2>防災訓練・防犯活動</h2>
-            <p>誰もが安心して暮らせる街を目指し、防災・防犯と地域連携に取り組んでいます。</p>
+            <h2>防災・防犯</h2>
+            <p>災害時の行動、防災マップ、地区防災計画、備蓄、防犯活動をまとめています。</p>
           </div>
+          <a class="button button-primary" href="./disaster-prevention.html">防災・防犯ページを見る</a>
         </div>
         <div class="safety-resource-panel" aria-label="防災関連資料">
           <article class="safety-resource-card primary">
+            <span class="date">まとめ</span>
+            <h3>防災・防犯ページ</h3>
+            <p>いっとき避難場所、防災マップ、地区防災計画、備蓄、防犯活動をまとめて確認できます。</p>
+            <a class="button" href="./disaster-prevention.html">防災・防犯ページを見る</a>
+          </article>
+          <article class="safety-resource-card">
             <span class="date">まず確認</span>
             <h3>大規模地震時の初期行動</h3>
             <p>地震が起きた直後に、家族・近所・班長が何をすればよいかを、子どもにも分かる形で整理しました。</p>
@@ -2569,7 +2579,7 @@
               <h3>町内会の防災備蓄</h3>
               <p>災害時に備え、町内会で主な備蓄品・備品を管理しています。</p>
             </div>
-            <a class="button button-secondary" href="#safety">防災・防犯</a>
+            <a class="button button-secondary" href="./disaster-prevention.html">防災・防犯ページを見る</a>
           </div>
 
           <div class="stockpile-grid">
