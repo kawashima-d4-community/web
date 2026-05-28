@@ -373,6 +373,42 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       text-underline-offset: 3px;
     }
 
+  
+    /* 地域からのお知らせ：カテゴリ名が長い場合のタイトル重なり防止 */
+    .community-post {
+      grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+      align-items: start;
+    }
+    .post-category {
+      height: auto;
+      min-height: 30px;
+      line-height: 1.35;
+      white-space: normal;
+      text-align: center;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+    .post-body {
+      min-width: 0;
+    }
+    .post-body h3 {
+      line-height: 1.45;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+    @media (max-width: 720px) {
+      .community-post {
+        grid-template-columns: 1fr;
+      }
+      .post-category {
+        width: fit-content;
+        max-width: 100%;
+        justify-content: flex-start;
+        text-align: left;
+      }
+    }
+
   </style>
 </head>
 <body id="top">
