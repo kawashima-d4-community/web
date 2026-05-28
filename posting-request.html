@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>地域情報掲載依頼｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会・西谷・上星川周辺の地域情報掲載依頼ページです。内容確認後、問題がなければ期間限定で掲載します。" />
+  <meta name="description" content="川島第四町内会・西谷・上星川周辺の地域情報掲載依頼ページです。Googleフォームから掲載依頼を受け付け、内容確認後に期間限定で掲載します。" />
   <style>
 
 :root {
@@ -80,44 +80,259 @@ section { padding: 28px 0; }
   border-color: var(--border);
 }
 .button:hover { background: var(--primary-dark); color: #fff; }
+.button.disabled {
+  background: #d1d5db;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
 .small-note { color: var(--muted); font-size: 13px; }
 footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-entry-card {
+      display: grid;
+      grid-template-columns: 1fr 190px;
+      gap: 18px;
+      align-items: center;
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff4ee, #fff7e8);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .qr-panel {
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      padding: 14px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+    .qr-panel img {
+      width: 150px;
+      height: 150px;
+      border-radius: 12px;
+    }
     .check-list { color: var(--muted); padding-left: 1.2em; }
     .check-list li { margin: 5px 0; }
     .info-table { width: 100%; border-collapse: collapse; }
     .info-table th, .info-table td { padding: 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
-    .info-table th { width: 170px; color: var(--muted); }
+    .info-table th { width: 190px; color: var(--muted); }
     .flow-list { counter-reset: flow; display: grid; gap: 10px; }
     .flow-item { counter-increment: flow; display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: start; padding: 12px; border-radius: 14px; background: #fff; border: 1px solid var(--border); }
     .flow-item::before { content: counter(flow); width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; font-size: 13px; }
     .notice { padding: 16px; border-radius: 16px; background: var(--soft-orange); border: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    .notice {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px dashed var(--primary);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
     @media (max-width: 760px) {
-      .grid-2 { grid-template-columns: 1fr; }
+      .grid-2, .form-entry-card { grid-template-columns: 1fr; }
       .button { width: 100%; }
       .info-table th, .info-table td { display: block; width: 100%; padding: 10px 0; }
       .info-table th { border-bottom: 0; padding-bottom: 2px; }
+      .qr-panel img { width: 132px; height: 132px; }
     }
+  
+    /* スマートフォン表示のはみ出し対策 */
+    body {
+      overflow-x: hidden;
+    }
+    .form-entry-card,
+    .card,
+    .hero {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+    .form-entry-card {
+      align-items: start;
+    }
+    .form-entry-card > div {
+      min-width: 0;
+    }
+    .form-entry-card p,
+    .notice,
+    .small-note {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .button {
+      max-width: 100%;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.45;
+    }
+    .qr-panel {
+      width: 100%;
+      max-width: 190px;
+      justify-self: center;
+    }
+    .qr-panel img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+      .hero,
+      .card,
+      .form-entry-card {
+        padding: 18px;
+        border-radius: 20px;
+      }
+      .form-entry-card {
+        grid-template-columns: 1fr;
+      }
+      .button {
+        width: 100%;
+      }
+      .qr-panel {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
+
+  
+    .floating-actions {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floating-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 142px;
+      min-height: 42px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 900;
+      font-size: 13px;
+      box-shadow: 0 10px 24px rgba(127,29,29,0.18);
+      border: 1px solid rgba(255,255,255,0.42);
+      text-decoration: none;
+    }
+    .floating-actions a.secondary {
+      background: #fff;
+      color: var(--primary-dark);
+      border-color: var(--border);
+    }
+    .floating-actions a:hover {
+      background: var(--primary-dark);
+      color: #fff;
+    }
+    @media (max-width: 760px) {
+      .floating-actions {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        flex-direction: row;
+      }
+      .floating-actions a {
+        flex: 1;
+        min-width: 0;
+        min-height: 40px;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+      footer {
+        padding-bottom: 84px;
+      }
+    }
+
+  
+    .footer-links {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .footer-links a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+  
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 22px 0 28px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .footer-links {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .footer-links a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
   </style>
 </head>
-<body>
+<body id="top">
   <header>
     <div class="container">
-      <a class="back" href="./index.html">← 川島第四町内会ホームページへ戻る</a>
+      <a class="back" href="./index.html">← ホームページへ戻る</a>
       <div class="hero">
         <span class="badge">Posting Request</span>
         <h1>地域情報掲載依頼</h1>
-        <p>第四町内会・西谷・上星川周辺の地域情報をお寄せください。町内会側で内容を確認し、問題がなければホームページへ期間限定で掲載します。</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-          <a class="button" href="mailto:kawashimadai4@gmail.com?subject=%E5%9C%B0%E5%9F%9F%E6%83%85%E5%A0%B1%E6%8E%B2%E8%BC%89%E4%BE%9D%E9%A0%BC&body=%E3%80%90%E5%9C%B0%E5%9F%9F%E6%83%85%E5%A0%B1%E6%8E%B2%E8%BC%89%E4%BE%9D%E9%A0%BC%E3%80%91%0A%E6%8A%95%E7%A8%BF%E8%80%85%E6%B0%8F%E5%90%8D%EF%BC%9A%0A%E6%89%80%E5%B1%9E%E3%83%BB%E7%8F%AD%E5%90%8D%E3%83%BB%E5%9B%A3%E4%BD%93%E5%90%8D%EF%BC%9A%0A%E9%80%A3%E7%B5%A1%E5%85%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%EF%BC%9A%0A%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%EF%BC%9A%0A%E6%8E%B2%E8%BC%89%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%EF%BC%9A%0A%E6%8E%B2%E8%BC%89%E3%81%97%E3%81%9F%E3%81%84%E6%9C%AC%E6%96%87%EF%BC%9A%0A%E9%96%8B%E5%82%AC%E6%97%A5%E3%83%BB%E5%AE%9F%E6%96%BD%E6%97%A5%EF%BC%9A%0A%E6%8E%B2%E8%BC%89%E5%B8%8C%E6%9C%9B%E6%9C%9F%E9%96%93%EF%BC%9A%0A%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%88URL%EF%BC%9A%0A%E5%86%99%E7%9C%9F%E3%81%AE%E5%85%B1%E6%9C%89URL%EF%BC%9A%0A%0A%E3%80%90%E7%A2%BA%E8%AA%8D%E4%BA%8B%E9%A0%85%E3%80%91%0A%E3%83%BB%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%80%81%E8%AA%B9%E8%AC%97%E4%B8%AD%E5%82%B7%E3%80%81%E5%96%B6%E5%88%A9%E7%9B%AE%E7%9A%84%E3%80%81%E5%AE%97%E6%95%99%E5%8B%A7%E8%AA%98%E3%80%81%E5%85%AC%E5%BA%8F%E8%89%AF%E4%BF%97%E3%81%AB%E5%8F%8D%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9%E3%81%A7%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%0A%E3%83%BB%E5%86%99%E7%9C%9F%E3%81%AB%E4%BA%BA%E7%89%A9%E3%81%8C%E5%86%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AF%E3%80%81%E6%8E%B2%E8%BC%89%E8%A8%B1%E5%8F%AF%E3%82%92%E5%BE%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0A">メールで掲載依頼する</a>
-          <a class="button secondary" href="./community-info.html">掲載中のお知らせを見る</a>
-        </div>
+        <p>第四町内会・西谷・上星川周辺の地域情報を、スマートフォンからGoogleフォームでお寄せいただけます。町内会側で内容を確認し、問題がなければホームページへ期間限定で掲載します。</p>
       </div>
     </div>
   </header>
 
   <main class="container">
+    <section>
+      <div class="form-entry-card">
+        <div>
+          <span class="badge">Google Form</span>
+          <h2>掲載依頼フォーム</h2>
+          <p>掲載したい内容がある方は、Googleフォームから依頼してください。スマートフォンからも入力できます。</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A/viewform" target="_blank" rel="noopener">Googleフォームを開く</a>
+            <a class="button secondary" href="./community-info.html">掲載中のお知らせを見る</a>
+          </div>
+          <div class="notice">
+            Googleフォームから地域情報掲載依頼を送信できます。送信内容は町内会側で確認し、問題がなければ期間限定で掲載します。
+          </div>
+        </div>
+        <div class="qr-panel">
+          <img alt="地域情報掲載依頼フォーム スマホで読み取り" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A%2Fviewform" />
+          <span class="small-note">スマホで読み取り</span>
+        </div>
+      </div>
+    </section>
+
     <section class="grid-2">
       <div class="card">
         <h2>掲載できる内容</h2>
@@ -125,6 +340,12 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <li>町内会・地域活動に関するお知らせ</li>
           <li>子ども会、防災、防犯、清掃活動の案内</li>
           <li>西谷・上星川周辺の地域イベント情報</li>
+          <li>小学校・中学校のPTAからのお知らせ</li>
+          <li>部活動のお知らせ</li>
+          <li>少年野球・サッカー・バスケなどの習い事・地域スポーツ活動のお知らせ</li>
+          <li>ゴルフコンペ・趣味の集まり・交流会などのお知らせ</li>
+          <li>消防団からの防火・防災に関するお知らせ</li>
+          <li>地域のお店からの地域向けお知らせ</li>
           <li>地域団体・関係機関からの公開情報</li>
           <li>町内会行事や地域活動の写真リンク</li>
         </ul>
@@ -135,7 +356,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         <ul class="check-list">
           <li>個人情報を含む内容</li>
           <li>誹謗中傷、差別的表現、トラブルにつながる内容</li>
-          <li>営利目的が強い宣伝</li>
+          <li>地域性のない単なる広告、価格訴求のみの宣伝、過度な営利目的の内容</li>
           <li>宗教勧誘、政治的主張、公序良俗に反する内容</li>
           <li>掲載許可を得ていない人物写真</li>
         </ul>
@@ -143,14 +364,15 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     </section>
 
     <section class="card">
-      <h2>掲載依頼時に記載してほしい内容</h2>
+      <h2>Googleフォームの項目案</h2>
       <table class="info-table">
-        <tr><th>投稿者情報</th><td>氏名、所属・班名・団体名、連絡先メールアドレス</td></tr>
-        <tr><th>カテゴリ</th><td>町内会、地域イベント、子ども会、防災・防犯、清掃活動、西谷・上星川情報、写真掲載など</td></tr>
+        <tr><th>投稿者情報</th><td>氏名、所属・班名・団体名、連絡先</td></tr>
+        <tr><th>カテゴリ</th><td>町内会、地域イベント、子ども会、PTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ、趣味の集まり、交流会、消防団、地域のお店、防災・防犯、清掃活動、西谷・上星川情報、写真掲載など</td></tr>
         <tr><th>掲載タイトル</th><td>例：ラジオ体操のお知らせ、地域清掃ボランティア募集 など</td></tr>
         <tr><th>本文</th><td>日時、場所、対象者、内容、問い合わせ方法など</td></tr>
-        <tr><th>掲載希望期間</th><td>原則1週間程度。イベント告知は開催日までなど、必要に応じて調整します。</td></tr>
+        <tr><th>掲載希望期間</th><td>原則1か月程度。イベント告知は開催日または開催翌日までなど、必要に応じて調整します。</td></tr>
         <tr><th>リンク・写真</th><td>Googleドライブ、公式サイト、案内ページなどのURL</td></tr>
+        <tr><th>同意確認</th><td>個人情報・写真掲載許可・掲載条件への同意</td></tr>
       </table>
     </section>
 
@@ -158,8 +380,8 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       <div class="card">
         <h2>掲載までの流れ</h2>
         <div class="flow-list">
-          <div class="flow-item"><div><strong>掲載依頼</strong><br><span class="small-note">メールで掲載したい内容を送付します。</span></div></div>
-          <div class="flow-item"><div><strong>内容確認</strong><br><span class="small-note">町内会側で内容・個人情報・写真許可を確認します。</span></div></div>
+          <div class="flow-item"><div><strong>Googleフォームから依頼</strong><br><span class="small-note">スマートフォンから掲載したい内容を送信します。</span></div></div>
+          <div class="flow-item"><div><strong>町内会側で内容確認</strong><br><span class="small-note">個人情報・写真許可・内容の妥当性を確認します。</span></div></div>
           <div class="flow-item"><div><strong>期間限定で掲載</strong><br><span class="small-note">問題がなければホームページに掲載します。</span></div></div>
           <div class="flow-item"><div><strong>期限後に非表示</strong><br><span class="small-note">掲載期限を過ぎた情報は画面に表示しません。</span></div></div>
         </div>
@@ -170,14 +392,23 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         <div class="notice">
           すべての掲載依頼が掲載されるとは限りません。内容確認の結果、掲載を見送る場合や、表現を調整する場合があります。
         </div>
-        <p>写真に人物が写る場合は、投稿者の責任で掲載許可を得てください。特にお子様の写真は慎重に取り扱います。</p>
-        <p>このページは初期運用版です。今後、Googleフォーム受付に切り替えることもできます。</p>
+        <p>写真に人物が写る場合は、投稿者の責任で掲載許可を得てください。特にお子様の写真、学校・部活動・習い事関係の情報、個人名が含まれる内容は慎重に取り扱います。</p>
+        <p>回答はGoogleスプレッドシートに蓄積されるため、将来的には「公開OK」「掲載開始日」「掲載終了日」を使った自動表示にも発展できます。</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© 川島第四町内会</div>
+    <div class="container footer-inner">
+      <div>© 川島第四町内会<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
+      <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
+    </div>
   </footer>
+
+  <div class="floating-actions" aria-label="ページ内ナビゲーション">
+    <a href="#top">↑ トップへ戻る</a>
+    <a class="secondary" href="./index.html">ホームページへ戻る</a>
+  </div>
+
 </body>
 </html>
