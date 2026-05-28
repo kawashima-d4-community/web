@@ -55,6 +55,33 @@
       font-weight: 700;
     }
 
+  
+    .evac-guide {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .evac-guide article {
+      padding: 14px;
+      border-radius: 18px;
+      background: #fff8f6;
+      border: 1px solid var(--border);
+    }
+    .evac-guide h3 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+    .evac-guide p,
+    .evac-guide ul {
+      margin-bottom: 0;
+    }
+    @media (max-width: 760px) {
+      .evac-guide {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body id="top">
@@ -101,12 +128,32 @@
 
       <section class="card">
         <h2>災害時の避難場所・避難拠点</h2>
+        <p>災害時は、状況に応じて「いっとき避難場所」「地域防災拠点」「広域避難場所」を使い分けます。</p>
+
+        <div class="evac-guide">
+          <article>
+            <h3>いっとき避難場所とは</h3>
+            <p>大きな地震のあと、近所の人たちが一度集まり、無事かどうかを確認するための身近な集合場所です。長く避難生活をする場所ではなく、まず地域の安全確認や安否確認を行うための場所です。</p>
+            <p><strong>対象場所：</strong>東川島水道みち公園、東川島わくわく公園</p>
+          </article>
+
+          <article>
+            <h3>どのようなときに行くの？</h3>
+            <ul>
+              <li>震度5強以上の地震が発生したとき</li>
+              <li>自宅や周囲が危ないと感じたとき</li>
+              <li>近所で火災、建物の倒壊、けが人などがあり、地域で状況確認が必要なとき</li>
+              <li>安否確認用タオルを出したあと、班や町内会で安否確認を行うとき</li>
+            </ul>
+            <p class="small-note">※自宅が安全で、避難の必要がない場合でも、周囲に無事を知らせるため安否確認用タオルを見える場所に出してください。</p>
+          </article>
+        </div>
+
         <ul>
-          <li><strong>いっとき避難場所：</strong>東川島水道みち公園、東川島わくわく公園</li>
-          <li><strong>地域防災拠点：</strong>横浜市立川島小学校</li>
-          <li><strong>広域避難場所：</strong>笹山団地</li>
+          <li><strong>地域防災拠点：</strong>横浜市立川島小学校。自宅が倒壊した、または倒壊のおそれがあるなど、自宅に住み続けることが難しい場合に避難生活を行う拠点です。</li>
+          <li><strong>広域避難場所：</strong>笹山団地。大規模火災などで広い場所へ避難が必要な場合の避難先です。</li>
         </ul>
-        <p class="small-note">場所の詳細は、防災マップPDFでご確認ください。</p>
+        <p class="small-note">場所の詳細は、防災マップでご確認ください。</p>
       </section>
 
       <section class="grid-2">
