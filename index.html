@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-05-28
-  Update Note: トップページを玄関化し、詳細情報を個別ページへ整理
+  Update Note: 前回内容を維持しつつトップページを玄関化
 -->
 <!doctype html>
 <html lang="ja">
@@ -2090,10 +2090,10 @@
     }
 
   
-    /* トップページ玄関化：入口カードと短縮セクション */
+    /* トップページ玄関化：前回内容は個別ページへ移し、トップは入口に整理 */
     .gateway-section { padding: 32px 0 18px; }
     .gateway-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-    .gateway-card { display: flex; flex-direction: column; gap: 8px; min-height: 180px; padding: 18px; border-radius: 22px; background: #fff; border: 1px solid var(--border); box-shadow: 0 10px 24px rgba(127,29,29,0.055); text-decoration: none; color: var(--ink); }
+    .gateway-card { display: flex; flex-direction: column; gap: 8px; min-height: 170px; padding: 18px; border-radius: 22px; background: #fff; border: 1px solid var(--border); box-shadow: 0 10px 24px rgba(127,29,29,0.055); text-decoration: none; color: var(--ink); }
     .gateway-card:hover { transform: translateY(-1px); box-shadow: 0 16px 32px rgba(127,29,29,0.09); }
     .gateway-card .icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px; background: var(--soft-red); font-size: 22px; }
     .gateway-card h3 { margin: 0; color: var(--primary-dark); font-size: 18px; line-height: 1.35; }
@@ -2101,7 +2101,6 @@
     .gateway-card span.more { margin-top: auto; color: var(--primary-dark); font-size: 13px; font-weight: 1000; }
     .home-short-section { padding-top: 30px; padding-bottom: 22px; }
     .home-short-card { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 16px; align-items: center; padding: 18px; border-radius: 24px; background: #fff; border: 1px solid var(--border); box-shadow: 0 10px 24px rgba(127,29,29,0.055); }
-    .home-short-card h2, .home-short-card h3 { margin-top: 0; }
     .home-short-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
     .home-mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
     .home-mini-card { padding: 12px; border-radius: 16px; background: var(--soft-red); border: 1px solid rgba(238,216,201,0.9); }
@@ -2160,7 +2159,7 @@
         <div class="nav-group">
           <button class="nav-group-button" type="button" aria-expanded="false">町内会について</button>
           <div class="nav-submenu">
-            <a href="./about.html">町内会について</a>
+            <a href="./about.html">活動方針</a>
             <a href="./about.html#greeting">会長あいさつ</a>
             <a href="./about.html#basic">基本情報</a>
           </div>
@@ -2321,7 +2320,7 @@
           <div>
             <span class="badge">Guide</span>
             <h2>知りたい情報を選んでください</h2>
-            <p>トップページは入口として短く整理し、詳しい内容は各ページで確認できるようにしました。</p>
+            <p>トップページは入口として短く整理し、詳しい内容は各ページで確認できます。</p>
           </div>
         </div>
         <div class="gateway-grid">
@@ -2334,6 +2333,7 @@
         </div>
       </div>
     </section>
+
 
 
     <section id="festival">
@@ -2385,21 +2385,13 @@
           <div>
             <span class="badge">About</span>
             <h2>町内会について</h2>
-            <p>川島第四町内会は、約400世帯・23班で構成される地域の町内会です。防災・防犯、清掃活動、子ども会、行事などを通じて、安心して暮らせる地域づくりを進めています。</p>
-            <div class="home-mini-grid">
-              <div class="home-mini-card"><b>約400世帯</b><span>地域の暮らしを支える町内会</span></div>
-              <div class="home-mini-card"><b>23班</b><span>班ごとの輪番で運営</span></div>
-              <div class="home-mini-card"><b>5カ所</b><span>いっとき避難場所を確認</span></div>
-            </div>
+            <p>活動方針、会長あいさつ、基本情報、さわやか清掃、子ども会は、前回内容のまま個別ページに整理しました。</p>
             <div class="home-short-actions">
               <a class="button button-primary" href="./about.html">町内会について詳しく見る</a>
               <a class="button button-secondary" href="./about.html#greeting">会長あいさつを見る</a>
             </div>
           </div>
-          <figure class="basic-hall-mini">
-            <img src="./d4kaikan.jpg" alt="川島第四町内会館の外観写真" />
-            <figcaption>川島第四町内会館</figcaption>
-          </figure>
+          <figure class="basic-hall-mini"><img src="./d4kaikan.jpg" alt="川島第四町内会館の外観写真" /><figcaption>川島第四町内会館</figcaption></figure>
         </div>
       </div>
     </section>
@@ -2411,7 +2403,7 @@
           <div>
             <span class="badge">Events</span>
             <h2>直近の行事予定</h2>
-            <p>トップページでは直近の予定だけを表示します。年間の行事予定は詳細ページで確認できます。</p>
+            <p>トップページでは直近の予定だけを表示します。年間行事予定は前回内容のまま詳細ページに整理しました。</p>
             <div class="home-upcoming-list" aria-label="直近の行事予定">
               <div class="home-upcoming-row" data-event-end="2026-06-14"><b>6/14（日）</b><span>川島東部ドッジボール大会 ／ 川島小学校体育館</span></div>
               <div class="home-upcoming-row" data-event-end="2026-06-21"><b>6/21（日）</b><span>わんぱくっ子竹細工・木工細工教室 ／ 川島第四町内会館・横広場</span></div>
@@ -2448,26 +2440,32 @@
       </div>
     </section>
 
-    <section id="join" class="home-short-section">
+    <section id="join">
       <div class="container">
         <div class="contact-card">
           <div>
             <span class="badge">Join</span>
             <h2>町内会加入方法・お問い合わせ</h2>
-            <p>町内会への加入は、メールまたはGoogleフォームからお申し込みいただけます。</p>
+            <p>町内会への加入は、メールでのお申し込み、またはGoogleフォームからお申し込みいただけます。</p>
             <p><strong>メール：</strong><a href="mailto:kawashimadai4@gmail.com" style="color:#fff;text-decoration:underline;">kawashimadai4@gmail.com</a></p>
-            <div class="home-short-actions">
-              <a class="button button-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA/viewform" target="_blank" rel="noopener">加入申込フォームを開く</a>
-              <a class="button button-secondary" href="./faq.html">よくある質問を見る</a>
+            <div class="qr-box">
+              <img alt="川島第四町内会 加入申込Googleフォーム QRコード" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA%2Fviewform" />
+              <div>
+                <p><strong>スマートフォンでQRコードを読み取り、Googleフォームからお申し込みください。</strong></p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA/viewform" target="_blank" rel="noopener">Googleフォームを開く</a>
+              </div>
             </div>
           </div>
           <div class="contact-panel">
-            <h3>町内会費</h3>
+            <h3>班長・町内会費について</h3>
             <ul>
-              <li>月額300円（年額3,600円）</li>
-              <li>年度初めに1年分を一括して班長へお支払いください。</li>
-              <li>班長はエリアごとの輪番制、任期は原則1年間です。</li>
+              <li>班長の選出方法：エリアごとの輪番制（持ち回り）</li>
+              <li>班長の任期：1年間</li>
+              <li>町内会費：月額300円（年額3,600円）</li>
+              <li>納入方法：年度初めに1年分を一括して班長へお支払いください。</li>
+              <li>途中入会・退会：月割り計算にて対応します。</li>
             </ul>
+            <p>転入される方は入会月からの月数分を納入、転居される方は未経過月分を計算し、後日返金いたします。異動が発生する際は、お早めに班長までお知らせください。</p>
           </div>
         </div>
       </div>
@@ -2479,18 +2477,13 @@
           <div>
             <span class="badge">Living</span>
             <h2>暮らしの案内</h2>
-            <p>ごみ出し・資源回収、回覧板の運用など、日々の暮らしに関する情報は専用ページにまとめました。</p>
-            <div class="home-mini-grid">
-              <div class="home-mini-card"><b>ごみ出し</b><span>曜日別の回収概要</span></div>
-              <div class="home-mini-card"><b>回覧板</b><span>早めの回覧にご協力ください</span></div>
-              <div class="home-mini-card"><b>掲載ルール</b><span>地域情報の掲載基準を確認</span></div>
-            </div>
+            <p>ごみ出し・資源回収、回覧板などの暮らし情報は、前回内容のまま個別ページに整理しました。</p>
             <div class="home-short-actions">
               <a class="button button-primary" href="./living-guide.html">暮らしの案内を見る</a>
               <a class="button button-secondary" href="./posting-guidelines.html">掲載ルールを見る</a>
             </div>
           </div>
-          <div class="home-mini-card"><b>スマホで確認</b><span>回覧板を見逃しても、町内会情報をスマホで確認できます。</span></div>
+          <div class="home-mini-card"><b>スマホで確認</b><span>町内会情報を見逃しても、ホームページで確認できます。</span></div>
         </div>
       </div>
     </section>
