@@ -82,6 +82,41 @@
       }
     }
 
+      /* 防災備蓄品をコンパクト表示 */
+    .stockpile-card {
+      margin: 0 0 18px;
+      padding: 18px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff8f6, #fff);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.055);
+    }
+    .stockpile-heading { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+    .stockpile-heading h3 { margin: 6px 0 6px; color: var(--primary-dark); font-size: 20px; line-height: 1.35; }
+    .stockpile-heading p { margin: 0; color: var(--muted); font-size: 13px; font-weight: 800; line-height: 1.55; }
+    .stockpile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+    .stockpile-item { min-height: 92px; padding: 11px 12px; border-radius: 16px; background: #fff; border: 1px solid rgba(238,216,201,0.9); }
+    .stockpile-item strong { display: block; color: var(--primary-dark); font-size: 13px; font-weight: 1000; line-height: 1.35; }
+    .stockpile-item span { display: block; margin-top: 3px; color: var(--ink); font-size: 16px; font-weight: 1000; line-height: 1.35; }
+    .stockpile-item small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; font-weight: 800; line-height: 1.35; }
+    .stockpile-details { margin-top: 10px; padding: 10px 12px; border-radius: 16px; background: rgba(255,255,255,0.78); border: 1px dashed rgba(238,216,201,0.95); }
+    .stockpile-details summary { cursor: pointer; color: var(--primary-dark); font-weight: 1000; font-size: 13px; }
+    .stockpile-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 10px; }
+    .stockpile-detail-grid h4 { margin: 0 0 5px; color: var(--primary-dark); font-size: 13px; }
+    .stockpile-detail-grid ul { margin: 0; padding-left: 1.2em; color: var(--muted); font-size: 12px; font-weight: 800; line-height: 1.55; }
+    .stockpile-card .small-note { margin-top: 10px; margin-bottom: 0; }
+    @media (max-width: 900px) { .stockpile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .stockpile-heading { flex-direction: column; } }
+    @media (max-width: 560px) { .stockpile-card { padding: 13px; border-radius: 20px; } .stockpile-grid, .stockpile-detail-grid { grid-template-columns: 1fr; } .stockpile-item { min-height: auto; padding: 10px 11px; } .stockpile-heading h3 { font-size: 17px; } }
+
+  
+    .site-published {
+      display: inline-block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
   </style>
 </head>
 <body id="top">
@@ -178,10 +213,60 @@
         </article>
       </section>
 
-      <section class="card">
-        <h2>防災備蓄について</h2>
-        <p>町内会では、災害時の共助活動に必要な資機材・物品を管理しています。防犯上の観点から、ホームページ上では詳細な保管場所が特定される表現は控えています。</p>
+      <section id="stockpile" class="card">
+        <h2>町内会の防災備蓄</h2>
+        <p>災害時に備え、町内会で管理している主な備蓄品・備品を、2026年5月時点の情報として掲載しています。</p>
+        <article class="stockpile-card" id="stockpile-202605" aria-label="町内会の防災備蓄品">
+          <div class="stockpile-heading">
+            <div>
+              <span class="date">2026年5月時点</span>
+              <h3>町内会の防災備蓄</h3>
+              <p>災害時に備え、町内会で主な備蓄品・備品を管理しています。</p>
+            </div>
+            <a class="button button-secondary" href="#top">ページ上部へ戻る</a>
+          </div>
+
+          <div class="stockpile-grid">
+            <div class="stockpile-item"><strong>保存水</strong><span>合計 664本</span><small>500ml缶・ペットボトル</small></div>
+            <div class="stockpile-item"><strong>食料</strong><span>約262食分</span><small>アルファ米・炊き出し用米・非常食セット等</small></div>
+            <div class="stockpile-item"><strong>トイレ・衛生</strong><span>凝固剤 約660回分</span><small>簡易トイレ・非常用トイレ・マスク等</small></div>
+            <div class="stockpile-item"><strong>避難・防寒</strong><span>毛布36枚</span><small>寝袋5個・エアーマット14個・防寒シート9枚</small></div>
+            <div class="stockpile-item"><strong>テント類</strong><span>簡易テント等</span><small>2.5m/3mテント・災害用簡易テント・サイドカーテン</small></div>
+            <div class="stockpile-item"><strong>救急・情報</strong><span>救急箱・ラジオ等</span><small>メガホン2個・サイレン1個・ホイッスル17個</small></div>
+          </div>
+
+          <details class="stockpile-details">
+            <summary>主な内訳を見る</summary>
+            <div class="stockpile-detail-grid">
+              <div>
+                <h4>水・食料</h4>
+                <ul>
+                  <li>保存水：合計664本</li>
+                  <li>アルファ米：120食分</li>
+                  <li>炊き出し用五目米：50食分</li>
+                  <li>山菜おこわ：50食分</li>
+                  <li>非常食セット：12種42食セット</li>
+                  <li>えいようかん：20個</li>
+                </ul>
+              </div>
+              <div>
+                <h4>主な備品</h4>
+                <ul>
+                  <li>非常用トイレ凝固剤：約660回分</li>
+                  <li>災害用備蓄毛布：36枚</li>
+                  <li>簡易テント・災害用簡易テント、サイドカーテン</li>
+                  <li>防災バック：複数セットを管理</li>
+                  <li>車椅子2台、布担架1枚、組織用救急箱1個</li>
+                  <li>子供用・大人用不織布マスク 各150枚</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <p class="small-note">※数量・賞味期限は2026年5月時点の確認情報です。備蓄品は点検・入替により変更となる場合があります。</p>
+        </article>
       </section>
+
 </div>
   </main>
   <a class="back-to-top" href="#top">↑ トップへ</a>
