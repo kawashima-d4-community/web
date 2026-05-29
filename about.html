@@ -2174,6 +2174,96 @@
       }
     }
 
+
+    /* 外部メディア掲載：中央寄せのコンパクトカード */
+    .media-feature {
+      max-width: 980px;
+      margin: 24px auto 0;
+      padding: 22px 24px;
+      border: 1px solid #ead2c8;
+      border-radius: 24px;
+      background: #fffaf7;
+      box-shadow: 0 10px 24px rgba(80, 40, 20, 0.06);
+    }
+    .media-feature-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .media-feature-text {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .media-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: #9a5a44;
+      background: #fff3ec;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+    .media-feature h3 {
+      margin: 0 0 8px;
+      font-size: 1.5rem;
+      line-height: 1.35;
+      color: var(--primary-dark);
+    }
+    .media-feature p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .media-feature-action {
+      flex: 0 0 auto;
+      text-align: right;
+    }
+    .media-feature-action a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 24px;
+      border: 1px solid #d8b2a4;
+      border-radius: 999px;
+      background: #fff;
+      color: #5f2f22;
+      text-decoration: none;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .media-feature-action a:hover {
+      background: #fdf1eb;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 768px) {
+      .media-feature {
+        padding: 18px;
+        margin-top: 18px;
+      }
+      .media-feature-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .media-feature h3 {
+        font-size: 1.25rem;
+      }
+      .media-feature-action {
+        width: 100%;
+        text-align: left;
+      }
+      .media-feature-action a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
 </style>
 
 </head>
@@ -2268,13 +2358,24 @@
         </div>
       </div>
 
-      <div class="media-link-card">
-        <div class="media-link-copy">
-          <span class="media-link-label">外部メディア掲載</span>
-          <h3>タウンニュースで紹介されました</h3>
-          <p>川島第四町内会の活動や地域への思いが紹介されています。2024年8月掲載の記事です。</p>
-        </div>
-        <a class="button button-secondary media-link-button" href="https://www.townnews.co.jp/0115/2024/08/29/748468.html" target="_blank" rel="noopener">タウンニュースの記事を見る</a>
+      <div class="container">
+        <section class="media-feature" aria-label="外部メディア掲載">
+          <div class="media-feature-inner">
+            <div class="media-feature-text">
+              <span class="media-badge">外部メディア掲載</span>
+              <h3>タウンニュースで紹介されました</h3>
+              <p>
+                川島第四町内会の活動や、地域への思いが紹介された記事です。
+                <strong>2024年8月掲載</strong>の記事です。
+              </p>
+            </div>
+            <div class="media-feature-action">
+              <a href="https://www.townnews.co.jp/0115/2024/08/29/748468.html" target="_blank" rel="noopener noreferrer">
+                タウンニュースの記事を見る
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
 
     </section>
