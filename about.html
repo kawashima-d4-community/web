@@ -2144,17 +2144,37 @@
     .subpage-nav { min-height: 68px; }
     .subpage-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .subpage-actions .button { min-height: 38px; padding: 8px 14px; }
-    #greeting .greeting-layout { grid-template-columns: 160px 1fr; }
-    #greeting .president-photo { width: 160px; max-width: 100%; }
+    #greeting .greeting-layout { grid-template-columns: 240px 1fr; }
+    #greeting .president-photo { width: 240px; max-width: 100%; }
     #greeting .quote-card { padding: 24px; }
     @media (max-width: 760px) {
       #greeting .greeting-layout { grid-template-columns: 1fr; }
-      #greeting .president-photo { width: 136px; }
+      #greeting .president-photo { width: 180px; }
       #greeting figure { text-align: center; }
       .subpage-actions { width: 100%; }
       .subpage-actions .button { flex: 1; }
     }
-  </style>
+  
+    /* 会長写真差し替え：名前入り画像が読めるように表示サイズを調整 */
+    #greeting .greeting-layout {
+      grid-template-columns: 240px 1fr;
+    }
+    #greeting .president-photo {
+      width: 240px;
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+    @media (max-width: 760px) {
+      #greeting .greeting-layout {
+        grid-template-columns: 1fr;
+      }
+      #greeting .president-photo {
+        width: 180px;
+      }
+    }
+
+</style>
 
 </head>
 <body id="top">
@@ -2176,7 +2196,7 @@
         <span class="badge">About</span>
         <h1>町内会について</h1>
         <p>川島第四町内会の活動方針、会長あいさつ、基本情報、清掃活動、子ども会をまとめています。</p>
-        <p class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></p>
+        <p class="site-updated">最終更新日：<time datetime="2026-05-30">2026-05-30</time></p>
       </section>
     </div>
     <section id="about">
@@ -2230,7 +2250,7 @@
         <div class="quote-card">
           <div class="greeting-layout">
             <figure style="margin:0;">
-              <img class="president-photo" src="./araiy.jpg" alt="川島第四町内会 会長 新井好美の写真" />
+              <img class="president-photo" src="./arai-president-portrait.png" alt="川島第四町内会 会長 新井好美の写真" />
               <figcaption class="photo-caption">町内会 会長<br />新井 好美</figcaption>
             </figure>
             <div>
