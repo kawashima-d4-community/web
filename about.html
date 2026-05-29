@@ -2078,30 +2078,60 @@
       .safety-resource-panel { grid-template-columns: 1fr; }
     }
 
-  
     .media-link-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
       margin-top: 18px;
-      padding: 18px;
+      padding: 16px 18px;
       border-radius: 22px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.28);
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.10);
+      color: var(--ink);
+    }
+    .media-link-copy {
+      min-width: 0;
+    }
+    .media-link-label {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--soft-red);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.4;
     }
     .media-link-card h3 {
-      margin: 10px 0 8px;
-      color: #fff;
+      margin: 0 0 5px;
+      color: var(--primary-dark);
+      font-size: 18px;
+      line-height: 1.35;
     }
     .media-link-card p {
-      color: rgba(255,255,255,0.88);
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.6;
     }
-    .media-link-card .small-note {
-      font-size: 12px;
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 12px;
+    .media-link-button {
+      white-space: nowrap;
+      min-height: 40px;
     }
-    .media-link-card .button-secondary {
-      background: #fff;
-      color: var(--primary-dark);
-      border-color: rgba(255,255,255,0.8);
+    @media (max-width: 760px) {
+      .media-link-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 14px;
+      }
+      .media-link-button {
+        width: 100%;
+      }
     }
 
   </style>
@@ -2217,12 +2247,14 @@
           </div>
         </div>
       </div>
+
       <div class="media-link-card">
-        <span class="badge">外部メディア掲載</span>
-        <h3>タウンニュースで紹介されました</h3>
-        <p>新井会長は、地域活動に取り組む人物として、2024年にタウンニュース「人物風土記」で紹介されました。</p>
-        <p class="small-note">※外部サイトの記事へ移動します。記事本文や写真は転載せず、リンクでご紹介しています。</p>
-        <a class="button button-secondary" href="https://www.townnews.co.jp/0115/2024/08/29/748468.html" target="_blank" rel="noopener">タウンニュースの記事を見る</a>
+        <div class="media-link-copy">
+          <span class="media-link-label">外部メディア掲載</span>
+          <h3>タウンニュースで紹介されました</h3>
+          <p>川島第四町内会の活動や地域への思いが紹介されています。2024年8月掲載の記事です。</p>
+        </div>
+        <a class="button button-secondary media-link-button" href="https://www.townnews.co.jp/0115/2024/08/29/748468.html" target="_blank" rel="noopener">タウンニュースの記事を見る</a>
       </div>
 
     </section>
