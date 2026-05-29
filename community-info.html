@@ -119,14 +119,18 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     .post-list { display: grid; gap: 14px; }
 
     .sheet-status {
-      margin: 12px 0 0;
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: var(--soft-orange);
-      border: 1px solid var(--border);
+      margin: 6px 0 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
       color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: right;
+    }
+    .sheet-status:empty {
+      display: none;
     }
     .community-post {
       display: grid;
@@ -439,7 +443,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
         <span class="badge" id="totalPostCount">確認中</span>
       </div>
-      <div class="sheet-status" id="sheetStatus">地域からのお知らせをスプレッドシートから読み込み中です。</div>
+      <div class="sheet-status" id="sheetStatus" aria-live="polite"></div>
 
       <div class="board-section" id="chonaikai-news">
         <div class="board-section-head">
@@ -713,9 +717,7 @@ ${thumbnail}
       updateCommunityPosts();
 
       if (status) {
-        const updatedAt = payload.updatedAt ? ` 最終取得：${escapeHtml(payload.updatedAt)}` : '';
-        const cacheText = payload.cache ? ` / cache:${escapeHtml(payload.cache)}` : '';
-        status.textContent = `地域からのお知らせはスプレッドシートから公開OKのお知らせを表示しています。町内会からのお知らせは固定掲載です。${updatedAt}${cacheText}`;
+        status.textContent = payload.updatedAt ? `最終取得：${escapeHtml(payload.updatedAt)}` : '';
       }
     }
 
@@ -730,7 +732,7 @@ ${thumbnail}
       }
 
       if (status) {
-        status.textContent = '地域からのお知らせをスプレッドシートから読み込み中です。';
+        status.textContent = '';
       }
 
       let loaded = false;
