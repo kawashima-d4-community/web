@@ -2236,6 +2236,20 @@
       line-height: 1.6;
     }
 
+  
+    /* ホームページ案内チラシ：トップページでは画像を出さず、別ページへの導線だけ表示 */
+    .flyer-link-card .flyer-actions {
+      margin-top: 14px;
+    }
+    .flyer-link-card .button {
+      width: fit-content;
+    }
+    @media (max-width: 560px) {
+      .flyer-link-card .button {
+        width: 100%;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2378,17 +2392,12 @@
             </div>
             <a class="button button-secondary" href="./about.html#first-time">町内会について詳しく見る</a>
           </article>
-
-          <article class="flyer-guide-card">
+          <article class="flyer-guide-card flyer-link-card">
             <span class="badge">チラシ</span>
             <h2>ホームページ案内チラシ</h2>
-            <p>回覧板・掲示板・イベント案内などで使える、QRコード付きのホームページ案内チラシです。スマートフォンで読み取ると、川島第四町内会ホームページを開けます。</p>
-            <a class="flyer-preview-link" href="./homepage-flyer.pdf" target="_blank" rel="noopener">
-              <img src="./homepage-flyer-thumb.jpg" alt="川島第四町内会ホームページ公開のお知らせチラシ" loading="lazy" onerror="this.closest('.flyer-preview-link').classList.add('image-missing'); this.remove();" />
-            </a>
+            <p>回覧板・掲示板・イベント案内などで使えるQRコード付きチラシは、専用ページで確認できます。</p>
             <div class="flyer-actions">
-              <a class="button button-primary" href="./homepage-flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
-              <a class="button button-secondary" href="./homepage-flyer.jpg" target="_blank" rel="noopener">画像を見る</a>
+              <a class="button button-secondary" href="./homepage-flyer.html">チラシ案内ページを見る</a>
             </div>
           </article>
         </div>
