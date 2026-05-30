@@ -2417,6 +2417,94 @@
       }
     }
 
+  
+    /* 直近の行事予定：レイアウト修正 */
+    #events.events-compact-section {
+      padding-top: 28px;
+      padding-bottom: 24px;
+    }
+    #events .events-compact-card {
+      display: block;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 24px;
+    }
+    #events .events-compact-card h2 {
+      margin-bottom: 8px;
+    }
+    #events .events-compact-card p {
+      margin-bottom: 12px;
+    }
+    #events .events-compact-list {
+      gap: 8px;
+      margin-top: 10px;
+    }
+    #events .home-upcoming-row {
+      grid-template-columns: 116px minmax(0, 1fr);
+      padding: 10px 12px;
+      min-height: 48px;
+    }
+    #events .home-upcoming-row span {
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+    #events .events-festival-note {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+      padding: 11px 12px;
+      border-radius: 16px;
+      background: #fff7e8;
+      border: 1px solid rgba(242,166,90,0.45);
+    }
+    #events .events-festival-note b {
+      color: var(--primary-dark);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    #events .events-festival-note span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+    #events .events-festival-note a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    #events .events-actions {
+      margin-top: 12px;
+    }
+    @media (max-width: 760px) {
+      #events .events-compact-card {
+        padding: 14px;
+      }
+      #events .home-upcoming-row {
+        grid-template-columns: 94px minmax(0, 1fr);
+        gap: 8px;
+      }
+      #events .events-festival-note {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      #events .events-festival-note a {
+        width: 100%;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2711,25 +2799,34 @@
       </div>
     </section>
 
-    <section id="events" class="home-short-section">
+    <section id="events" class="home-short-section events-compact-section">
       <div class="container">
-        <div class="home-short-card">
+        <div class="home-short-card events-compact-card">
           <div>
             <span class="badge">Events</span>
             <h2>直近の行事予定</h2>
-            <p>トップページでは直近の予定だけを表示します。年間行事予定は前回内容のまま詳細ページに整理しました。</p>
-            <div class="home-upcoming-list" aria-label="直近の行事予定">
+            <p>トップページでは直近の予定をコンパクトに表示します。年間行事予定は詳細ページで確認できます。</p>
+            <div class="home-upcoming-list events-compact-list" aria-label="直近の行事予定">
               <div class="home-upcoming-row" data-event-end="2026-06-14"><b>6/14（日）</b><span>川島東部ドッジボール大会 ／ 川島小学校体育館</span></div>
               <div class="home-upcoming-row" data-event-end="2026-06-21"><b>6/21（日）</b><span>わんぱくっ子竹細工・木工細工教室 ／ 川島第四町内会館・横広場</span></div>
               <div class="home-upcoming-row" data-event-end="2026-06-27"><b>6/27（土）</b><span>ソフトバレーボール大会 ／ 川島小学校体育館</span></div>
             </div>
             <p class="event-empty-message" id="homeEventEmptyMessage" hidden>現在表示できる直近の行事予定はありません。新しい予定が決まり次第お知らせします。</p>
-            <div class="home-short-actions"><a class="button button-primary" href="./events.html">年間行事予定を見る</a></div>
+
+            <div class="events-festival-note">
+              <b>夏祭り</b>
+              <span>9/12（土）・9/13（日）開催予定。詳しくは夏祭り欄をご確認ください。</span>
+              <a href="#festival">夏祭り欄を見る</a>
+            </div>
+
+            <div class="home-short-actions events-actions">
+              <a class="button button-primary" href="./events.html">年間行事予定を見る</a>
+            </div>
           </div>
-          <div class="home-mini-card"><b>夏祭り</b><span>9/12（土）・9/13（日）開催予定。詳しくは夏祭り欄をご確認ください。</span></div>
         </div>
       </div>
     </section>
+
 
     <section id="safety" class="home-short-section">
       <div class="container">
