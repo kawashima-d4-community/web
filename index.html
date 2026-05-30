@@ -2250,6 +2250,35 @@
       }
     }
 
+  
+    /* 初めての方へ：ホームページ案内チラシを同じ枠内に統合 */
+    #first-guide .first-visit-grid {
+      grid-template-columns: 1fr;
+    }
+    #first-guide .first-visit-card {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .first-visit-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .first-visit-actions .button {
+      width: fit-content;
+    }
+    .first-visit-point.flyer-point {
+      background: var(--soft-orange);
+      border-color: rgba(242,166,90,0.48);
+      color: var(--primary-dark);
+    }
+    @media (max-width: 560px) {
+      .first-visit-actions .button {
+        width: 100%;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2389,15 +2418,11 @@
               <div class="first-visit-point">📅 行事予定・イベント情報</div>
               <div class="first-visit-point">🧯 防災・防犯に関する情報</div>
               <div class="first-visit-point">🤝 地域からのお知らせ</div>
+              <div class="first-visit-point flyer-point">🧾 ホームページ案内チラシ</div>
             </div>
-            <a class="button button-secondary" href="./about.html#first-time">町内会について詳しく見る</a>
-          </article>
-          <article class="flyer-guide-card flyer-link-card">
-            <span class="badge">チラシ</span>
-            <h2>ホームページ案内チラシ</h2>
-            <p>回覧板・掲示板・イベント案内などで使えるQRコード付きチラシは、専用ページで確認できます。</p>
-            <div class="flyer-actions">
-              <a class="button button-secondary" href="./homepage-flyer.html">チラシ案内ページを見る</a>
+            <div class="first-visit-actions">
+              <a class="button button-secondary" href="./about.html#first-time">町内会について詳しく見る</a>
+              <a class="button button-primary" href="./homepage-flyer.html">ホームページ案内チラシを見る</a>
             </div>
           </article>
         </div>
