@@ -2570,6 +2570,19 @@
       outline-offset: 3px;
     }
 
+  
+    /* 初めての方へ：リンク項目を6個の均等グリッドに整理 */
+    .first-visit-point.about-point {
+      background: #fff;
+      border-color: rgba(238,216,201,0.95);
+      color: var(--primary-dark);
+    }
+    @media (min-width: 720px) {
+      .first-visit-points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2809,9 +2822,7 @@
               <a class="first-visit-point" href="./disaster-prevention.html">🧯 防災・防犯に関する情報</a>
               <a class="first-visit-point" href="./community-info.html#local-news">🤝 地域からのお知らせ</a>
               <a class="first-visit-point flyer-point" href="./homepage-flyer.html">🧾 ホームページ案内チラシ</a>
-            </div>
-<div class="first-visit-actions">
-              <a class="button button-secondary" href="./about.html#first-time">町内会について詳しく見る</a>
+              <a class="first-visit-point about-point" href="./about.html#first-time">🏘️ 町内会について詳しく見る</a>
             </div>
           </article>
         </div>
