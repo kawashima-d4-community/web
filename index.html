@@ -2505,6 +2505,54 @@
       }
     }
 
+  
+    /* イベント参加の考え方 */
+    .participation-section { padding-top: 28px; padding-bottom: 26px; }
+    .participation-card {
+      padding: 24px; border-radius: 28px;
+      background: linear-gradient(135deg, #fff4ee, #fff);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(127,29,29,0.07);
+    }
+    .participation-card h2 {
+      margin: 8px 0 10px; color: var(--primary-dark);
+      font-size: clamp(24px, 4vw, 34px); line-height: 1.25;
+    }
+    .participation-lead {
+      margin: 0 0 16px; color: var(--muted);
+      font-weight: 900; line-height: 1.75;
+    }
+    .participation-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px; margin: 16px 0;
+    }
+    .participation-point {
+      padding: 14px; border-radius: 18px; background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      color: var(--ink); font-size: 14px; font-weight: 1000;
+      line-height: 1.55; text-align: center;
+    }
+    .participation-point span {
+      display: block; margin-bottom: 6px; font-size: 24px; line-height: 1;
+    }
+    .participation-note {
+      margin-top: 14px; padding: 14px 16px; border-radius: 18px;
+      background: var(--soft-orange);
+      border: 1px solid rgba(242,166,90,0.46);
+      color: var(--muted); font-size: 14px; font-weight: 900; line-height: 1.7;
+    }
+    .participation-actions {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;
+    }
+    @media (max-width: 900px) {
+      .participation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .participation-card { padding: 16px; border-radius: 22px; }
+      .participation-grid { grid-template-columns: 1fr; }
+      .participation-actions .button { width: 100%; }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2706,6 +2754,31 @@
         </div>
       </div>
     </section>
+
+    <section id="event-participation" class="participation-section">
+      <div class="container">
+        <div class="participation-card">
+          <span class="badge">イベント参加について</span>
+          <h2>参加だけでも、見学だけでも大歓迎です</h2>
+          <p class="participation-lead">町内会イベントは、役員だけのものではありません。地域の皆さまに、まずは気軽に参加して、楽しんでいただきたいという思いで開催しています。</p>
+          <div class="participation-grid" aria-label="イベント参加の考え方">
+            <div class="participation-point"><span>🙌</span>参加だけで大丈夫</div>
+            <div class="participation-point"><span>👀</span>見学だけでも大歓迎</div>
+            <div class="participation-point"><span>🤝</span>お手伝いはできる人だけで大丈夫</div>
+            <div class="participation-point"><span>🌿</span>参加を理由に役員をお願いすることはありません</div>
+          </div>
+          <div class="participation-note">
+            町内会では、子どもから大人まで、地域の皆さまが顔を合わせるきっかけを大切にしています。運動が得意でなくても、初めてでも、少しだけの参加でも大丈夫です。無理のない範囲で、地域の行事を一緒に楽しんでいただければ幸いです。
+          </div>
+          <div class="participation-actions">
+            <a class="button button-primary" href="./events.html">年間行事予定を見る</a>
+            <a class="button button-secondary" href="./community-info.html">町内会からのお知らせを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 <section id="first-guide" class="first-visit-section">
       <div class="container">
         <div class="first-visit-grid">
