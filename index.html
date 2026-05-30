@@ -2279,6 +2279,144 @@
       }
     }
 
+  
+    /* 夏祭り：過去写真リンク */
+    .festival-photo-archive {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.26);
+    }
+    .festival-photo-archive h3 {
+      margin: 0 0 6px;
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .festival-photo-archive p {
+      margin: 0 0 10px;
+      color: rgba(255,255,255,0.86);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .festival-photo-archive a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.8);
+    }
+    .festival-photo-archive a:hover {
+      background: #fff7e8;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 560px) {
+      .festival-photo-archive a {
+        width: 100%;
+      }
+    }
+
+  
+    /* 夏祭り：写真リンクカードのレイアウト修正 */
+    #festival .festival-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+      grid-template-areas:
+        "main image"
+        "points points";
+      gap: 16px 20px;
+      align-items: stretch;
+    }
+    #festival .festival-main {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    #festival .festival-main-content {
+      margin-top: 14px;
+    }
+    #festival .festival-archive-side-card {
+      grid-area: image;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.36);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.14);
+      color: var(--ink);
+      text-decoration: none;
+      text-align: center;
+    }
+    #festival .festival-archive-side-card:hover {
+      transform: translateY(-2px);
+      background: #fff7e8;
+    }
+    #festival .festival-archive-icon {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 2px;
+      border-radius: 999px;
+      background: var(--soft-orange);
+      color: var(--primary-dark);
+      font-size: 28px;
+    }
+    #festival .festival-archive-title {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 19px;
+      font-weight: 1000;
+      line-height: 1.35;
+    }
+    #festival .festival-archive-text {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    #festival .festival-archive-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 38px;
+      margin: 4px auto 0;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+    }
+    #festival .festival-points {
+      margin-top: 0;
+    }
+    @media (max-width: 980px) {
+      #festival .festival-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "image"
+          "points";
+      }
+      #festival .festival-archive-side-card {
+        min-height: auto;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2534,20 +2672,21 @@
                   <li>地域の皆様の交流の場</li>
                 </ul>
               </div>
-
-            <div class="festival-points">
+<div class="festival-points">
               <div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
               <div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
               <div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
             </div>
             </div>
 
-            <a class="festival-photo-card" href="./thumbnails/summer-festival-thumb.jpg" target="_blank" rel="noopener" aria-label="夏祭りの写真を開く">
-              <img src="./thumbnails/summer-festival-thumb.jpg" alt="川島第四町内会 夏祭りの会場風景" />
-              <span>夏祭りの雰囲気</span>
+            <a class="festival-archive-side-card" href="https://drive.google.com/drive/folders/1fa4umg5Rsli2u-qBW6WgxIqvoOOnGcoT?usp=sharing" target="_blank" rel="noopener" aria-label="過去の夏祭り写真をGoogleドライブで開く">
+              <span class="festival-archive-icon" aria-hidden="true">📷</span>
+              <span class="festival-archive-title">過去の夏祭り写真</span>
+              <span class="festival-archive-text">これまでの夏祭りの様子を写真でご覧いただけます。</span>
+              <span class="festival-archive-button">写真を見る</span>
             </a>
 
-            <p class="small-note" style="grid-column:1 / -1;color:rgba(255,255,255,0.82);margin:0;">
+<p class="small-note" style="grid-column:1 / -1;color:rgba(255,255,255,0.82);margin:0;">
               ※開催内容・時間・雨天時対応などの詳細は、決まり次第、回覧板・掲示・ホームページでお知らせします。
             </p>
           </div>
