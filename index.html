@@ -2103,6 +2103,109 @@
       .home-upcoming-row { grid-template-columns: 92px 1fr; padding: 9px 10px; }
     }
 
+  
+    /* 初めての方へ・ホームページ案内チラシ */
+    .first-visit-section {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+    .first-visit-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .first-visit-card,
+    .flyer-guide-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(127,29,29,0.06);
+    }
+    .first-visit-card {
+      background: linear-gradient(135deg, #fff4ee, #fff);
+    }
+    .first-visit-card h2,
+    .flyer-guide-card h2 {
+      margin: 8px 0 10px;
+      color: var(--primary-dark);
+      font-size: clamp(22px, 3.2vw, 30px);
+      line-height: 1.3;
+    }
+    .first-visit-card p,
+    .flyer-guide-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .first-visit-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 14px 0 16px;
+    }
+    .first-visit-point {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.9);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+    .flyer-preview-link {
+      display: block;
+      margin: 10px 0 12px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(127,29,29,0.06);
+    }
+    .flyer-preview-link img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .flyer-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .flyer-actions .button {
+      min-height: 40px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    @media (max-width: 900px) {
+      .first-visit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 560px) {
+      .first-visit-section {
+        padding-top: 22px;
+        padding-bottom: 22px;
+      }
+      .first-visit-card,
+      .flyer-guide-card {
+        padding: 16px;
+        border-radius: 20px;
+      }
+      .first-visit-points {
+        grid-template-columns: 1fr;
+      }
+      .flyer-actions .button {
+        width: 100%;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2229,6 +2332,39 @@
         </div>
       </div>
     </section>
+
+    <section id="first-guide" class="first-visit-section">
+      <div class="container">
+        <div class="first-visit-grid">
+          <article class="first-visit-card">
+            <span class="badge">初めての方へ</span>
+            <h2>町内会情報を見逃しても、スマホでいつでも確認できます</h2>
+            <p>川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域を対象とした町内会です。防災・防犯、清掃活動、子ども会、地域行事などを通じて、安心して暮らせる地域づくりを進めています。</p>
+            <div class="first-visit-points" aria-label="ホームページで確認できること">
+              <div class="first-visit-point">📢 町内会からのお知らせ</div>
+              <div class="first-visit-point">📅 行事予定・イベント情報</div>
+              <div class="first-visit-point">🧯 防災・防犯に関する情報</div>
+              <div class="first-visit-point">🤝 地域からのお知らせ</div>
+            </div>
+            <a class="button button-secondary" href="./about.html#first-time">町内会について詳しく見る</a>
+          </article>
+
+          <article class="flyer-guide-card">
+            <span class="badge">チラシ</span>
+            <h2>ホームページ案内チラシ</h2>
+            <p>回覧板・掲示板・イベント案内などで使える、QRコード付きのホームページ案内チラシです。スマートフォンで読み取ると、川島第四町内会ホームページを開けます。</p>
+            <a class="flyer-preview-link" href="./homepage-flyer.pdf" target="_blank" rel="noopener">
+              <img src="./homepage-flyer.jpg" alt="川島第四町内会ホームページ公開のお知らせチラシ" />
+            </a>
+            <div class="flyer-actions">
+              <a class="button button-primary" href="./homepage-flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
+              <a class="button button-secondary" href="./homepage-flyer.jpg" target="_blank" rel="noopener">画像を見る</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
 <section id="news">
       <div class="container">
         <div class="section-head">

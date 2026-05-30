@@ -2134,6 +2134,67 @@
       }
     }
 
+  
+    /* 初めての方へ */
+    .first-time-section {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+    .first-time-box {
+      padding: 24px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #fff4ee, #fff);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(127,29,29,0.06);
+    }
+    .first-time-box h2 {
+      margin: 8px 0 10px;
+      color: var(--primary-dark);
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1.25;
+    }
+    .first-time-box p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+    .first-time-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .first-time-item {
+      padding: 13px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.9);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+    .first-time-item b {
+      display: block;
+      color: var(--primary-dark);
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .first-time-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 560px) {
+      .first-time-box {
+        padding: 16px;
+        border-radius: 20px;
+      }
+      .first-time-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <style>
@@ -2289,7 +2350,25 @@
         <p class="site-updated">最終更新日：<time datetime="2026-05-30">2026-05-30</time></p>
       </section>
     </div>
-    <section id="about">
+    
+    <section id="first-time" class="first-time-section">
+      <div class="container">
+        <div class="first-time-box">
+          <span class="badge">初めての方へ</span>
+          <h2>川島第四町内会は、地域の情報をスマホで確認できる町内会です</h2>
+          <p>川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域を対象に、防災・防犯、清掃活動、子ども会、地域行事などを通じて、安心して暮らせる地域づくりを進めています。</p>
+          <p>このホームページでは、町内会からのお知らせ、行事予定、防災情報、地域からのお知らせを、スマートフォンでいつでも確認できます。回覧板を見逃した時や、行事の日程を確認したい時にもご活用ください。</p>
+          <div class="first-time-list">
+            <div class="first-time-item"><b>対象エリア</b>東川島町1番地より21番地までの区域</div>
+            <div class="first-time-item"><b>主な活動</b>防災・防犯、清掃、子ども会、地域行事</div>
+            <div class="first-time-item"><b>確認できる情報</b>お知らせ、行事予定、防災情報、地域情報</div>
+            <div class="first-time-item"><b>目指す姿</b>顔の見えるつながりで、安心して暮らせるまち</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="about">
       <div class="container">
         <div class="section-head">
           <div>
