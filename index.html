@@ -2206,6 +2206,36 @@
       }
     }
 
+  
+    /* ホームページ案内チラシ：画像プレビュー表示崩れ防止 */
+    .flyer-preview-link {
+      position: relative;
+      min-height: 0;
+      background: #fff;
+    }
+    .flyer-preview-link img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .flyer-preview-link.image-missing {
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      padding: 18px;
+      color: var(--muted);
+      font-weight: 900;
+      text-align: center;
+      background: #fff8f6;
+    }
+    .flyer-preview-link.image-missing::after {
+      content: "チラシ画像を表示するには homepage-flyer-thumb.jpg を同じフォルダにアップロードしてください";
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2354,7 +2384,7 @@
             <h2>ホームページ案内チラシ</h2>
             <p>回覧板・掲示板・イベント案内などで使える、QRコード付きのホームページ案内チラシです。スマートフォンで読み取ると、川島第四町内会ホームページを開けます。</p>
             <a class="flyer-preview-link" href="./homepage-flyer.pdf" target="_blank" rel="noopener">
-              <img src="./homepage-flyer.jpg" alt="川島第四町内会ホームページ公開のお知らせチラシ" />
+              <img src="./homepage-flyer-thumb.jpg" alt="川島第四町内会ホームページ公開のお知らせチラシ" loading="lazy" onerror="this.closest('.flyer-preview-link').classList.add('image-missing'); this.remove();" />
             </a>
             <div class="flyer-actions">
               <a class="button button-primary" href="./homepage-flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
