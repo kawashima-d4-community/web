@@ -2665,8 +2665,8 @@
       </a>
       <button class="menu-button" type="button" aria-controls="navLinks" aria-expanded="false">メニュー</button>
       <nav id="navLinks" class="nav-links">
-        <a class="nav-direct" href="./index.html#top">トップ</a>
-        <a class="nav-direct" href="./index.html#news">What's New</a>
+        <a class="nav-direct js-scroll-link" href="#top" data-scroll-target="top">トップ</a>
+        <a class="nav-direct js-scroll-link" href="#news" data-scroll-target="news">What's New</a>
         <a class="nav-direct" href="./community-info.html">地域情報</a>
         <a class="nav-direct" href="./disaster-prevention.html">防災・防犯</a>
 
@@ -2682,7 +2682,7 @@
         <div class="nav-group">
           <button class="nav-group-button" type="button" aria-expanded="false">行事・活動</button>
           <div class="nav-submenu">
-            <a href="./index.html#festival">夏祭り</a>
+            <a class="js-scroll-link" href="#festival" data-scroll-target="festival">夏祭り</a>
             <a href="./events.html">年間行事予定</a>
             <a href="./about.html#cleaning">さわやか清掃</a>
             <a href="./about.html#children">子ども会</a>
@@ -2692,7 +2692,7 @@
         <div class="nav-group">
           <button class="nav-group-button" type="button" aria-expanded="false">暮らし・加入</button>
           <div class="nav-submenu">
-            <a href="./index.html#join">加入案内</a>
+            <a class="js-scroll-link" href="#join" data-scroll-target="join">加入案内</a>
             <a href="./living-guide.html">暮らしの案内</a>
             <a href="./faq.html">よくある質問</a>
           </div>
@@ -3400,7 +3400,25 @@
     }
 
     loadVisitorCounter();
-  </script>
+  
+
+    // Google翻訳ページ上でページ内リンクを押した時の再翻訳エラー対策
+    document.querySelectorAll('.js-scroll-link[data-scroll-target]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('data-scroll-target');
+        const target = targetId ? document.getElementById(targetId) : null;
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', `#${targetId}`);
+        }
+        const navLinks = document.getElementById('navLinks');
+        if (navLinks) navLinks.classList.remove('open');
+      });
+    });
+
+</script>
 
 </body>
 </html>
