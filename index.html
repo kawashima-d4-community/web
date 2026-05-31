@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
-  Last Updated: 2026-05-30
-  Update Note: What's Newにソフトバレーボール大会参加者募集を追加
+  Last Updated: 2026-05-31
+  Update Note: トップページ上部に地域情報掲載案内と掲載依頼導線を追加
 -->
 <!doctype html>
 <html lang="ja">
@@ -9,7 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-05-31" />
-  <meta name="d4-site-version" content="2026-05-31" />
+  <meta name="d4-site-version" content="2026-05-31-community-hub" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -158,6 +158,26 @@
     .lead-box { border-radius: 28px; padding: 28px; background: linear-gradient(135deg, #fff4ee, #ffffff); border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(127,29,29,0.06); }
     .lead-box h3 { margin: 0 0 12px; font-size: 24px; }
     .lead-box p { color: var(--muted); margin: 0 0 12px; }
+    .hero-posting-guide {
+      margin-top: 20px;
+      padding: 20px;
+      border-left: 6px solid var(--primary);
+      background: linear-gradient(135deg, #fff7e8, #ffffff);
+    }
+    .hero-posting-guide h3 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+      font-size: 21px;
+      line-height: 1.35;
+    }
+    .hero-posting-guide p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      font-weight: 800;
+      line-height: 1.7;
+      max-width: none;
+    }
     .quote-card { background: #9f4c3c; color: #fff; border-radius: 30px; padding: 30px; box-shadow: var(--shadow); }
     .quote-card p { color: rgba(255,255,255,0.86); }
     .quote-card .signature { text-align: right; color: #fff; font-weight: 900; margin-top: 18px; }
@@ -2627,7 +2647,58 @@
         grid-template-columns: 1fr;
       }
     }
-</style>
+
+    /* 外国語ページ案内 */
+    .multilingual-guide-section {
+      padding-top: 18px;
+      padding-bottom: 26px;
+    }
+    .multilingual-guide-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      padding: 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff4ee, #fff);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(127,29,29,0.06);
+    }
+    .multilingual-guide-card h2 {
+      margin: 8px 0 8px;
+      color: var(--primary-dark);
+      font-size: clamp(22px, 3.4vw, 30px);
+      line-height: 1.3;
+    }
+    .multilingual-guide-card p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .multilingual-guide-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .multilingual-guide-actions .button {
+      white-space: nowrap;
+    }
+    @media (max-width: 760px) {
+      .multilingual-guide-card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+      .multilingual-guide-actions {
+        justify-content: flex-start;
+      }
+      .multilingual-guide-actions .button {
+        width: 100%;
+      }
+    }
+
+  </style>
 
   <script type="application/ld+json">
   {
@@ -2734,8 +2805,16 @@
           <p>
             川島第四町内会のホームページへようこそ。当町内会は、約400世帯が暮らす地域です。合言葉は「川島第四一致団結」。『一致団結』の精神を大切に、子育て世代からご年配の方まで、誰もが「この街に住んでよかった」と思える温かいコミュニティづくりを進めています。
           </p>
+          <div class="lead-box hero-posting-guide">
+            <h3>地域の情報掲載を受け付けています</h3>
+            <p>
+              子ども会、少年野球、消防団、PTA、地域スポーツ、趣味の集まり、地域イベントなど、
+              第四町内会エリアに関係するお知らせをホームページに掲載できます。
+            </p>
+          </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#festival">夏祭り情報を見る</a>
+            <a class="button button-secondary" href="./posting-request.html">地域情報を掲載する</a>
             <a class="button button-secondary" href="#join">町内会に加入する</a>
             <a class="button button-secondary" href="./events.html">行事予定を見る</a>
           </div>
@@ -2874,6 +2953,25 @@
         </div>
       </div>
     </section>
+
+    <section id="multilingual-guide" class="multilingual-guide-section">
+      <div class="container">
+        <div class="multilingual-guide-card">
+          <div>
+            <span class="badge">Foreign Languages</span>
+            <h2>外国語で町内会について確認できます</h2>
+            <p>町内会についての概要を、英語・中国語・韓国語・ポルトガル語・スペイン語・ベトナム語で確認できるページを用意しました。各ページには、Google翻訳やChrome翻訳を使ってサイト全体を外国語で見る手順も掲載しています。</p>
+          </div>
+          <div class="multilingual-guide-actions">
+            <a class="button button-primary" href="./about-en.html">English</a>
+            <a class="button button-secondary" href="./about-zh.html">中文</a>
+            <a class="button button-secondary" href="./about-ko.html">한국어</a>
+            <a class="button button-secondary" href="./about.html">外国語ページ一覧を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <section id="gateway" class="gateway-section">
       <div class="container">
         <div class="section-head compact-section-head">
