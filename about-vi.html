@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="last-modified" content="2026-05-31" />
+  <meta name="d4-site-version" content="2026-05-31" />
+  <title>Giới thiệu về Hội khu phố Kawashima Daiyon｜Kawashima Daiyon Neighborhood Association</title>
+  <meta name="description" content="Hội khu phố Kawashima Daiyon phụ trách khu vực Higashi-Kawashima-cho từ số 1 đến số 21, quận Hodogaya, thành phố Yokohama." />
+  <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <link rel="alternate" hreflang="ja" href="https://kawashima-d4-community.github.io/web/about.html" />
+  <link rel="alternate" hreflang="en" href="https://kawashima-d4-community.github.io/web/about-en.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://kawashima-d4-community.github.io/web/about-zh.html" />
+  <link rel="alternate" hreflang="ko" href="https://kawashima-d4-community.github.io/web/about-ko.html" />
+  <link rel="alternate" hreflang="pt" href="https://kawashima-d4-community.github.io/web/about-pt.html" />
+  <link rel="alternate" hreflang="es" href="https://kawashima-d4-community.github.io/web/about-es.html" />
+  <link rel="alternate" hreflang="vi" href="https://kawashima-d4-community.github.io/web/about-vi.html" />
+  <style>
+    :root {
+      --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52;
+      --primary:#d9684f; --primary-dark:#9f4c3c; --soft-red:#fff4ee;
+      --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,0.11);
+      --max:1120px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#fff5ee 0%,var(--bg) 42%,#fff 100%);
+      line-height:1.8;
+    }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(var(--max), calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:900; }
+    .brand-mark { width:54px; height:54px; min-width:54px; display:grid; place-items:center; border-radius:16px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 22px rgba(217,104,79,.16); padding:5px; }
+    .brand-mark img { width:100%; height:100%; object-fit:contain; }
+    .brand small { display:block; color:var(--muted); font-size:12px; font-weight:700; line-height:1.3; }
+    .actions { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:8px 15px; border-radius:999px; font-weight:900; border:1px solid transparent; }
+    .button-primary { background:var(--primary); color:#fff; }
+    .button-secondary { background:#fff; color:var(--ink); border-color:var(--border); }
+    main { padding:28px 0 48px; }
+    .hero { padding:34px 0 20px; }
+    .hero-card, .card {
+      background:#fff; border:1px solid var(--border); border-radius:26px; box-shadow:var(--shadow);
+    }
+    .hero-card { padding:28px; background:linear-gradient(135deg,#fff4ee,#fff); }
+    .badge { display:inline-flex; padding:5px 10px; border-radius:999px; background:var(--soft-red); color:var(--primary-dark); font-size:12px; font-weight:900; }
+    h1 { margin:14px 0 10px; font-size:clamp(30px,5vw,50px); line-height:1.18; letter-spacing:-.03em; }
+    h2 { margin:0 0 12px; font-size:clamp(23px,4vw,34px); color:var(--primary-dark); line-height:1.3; }
+    h3 { margin:0 0 10px; color:var(--primary-dark); font-size:20px; line-height:1.35; }
+    p { color:var(--muted); font-weight:800; }
+    .language-switch { margin-top:18px; display:flex; flex-wrap:wrap; gap:8px; }
+    .language-switch a { padding:7px 12px; border-radius:999px; border:1px solid var(--border); background:#fff; color:var(--ink); font-weight:900; font-size:13px; }
+    .language-switch a.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+    section { padding:18px 0; }
+    .card { padding:22px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .info-card { display:grid; gap:5px; padding:14px; border-radius:18px; background:var(--soft-red); border:1px solid var(--border); }
+    .info-card b { color:var(--primary-dark); }
+    .info-card span { color:var(--muted); font-weight:800; font-size:14px; }
+    .notice { padding:16px; border-radius:18px; background:var(--soft-orange); border:1px solid rgba(242,166,90,.46); color:var(--muted); font-weight:800; }
+    .translate-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .step-card { padding:16px; border-radius:20px; background:#fff; border:1px solid var(--border); }
+    .step-card ol { margin:0; padding-left:20px; color:var(--muted); font-weight:800; }
+    .step-card li { margin:6px 0; }
+    .footer { padding:26px 0 30px; color:var(--muted); font-size:13px; font-weight:800; border-top:1px solid var(--border); }
+    @media (max-width:860px) {
+      .nav { align-items:flex-start; flex-direction:column; padding:12px 0; }
+      .actions { justify-content:flex-start; }
+      .grid, .translate-grid { grid-template-columns:1fr; }
+      .hero-card, .card { padding:18px; border-radius:22px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./index.html" aria-label="Kawashima Daiyon Neighborhood Association">
+        <span class="brand-mark"><img src="./d4-mark2.png" alt="logo" /></span>
+        <span>Kawashima Daiyon<small>Higashi-Kawashima-cho 1–21, Hodogaya, Yokohama</small></span>
+      </a>
+      <div class="actions">
+        <a class="button button-secondary" href="./about.html">Trang tiếng Nhật</a>
+        <a class="button button-primary" href="./index.html">Quay lại trang tiếng Nhật</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="badge">Giới thiệu</span>
+          <h1>Giới thiệu về Hội khu phố Kawashima Daiyon</h1>
+          <p>Hội khu phố Kawashima Daiyon phụ trách khu vực Higashi-Kawashima-cho từ số 1 đến số 21, quận Hodogaya, thành phố Yokohama.</p>
+          <p><strong>Cập nhật lần cuối:</strong> <time datetime="2026-05-31">2026-05-31</time></p>
+          <div class="language-switch" aria-label="Language">
+            <a href="./about.html">日本語</a>
+            <a href="./about-en.html">English</a>
+            <a href="./about-zh.html">中文</a>
+            <a href="./about-ko.html">한국어</a>
+            <a href="./about-pt.html">Português</a>
+            <a href="./about-es.html">Español</a>
+            <a class="active" href="./about-vi.html">Tiếng Việt</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card">
+          <h2>Dành cho người xem lần đầu</h2>
+          <p>Hội khu phố hoạt động để xây dựng một khu vực an toàn và thân thiện thông qua phòng chống thiên tai, phòng chống tội phạm, dọn vệ sinh, hoạt động thiếu nhi, sự kiện địa phương và chia sẻ thông tin.</p>
+<p>Trang web này giúp bạn xem thông báo, lịch sự kiện, thông tin phòng chống thiên tai và tin tức địa phương bằng điện thoại thông minh.</p>
+          <div class="grid">
+            <div class="info-card"><b>Khu vực</b><span>Higashi-Kawashima-cho từ số 1 đến số 21, Hodogaya, Yokohama</span></div>
+<div class="info-card"><b>Hoạt động chính</b><span>Phòng chống thiên tai, an ninh, dọn vệ sinh, hoạt động thiếu nhi và sự kiện</span></div>
+<div class="info-card"><b>Thông tin trên trang web</b><span>Thông báo, lịch sự kiện, thông tin an toàn và tin địa phương</span></div>
+<div class="info-card"><b>Mục tiêu</b><span>Một cộng đồng an toàn, thân thiện và có sự kết nối</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card">
+          <h2>Mọi người đều được chào đón</h2>
+          <div class="notice">Các sự kiện của hội khu phố dành cho mọi người trong khu vực. Bạn có thể chỉ tham gia, chỉ xem hoặc giúp đỡ khi có thể. Việc tham gia sự kiện không có nghĩa là bạn sẽ bị yêu cầu làm ban điều hành.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="translate">
+      <div class="container">
+        <div class="card">
+          <h2>Cách dịch toàn bộ trang web</h2>
+          <p>Toàn bộ trang web chủ yếu bằng tiếng Nhật. Vui lòng dùng Google Translate hoặc chức năng dịch của Chrome để đọc các trang khác.</p>
+          <div class="actions" style="justify-content:flex-start;margin:10px 0 18px;">
+            <a class="button button-primary" href="./index.html">Mở trang tiếng Nhật</a>
+            <a class="button button-secondary" href="https://translate.google.com/" target="_blank" rel="noopener">Mở Google Translate</a>
+          </div>
+          <div class="translate-grid">
+            <div class="step-card">
+              <h3>Trên máy tính dùng Chrome</h3>
+              <ol><li>Mở trang chủ tiếng Nhật.</li>
+<li>Nhấp chuột phải vào vùng trống của trang và chọn dịch sang tiếng Việt.</li>
+<li>Nếu không thấy tiếng Việt, bấm biểu tượng dịch ở thanh địa chỉ và chọn ngôn ngữ.</li>
+<li>Bản dịch tự động có thể không hoàn toàn chính xác; nếu cần, hãy kiểm tra bản tiếng Nhật.</li></ol>
+            </div>
+            <div class="step-card">
+              <h3>Trên điện thoại dùng Chrome</h3>
+              <ol><li>Mở trang chủ tiếng Nhật bằng Chrome.</li>
+<li>Nếu hiện thông báo dịch, hãy bấm Dịch.</li>
+<li>Nếu không hiện, hãy mở menu Chrome và chọn Dịch.</li>
+<li>Chọn tiếng Việt nếu cần.</li></ol>
+            </div>
+            <div class="step-card">
+              <h3>Dùng trang Google Translate</h3>
+              <ol><li>Mở Google Translate.</li>
+<li>Chọn “Trang web”.</li>
+<li>Nhập URL này: https://kawashima-d4-community.github.io/web/</li>
+<li>Chọn ngôn ngữ mong muốn và mở trang đã dịch.</li></ol>
+            </div>
+          </div>
+          <p class="notice" style="margin-top:16px;">Tên địa điểm, tên người và tên sự kiện có thể không được dịch chính xác.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Kawashima Daiyon Neighborhood Association</div>
+  </footer>
+</body>
+</html>
