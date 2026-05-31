@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-28" />
-  <meta name="d4-site-version" content="2026-05-28" />
+  <meta name="last-modified" content="2026-05-31" />
+  <meta name="d4-site-version" content="2026-05-31" />
   <title>暮らしの案内｜川島第四町内会</title>
-  <meta name="description" content="ごみ出し、資源回収、回覧板など、日々の暮らしに関する情報をまとめています。" />
+  <meta name="description" content="ごみ出し、資源回収、回覧板、区役所手続き、子育て、福祉相談、地域施設など、第四町内会エリアの暮らしに役立つ情報をまとめています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
 <style>
     :root {
@@ -2078,10 +2078,138 @@
       .safety-resource-panel { grid-template-columns: 1fr; }
     }
 
+  
+    /* 暮らしの案内：区役所・地域情報リンク拡充 */
+    .living-intro-card {
+      margin: 0 0 18px;
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #fff8f6, #fff);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.055);
+    }
+    .living-intro-card p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .living-main-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 16px;
+      align-items: start;
+    }
+    .living-panel {
+      padding: 16px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.055);
+    }
+    .living-panel h3 {
+      margin: 0 0 10px;
+      color: var(--primary-dark);
+      font-size: 19px;
+      line-height: 1.35;
+    }
+    .living-panel p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .living-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .living-link-card {
+      display: grid;
+      gap: 8px;
+      padding: 15px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff8f6, #fff);
+      border: 1px solid rgba(238,216,201,0.95);
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .living-link-card:hover {
+      transform: translateY(-1px);
+      background: #fff7e8;
+      box-shadow: 0 10px 20px rgba(127,29,29,0.08);
+    }
+    .living-link-card b {
+      color: var(--primary-dark);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    .living-link-card span {
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .living-note-box {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--soft-orange);
+      border: 1px solid rgba(242,166,90,0.46);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .living-note-box b {
+      color: var(--primary-dark);
+    }
+    @media (max-width: 980px) {
+      .living-main-grid { grid-template-columns: 1fr; }
+      .living-card-grid { grid-template-columns: 1fr; }
+    }
+
+  
+    /* 暮らしの案内：レイアウトバランス調整 */
+    .living-main-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .living-panel {
+      width: 100%;
+    }
+    .living-panel .living-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .living-section-title {
+      margin: 22px 0 10px;
+      color: var(--primary-dark);
+      font-size: 21px;
+      line-height: 1.35;
+    }
+    .living-section-lead {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    @media (max-width: 760px) {
+      .living-panel .living-card-grid {
+        grid-template-columns: 1fr;
+      }
+      .living-section-title {
+        font-size: 19px;
+      }
+    }
+
   </style>
 
   <style>
-    /* 個別ページ用の補正：前回内容は維持し、会長写真だけ大きくなりすぎないよう調整 */
+    /* 個別ページ用の補正 */
     .subpage-main { padding-top: 22px; }
     .subpage-hero { padding: 28px; border-radius: 28px; background: linear-gradient(135deg,#fff4ee,#fff7e8); border: 1px solid var(--border); box-shadow: var(--shadow); margin: 24px auto 10px; }
     .subpage-hero h1 { margin: 10px 0 8px; }
@@ -2119,22 +2247,27 @@
       <section class="subpage-hero">
         <span class="badge">Living</span>
         <h1>暮らしの案内</h1>
-        <p>ごみ出し、資源回収、回覧板など、日々の暮らしに関する情報をまとめています。</p>
-        <p class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></p>
+        <p>ごみ出し、資源回収、回覧板、区役所手続き、子育て、福祉相談、地域施設など、第四町内会エリアの暮らしに役立つ情報をまとめています。</p>
+        <p class="site-updated">最終更新日：<time datetime="2026-05-31">2026-05-31</time></p>
       </section>
     </div>
+
     <section id="living" class="living-compact-section">
       <div class="container">
         <div class="section-head compact-section-head">
           <div>
             <span class="badge">Living</span>
             <h2>暮らしの案内</h2>
-            <p>ごみ出し・資源回収、回覧板の運用をコンパクトにまとめています。</p>
+            <p>町内会で共有したい暮らしの基本情報と、保土ケ谷区役所などの公式情報への入口をまとめています。</p>
           </div>
         </div>
 
-        <div class="living-compact-card">
-          <div class="living-schedule">
+        <div class="living-intro-card">
+          <p>このページは、第四町内会エリアで生活するうえで確認する機会が多い情報をまとめた案内ページです。町内会独自の情報はこのページに掲載し、行政手続きや施設情報など変更される可能性があるものは、保土ケ谷区役所・横浜市などの公式ページをご確認ください。</p>
+        </div>
+
+        <div class="living-main-grid">
+          <div class="living-panel">
             <h3>ごみ出し・資源回収</h3>
             <div class="living-day-grid" aria-label="ごみ出し・資源回収カレンダー">
               <div class="living-day"><b>月</b><span>プラスチック</span></div>
@@ -2145,34 +2278,84 @@
               <div class="living-day"><b>土</b><span>燃えるゴミ<br />燃えないゴミ等</span></div>
               <div class="living-day muted"><b>日</b><span>回収なし</span></div>
             </div>
-            <p class="small-note">詳しくはネット検索「保土ヶ谷区の収集曜日」の東川島町をご確認ください。</p>
+            <p class="small-note">詳しい分別・収集日は、横浜市・保土ケ谷区の最新情報もあわせてご確認ください。</p>
+
+            <div class="living-rules" style="margin-top:12px;">
+              <div class="living-mini-card">
+                <h3>出し方のルール</h3>
+                <ul>
+                  <li>ごみは回収日の当日朝に出してください。</li>
+                  <li>前日の夜出しは禁止です。</li>
+                  <li>段ボールは紐でまとめてください。</li>
+                  <li>分別の徹底にご協力ください。</li>
+                </ul>
+              </div>
+
+              <div class="living-mini-card">
+                <h3>回覧板</h3>
+                <p>広報よこはま、県のたより、町内会からの各種案内を班長から順次回覧します。</p>
+                <p class="small-note">回覧後は、次のご家庭へ早めにお回しください。</p>
+              </div>
+            </div>
           </div>
 
-          <div class="living-rules">
-            <div class="living-mini-card">
-              <h3>出し方のルール</h3>
-              <ul>
-                <li>ごみは回収日の当日朝に出してください。</li>
-                <li>前日の夜出しは禁止です。</li>
-                <li>段ボールは紐でまとめてください。</li>
-                <li>分別の徹底にご協力ください。</li>
-              </ul>
-            </div>
-
-            <div class="living-mini-card">
-              <h3>回覧板</h3>
-              <p>広報よこはま、県のたより、町内会からの各種案内を班長から順次回覧します。</p>
-              <p class="small-note">回覧後は、次のご家庭へ早めにお回しください。</p>
+          <div class="living-panel">
+            <h3>区役所・行政手続き</h3>
+            <p>住所変更、証明書、マイナンバーカード、国民健康保険、税金など、行政手続きに関する公式情報を確認できます。</p>
+            <div class="living-card-grid">
+              <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/" target="_blank" rel="noopener">
+                <b>保土ケ谷区役所トップ</b>
+                <span>区役所案内、窓口、生活情報、新着情報などの入口です。</span>
+              </a>
+              <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/kurashi/" target="_blank" rel="noopener">
+                <b>くらし・手続き</b>
+                <span>戸籍、税、保険、引越し、住まいなどの行政手続き。</span>
+              </a>
             </div>
           </div>
         </div>
+
+        <h3 class="living-section-title">暮らしに役立つ公式リンク</h3>
+        <p class="living-section-lead">よく使う行政・地域施設・子育て・福祉関連の公式ページへの入口です。</p>
+
+        <div class="living-card-grid">
+          <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/kurashi/sumai_kurashi/" target="_blank" rel="noopener">
+            <b>住まい・暮らし</b>
+            <span>ごみ・リサイクル、消費生活、ペット・動物、生活環境、市民相談など。</span>
+          </a>
+          <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/kosodate_kyoiku/" target="_blank" rel="noopener">
+            <b>子育て・教育</b>
+            <span>母子健康手帳、乳幼児健診、子育て支援、保育、放課後児童育成など。</span>
+          </a>
+          <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/kenko-iryo-fukushi/fukushi_kaigo/chiikifukushi/fukushi-shisetsu/cp/cp-syoukai.html" target="_blank" rel="noopener">
+            <b>高齢者・福祉相談</b>
+            <span>地域ケアプラザ、地域包括支援センター、福祉・保健に関する相談。</span>
+          </a>
+          <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/madoguchi-shisetsu/shisetu.html" target="_blank" rel="noopener">
+            <b>地域の施設</b>
+            <span>西谷地区センター、川島地域ケアプラザ、ログハウス、スポーツセンターなど。</span>
+          </a>
+          <a class="living-link-card" href="https://www.city.yokohama.lg.jp/hodogaya/" target="_blank" rel="noopener">
+            <b>広報・イベント情報</b>
+            <span>広報よこはま ほどがや区版、イベントカレンダー、新着情報など。</span>
+          </a>
+          <a class="living-link-card" href="https://pamatoco.city.yokohama.lg.jp/" target="_blank" rel="noopener">
+            <b>横浜市子育て応援アプリ パマトコ</b>
+            <span>子育て世帯向けの情報・手続きの入口です。</span>
+          </a>
+        </div>
+
+        <div class="living-note-box">
+          <b>掲載方針：</b>第四町内会ホームページでは、町内会エリアの皆さまが使いやすい入口として情報を整理しています。行政手続き、施設の開館時間、相談窓口などは変更される場合があるため、最新情報はリンク先の公式ページでご確認ください。
+        </div>
       </div>
     </section>
+
   </main>
   <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ トップへ</a>
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-05-31">2026-05-31</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
