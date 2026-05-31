@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="last-modified" content="2026-06-01" />
+  <meta name="d4-site-version" content="2026-06-01-monthly-notices" />
+  <title>月別お知らせ｜川島第四町内会</title>
+  <meta name="description" content="町内会役員定例会で共有された横浜市・保土ケ谷区などからのお知らせを、月別に整理して掲載しています。" />
+  <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <style>
+    :root {
+      --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52;
+      --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a;
+      --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9;
+      --shadow:0 18px 45px rgba(159,76,60,.11); --max:1120px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#fff5ee 0%,var(--bg) 42%,#fff 100%);
+      line-height:1.8;
+    }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(var(--max), calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.02em; }
+    .brand-mark { width:54px; height:54px; min-width:54px; display:grid; place-items:center; border-radius:16px; background:#fff; border:1px solid var(--border); box-shadow:0 10px 22px rgba(217,104,79,.16); padding:5px; }
+    .brand-mark img { width:100%; height:100%; object-fit:contain; display:block; }
+    .brand small { display:block; color:var(--muted); font-weight:700; font-size:12px; line-height:1.25; }
+    .subpage-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:42px; padding:8px 15px; border-radius:999px; font-weight:900; border:1px solid transparent; }
+    .button-primary { background:var(--primary); color:#fff; box-shadow:0 12px 24px rgba(217,104,79,.18); }
+    .button-secondary { background:#fff; color:var(--ink); border-color:var(--border); }
+    main { padding:28px 0 54px; }
+    .hero {
+      margin:0 0 24px;
+      padding:28px;
+      border-radius:28px;
+      background:linear-gradient(135deg,#fff4ee,#fff);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+    .badge { display:inline-flex; align-items:center; border-radius:999px; padding:5px 10px; font-size:12px; font-weight:900; background:var(--soft-red); color:var(--primary-dark); }
+    h1 { margin:14px 0 10px; font-size:clamp(30px,5vw,48px); line-height:1.16; letter-spacing:-.04em; }
+    h2 { margin:0 0 12px; font-size:clamp(24px,4vw,34px); line-height:1.25; color:var(--primary-dark); }
+    h3 { margin:0 0 8px; color:var(--primary-dark); font-size:19px; line-height:1.35; }
+    p { color:var(--muted); font-weight:800; }
+    .site-updated { display:inline-block; margin-top:4px; color:var(--muted); font-size:12px; font-weight:700; }
+    .month-nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .month-nav a { padding:7px 12px; border-radius:999px; background:#fff; border:1px solid var(--border); color:var(--primary-dark); font-size:13px; font-weight:900; }
+    .month-section {
+      margin-top:22px;
+      padding:24px;
+      border-radius:28px;
+      background:#fff;
+      border:1px solid var(--border);
+      box-shadow:0 10px 26px rgba(127,29,29,.06);
+    }
+    .month-head { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; margin-bottom:16px; }
+    .month-head p { margin:8px 0 0; }
+    .source-note {
+      padding:13px 15px;
+      border-radius:18px;
+      background:var(--soft-orange);
+      border:1px solid rgba(242,166,90,.46);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:800;
+      line-height:1.65;
+    }
+    .notice-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .notice-card {
+      padding:17px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#fff8f6,#fff);
+      border:1px solid rgba(238,216,201,.95);
+    }
+    .notice-card ul { margin:8px 0 0; padding-left:1.2em; color:var(--muted); font-weight:800; }
+    .notice-card li { margin:4px 0; }
+    .notice-category { display:inline-flex; margin-bottom:8px; padding:4px 9px; border-radius:999px; background:#fff; border:1px solid var(--border); color:var(--primary-dark); font-size:12px; font-weight:900; }
+    .timeline-card {
+      margin-top:16px;
+      padding:18px;
+      border-radius:22px;
+      background:var(--soft-red);
+      border:1px solid var(--border);
+    }
+    .event-table { width:100%; border-collapse:collapse; overflow:hidden; border-radius:16px; background:#fff; }
+    .event-table th, .event-table td { padding:11px 12px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; font-size:13px; }
+    .event-table th { background:#fff4ee; color:#4b1f1f; font-weight:900; }
+    .event-table tr:last-child td { border-bottom:0; }
+    .next-month {
+      margin-top:16px;
+      padding:16px;
+      border-radius:20px;
+      border:1px dashed rgba(238,216,201,.95);
+      background:#fff;
+      color:var(--muted);
+      font-weight:800;
+    }
+    footer { padding:30px 0; background:#0f172a; color:rgba(255,255,255,.78); font-size:14px; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    @media (max-width:860px) {
+      .nav { flex-direction:column; align-items:flex-start; padding:12px 0; }
+      .subpage-actions { justify-content:flex-start; }
+      .hero, .month-section { padding:18px; border-radius:22px; }
+      .notice-grid { grid-template-columns:1fr; }
+      .month-head { flex-direction:column; }
+      .event-table, .event-table tbody, .event-table tr, .event-table td, .event-table th { display:block; }
+      .event-table thead { display:none; }
+      .event-table tr { border-bottom:1px solid var(--border); padding:8px 0; }
+      .event-table td { border-bottom:0; }
+      .event-table td::before { content:attr(data-label); display:block; color:var(--primary-dark); font-size:12px; font-weight:900; }
+      .button { width:100%; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./index.html" aria-label="川島第四町内会 トップへ">
+        <span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span>
+        <span>川島第四町内会<small>保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
+      </a>
+      <div class="subpage-actions">
+        <a class="button button-secondary" href="./community-info.html">お知らせへ戻る</a>
+        <a class="button button-primary" href="./index.html">ホームページへ戻る</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">Monthly Notices</span>
+      <h1>月別お知らせ</h1>
+      <p>町内会役員定例会で配布・共有された、横浜市・保土ケ谷区などからのお知らせを月別に整理して掲載します。</p>
+      <p class="site-updated">最終更新日：<time datetime="2026-06-01">2026-06-01</time></p>
+      <div class="month-nav" aria-label="月別お知らせ一覧">
+        <a href="#2026-05">2026年5月度</a>
+      </div>
+    </section>
+
+    <section id="2026-05" class="month-section">
+      <div class="month-head">
+        <div>
+          <span class="badge">2026年5月度</span>
+          <h2>定例会配布資料からのお知らせ</h2>
+          <p>2026年5月度の町内会役員定例会資料で共有された、市・区からのお知らせ等を、住民の皆さま向けに見やすく整理しました。</p>
+        </div>
+        <div class="source-note">
+          掲載内容は定例会配布資料をもとに要約しています。制度内容、対象、申込方法、期限などは変更される場合があります。詳しくは回覧板・配布資料・横浜市や保土ケ谷区の公式情報をご確認ください。
+        </div>
+      </div>
+
+      <div class="notice-grid">
+        <article class="notice-card">
+          <span class="notice-category">保土ケ谷区制100周年</span>
+          <h3>保土ケ谷区制100周年記念事業</h3>
+          <p>令和9年度の保土ケ谷区制100周年に向けた記念事業について、実行委員会での検討内容が共有されました。</p>
+          <ul>
+            <li>区制100周年記念事業実行委員会の議案概要</li>
+            <li>区制100周年ロゴ・名称の活用</li>
+            <li>イベント、広報、メールマガジン等による周知</li>
+            <li>地域づくりに関する活動・団体支援の検討</li>
+          </ul>
+        </article>
+
+        <article class="notice-card">
+          <span class="notice-category">子育て・医療</span>
+          <h3>小児医療費助成の対象年齢拡大</h3>
+          <p>令和8年6月から、小児医療費助成の対象年齢を18歳年度末まで拡大する内容が共有されました。</p>
+          <ul>
+            <li>中学3年生から18歳年度末までに対象を拡大</li>
+            <li>対象者には医療証等が郵送される予定</li>
+            <li>申請が必要な場合があります</li>
+            <li>健康保険証を持っていない場合など、一部対象外となる場合があります</li>
+          </ul>
+        </article>
+
+        <article class="notice-card">
+          <span class="notice-category">防災・減災</span>
+          <h3>家具転倒防止対策事業</h3>
+          <p>地震時の家具の転倒から身を守るため、家具転倒防止器具の購入・取付費用を補助する事業が案内されました。</p>
+          <ul>
+            <li>対象は申込要件を満たす世帯</li>
+            <li>器具代・取付費用の一部または全額補助</li>
+            <li>申請期間は令和8年6月1日から令和9年1月31日までの案内</li>
+            <li>補助件数には上限があります</li>
+          </ul>
+        </article>
+
+        <article class="notice-card">
+          <span class="notice-category">防災・減災</span>
+          <h3>感震ブレーカー等設置推進事業</h3>
+          <p>大地震時の電気火災対策として、揺れを感知して自動的に電気を遮断する感震ブレーカー等の設置支援が案内されました。</p>
+          <ul>
+            <li>簡易タイプ・コンセントタイプなどが対象</li>
+            <li>購入・設置費用の一部または全額補助</li>
+            <li>申請期間は令和8年6月1日から令和9年1月31日までの案内</li>
+            <li>詳細は横浜市の公式情報をご確認ください</li>
+          </ul>
+        </article>
+
+        <article class="notice-card">
+          <span class="notice-category">防災研修</span>
+          <h3>よこはま防災研修の案内</h3>
+          <p>地域防災活動の支援に向けた研修として、「よこはま防災研修」の案内が共有されました。</p>
+          <ul>
+            <li>横浜市の防災対策や地域防災活動の事例を学ぶ内容</li>
+            <li>基礎編・支援編などの研修案内</li>
+            <li>自治会・町内会、マンション、管理組合などの地域活動に活用可能</li>
+          </ul>
+        </article>
+
+        <article class="notice-card">
+          <span class="notice-category">地域づくり</span>
+          <h3>デジタルプラットフォームでのアイデア募集</h3>
+          <p>幅広い年代の区民から、地域ニーズや課題等の意見を収集するため、インターネットで意見投稿できるプラットフォームの実施案内が共有されました。</p>
+          <ul>
+            <li>区制100周年記念事業の一環</li>
+            <li>地域の課題やアイデアを投稿</li>
+            <li>実施期間は令和8年6月1日から6月30日までの案内</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="timeline-card">
+        <h3>共通テーマ「未来へつなごう！人にもやさしいまちづくり」</h3>
+        <p>地域のつながりや課題について話し合う意見交換会の開催予定が共有されました。</p>
+        <table class="event-table">
+          <thead>
+            <tr>
+              <th>日程</th>
+              <th>主なテーマ</th>
+              <th>備考</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="日程">6月12日（金）</td>
+              <td data-label="主なテーマ">自治会への加入促進、防災対応策など</td>
+              <td data-label="備考">地域ごとの会場で開催</td>
+            </tr>
+            <tr>
+              <td data-label="日程">6月17日（水）</td>
+              <td data-label="主なテーマ">地域の情報共有・回覧や掲示について</td>
+              <td data-label="備考">意見交換会</td>
+            </tr>
+            <tr>
+              <td data-label="日程">6月19日（金）</td>
+              <td data-label="主なテーマ">地域の困りごとをみんなで話し合う</td>
+              <td data-label="備考">意見交換会</td>
+            </tr>
+            <tr>
+              <td data-label="日程">6月20日（土）</td>
+              <td data-label="主なテーマ">地域の課題をみんなで考える</td>
+              <td data-label="備考">意見交換会</td>
+            </tr>
+            <tr>
+              <td data-label="日程">6月27日（土）</td>
+              <td data-label="主なテーマ">地域で交流を増やすきっかけ</td>
+              <td data-label="備考">意見交換会</td>
+            </tr>
+            <tr>
+              <td data-label="日程">7月10日（金）</td>
+              <td data-label="主なテーマ">防災について</td>
+              <td data-label="備考">意見交換会</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="next-month">
+        <strong>今後の掲載方針：</strong>
+        6月度以降も、町内会役員定例会で共有された市・区からのお知らせ等を、月別に追記していきます。トップページや町内会からのお知らせには、最新月の掲載案内のみ表示します。
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 川島第四町内会<br />最終更新日：<time datetime="2026-06-01">2026-06-01</time></div>
+      <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
+    </div>
+  </footer>
+</body>
+</html>
