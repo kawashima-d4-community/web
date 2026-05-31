@@ -2583,6 +2583,51 @@
       }
     }
 
+  
+    /* 上部情報バー：表示順と天気表示の整理 */
+    .top-status-ordered {
+      gap: 8px;
+    }
+    .top-status-row {
+      width: 100%;
+    }
+    .top-status-mainrow {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .top-status-subrow {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.9fr);
+      gap: 8px;
+      align-items: stretch;
+    }
+    .top-status-counter {
+      order: 1;
+    }
+    .top-status-date {
+      order: 2;
+    }
+    .top-status-weather {
+      order: 3;
+    }
+    .top-status-weather .compact-weather-summary {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+    @media (max-width: 760px) {
+      .top-status-mainrow {
+        gap: 5px;
+      }
+      .top-status-subrow {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2645,27 +2690,28 @@
       </nav>
     </div>
   </header>
+
     <section id="daily-info" class="top-status" aria-label="今日の地域情報">
-      <div class="container top-status-inner">
-        <div class="top-status-panel" aria-label="日付・天気・訪問者カウンター">
-          <span class="top-status-pill">
+      <div class="container top-status-inner top-status-ordered">
+        <div class="top-status-row top-status-mainrow" aria-label="訪問者カウンター・日付・天気">
+          <span class="top-status-pill counter-compact top-status-counter">
+            <span aria-hidden="true">👀</span>
+            <span>本日 <strong id="visitorToday">確認中</strong></span>
+            <span>累計 <strong id="visitorTotal">確認中</strong></span>
+          </span>
+          <span class="top-status-pill top-status-date">
             <span class="pill-label">今日</span>
             <span id="todayDate">日付確認中</span>
           </span>
-          <span class="top-status-pill weather-compact">
+          <span class="top-status-pill weather-compact top-status-weather">
             <span class="compact-weather-icon" id="weatherIcon" aria-hidden="true">☀️</span>
             <span class="compact-weather-summary" id="weatherSummary">
               <span class="weather-pill">天気確認中</span>
             </span>
           </span>
-          <span class="top-status-pill counter-compact">
-            <span aria-hidden="true">👀</span>
-            <span>本日 <strong id="visitorToday">確認中</strong></span>
-            <span>累計 <strong id="visitorTotal">確認中</strong></span>
-          </span>
         </div>
 
-        <div class="top-status-subgrid">
+        <div class="top-status-row top-status-subrow" aria-label="今日の地域メッセージ・季節の花">
           <div class="top-status-message" aria-label="今日の地域メッセージ">
             <span class="top-status-label">今日の地域メッセージ</span>
             <span id="dailyMessageText">地域メッセージを準備中...</span>
@@ -2677,6 +2723,7 @@
         </div>
       </div>
     </section>
+
 
 <main id="main">
     
@@ -3151,7 +3198,7 @@
       // 川島第四町内会館周辺の概算座標（横浜市保土ヶ谷区東川島町）
       const latitude = 35.4703;
       const longitude = 139.5687;
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=1`;
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=1`;
 
       try {
         const response = await fetch(url);
@@ -3161,7 +3208,6 @@
         const code = data.current?.weather_code;
         const [weatherText, icon] = weatherCodeMap[code] || ['天気情報', '🌤️'];
         const currentTemp = data.current?.temperature_2m;
-        const windSpeed = data.current?.wind_speed_10m;
         const maxTemp = data.daily?.temperature_2m_max?.[0];
         const minTemp = data.daily?.temperature_2m_min?.[0];
         const rainProb = data.daily?.precipitation_probability_max?.[0];
@@ -3173,7 +3219,6 @@
           <span class="weather-pill">最高：${Math.round(maxTemp)}℃</span>
           <span class="weather-pill">最低：${Math.round(minTemp)}℃</span>
           <span class="weather-pill">降水確率：${rainProb ?? '-'}%</span>
-          <span class="weather-pill">風速：${Math.round(windSpeed)}m/s</span>
         `;
       } catch (error) {
         weatherIcon.textContent = '🌤️';
