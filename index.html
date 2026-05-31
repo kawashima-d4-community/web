@@ -2629,59 +2629,14 @@
     }
 
   
-    /* ブラウザ翻訳案内 */
-    .translation-notice {
-      margin-top: 16px;
-      padding: 16px;
-      border-radius: 20px;
-      background: #fff;
-      border: 1px solid rgba(238,216,201,0.95);
-      box-shadow: 0 8px 18px rgba(127,29,29,0.05);
+    /* Google翻訳リンク */
+    .translate-nav-group .nav-submenu {
+      min-width: 170px;
     }
-    .translation-notice h3 {
-      margin: 0 0 8px;
-      color: var(--primary-dark);
-      font-size: 17px;
-      line-height: 1.35;
-    }
-    .translation-notice p {
-      margin: 0 0 10px;
+    .translate-nav-group .nav-submenu a::after {
+      content: " ↗";
       color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.65;
-    }
-    .translation-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 10px;
-    }
-    .translation-item {
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: var(--soft-red);
-      border: 1px solid rgba(238,216,201,0.9);
-      color: var(--muted);
-      font-size: 12.5px;
-      font-weight: 800;
-      line-height: 1.55;
-    }
-    .translation-item b {
-      display: block;
-      margin-bottom: 2px;
-      color: var(--primary-dark);
-      font-size: 13px;
-      font-weight: 1000;
-    }
-    @media (max-width: 560px) {
-      .translation-list {
-        grid-template-columns: 1fr;
-      }
-      .translation-notice {
-        padding: 14px;
-        border-radius: 18px;
-      }
+      font-size: 11px;
     }
 
   </style>
@@ -2742,6 +2697,18 @@
             <a href="./faq.html">よくある質問</a>
           </div>
         </div>
+      
+        <div class="nav-group translate-nav-group">
+          <button class="nav-group-button" type="button" aria-expanded="false">翻訳</button>
+          <div class="nav-submenu">
+            <a href="https://translate.google.com/translate?sl=ja&tl=en&u=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2F" target="_blank" rel="noopener">English</a>
+            <a href="https://translate.google.com/translate?sl=ja&tl=zh-CN&u=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2F" target="_blank" rel="noopener">中文</a>
+            <a href="https://translate.google.com/translate?sl=ja&tl=ko&u=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2F" target="_blank" rel="noopener">한국어</a>
+            <a href="https://translate.google.com/translate?sl=ja&tl=pt&u=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2F" target="_blank" rel="noopener">Português</a>
+            <a href="https://translate.google.com/translate?sl=ja&tl=es&u=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2F" target="_blank" rel="noopener">Español</a>
+          </div>
+        </div>
+
       </nav>
     </div>
   </header>
@@ -2925,17 +2892,6 @@
               <a class="first-visit-point" href="./community-info.html#local-news">🤝 地域からのお知らせ</a>
               <a class="first-visit-point flyer-point" href="./homepage-flyer.html">🧾 ホームページ案内チラシ</a>
               <a class="first-visit-point about-point" href="./about.html#first-time">🏘️ 町内会について詳しく見る</a>
-            </div>
-
-            <div class="translation-notice" aria-label="ブラウザ翻訳の案内">
-              <h3>外国語でご覧になりたい方へ</h3>
-              <p>このホームページは、Chromeなどのブラウザ翻訳機能で他の言語に翻訳してご覧いただけます。</p>
-              <div class="translation-list">
-                <div class="translation-item"><b>English</b>This website can be translated using your browser’s translation feature, such as Google Chrome.</div>
-                <div class="translation-item"><b>中文</b>您可以使用 Chrome 等浏览器的翻译功能，将本网站翻译成其他语言查看。</div>
-                <div class="translation-item"><b>한국어</b>이 홈페이지는 Chrome 등 브라우저의 번역 기능을 사용하여 다른 언어로 볼 수 있습니다.</div>
-                <div class="translation-item"><b>やさしい日本語</b>Chromeなどの翻訳機能を使うと、ほかの言葉で見ることができます。</div>
-              </div>
             </div>
           </article>
         </div>
