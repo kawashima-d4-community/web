@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-31" />
-  <meta name="d4-site-version" content="2026-05-31" />
+  <meta name="last-modified" content="2026-06-03" />
+  <meta name="d4-site-version" content="2026-06-03" />
   <title>Giới thiệu về Hội khu phố Kawashima Daiyon｜Kawashima Daiyon Neighborhood Association</title>
   <meta name="description" content="Hội khu phố Kawashima Daiyon phụ trách khu vực Higashi-Kawashima-cho từ số 1 đến số 21, quận Hodogaya, thành phố Yokohama." />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -75,6 +75,21 @@
       .grid, .translate-grid { grid-template-columns:1fr; }
       .hero-card, .card { padding:18px; border-radius:22px; }
     }
+  
+    /* 共通フッターメニュー */
+    .footer-links {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
   </style>
 </head>
 <body id="top">
@@ -86,7 +101,7 @@
       </a>
       <div class="actions">
         <a class="button button-secondary" href="./about.html">Trang tiếng Nhật</a>
-        <a class="button button-primary" href="./index.html">Quay lại trang tiếng Nhật</a>
+        <a class="button button-secondary" href="./index.html">Quay lại trang tiếng Nhật</a>
       </div>
     </div>
   </header>
@@ -176,7 +191,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© Kawashima Daiyon Neighborhood Association</div>
+    <div class="container">© Kawashima Daiyon Neighborhood Association<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
   </footer>
 </body>
 </html>

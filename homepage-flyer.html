@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-30" />
-  <meta name="d4-site-version" content="2026-05-30" />
+  <meta name="last-modified" content="2026-06-03" />
+  <meta name="d4-site-version" content="2026-06-03" />
   <title>ホームページ案内チラシ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会ホームページを案内するQRコード付きチラシです。回覧板、掲示板、イベント案内などでご活用ください。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -36,6 +36,21 @@
     footer { padding:26px 0 30px; color:var(--muted); font-size:13px; font-weight:800; border-top:1px solid var(--border); }
     @media (max-width:900px) { .flyer-layout { grid-template-columns:1fr; } }
     @media (max-width:560px) { .hero,.card { padding:16px; border-radius:20px; } .flyer-preview { padding:10px; border-radius:20px; } .button { width:100%; } .actions { gap:8px; } }
+  
+    /* 共通フッターメニュー */
+    .footer-links {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
   </style>
 </head>
 <body id="top">
@@ -73,7 +88,7 @@
     </div>
   </main>
   <footer>
-    <div class="container">© 川島第四町内会<br /><span>最終更新日：<time datetime="2026-05-30">2026-05-30</time></span></div>
+    <div class="container">© 川島第四町内会<br /><span>最終更新日：<time datetime="2026-06-03">2026-06-03</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
   </footer>
 </body>
 </html>

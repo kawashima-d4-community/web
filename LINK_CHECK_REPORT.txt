@@ -1,0 +1,42 @@
+リンク切れ確認レポート（about.html / disaster-prevention.html / living-guide.html）
+作成日: 2026-06-03
+
+確認範囲: サイト内リンク（HTMLファイルおよびページ内アンカー）
+外部URL: 目視確認対象として除外（URL自体は各ページに維持）
+
+結果: サイト内リンク切れは検出されませんでした。
+
+確認済みリンク:
+- about.html: OK -> ./d4-mark2.png
+- about.html: OK -> #main
+- about.html: OK -> ./index.html
+- about.html: OK -> ./index.html
+- about.html: OK -> ./about-en.html
+- about.html: OK -> ./about-zh.html
+- about.html: OK -> ./about-ko.html
+- about.html: OK -> ./about-pt.html
+- about.html: OK -> ./about-es.html
+- about.html: OK -> ./about-vi.html
+- about.html: OK -> #top
+- about.html: OK -> ./posting-guidelines.html
+- about.html: OK -> ./faq.html
+- about.html: OK -> ./privacy-policy.html
+- disaster-prevention.html: OK -> ./d4-mark2.png
+- disaster-prevention.html: OK -> ./index.html
+- disaster-prevention.html: OK -> ./index.html
+- disaster-prevention.html: OK -> ./disaster-prevention.html
+- disaster-prevention.html: OK -> ./disaster-flow.html
+- disaster-prevention.html: OK -> ./disaster-plan.html
+- disaster-prevention.html: OK -> #top
+- disaster-prevention.html: OK -> #top
+- disaster-prevention.html: OK -> ./posting-guidelines.html
+- disaster-prevention.html: OK -> ./faq.html
+- disaster-prevention.html: OK -> ./privacy-policy.html
+- living-guide.html: OK -> ./d4-mark2.png
+- living-guide.html: OK -> #main
+- living-guide.html: OK -> ./index.html
+- living-guide.html: OK -> ./index.html
+- living-guide.html: OK -> #top
+- living-guide.html: OK -> ./posting-guidelines.html
+- living-guide.html: OK -> ./faq.html
+- living-guide.html: OK -> ./privacy-policy.html

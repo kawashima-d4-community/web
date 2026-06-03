@@ -118,6 +118,21 @@
       .event-table td::before { content:attr(data-label); display:block; color:var(--primary-dark); font-size:12px; font-weight:900; }
       .button { width:100%; }
     }
+  
+    /* 共通フッターメニュー */
+    .footer-links {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
   </style>
 </head>
 <body id="top">
@@ -284,7 +299,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br />最終更新日：<time datetime="2026-06-03">2026-06-03</time></div>
+      <div>© 川島第四町内会<br />最終更新日：<time datetime="2026-06-03">2026-06-03</time><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
