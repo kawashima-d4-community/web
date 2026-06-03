@@ -8,6 +8,14 @@
   <title>サイト内検索｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会ホームページ内のお知らせ、行事予定、防災、暮らしの案内などを検索できます。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <!-- PWA / ホーム画面追加対応 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#d9684f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <style>
     :root {
       --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52;
@@ -211,5 +219,14 @@
       search();
     }
   </script>
+  <script>
+    // PWA / ホーム画面追加対応
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+
 </body>
 </html>

@@ -425,3 +425,113 @@ Text files:
 - 共通メニュー: 地域情報の掲載について / よくある質問 / お問い合わせ / プライバシーポリシー / Foreign Languages。
 - 既存メニュー差し替え: about.html, community-info.html, contact.html, disaster-flow.html, disaster-plan.html, disaster-prevention.html, events.html, faq.html, index.html, living-guide.html, posting-guidelines.html, posting-request.html, privacy-policy.html
 - メニュー新規追加: about-en.html, about-es.html, about-ko.html, about-pt.html, about-vi.html, about-zh.html, homepage-flyer.html, monthly-notices.html
+
+
+2026-06-03 ソフトバレーボール大会記事修正:
+- community-info.html のソフトバレーボール大会記事の参加連絡文を修正。
+- 第四町内会スポーツ推進委員担当者への連絡に加え、お問い合わせフォームから参加連絡できる導線を追加。
+- 記事内に contact.html へのボタンを追加。
+
+
+2026-06-03 posting-request.html 文言整理:
+- 『Googleフォームを開く』を『掲載依頼をする』へ変更。
+- 『Googleフォームの項目案』セクションを削除。
+- 掲載までの流れの『Googleフォームから依頼』を『掲載依頼フォームから依頼』へ変更。
+- 利用者向けページとして、Googleフォームという表現を掲載依頼フォームへ寄せました。
+
+
+2026-06-03 contact.html お問い合わせ内容追加:
+- 『お問い合わせできる内容』に『町内会へのイベント参加申し込み』を追加。
+
+
+2026-06-03 ホームページ最新版一式保存:
+- contact.html に『町内会へのイベント参加申し込み』を追加済みの最新版を保存。
+- ソフトバレーボール大会記事のお問い合わせフォーム導線、posting-request.html文言整理、全ページ共通フッター等を含む最新版。
+- HTML、画像、PDF、関連テキストを含めて一式保存。
+- ベースZIP: kawashima_d4_contact_event_entry_added_20260603_130354.zip
+- HTMLファイル数: 21
+- 画像ファイル数: 11
+- PDFファイル数: 1
+- TXTファイル数: 3
+
+HTML files:
+  - about-en.html
+  - about-es.html
+  - about-ko.html
+  - about-pt.html
+  - about-vi.html
+  - about-zh.html
+  - about.html
+  - community-info.html
+  - contact.html
+  - disaster-flow.html
+  - disaster-plan.html
+  - disaster-prevention.html
+  - events.html
+  - faq.html
+  - homepage-flyer.html
+  - index.html
+  - living-guide.html
+  - monthly-notices.html
+  - posting-guidelines.html
+  - posting-request.html
+  - privacy-policy.html
+
+Image files:
+  - arai-president-portrait.png
+  - araiy.jpg
+  - d4-isshidanketsu-icon.png
+  - d4-karugamo.png
+  - d4-logo-icon.png
+  - d4-mark1.png
+  - d4-mark2.png
+  - d4kaikan.jpg
+  - homepage-flyer-thumb.jpg
+  - homepage-flyer.jpg
+  - thumbnails/softball-20260517-thumb.jpg
+
+PDF files:
+  - homepage-flyer.pdf
+
+Text files:
+  - CONTACT_FORM_TEMPLATE.txt
+  - LATEST_MANIFEST.txt
+  - LINK_CHECK_REPORT.txt
+
+
+2026-06-03 サイト内検索追加:
+- search.html を新規追加。
+- search-data.js を新規追加し、HTMLページ内容を静的検索データ化。
+- index.html の上部メニューに『サイト内検索』を追加。
+- 全HTMLのフッター共通メニューに『サイト内検索』を追加。
+- 検索はGitHub Pages上で動くクライアントサイド検索です。サーバーや外部サービスは不要です。
+
+
+2026-06-03 サイトマップページ追加:
+- sitemap.html を新規追加。
+- お知らせ、町内会について、行事・活動、防災・防犯、暮らし・加入、掲載依頼・お問い合わせを目的別に整理。
+- 全HTMLのフッター共通メニューに『サイトマップ』を追加。
+- search-data.js を再生成し、サイトマップページも検索対象に追加。
+
+
+2026-06-03 index.html 上段メニュー整理:
+- 上段メニューに『探す』グループを新設。
+- 『サイト内検索』『サイトマップ』『よくある質問』を『探す』メニューへ集約。
+- 『暮らし・加入』から『よくある質問』を外し、加入案内・暮らしの案内・お問い合わせに整理。
+- index.html の直リンクから『サイト内検索』を削除し、メニュー全体を見やすく整理。
+- search-data.js を再生成。
+
+
+2026-06-03 新井会長写真の右クリック保存抑止:
+- about.html の arai-president-portrait.png のみに protected-photo を追加。
+- 右クリック、ドラッグ保存、スマホ長押し保存をしにくくするCSS/JavaScriptを追加。
+- 完全なダウンロード防止ではなく、通常操作での保存抑止を目的とした対応。
+
+
+2026-06-03 PWA・ホーム画面追加対応:
+- manifest.webmanifest を追加。
+- service-worker.js を追加。
+- アップロードされた appsicon.png から icons/icon-192.png と icons/icon-512.png を生成。
+- 全HTMLにPWA用headタグとservice worker登録を追加。
+- index.html にホーム画面追加方法を掲載。
+- search-data.js を再生成。

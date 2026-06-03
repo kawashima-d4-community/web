@@ -8,6 +8,14 @@
   <title>Sobre la Asociación Vecinal Kawashima Daiyon｜Kawashima Daiyon Neighborhood Association</title>
   <meta name="description" content="La Asociación Vecinal Kawashima Daiyon corresponde al área de Higashi-Kawashima-cho, números 1 a 21, en el distrito de Hodogaya, Yokohama." />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <!-- PWA / ホーム画面追加対応 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#d9684f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <link rel="alternate" hreflang="ja" href="https://kawashima-d4-community.github.io/web/about.html" />
   <link rel="alternate" hreflang="en" href="https://kawashima-d4-community.github.io/web/about-en.html" />
   <link rel="alternate" hreflang="zh-CN" href="https://kawashima-d4-community.github.io/web/about-zh.html" />
@@ -193,5 +201,14 @@
   <footer class="footer">
     <div class="container">© Kawashima Daiyon Neighborhood Association<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
   </footer>
+  <script>
+    // PWA / ホーム画面追加対応
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+
 </body>
 </html>

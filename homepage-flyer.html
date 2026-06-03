@@ -8,6 +8,14 @@
   <title>ホームページ案内チラシ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会ホームページを案内するQRコード付きチラシです。回覧板、掲示板、イベント案内などでご活用ください。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <!-- PWA / ホーム画面追加対応 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#d9684f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <style>
     :root { --bg:#fff8f6; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,0.11); --max:1040px; }
     * { box-sizing:border-box; }
@@ -90,5 +98,14 @@
   <footer>
     <div class="container">© 川島第四町内会<br /><span>最終更新日：<time datetime="2026-06-03">2026-06-03</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
   </footer>
+  <script>
+    // PWA / ホーム画面追加対応
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+
 </body>
 </html>

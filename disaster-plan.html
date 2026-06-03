@@ -8,6 +8,14 @@
   <title>地区防災計画の要約｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会の地区防災計画を、住民の皆さま向けに分かりやすく要約しました。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <!-- PWA / ホーム画面追加対応 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#d9684f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <style>
     :root { --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,.11); --max:1040px; }
     * { box-sizing:border-box; }
@@ -179,5 +187,14 @@
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
+  <script>
+    // PWA / ホーム画面追加対応
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+
 </body>
 </html>

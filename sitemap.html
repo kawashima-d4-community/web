@@ -4,10 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-06-03" />
-  <meta name="d4-site-version" content="2026-06-03-sitemap" />
+  <meta name="d4-site-version" content="2026-06-03" />
   <title>サイトマップ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会ホームページの案内ページです。お知らせ、防災、行事予定、暮らしの案内、掲載依頼、お問い合わせなど、目的別にページを探せます。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
+  <!-- PWA / ホーム画面追加対応 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#d9684f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <style>
     :root {
       --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52;
@@ -197,5 +205,14 @@
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
+  <script>
+    // PWA / ホーム画面追加対応
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+      });
+    }
+  </script>
+
 </body>
 </html>
