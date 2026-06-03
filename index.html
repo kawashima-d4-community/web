@@ -2782,7 +2782,38 @@
       }
     }
 
-</style>
+
+    /* 更新情報の確認方法 */
+    .update-check-note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.84);
+      border: 1px dashed rgba(238,216,201,0.95);
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .update-check-note strong {
+      color: var(--primary-dark);
+      font-weight: 1000;
+    }
+    .update-check-note a {
+      color: var(--primary-dark);
+      font-weight: 1000;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    @media (max-width: 760px) {
+      .update-check-note {
+        font-size: 12px;
+        padding: 11px 12px;
+        border-radius: 16px;
+      }
+    }
+
+  </style>
 
   <script type="application/ld+json">
   {
@@ -2965,7 +2996,15 @@
         </div>
         <div class="notice-more">
           <a class="button button-secondary" href="./community-info.html">過去のお知らせ・地域情報を見る</a>
-        </div></div>
+        </div>
+        <div class="update-check-note" id="update-check-note">
+          <strong>更新情報の確認方法：</strong>
+          ホームページを更新した際は、このトップページの「更新情報」と
+          <a href="./community-info.html#chonaikai-news">町内会からのお知らせ</a>に掲載します。
+          スマホのホーム画面に追加しておくと、アイコンからすぐに最新情報を確認できます。
+          重要なお知らせは、必要に応じて回覧板や町内会LINE等でも案内します。
+        </div>
+</div>
     </section>
 <section id="festival">
       <div class="container">

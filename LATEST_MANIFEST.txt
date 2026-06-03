@@ -563,3 +563,10 @@ Text files:
 - iPhone / Android の追加方法を記事内に掲載。
 - index.html の What's New にも追加。
 - search-data.js を再生成。
+
+
+2026-06-03 index.html 更新情報の確認方法を追加:
+- What's New の下に『更新情報の確認方法』を小さく追加。
+- 更新時はトップページの更新情報と町内会からのお知らせに掲載する運用を明記。
+- スマホのホーム画面追加、重要なお知らせは回覧板や町内会LINE等でも案内する旨を記載。
+- search-data.js を再生成。
