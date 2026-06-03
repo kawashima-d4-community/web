@@ -2240,6 +2240,14 @@
       color: var(--primary-dark);
     }
 
+  
+    /* 新井会長写真の簡易保護（右クリック・ドラッグ抑止） */
+    .protected-photo {
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
   </style>
 
   <style>
@@ -2486,7 +2494,7 @@
         <div class="quote-card">
           <div class="greeting-layout">
             <figure style="margin:0;">
-              <img class="president-photo" src="./arai-president-portrait.png" alt="川島第四町内会 会長 新井好美の写真" />
+              <img class="president-photo protected-photo" src="./arai-president-portrait.png" alt="川島第四町内会 会長 新井好美の写真" / draggable="false" oncontextmenu="return false;">
               <figcaption class="photo-caption">町内会 会長<br />新井 好美</figcaption>
             </figure>
             <div>
@@ -2627,5 +2635,17 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    // 新井会長写真のみ、右クリック保存・ドラッグ保存を抑止します。
+    document.querySelectorAll('.protected-photo').forEach((img) => {
+      img.addEventListener('contextmenu', (event) => event.preventDefault());
+      img.addEventListener('dragstart', (event) => event.preventDefault());
+      img.addEventListener('touchstart', () => {
+        img.style.webkitTouchCallout = 'none';
+      }, { passive: true });
+    });
+  </script>
+
 </body>
 </html>
