@@ -297,7 +297,23 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       text-underline-offset: 3px;
     }
 
-  </style>
+  
+    /* Googleフォーム冒頭に入れる同意文 */
+    .form-consent-box {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 20px;
+      background: var(--soft-orange);
+      border: 1px solid rgba(242,166,90,0.46);
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .form-consent-box strong { color: var(--primary-dark); }
+    .form-consent-box p { margin: 0 0 8px; }
+    .form-consent-box p:last-child { margin-bottom: 0; }
+
+</style>
 </head>
 <body id="top">
   <header>
@@ -325,6 +341,12 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <div class="notice">
             Googleフォームから地域情報掲載依頼を送信できます。送信内容は町内会側で確認し、問題がなければ期間限定で掲載します。
           </div>
+          <div class="form-consent-box" id="form-consent-notice">
+            <p><strong>個人情報・写真掲載に関する確認事項</strong></p>
+            <p>入力いただいた情報は、掲載内容の確認、掲載可否の判断、必要な連絡のために使用します。投稿者の氏名・連絡先等は原則としてホームページには掲載しません。</p>
+            <p>写真に人物が写る場合は、投稿者の責任で掲載許可を得たうえで申請してください。</p>
+          </div>
+
         </div>
         <div class="qr-panel">
           <img alt="地域情報掲載依頼フォーム スマホで読み取り" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSc8Zbx6fPHVw-6RCRT37zyuu2efzVwxZxUgCXNpgcoOdBDJ-A%2Fviewform" />
@@ -372,7 +394,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         <tr><th>本文</th><td>日時、場所、対象者、内容、問い合わせ方法など</td></tr>
         <tr><th>掲載希望期間</th><td>原則1か月程度。イベント告知は開催日または開催翌日までなど、必要に応じて調整します。</td></tr>
         <tr><th>リンク・写真</th><td>Googleドライブ、公式サイト、案内ページなどのURL</td></tr>
-        <tr><th>同意確認</th><td>個人情報・写真掲載許可・掲載条件への同意</td></tr>
+        <tr><th>同意確認</th><td>個人情報の利用目的、投稿者氏名・連絡先等は原則ホームページに掲載しないこと、人物写真は投稿者の責任で掲載許可を得ること、掲載条件への同意</td></tr>
       </table>
     </section>
 
