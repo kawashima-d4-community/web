@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-28" />
-  <meta name="d4-site-version" content="2026-05-28" />
+  <meta name="last-modified" content="2026-06-03" />
+  <meta name="d4-site-version" content="2026-06-03" />
   <title>防災・防犯｜川島第四町内会</title>
-  <meta name="description" content="大規模地震への備え、避難場所、防災マップ、地区防災計画をまとめています。" />
+  <meta name="description" content="大規模地震への備え、避難場所、防災マップ、地区防災計画、災害時に確認する公式情報リンクをまとめています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <style>
     :root { --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52; --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a; --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9; --shadow:0 18px 45px rgba(159,76,60,.11); --max:1040px; }
@@ -117,6 +117,81 @@
       font-weight: 700;
     }
 
+  
+    /* 災害時の公式情報リンク集 */
+    .official-links-card {
+      padding: 22px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #fff4ee, #fff);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(127,29,29,0.07);
+    }
+    .official-links-lead {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.75;
+    }
+    .official-policy-note {
+      margin: 12px 0 16px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--soft-orange);
+      border: 1px solid rgba(242,166,90,0.46);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.7;
+    }
+    .official-link-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .official-link-item {
+      display: grid;
+      gap: 7px;
+      min-height: 148px;
+      padding: 15px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .official-link-item:hover {
+      transform: translateY(-1px);
+      background: #fff7e8;
+      box-shadow: 0 10px 22px rgba(127,29,29,0.08);
+    }
+    .official-link-item b {
+      color: var(--primary-dark);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    .official-link-item span {
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .official-link-item small {
+      margin-top: auto;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 1000;
+    }
+    @media (max-width: 900px) {
+      .official-link-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .official-links-card { padding: 16px; border-radius: 22px; }
+      .official-link-grid { grid-template-columns: 1fr; }
+      .official-link-item { min-height: auto; }
+    }
+
   </style>
 </head>
 <body id="top">
@@ -139,8 +214,51 @@
         <span class="badge">Safety</span>
         <h1>防災・防犯</h1>
         <p>大規模地震への備え、避難場所、防災マップ、地区防災計画をまとめています。</p>
-        <p class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></p>
+        <p class="site-updated">最終更新日：<time datetime="2026-06-03">2026-06-03</time></p>
       </section>
+
+      <section id="official-disaster-links" class="official-links-card">
+        <span class="badge">Official Links</span>
+        <h2>災害時に確認する公式情報リンク集</h2>
+        <p class="official-links-lead">災害時は、町内会ホームページで独自にリアルタイム情報を更新するのではなく、住民の皆さまが公式情報へすぐアクセスできる導線を用意します。</p>
+        <div class="official-policy-note">
+          町内会としての基本方針：災害時の最新情報は、横浜市・神奈川県・気象庁などの公式情報を確認してください。町内会独自のお知らせが必要な場合は、「夏祭り中止」「清掃中止」「防災訓練延期」など、通常のお知らせ欄に掲載します。
+        </div>
+
+        <div class="official-link-grid" aria-label="災害時に確認する公式情報">
+          <a class="official-link-item" href="https://www.city.yokohama.lg.jp/bousai-kyukyu-bohan/bousai-saigai/iza/information.html" target="_blank" rel="noopener">
+            <b>横浜市 防災情報</b>
+            <span>横浜市域の災害情報、警報・注意報、雨量、河川、地震情報などへの入口です。</span>
+            <small>公式情報を開く ↗</small>
+          </a>
+          <a class="official-link-item" href="https://www.bousai.pref.kanagawa.jp/" target="_blank" rel="noopener">
+            <b>神奈川県災害情報</b>
+            <span>神奈川県内の災害情報、警報・注意報などを確認できます。</span>
+            <small>公式情報を開く ↗</small>
+          </a>
+          <a class="official-link-item" href="https://www.data.jma.go.jp/multi/warn/kanto_kanagawa.html?lang=jp&warning=all" target="_blank" rel="noopener">
+            <b>気象庁 警報・注意報</b>
+            <span>神奈川県の気象警報・注意報、土砂災害、浸水害、洪水などの危険度を確認できます。</span>
+            <small>公式情報を開く ↗</small>
+          </a>
+          <a class="official-link-item" href="https://www.city.yokohama.lg.jp/bousai-kyukyu-bohan/bousai-saigai/map/shinsui/hodogaya.html" target="_blank" rel="noopener">
+            <b>保土ケ谷区 浸水ハザードマップ</b>
+            <span>洪水・内水・高潮など、保土ケ谷区版の浸水ハザードマップを確認できます。</span>
+            <small>公式情報を開く ↗</small>
+          </a>
+          <a class="official-link-item" href="https://www.city.yokohama.lg.jp/bousai-kyukyu-bohan/bousai-saigai/map/jishin/jisin-map.html" target="_blank" rel="noopener">
+            <b>横浜市 地震マップ</b>
+            <span>横浜市の地震被害想定に基づく震度分布などを確認できます。</span>
+            <small>公式情報を開く ↗</small>
+          </a>
+          <a class="official-link-item" href="https://www.river.go.jp/" target="_blank" rel="noopener">
+            <b>川の防災情報</b>
+            <span>国土交通省の河川水位・雨量などの防災情報を確認できます。</span>
+            <small>公式情報を開く ↗</small>
+          </a>
+        </div>
+      </section>
+
       
       <section class="grid-3">
         <article class="card">
