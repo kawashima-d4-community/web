@@ -8,8 +8,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-03" />
-  <meta name="d4-site-version" content="2026-06-03" />
+  <meta name="last-modified" content="2026-06-04" />
+  <meta name="d4-site-version" content="2026-06-04" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -2813,6 +2813,99 @@
       }
     }
 
+  
+    /* 地域情報掲載・活動紹介の案内 */
+    .local-promotion-section {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    .local-promotion-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 18px;
+      align-items: stretch;
+      padding: 22px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(242,166,90,0.22), transparent 34%),
+        linear-gradient(135deg, #fff4ee, #ffffff 58%, #fff7e8);
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 12px 30px rgba(127,29,29,0.08);
+    }
+    .local-promotion-main h2 {
+      margin: 8px 0 10px;
+      color: var(--primary-dark);
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 1.22;
+      letter-spacing: -0.03em;
+    }
+    .local-promotion-main p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.75;
+    }
+    .local-promotion-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .local-promotion-point {
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.55;
+    }
+    .local-promotion-point b {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+    .local-promotion-side {
+      display: grid;
+      align-content: center;
+      gap: 10px;
+      padding: 18px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 8px 20px rgba(127,29,29,0.05);
+    }
+    .local-promotion-side h3 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 20px;
+      line-height: 1.35;
+    }
+    .local-promotion-side p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .local-promotion-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    @media (max-width: 860px) {
+      .local-promotion-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+      .local-promotion-points {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -3093,6 +3186,36 @@
       </div>
     </section>
 
+    <section id="local-promotion" class="local-promotion-section">
+      <div class="container">
+        <div class="local-promotion-card">
+          <div class="local-promotion-main">
+            <span class="badge">地域情報を届ける</span>
+            <h2>地域の活動・体験会・お店の情報を掲載できます</h2>
+            <p>第四町内会ホームページでは、子ども向け体験会、地域スポーツ、習い事、地域イベント、地域のお店や小規模事業者からのお知らせなど、地域に関係する情報を掲載できます。</p>
+            <div class="local-promotion-points" aria-label="掲載できる情報の例">
+              <div class="local-promotion-point"><b>参加者募集</b>体験会、地域スポーツ、子ども向け活動など</div>
+              <div class="local-promotion-point"><b>地域イベント</b>催し物、交流会、地域団体の活動案内など</div>
+              <div class="local-promotion-point"><b>地域のお店紹介</b>地域向けのお知らせ、営業案内、活動紹介など</div>
+              <div class="local-promotion-point"><b>スマホで確認</b>回覧板だけでは届きにくい情報も、いつでも確認できます</div>
+            </div>
+            <p>まずは無料掲載を基本に、地域の情報を集めて「見てもらえるホームページ」に育てていきます。</p>
+            <div class="local-promotion-actions">
+              <a class="button button-primary" href="./posting-request.html">地域情報の掲載を依頼する</a>
+              <a class="button button-secondary" href="./posting-guidelines.html">掲載ルールを見る</a>
+            </div>
+          </div>
+          <aside class="local-promotion-side" aria-label="地域応援スポンサーについて">
+            <h3>今後の検討：地域応援スポンサー</h3>
+            <p>将来的には、地域のお店・団体・事業者の皆さまに、ホームページ運営を応援いただく「地域応援スポンサー」枠も検討していきます。</p>
+            <p>広告サイト化ではなく、地域の活動やお店を応援しながら、町内会ホームページの運営を支える形を目指します。</p>
+            <a class="button button-secondary" href="./contact.html">相談・お問い合わせ</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+
 <section id="gateway" class="gateway-section">
       <div class="container">
         <div class="section-head compact-section-head">
@@ -3286,7 +3409,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-03">2026-06-03</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-04">2026-06-04</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
           <div class="footer-mascot">
             <img src="./d4-karugamo.png" alt="川島第四町内会の第四かるがも親子" />
             <span>第四かるがも親子<small>AI生成画像</small></span>
