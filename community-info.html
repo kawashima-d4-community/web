@@ -424,6 +424,86 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       }
     }
 
+  
+    /* ホーム画面追加のお知らせ：注目表示 */
+    .pwa-feature-post {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(217,104,79,0.42);
+      background:
+        radial-gradient(circle at top right, rgba(242,166,90,0.24), transparent 34%),
+        linear-gradient(135deg, #fff4ee, #ffffff 58%, #fff7e8);
+      box-shadow: 0 16px 34px rgba(159,76,60,0.13);
+    }
+    .pwa-feature-post .post-category {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(217,104,79,0.18);
+    }
+    .pwa-feature-layout {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      margin-top: 8px;
+    }
+    .pwa-feature-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.08);
+      overflow: hidden;
+    }
+    .pwa-feature-icon img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      display: block;
+    }
+    .pwa-feature-steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .pwa-feature-step {
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .pwa-feature-step b {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+    @media (max-width: 760px) {
+      .pwa-feature-layout {
+        grid-template-columns: 1fr;
+      }
+      .pwa-feature-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 17px;
+      }
+      .pwa-feature-icon img {
+        width: 46px;
+        height: 46px;
+      }
+      .pwa-feature-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
   <!-- PWA / ホーム画面追加対応 -->
   <link rel="manifest" href="./manifest.webmanifest" />
@@ -475,6 +555,41 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
 
         <div class="post-list" id="chonaikaiPostList">
+
+
+          <article id="home-screen-app-20260603" class="community-post pwa-feature-post" data-board="chonaikai" data-start="2026-06-03" data-expire="2026-07-03">
+            <span class="post-category">注目</span>
+            <div class="post-body">
+              <h3>ホーム画面に追加して、アプリのように開けます</h3>
+              <div class="pwa-feature-layout">
+                <div class="pwa-feature-icon" aria-hidden="true">
+                  <img src="./icons/icon-192.png" alt="" />
+                </div>
+                <div>
+                  <p>川島第四町内会ホームページは、スマートフォンのホーム画面に追加できます。追加しておくと、回覧板を見逃したときや行事予定を確認したいときに、アイコンからすぐ開けます。</p>
+                  <div class="pwa-feature-steps" aria-label="ホーム画面への追加方法">
+                    <div class="pwa-feature-step">
+                      <b>iPhoneの場合</b>
+                      Safariでこのページを開き、共有ボタンから「ホーム画面に追加」を選んでください。
+                    </div>
+                    <div class="pwa-feature-step">
+                      <b>Androidの場合</b>
+                      Chromeでこのページを開き、メニューから「ホーム画面に追加」または「アプリをインストール」を選んでください。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-meta">
+                <span>掲載開始：2026年6月3日</span>
+                <span>掲載終了：2026年7月3日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+              <div class="post-actions">
+                <a class="button" href="./index.html#home-screen-guide">トップページの案内を見る</a>
+              </div>
+            </div>
+          </article>
+
 
           <article id="monthly-city-notices-202605" class="community-post" data-board="chonaikai" data-start="2026-06-01" data-expire="2026-07-01">
             <span class="post-category">行政情報</span>
