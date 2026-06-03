@@ -29,8 +29,9 @@
     header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
     .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
     .brand { display:flex; align-items:center; gap:10px; font-weight:1000; color:var(--ink); }
-    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--soft-red); color:var(--primary-dark); font-weight:1000; }
+    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#fff; border:1px solid var(--border); box-shadow:0 8px 18px rgba(217,104,79,.14); padding:4px; }
     .brand small { display:block; color:var(--muted); font-size:11px; font-weight:800; }
+    .brand-mark img { width:100%; height:100%; object-fit:contain; display:block; }
     .header-actions { display:flex; gap:8px; flex-wrap:wrap; }
     .button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:9px 16px; border-radius:999px; font-weight:900; background:var(--primary); color:#fff; border:1px solid transparent; }
     .button.secondary { background:#fff; color:var(--ink); border-color:var(--border); }
@@ -74,7 +75,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="./index.html" aria-label="川島第四町内会ホームページへ戻る">
-        <span class="brand-mark">第四</span>
+        <span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span>
         <span>川島第四町内会<small>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
       </a>
       <div class="header-actions">
@@ -94,10 +95,7 @@
 
     <section class="card">
       <h2>お問い合わせフォームについて</h2>
-      <p>迷惑メール対策のため、ホームページ上にメールアドレスを直接掲載せず、Googleフォームでお問い合わせを受け付ける運用を想定しています。</p>
-      <div class="notice">
-        <strong>運用メモ：</strong>お問い合わせフォームを設定済みです。下のボタンからGoogleフォームを開いてお問い合わせいただけます。
-      </div>
+      <p>掲載内容の修正・削除、個人情報の取り扱い、ホームページの表示不具合などは、下のボタンからお問い合わせフォームを開いてご連絡ください。</p>
       <div class="contact-actions">
         <a id="contactFormButton" class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScTvfn5s04v4hHsOJaS-ZRAaer8Ct1HNY6z30bn0qjZCdE-xg/viewform?usp=publish-editor" target="_blank" rel="noopener">お問い合わせフォームを開く</a>
       </div>
@@ -124,26 +122,6 @@
         </ul>
       </article>
     </section>
-
-    <section class="card">
-      <h2>Googleフォームに設定する項目案</h2>
-      <p>Googleフォームを作成する際は、以下の項目を設定してください。</p>
-      <table class="form-preview">
-        <tr><th>お問い合わせ種別</th><td>掲載内容の修正・削除、個人情報、写真掲載、ホームページ不具合、その他</td></tr>
-        <tr><th>お名前</th><td>任意。ただし、返信が必要な場合は入力をお願いする項目</td></tr>
-        <tr><th>連絡先</th><td>メールアドレスまたは電話番号。返信が必要な場合のみ入力</td></tr>
-        <tr><th>対象ページ・記事</th><td>該当するページ名、記事名、URLなど</td></tr>
-        <tr><th>お問い合わせ内容</th><td>修正・削除希望内容、確認したい内容、不具合の内容など</td></tr>
-        <tr><th>同意確認</th><td>入力内容を、お問い合わせ対応・掲載内容確認・必要な連絡のために使用することへの同意</td></tr>
-      </table>
-    </section>
-
-    <section class="card">
-      <h2>Googleフォーム冒頭に入れる文面</h2>
-      <div class="notice">
-        入力いただいた情報は、掲載内容の確認、掲載可否の判断、必要な連絡のために使用します。投稿者の氏名・連絡先等は原則としてホームページには掲載しません。写真に人物が写る場合は、投稿者の責任で掲載許可を得たうえで申請してください。
-      </div>
-    </section>
   </main>
 
   <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ トップへ</a>
@@ -169,7 +147,7 @@
     } else {
       contactFormButton.addEventListener('click', function(event) {
         event.preventDefault();
-        alert('お問い合わせフォームURLが未設定です。Googleフォーム作成後に CONTACT_FORM_URL を設定してください。');
+        alert('お問い合わせフォームを開けませんでした。時間をおいて再度お試しください。');
       });
     }
   </script>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-05-28" />
-  <meta name="d4-site-version" content="2026-05-28" />
+  <meta name="last-modified" content="2026-06-03" />
+  <meta name="d4-site-version" content="2026-06-03" />
   <title>大規模地震時の初期行動｜川島第四町内会</title>
   <meta name="description" content="地震が起きたとき、子どもにも分かるように最初の行動をまとめました。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -18,8 +18,9 @@
     header { position:sticky; top:0; z-index:20; backdrop-filter:blur(12px); background:rgba(255,255,255,.92); border-bottom:1px solid rgba(241,212,212,.95); }
     .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
     .brand { display:flex; align-items:center; gap:10px; font-weight:1000; color:var(--ink); }
-    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--soft-red); color:var(--primary-dark); font-weight:1000; }
+    .brand-mark { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#fff; border:1px solid var(--border); box-shadow:0 8px 18px rgba(217,104,79,.14); padding:4px; }
     .brand small { display:block; color:var(--muted); font-size:11px; font-weight:800; }
+    .brand-mark img { width:100%; height:100%; object-fit:contain; display:block; }
     .header-actions { display:flex; gap:8px; flex-wrap:wrap; }
     .button { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:8px 14px; border-radius:999px; font-weight:900; background:var(--primary); color:#fff; border:1px solid transparent; }
     .button.secondary, .button-secondary { background:#fff; color:var(--primary-dark); border-color:var(--border); }
@@ -68,12 +69,12 @@
   <header>
     <div class="container nav">
       <a class="brand" href="./index.html" aria-label="川島第四町内会ホームページへ戻る">
-        <span class="brand-mark">第四</span>
+        <span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span>
         <span>川島第四町内会<small>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
       </a>
       <div class="header-actions">
         <a class="button secondary" href="./index.html">ホームページへ戻る</a>
-        <a class="button" href="./disaster-prevention.html">防災・防犯</a>
+        <a class="button secondary" href="./disaster-prevention.html">防災・防犯へ戻る</a>
       </div>
     </div>
   </header>
@@ -84,7 +85,7 @@
         <span class="badge">Earthquake Flow</span>
         <h1>大規模地震時の初期行動</h1>
         <p>地震が起きたとき、子どもにも分かるように最初の行動をまとめました。</p>
-        <p class="site-updated">最終更新日：<time datetime="2026-05-28">2026-05-28</time></p>
+        <p class="site-updated">最終更新日：<time datetime="2026-06-03">2026-06-03</time></p>
       </section>
       
       <section class="card">
@@ -138,7 +139,7 @@
   <a class="back-to-top" href="#top">↑ トップへ</a>
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
+      <div>© 川島第四町内会<br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
