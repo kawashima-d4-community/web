@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-06" />
-  <meta name="d4-site-version" content="2026-06-06" />
+  <meta name="last-modified" content="2026-06-07" />
+  <meta name="d4-site-version" content="2026-06-07" />
   <title>町内会・地域からのお知らせ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。" />
   <style>
@@ -522,6 +522,23 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       font-weight: 1000;
     }
 
+  
+    /* フローティング：見ました説明ボタン */
+    .floating-actions a.seen-help {
+      background: #fff7e8;
+      color: var(--primary-dark);
+      border-color: rgba(242,166,90,0.55);
+    }
+    .floating-actions a.seen-help:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    @media (max-width: 760px) {
+      .floating-actions a.seen-help {
+        flex: 1.1;
+      }
+    }
+
   </style>
   <!-- PWA / ホーム画面追加対応 -->
   <link rel="manifest" href="./manifest.webmanifest" />
@@ -558,7 +575,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <h2>掲載中のお知らせ</h2>
           <p class="small-note">「町内会からのお知らせ」と「地域からのお知らせ」を分けて掲載します。町内会からのお知らせ・地域からのお知らせともに、原則1か月で自動非表示になります。</p>
 
-          <div class="seen-guide-note">
+          <div class="seen-guide-note" id="seen-guide-note">
             <strong>「見ました」ボタンについて：</strong>
             記事を確認したら、各お知らせ下部の「😊 見ました」を押してください。
           </div>
@@ -783,7 +800,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-06">2026-06-06</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-07">2026-06-07</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
@@ -1000,6 +1017,7 @@ ${thumbnail}
 
 
   <div class="floating-actions" aria-label="ページ内ナビゲーション">
+    <a class="seen-help" href="#seen-guide-note">😊 見ましたとは？</a>
     <a href="#top">↑ トップへ戻る</a>
     <a class="secondary" href="./index.html">ホームページへ戻る</a>
   </div>
