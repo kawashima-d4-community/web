@@ -561,9 +561,8 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <div class="seen-guide-note">
             <strong>「見ました」ボタンについて：</strong>
             記事を確認したら、各お知らせ下部の「😊 見ました」を押してください。
-            町内会側が「どのお知らせが読まれているか」を把握するための目安として使います。
-            同じ端末・同じブラウザでは原則1回だけ押せます。
           </div>
+
 
         </div>
         <span class="badge" id="totalPostCount">確認中</span>
@@ -1084,7 +1083,7 @@ ${thumbnail}
 
         const note = document.createElement('span');
         note.className = 'reaction-note';
-        note.textContent = '確認したら押してください（同じ端末では原則1回）';
+        note.textContent = '確認したら押してください';
 
         area.appendChild(button);
         area.appendChild(note);
