@@ -692,3 +692,116 @@ Text files:
 - ローカルPDFリンク『PDFを開く』ボタンを削除。
 - police-news-202606.pdf は同梱対象から削除し、Googleドライブ参照に統一。
 - search-data.js を再生成。
+
+
+2026-06-06 community-info.html『見ました』ボタン説明追加:
+- 掲載中のお知らせの下に『見ました』ボタンの使い方説明を追加。
+- 各記事下部の補足文を『確認したら押してください（同じ端末では原則1回）』に変更。
+- search-data.js を再生成。
+
+
+2026-06-06 community-info.html『見ました』説明を短縮:
+- 『見ました』ボタンの説明を1文に短縮。
+- 各記事下部の補足文も『確認したら押してください』に短縮。
+- search-data.js を再生成。
+
+
+2026-06-07 community-info.html『見ました』説明へのフローティングボタン追加:
+- 右下フローティング操作に『😊 見ましたとは？』ボタンを追加。
+- ボタン押下で『見ました』ボタン説明欄へ移動するように設定。
+- search-data.js を再生成。
+
+
+2026-06-07 ホームページ最新版一式保存:
+- community-info.html に『😊 見ましたとは？』フローティングボタン追加済みの最新版を保存。
+- 『見ました』ボタン説明短縮、保土ケ谷警察署お知らせのGoogleドライブ参照化、トップページ主要セクション幅統一、PWA対応、サイト内検索、サイトマップ等を含む最新版。
+- HTML、画像、PDF、JavaScript、manifest、関連テキストを含めて一式保存。
+- ベースZIP: kawashima_d4_seen_floating_button_20260607_062212.zip
+- HTMLファイル数: 23
+- JSファイル数: 2
+- Manifestファイル数: 1
+- 画像ファイル数: 15
+- PDFファイル数: 1
+- TXTファイル数: 4
+
+HTML files:
+  - about-en.html
+  - about-es.html
+  - about-ko.html
+  - about-pt.html
+  - about-vi.html
+  - about-zh.html
+  - about.html
+  - community-info.html
+  - contact.html
+  - disaster-flow.html
+  - disaster-plan.html
+  - disaster-prevention.html
+  - events.html
+  - faq.html
+  - homepage-flyer.html
+  - index.html
+  - living-guide.html
+  - monthly-notices.html
+  - posting-guidelines.html
+  - posting-request.html
+  - privacy-policy.html
+  - search.html
+  - sitemap.html
+
+JS files:
+  - search-data.js
+  - service-worker.js
+
+Manifest files:
+  - manifest.webmanifest
+
+Image files:
+  - arai-president-portrait.png
+  - araiy.jpg
+  - d4-isshidanketsu-icon.png
+  - d4-karugamo.png
+  - d4-logo-icon.png
+  - d4-mark1.png
+  - d4-mark2.png
+  - d4kaikan.jpg
+  - homepage-flyer-thumb.jpg
+  - homepage-flyer.jpg
+  - icons/app-icon-original.png
+  - icons/icon-192.png
+  - icons/icon-512.png
+  - thumbnails/police-news-202606-thumb.jpg
+  - thumbnails/softball-20260517-thumb.jpg
+
+PDF files:
+  - homepage-flyer.pdf
+
+Text files:
+  - CONTACT_FORM_TEMPLATE.txt
+  - LATEST_MANIFEST.txt
+  - LINK_CHECK_REPORT.txt
+  - PWA_README.txt
+
+
+2026-06-07 community-info.html『確認しました』ボタン改善:
+- 『見ました』表記を『確認しました』へ変更。
+- 各記事のタイトル直下と記事下部の両方に確認ボタンを表示するよう変更。
+- 右下フローティングボタンを『😊 確認ボタンとは？』へ変更。
+- 同一記事の上下ボタンが同じカウント・状態になるようJavaScriptを修正。
+- search-data.js を再生成。
+
+
+2026-06-07 community-info.html 確認ボタンをタイトル直下のみに整理:
+- 1記事に2つ表示されていた確認ボタンを、タイトル直下の1つだけに変更。
+- 記事下部の確認ボタン表示を削除。
+- ボタン表記は『😊 確認しました』、押下後は『😊 確認済み』のまま維持。
+- search-data.js を再生成。
+
+
+2026-06-07 index.html よく読まれているお知らせ追加:
+- What's New下に『よく読まれているお知らせ』欄を追加。
+- 確認ボタン集計APIから記事ごとの確認数を取得し、上位3件を表示。
+- 確認数がない場合は『確認数が集まると表示されます。』を表示。
+- 対象記事はcommunity-info.html内の町内会からのお知らせ掲載中記事から生成。
+- search-data.js を再生成。
+- 対象記事数: 7

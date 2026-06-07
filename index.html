@@ -8,8 +8,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-05" />
-  <meta name="d4-site-version" content="2026-06-05" />
+  <meta name="last-modified" content="2026-06-07" />
+  <meta name="d4-site-version" content="2026-06-07" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -3017,6 +3017,108 @@
       }
     }
 
+  
+    /* よく読まれているお知らせ */
+    .popular-notices {
+      margin-top: 14px;
+      padding: 14px 15px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 8px 20px rgba(127,29,29,0.045);
+    }
+    .popular-notices-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .popular-notices-head h3 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .popular-notices-head span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .popular-notice-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .popular-notice-list li {
+      display: grid;
+      grid-template-columns: 42px minmax(0,1fr) auto;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 14px;
+      background: #fff8f6;
+      border: 1px solid rgba(238,216,201,0.8);
+    }
+    .popular-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 34px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 1000;
+    }
+    .popular-notice-list a {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+    .popular-notice-list a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .popular-count {
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 1000;
+      white-space: nowrap;
+    }
+    .popular-empty {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+    @media (max-width: 560px) {
+      .popular-notices {
+        padding: 12px;
+        border-radius: 18px;
+      }
+      .popular-notices-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .popular-notice-list li {
+        grid-template-columns: 36px minmax(0,1fr);
+        gap: 6px 8px;
+      }
+      .popular-count {
+        grid-column: 2;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -3214,6 +3316,16 @@
           スマホのホーム画面に追加しておくと、アイコンからすぐに最新情報を確認できます。
           重要なお知らせは、必要に応じて回覧板や町内会LINE等でも案内します。
         </div>
+
+        <div class="popular-notices" id="popular-notices" aria-live="polite">
+          <div class="popular-notices-head">
+            <h3>よく読まれているお知らせ</h3>
+            <span>確認ボタンの集計</span>
+          </div>
+          <p class="popular-empty" id="popularNoticesStatus">確認数を集計中です。</p>
+          <ol class="popular-notice-list" id="popularNoticesList"></ol>
+        </div>
+
 </div>
     </section>
 <section id="festival">
@@ -3520,7 +3632,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-05">2026-06-05</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-07">2026-06-07</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
           <div class="footer-mascot">
             <img src="./d4-karugamo.png" alt="川島第四町内会の第四かるがも親子" />
             <span>第四かるがも親子<small>AI生成画像</small></span>
@@ -3860,6 +3972,83 @@
 
     loadVisitorCounter();
 </script>
+
+
+  <script>
+    // よく読まれているお知らせ（確認ボタン集計）
+    const D4_POPULAR_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec';
+    const D4_POPULAR_NOTICE_ITEMS = [{"id":"police-news-202606","title":"保土ケ谷警察署からのお知らせを掲載しました","url":"./community-info.html#police-news-202606"},{"id":"home-screen-app-20260603","title":"ホーム画面に追加して、アプリのように開けます","url":"./community-info.html#home-screen-app-20260603"},{"id":"monthly-city-notices-202605","title":"2026年5月度 定例会配布資料からのお知らせを掲載しました","url":"./community-info.html#monthly-city-notices-202605"},{"id":"soft-volleyball-20260627","title":"ソフトバレーボール大会 参加者募集のお知らせ","url":"./community-info.html#soft-volleyball-20260627"},{"id":"crime-prevention-20260523","title":"警察官をかたる詐欺の電話にご注意ください","url":"./community-info.html#crime-prevention-20260523"},{"id":"softball-20260517","title":"ソフトボール大会の写真を掲載しました","url":"./community-info.html#softball-20260517"},{"id":"sawayaka-cleaning-2026","title":"さわやか清掃の実施日を更新しました","url":"./community-info.html#sawayaka-cleaning-2026"}];
+
+    function loadPopularNotices() {
+      const list = document.getElementById('popularNoticesList');
+      const status = document.getElementById('popularNoticesStatus');
+      const box = document.getElementById('popular-notices');
+      if (!list || !status || !box || !D4_POPULAR_NOTICE_ITEMS.length) return;
+
+      const articleIds = D4_POPULAR_NOTICE_ITEMS.map((item) => item.id).join(',');
+      const callbackName = 'popularNoticeCallback_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      let script;
+
+      window[callbackName] = function(payload) {
+        try {
+          if (!payload || !payload.ok || !payload.counts) {
+            status.textContent = '確認数が集まると表示されます。';
+            return;
+          }
+
+          const ranked = D4_POPULAR_NOTICE_ITEMS
+            .map((item) => {
+              return {
+                ...item,
+                count: Number(payload.counts[item.id] || 0)
+              };
+            })
+            .filter((item) => item.count > 0)
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 3);
+
+          if (!ranked.length) {
+            status.textContent = '確認数が集まると表示されます。';
+            return;
+          }
+
+          status.style.display = 'none';
+          list.innerHTML = ranked.map((item, index) => `
+            <li>
+              <span class="popular-rank">${index + 1}位</span>
+              <a href="${item.url}">${item.title}</a>
+              <span class="popular-count">確認 ${item.count.toLocaleString()}件</span>
+            </li>
+          `).join('');
+        } finally {
+          delete window[callbackName];
+          if (script && script.parentNode) script.parentNode.removeChild(script);
+        }
+      };
+
+      const params = new URLSearchParams({
+        action: 'summary',
+        articleIds: articleIds,
+        callback: callbackName,
+        cacheBust: String(Date.now())
+      });
+      const separator = D4_POPULAR_NOTICE_API_URL.includes('?') ? '&' : '?';
+      script = document.createElement('script');
+      script.src = D4_POPULAR_NOTICE_API_URL + separator + params.toString();
+      script.onerror = function() {
+        status.textContent = '確認数が集まると表示されます。';
+        delete window[callbackName];
+        if (script && script.parentNode) script.parentNode.removeChild(script);
+      };
+      document.body.appendChild(script);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadPopularNotices);
+    } else {
+      loadPopularNotices();
+    }
+  </script>
 
   <script>
     // PWA / ホーム画面追加対応

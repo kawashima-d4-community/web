@@ -274,7 +274,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     }
 
   
-    /* 町内会からのお知らせ：見ましたリアクション */
+    /* 町内会からのお知らせ：確認しましたリアクション */
     .reaction-area {
       display: flex;
       align-items: center;
@@ -315,6 +315,14 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       font-size: 12px;
       font-weight: 700;
     }
+
+    .reaction-area.reaction-area-top {
+      margin: 6px 0 12px;
+      padding: 0 0 9px;
+      border-top: 0;
+      border-bottom: 1px dashed rgba(238,216,201,0.95);
+    }
+
 
   
     /* 町内会からのお知らせ：チラシ・写真サムネイル */
@@ -505,7 +513,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     }
 
   
-    /* 「見ました」ボタンの説明 */
+    /* 「確認しました」ボタンの説明 */
     .seen-guide-note {
       margin: 10px 0 16px;
       padding: 11px 13px;
@@ -523,7 +531,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     }
 
   
-    /* フローティング：見ました説明ボタン */
+    /* フローティング：確認ボタン説明 */
     .floating-actions a.seen-help {
       background: #fff7e8;
       color: var(--primary-dark);
@@ -576,8 +584,8 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <p class="small-note">「町内会からのお知らせ」と「地域からのお知らせ」を分けて掲載します。町内会からのお知らせ・地域からのお知らせともに、原則1か月で自動非表示になります。</p>
 
           <div class="seen-guide-note" id="seen-guide-note">
-            <strong>「見ました」ボタンについて：</strong>
-            記事を確認したら、各お知らせ下部の「😊 見ました」を押してください。
+            <strong>「確認しました」ボタンについて：</strong>
+            記事を確認したら、各お知らせの「😊 確認しました」を押してください。
           </div>
 
 
@@ -1017,7 +1025,7 @@ ${thumbnail}
 
 
   <div class="floating-actions" aria-label="ページ内ナビゲーション">
-    <a class="seen-help" href="#seen-guide-note">😊 見ましたとは？</a>
+    <a class="seen-help" href="#seen-guide-note">😊 確認ボタンとは？</a>
     <a href="#top">↑ トップへ戻る</a>
     <a class="secondary" href="./index.html">ホームページへ戻る</a>
   </div>
@@ -1073,9 +1081,61 @@ ${thumbnail}
 
     function setReactionButtonState(button, count, reacted) {
       const safeCount = Number(count || 0).toLocaleString();
-      button.innerHTML = reacted ? `😊 見ました済み <strong>${safeCount}</strong>` : `😊 見ました <strong>${safeCount}</strong>`;
+      button.innerHTML = reacted ? `😊 確認済み <strong>${safeCount}</strong>` : `😊 確認しました <strong>${safeCount}</strong>`;
       button.classList.toggle('reacted', !!reacted);
       button.disabled = !!reacted;
+    }
+
+    function setArticleReactionButtons(article, count, reacted) {
+      article.querySelectorAll('.reaction-button').forEach((button) => {
+        setReactionButtonState(button, count, reacted);
+      });
+    }
+
+    function createReactionArea(article, position) {
+      const area = document.createElement('div');
+      area.className = 'reaction-area reaction-area-top';
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'reaction-button';
+      button.dataset.articleId = article.id;
+
+      const locallyReacted = localStorage.getItem(getReactionLocalKey(article.id)) === '1';
+      setReactionButtonState(button, 0, locallyReacted);
+
+      const note = document.createElement('span');
+      note.className = 'reaction-note';
+      note.textContent = '確認したら押してください';
+
+      area.appendChild(button);
+      area.appendChild(note);
+
+      button.addEventListener('click', function() {
+        const articleId = button.dataset.articleId;
+        article.querySelectorAll('.reaction-button').forEach((targetButton) => {
+          targetButton.disabled = true;
+          targetButton.textContent = '送信中...';
+        });
+
+        callReactionApi({
+          action: 'react',
+          articleId: articleId,
+          visitorId: getReactionVisitorId()
+        }, function(payload) {
+          if (payload && payload.ok) {
+            localStorage.setItem(getReactionLocalKey(articleId), '1');
+            setArticleReactionButtons(article, payload.count, true);
+          } else {
+            article.querySelectorAll('.reaction-button').forEach((targetButton) => {
+              targetButton.disabled = false;
+              targetButton.textContent = '😊 確認しました（再試行）';
+            });
+          }
+        });
+      });
+
+      return area;
     }
 
     function setupChonaikaiReactions() {
@@ -1085,47 +1145,13 @@ ${thumbnail}
       const articleIds = articles.map((article) => article.id);
 
       articles.forEach((article) => {
-        if (article.querySelector('.reaction-area')) return;
-
         const body = article.querySelector('.post-body') || article;
-        const area = document.createElement('div');
-        area.className = 'reaction-area';
+        const title = body.querySelector('h3');
 
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'reaction-button';
-        button.dataset.articleId = article.id;
+        if (!article.querySelector('.reaction-area-top') && title) {
+          title.insertAdjacentElement('afterend', createReactionArea(article, 'top'));
+        }
 
-        const locallyReacted = localStorage.getItem(getReactionLocalKey(article.id)) === '1';
-        setReactionButtonState(button, 0, locallyReacted);
-
-        const note = document.createElement('span');
-        note.className = 'reaction-note';
-        note.textContent = '確認したら押してください';
-
-        area.appendChild(button);
-        area.appendChild(note);
-        body.appendChild(area);
-
-        button.addEventListener('click', function() {
-          const articleId = button.dataset.articleId;
-          button.disabled = true;
-          button.textContent = '送信中...';
-
-          callReactionApi({
-            action: 'react',
-            articleId: articleId,
-            visitorId: getReactionVisitorId()
-          }, function(payload) {
-            if (payload && payload.ok) {
-              localStorage.setItem(getReactionLocalKey(articleId), '1');
-              setReactionButtonState(button, payload.count, true);
-            } else {
-              button.disabled = false;
-              button.textContent = '😊 見ました（再試行）';
-            }
-          });
-        });
       });
 
       callReactionApi({ action: 'summary', articleIds: articleIds.join(',') }, function(payload) {
@@ -1134,10 +1160,8 @@ ${thumbnail}
         }
 
         articles.forEach((article) => {
-          const button = article.querySelector('.reaction-button');
-          if (!button) return;
           const locallyReacted = localStorage.getItem(getReactionLocalKey(article.id)) === '1';
-          setReactionButtonState(button, payload.counts[article.id] || 0, locallyReacted);
+          setArticleReactionButtons(article, payload.counts[article.id] || 0, locallyReacted);
         });
       });
     }
