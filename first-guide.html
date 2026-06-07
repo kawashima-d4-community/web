@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-06-07" />
   <meta name="d4-site-version" content="2026-06-07" />
-  <title>サイトマップ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会ホームページの案内ページです。お知らせ、防災、行事予定、暮らしの案内、掲載依頼、お問い合わせなど、目的別にページを探せます。" />
+  <title>初めてアクセスされる方へ｜川島第四町内会</title>
+  <meta name="description" content="川島第四町内会ホームページを初めて利用する方向けに、更新情報、お知らせ、行事予定、防災・防犯、暮らしの案内、掲載依頼、お問い合わせの使い方をまとめています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <!-- PWA / ホーム画面追加対応 -->
   <link rel="manifest" href="./manifest.webmanifest" />
@@ -20,7 +20,7 @@
     :root {
       --bg:#fff8f6; --paper:#fff; --ink:#321d16; --muted:#7b5d52;
       --primary:#d9684f; --primary-dark:#9f4c3c; --accent:#f2a65a;
-      --soft-red:#fff4ee; --soft-orange:#fff7e8; --border:#eed8c9;
+      --soft-red:#fff4ee; --soft-orange:#fff7e8; --soft-yellow:#fffbea; --border:#eed8c9;
       --shadow:0 18px 45px rgba(159,76,60,.11); --max:1120px;
     }
     * { box-sizing:border-box; }
@@ -41,41 +41,58 @@
     .brand-mark img { width:100%; height:100%; object-fit:contain; display:block; }
     .brand small { display:block; color:var(--muted); font-size:11px; font-weight:800; }
     .header-actions { display:flex; gap:8px; flex-wrap:wrap; }
-    .button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:9px 16px; border-radius:999px; font-weight:900; background:var(--primary); color:#fff; border:1px solid transparent; }
-    .button.secondary { background:#fff; color:var(--ink); border-color:var(--border); }
-    main { padding:30px 0 48px; }
-    .hero { padding:28px; border-radius:28px; background:linear-gradient(135deg,#fff4ee,#fff7e8); border:1px solid var(--border); box-shadow:var(--shadow); margin:24px 0 18px; }
+    .button {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      min-height:42px; padding:10px 16px; border-radius:999px;
+      border:1px solid var(--border); background:#fff; color:var(--ink);
+      font-weight:1000; font-size:14px; box-shadow:0 10px 22px rgba(127,29,29,.06);
+    }
+    .button.primary { background:var(--primary); color:#fff; border-color:var(--primary); }
+    .button.secondary { background:#fff; color:var(--primary-dark); }
+    .hero {
+      padding:30px 26px;
+      border-radius:30px;
+      background:linear-gradient(135deg,#fff4ee,#fff 58%,#fff7e8);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      margin:24px 0 18px;
+    }
     .badge { display:inline-flex; border-radius:999px; padding:5px 10px; background:var(--soft-red); color:var(--primary-dark); font-size:12px; font-weight:900; }
     h1 { margin:14px 0 10px; font-size:clamp(30px,5vw,46px); line-height:1.18; letter-spacing:-.03em; }
     h2 { margin:0 0 12px; font-size:clamp(22px,4vw,30px); line-height:1.25; color:var(--primary-dark); }
     h3 { margin:0 0 8px; color:var(--primary-dark); font-size:18px; line-height:1.35; }
     p { color:var(--muted); font-weight:800; }
+    .lead { max-width:860px; }
     .site-updated { display:inline-block; margin-top:8px; color:var(--muted); font-size:12px; font-weight:700; }
     .quick-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
     .quick-links a { padding:7px 12px; border-radius:999px; background:#fff; border:1px solid var(--border); color:var(--primary-dark); font-size:13px; font-weight:900; }
-    .sitemap-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:18px; }
-    .sitemap-card {
+    .guide-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .guide-card {
       padding:18px;
       border-radius:22px;
       background:#fff;
       border:1px solid var(--border);
       box-shadow:0 10px 26px rgba(127,29,29,.06);
     }
-    .sitemap-card ul { list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; }
-    .sitemap-card li { margin:0; }
-    .sitemap-card a {
+    .guide-card strong { display:block; color:var(--primary-dark); font-size:18px; line-height:1.35; margin-bottom:6px; }
+    .guide-card p { margin:0 0 12px; font-size:13.5px; line-height:1.65; }
+    .guide-card a { display:inline-flex; padding:7px 12px; border-radius:999px; background:var(--soft-orange); border:1px solid rgba(242,166,90,.42); color:var(--primary-dark); font-size:12.5px; font-weight:1000; }
+    .steps {
+      margin:18px 0;
       display:grid;
-      gap:2px;
-      padding:10px 12px;
-      border-radius:14px;
-      background:linear-gradient(135deg,#fff8f6,#fff);
-      border:1px solid rgba(238,216,201,.85);
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
     }
-    .sitemap-card a:hover { background:#fff7e8; box-shadow:0 8px 18px rgba(127,29,29,.07); }
-    .sitemap-card b { color:var(--primary-dark); font-size:14px; line-height:1.35; }
-    .sitemap-card span { color:var(--muted); font-size:12.5px; font-weight:800; line-height:1.55; }
+    .step-box {
+      padding:18px;
+      border-radius:22px;
+      background:linear-gradient(135deg,#fff,#fff8f6);
+      border:1px solid var(--border);
+      box-shadow:0 10px 26px rgba(127,29,29,.05);
+    }
+    .step-box ul { margin:8px 0 0; padding-left:1.2em; color:var(--muted); font-weight:800; }
     .notice {
-      margin-top:16px;
+      margin:18px 0;
       padding:14px 16px;
       border-radius:18px;
       background:var(--soft-orange);
@@ -90,12 +107,12 @@
     footer { padding:30px 0; color:var(--muted); font-size:13px; }
     .footer-inner { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:22px 0 28px; border-top:1px solid var(--border); font-weight:800; }
     .back-to-top { position:fixed; right:18px; bottom:18px; z-index:50; display:inline-flex; align-items:center; padding:10px 13px; border-radius:999px; background:var(--primary); color:#fff; font-size:13px; font-weight:900; box-shadow:0 10px 24px rgba(127,29,29,.18); }
-    @media (max-width:800px) {
+    @media (max-width:900px) {
+      .guide-grid,.steps { grid-template-columns:1fr; }
       .nav { align-items:flex-start; flex-direction:column; padding:10px 0; }
       .header-actions { width:100%; }
       .button { width:100%; }
-      .hero,.sitemap-card { padding:17px; border-radius:22px; }
-      .sitemap-grid { grid-template-columns:1fr; }
+      .hero,.guide-card,.step-box { padding:16px; border-radius:22px; }
       .back-to-top { right:12px; bottom:12px; }
     }
   </style>
@@ -109,93 +126,105 @@
       </a>
       <div class="header-actions">
         <a class="button secondary" href="./index.html">ホームページへ戻る</a>
-        <a class="button secondary" href="./search.html">サイト内検索</a>
+        <a class="button secondary" href="./sitemap.html">サイトマップ</a>
       </div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <span class="badge">Site Map</span>
-      <h1>サイトマップ</h1>
-      <p>川島第四町内会ホームページの案内ページです。目的に合わせて、見たいページを選んでください。</p>
+      <span class="badge">First Guide</span>
+      <h1>初めてアクセスされる方へ</h1>
+      <p class="lead">川島第四町内会ホームページは、町内会からのお知らせ、地域からのお知らせ、行事予定、防災・防犯、暮らしの案内などを、スマートフォンやパソコンから確認できるページです。</p>
       <p class="site-updated">最終更新日：<time datetime="2026-06-07">2026-06-07</time></p>
       <div class="quick-links" aria-label="ページ内メニュー">
-        <a href="#news">お知らせ</a>
-        <a href="#about">町内会について</a>
-        <a href="#events">行事・活動</a>
-        <a href="#safety">防災・防犯</a>
-        <a href="#living">暮らし・加入</a>
-        <a href="#contact">掲載依頼・お問い合わせ</a>
+        <a href="#what">このページでできること</a>
+        <a href="#howto">おすすめの使い方</a>
+        <a href="#links">よく使うページ</a>
       </div>
     </section>
 
-    <div class="sitemap-grid">
-      <section class="sitemap-card" id="news">
-        <h2>お知らせ・地域情報</h2>
-        <ul>
-          <li><a href="./index.html#news"><b>What's New</b><span>トップページの更新情報を確認できます。</span></a></li>
-          <li><a href="./community-info.html"><b>町内会・地域からのお知らせ</b><span>町内会からのお知らせ、地域からのお知らせを確認できます。</span></a></li>
-          <li><a href="./monthly-notices.html"><b>月別お知らせ</b><span>定例会配布資料などを月別に整理しています。</span></a></li>
-          <li><a href="./search.html"><b>サイト内検索</b><span>キーワードでホームページ内を検索できます。</span></a></li>
-        </ul>
-      </section>
+    <section id="what">
+      <h2>このホームページでできること</h2>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <strong>更新情報を確認する</strong>
+          <p>新しく掲載したお知らせや、重要な更新内容をトップページで確認できます。</p>
+          <a href="./index.html#news">更新情報を見る</a>
+        </article>
+        <article class="guide-card">
+          <strong>町内会・地域のお知らせを見る</strong>
+          <p>町内会からのお知らせと、地域の方から寄せられたお知らせを確認できます。</p>
+          <a href="./community-info.html">お知らせを見る</a>
+        </article>
+        <article class="guide-card">
+          <strong>行事予定を確認する</strong>
+          <p>年間行事予定や、夏祭り・地域行事などの予定を確認できます。</p>
+          <a href="./events.html">行事予定を見る</a>
+        </article>
+        <article class="guide-card">
+          <strong>防災・防犯情報を見る</strong>
+          <p>災害時の初期行動、いっとき避難場所、公式情報リンク、防犯情報を確認できます。</p>
+          <a href="./disaster-prevention.html">防災・防犯を見る</a>
+        </article>
+        <article class="guide-card">
+          <strong>暮らしの案内を見る</strong>
+          <p>ごみ出し、資源回収、区役所手続き、地域施設などの暮らし情報を確認できます。</p>
+          <a href="./living-guide.html">暮らしの案内を見る</a>
+        </article>
+        <article class="guide-card">
+          <strong>地域情報を掲載する</strong>
+          <p>地域イベント、体験会、活動案内などをホームページへ掲載依頼できます。</p>
+          <a href="./posting-request.html">掲載依頼をする</a>
+        </article>
+      </div>
+    </section>
 
-      <section class="sitemap-card" id="about">
-        <h2>町内会について</h2>
-        <ul>
-          <li><a href="./about.html"><b>町内会について</b><span>活動方針、会長あいさつ、基本情報を確認できます。</span></a></li>
-          <li><a href="./about.html#greeting"><b>会長あいさつ</b><span>会長からのメッセージを掲載しています。</span></a></li>
-          <li><a href="./about.html#basic"><b>基本情報</b><span>対象区域、町内会館、主な活動などを確認できます。</span></a></li>
-          <li><a href="./about-en.html"><b>Foreign Languages</b><span>町内会についての概要を外国語で確認できます。</span></a></li>
-        </ul>
-      </section>
+    <section id="howto">
+      <h2>おすすめの使い方</h2>
+      <div class="steps">
+        <article class="step-box">
+          <h3>まずはトップページを見る</h3>
+          <ul>
+            <li>更新情報で、新しいお知らせを確認します。</li>
+            <li>夏祭りや直近の行事予定を確認します。</li>
+            <li>よく読まれているお知らせ、よく見られているページも参考にできます。</li>
+          </ul>
+        </article>
+        <article class="step-box">
+          <h3>探したい情報があるとき</h3>
+          <ul>
+            <li>ページ上部のメニュー、またはサイトマップから目的のページを選びます。</li>
+            <li>キーワードで探したい場合は、サイト内検索を使います。</li>
+            <li>スマートフォンでは、ホーム画面に追加しておくとアイコンからすぐ開けます。</li>
+          </ul>
+        </article>
+      </div>
+      <div class="notice">
+        災害時や緊急時は、町内会ホームページだけでなく、横浜市・神奈川県・気象庁・警察・消防などの公式情報もあわせて確認してください。
+      </div>
+    </section>
 
-      <section class="sitemap-card" id="events">
-        <h2>行事・活動</h2>
-        <ul>
-          <li><a href="./index.html#festival"><b>夏祭り</b><span>町内会まつり・夏祭りの案内を確認できます。</span></a></li>
-          <li><a href="./events.html"><b>年間行事予定</b><span>町内会の年間行事予定を確認できます。</span></a></li>
-          <li><a href="./about.html#cleaning"><b>さわやか清掃</b><span>地域清掃活動について確認できます。</span></a></li>
-          <li><a href="./about.html#children"><b>子ども会</b><span>子ども会や地域の子ども向け活動について確認できます。</span></a></li>
-        </ul>
-      </section>
-
-      <section class="sitemap-card" id="safety">
-        <h2>防災・防犯</h2>
-        <ul>
-          <li><a href="./disaster-prevention.html"><b>防災・防犯</b><span>避難場所、防災マップ、公式情報リンクを確認できます。</span></a></li>
-          <li><a href="./disaster-flow.html"><b>大規模地震時の初期行動</b><span>地震発生時の行動の流れを確認できます。</span></a></li>
-          <li><a href="./disaster-plan.html"><b>地区防災計画</b><span>町内会の防災計画に関する情報を確認できます。</span></a></li>
-          <li><a href="./disaster-prevention.html#official-disaster-links"><b>災害時の公式情報リンク</b><span>横浜市・神奈川県・気象庁などの公式情報へ移動できます。</span></a></li>
-        </ul>
-      </section>
-
-      <section class="sitemap-card" id="living">
-        <h2>暮らし・加入</h2>
-        <ul>
-          <li><a href="./first-guide.html"><b>初めてアクセスされる方へ</b><span>ホームページの見方、使い方、よく使うページを確認できます。</span></a></li>
-          <li><a href="./index.html#join"><b>加入案内</b><span>町内会への加入について確認できます。</span></a></li>
-          <li><a href="./living-guide.html"><b>暮らしの案内</b><span>ごみ出し、区役所手続き、地域施設などを確認できます。</span></a></li>
-          <li><a href="./faq.html"><b>よくある質問</b><span>町内会やホームページに関する質問をまとめています。</span></a></li>
-          <li><a href="./homepage-flyer.html"><b>ホームページ案内チラシ</b><span>回覧板・掲示板向けの案内チラシを確認できます。</span></a></li>
-        </ul>
-      </section>
-
-      <section class="sitemap-card" id="contact">
-        <h2>掲載依頼・お問い合わせ</h2>
-        <ul>
-          <li><a href="./posting-request.html"><b>地域情報の掲載依頼</b><span>地域からのお知らせ掲載依頼フォームへ進めます。</span></a></li>
-          <li><a href="./posting-guidelines.html"><b>地域情報の掲載について</b><span>掲載対象、写真掲載、著作権・出典などのルールを確認できます。</span></a></li>
-          <li><a href="./contact.html"><b>お問い合わせ</b><span>掲載内容の修正・削除、イベント参加連絡などのお問い合わせはこちらです。</span></a></li>
-          <li><a href="./privacy-policy.html"><b>プライバシーポリシー</b><span>個人情報の取り扱いについて確認できます。</span></a></li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="notice">
-      目的のページが見つからない場合は、<a href="./search.html" style="text-decoration:underline;text-underline-offset:3px;">サイト内検索</a>をご利用ください。
-    </div>
+    <section id="links">
+      <h2>よく使うページ</h2>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <strong>サイト内検索</strong>
+          <p>知りたい情報をキーワードで探せます。</p>
+          <a href="./search.html">検索する</a>
+        </article>
+        <article class="guide-card">
+          <strong>サイトマップ</strong>
+          <p>ホームページ全体のページ一覧を確認できます。</p>
+          <a href="./sitemap.html">サイトマップを見る</a>
+        </article>
+        <article class="guide-card">
+          <strong>お問い合わせ</strong>
+          <p>掲載内容の修正・削除、イベント参加連絡などはこちらです。</p>
+          <a href="./contact.html">お問い合わせへ</a>
+        </article>
+      </div>
+    </section>
   </main>
 
   <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ トップへ</a>
@@ -215,7 +244,6 @@
     }
   </script>
 
-
   <script>
     // ページ別アクセス集計
     const D4_PAGE_VIEW_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
@@ -232,7 +260,6 @@
 
     function recordD4PageView() {
       if (!D4_PAGE_VIEW_API_URL) return;
-
       const today = new Date().toISOString().slice(0, 10);
       const page = location.pathname || '/';
       const localKey = 'kawashimaD4PageView:' + today + ':' + page;
@@ -245,7 +272,6 @@
         delete window[callbackName];
         if (script && script.parentNode) script.parentNode.removeChild(script);
       };
-
       const params = new URLSearchParams({
         action: 'pageview',
         callback: callbackName,
@@ -270,6 +296,5 @@
       recordD4PageView();
     }
   </script>
-
 </body>
 </html>

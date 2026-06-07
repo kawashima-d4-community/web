@@ -3188,6 +3188,36 @@
       }
     }
 
+  
+    /* トップページ導線の整理：ページランキングは探す導線内に配置 */
+    #gateway .page-ranking {
+      margin-top: 12px;
+      width: 100%;
+    }
+    #gateway .page-ranking-head h3::before {
+      content: "🔎 ";
+    }
+    #news .popular-notices {
+      margin-top: 12px;
+    }
+    #news > .container,
+    #festival > .container,
+    #gateway > .container,
+    #events > .container,
+    #event-participation > .container,
+    #first-guide > .container,
+    #community-entry > .container,
+    #local-promotion > .container,
+    #safety > .container,
+    #living > .container,
+    #about > .container,
+    #join > .container {
+      width: min(var(--max), calc(100% - 32px));
+      max-width: var(--max);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -3250,6 +3280,7 @@
         <div class="nav-group">
           <button class="nav-group-button" type="button" aria-expanded="false">探す</button>
           <div class="nav-submenu">
+            <a href="./first-guide.html">初めてアクセスされる方へ</a>
             <a href="./search.html">サイト内検索</a>
             <a href="./sitemap.html">サイトマップ</a>
             <a href="./faq.html">よくある質問</a>
@@ -3295,7 +3326,7 @@
 
 
 <main id="main">
-    
+
 <section id="top" class="hero">
       <div class="container hero-grid">
         <div>
@@ -3316,6 +3347,7 @@
             <a class="button button-secondary" href="./posting-request.html">地域情報を掲載する</a>
             <a class="button button-secondary" href="#join">町内会に加入する</a>
             <a class="button button-secondary" href="./events.html">行事予定を見る</a>
+            <a class="button button-secondary" href="./first-guide.html">初めてアクセスされる方へ</a>
           </div>
         </div>
         <div class="visual-card" aria-label="川島第四町内会の活動イメージ">
@@ -3334,6 +3366,7 @@
         </div>
       </div>
     </section>
+
 <section id="news">
       <div class="container">
         <div class="section-head">
@@ -3389,17 +3422,8 @@
         </div>
 
 </div>
+</section>
 
-        <div class="page-ranking" id="page-ranking" aria-live="polite">
-          <div class="page-ranking-head">
-            <h3>よく見られているページ</h3>
-            <span>ページ別アクセス集計</span>
-          </div>
-          <p class="page-ranking-empty" id="pageRankingStatus">アクセス集計データが集まると表示されます。</p>
-          <ol class="page-ranking-list" id="pageRankingList"></ol>
-        </div>
-
-    </section>
 <section id="festival">
       <div class="container">
         <div class="festival-highlight">
@@ -3443,74 +3467,6 @@
       </div>
     </section>
 
-    <section id="event-participation" class="participation-section">
-      <div class="container">
-        <div class="participation-card">
-          <span class="badge">イベント参加について</span>
-          <h2>参加だけでも、見学だけでも大歓迎です</h2>
-          <p class="participation-lead">町内会イベントは、地域の皆さまみんなで楽しむための行事です。まずは気軽に参加して、地域のつながりを感じていただければ嬉しく思います。</p>
-          <div class="participation-grid" aria-label="イベント参加の考え方">
-            <div class="participation-point"><span>🙌</span>参加だけで大丈夫</div>
-            <div class="participation-point"><span>👀</span>見学だけでも大歓迎</div>
-            <div class="participation-point"><span>🤝</span>お手伝いはできる人だけで大丈夫</div>
-            <div class="participation-point"><span>🌿</span>参加を理由に役員をお願いすることはありません</div>
-          </div>
-          <div class="participation-note">
-            町内会では、子どもから大人まで、地域の皆さまが顔を合わせるきっかけを大切にしています。運動が得意でなくても、初めてでも、少しだけの参加でも大丈夫です。無理のない範囲で、地域の行事を一緒に楽しんでいただければ幸いです。
-          </div>
-          <div class="participation-actions">
-            <a class="button button-primary" href="./events.html">年間行事予定を見る</a>
-            <a class="button button-secondary" href="./community-info.html">町内会からのお知らせを見る</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-<section id="first-guide" class="first-visit-section">
-      <div class="container">
-        <div class="first-visit-grid">
-          <article class="first-visit-card">
-            <span class="badge">初めての方へ</span>
-            <h2>町内会情報を見逃しても、スマホでいつでも確認できます</h2>
-            <p>川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域を対象とした町内会です。防災・防犯、清掃活動、子ども会、地域行事などを通じて、安心して暮らせる地域づくりを進めています。</p>
-            <div class="first-visit-points" aria-label="ホームページで確認できること">
-              <a class="first-visit-point" href="./community-info.html#chonaikai-news">📢 町内会からのお知らせ</a>
-              <a class="first-visit-point" href="./events.html">📅 行事予定・イベント情報</a>
-              <a class="first-visit-point" href="./disaster-prevention.html">🧯 防災・防犯に関する情報</a>
-              <a class="first-visit-point" href="./community-info.html#local-news">🤝 地域からのお知らせ</a>
-              <a class="first-visit-point flyer-point" href="./homepage-flyer.html">🧾 ホームページ案内チラシ</a>
-              <a class="first-visit-point about-point" href="./about.html#first-time">🏘️ 町内会について詳しく見る</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="local-promotion" class="local-promotion-section">
-      <div class="container">
-        <div class="local-promotion-card">
-          <div class="local-promotion-main">
-            <span class="badge">地域情報を届ける</span>
-            <h2>地域の活動・体験会・お店の情報を掲載できます</h2>
-            <p>第四町内会ホームページでは、子ども向け体験会、地域スポーツ、習い事、地域イベント、地域のお店や小規模事業者からのお知らせなど、地域に関係する情報を掲載できます。</p>
-            <div class="local-promotion-points" aria-label="掲載できる情報の例">
-              <div class="local-promotion-point"><b>参加者募集</b>体験会、地域スポーツ、子ども向け活動など</div>
-              <div class="local-promotion-point"><b>地域イベント</b>催し物、交流会、地域団体の活動案内など</div>
-              <div class="local-promotion-point"><b>地域のお店紹介</b>地域向けのお知らせ、営業案内、活動紹介など</div>
-              <div class="local-promotion-point"><b>スマホで確認</b>回覧板だけでは届きにくい情報も、いつでも確認できます</div>
-            </div>
-            <p>まずは無料掲載を基本に、地域の情報を集めて「見てもらえるホームページ」に育てていきます。</p>
-            <div class="local-promotion-actions">
-              <a class="button button-primary" href="./posting-request.html">地域情報の掲載を依頼する</a>
-              <a class="button button-secondary" href="./posting-guidelines.html">掲載ルールを見る</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
 <section id="gateway" class="gateway-section">
       <div class="container">
         <div class="section-head compact-section-head">
@@ -3528,8 +3484,18 @@
           <a class="gateway-card" href="#join"><span class="icon">🤝</span><h3>加入案内</h3><p>町内会への加入方法、町内会費、Googleフォームを確認できます。</p><span class="more">加入案内を見る →</span></a>
           <a class="gateway-card" href="./living-guide.html"><span class="icon">🧹</span><h3>暮らしの案内</h3><p>ごみ出し、資源回収、回覧板など日々の暮らし情報をまとめています。</p><span class="more">暮らしの案内を見る →</span></a>
         </div>
+
+        <div class="page-ranking" id="page-ranking" aria-live="polite">
+                  <div class="page-ranking-head">
+                    <h3>よく見られているページ</h3>
+                    <span>よく使われているページ</span>
+                  </div>
+                  <p class="page-ranking-empty" id="pageRankingStatus">アクセスが集まると表示されます。</p>
+                  <ol class="page-ranking-list" id="pageRankingList"></ol>
+                </div>
       </div>
     </section>
+
 <section id="events" class="home-short-section events-compact-section">
       <div class="container">
         <div class="home-short-card events-compact-card">
@@ -3557,6 +3523,30 @@
         </div>
       </div>
     </section>
+
+<section id="event-participation" class="participation-section">
+      <div class="container">
+        <div class="participation-card">
+          <span class="badge">イベント参加について</span>
+          <h2>参加だけでも、見学だけでも大歓迎です</h2>
+          <p class="participation-lead">町内会イベントは、地域の皆さまみんなで楽しむための行事です。まずは気軽に参加して、地域のつながりを感じていただければ嬉しく思います。</p>
+          <div class="participation-grid" aria-label="イベント参加の考え方">
+            <div class="participation-point"><span>🙌</span>参加だけで大丈夫</div>
+            <div class="participation-point"><span>👀</span>見学だけでも大歓迎</div>
+            <div class="participation-point"><span>🤝</span>お手伝いはできる人だけで大丈夫</div>
+            <div class="participation-point"><span>🌿</span>参加を理由に役員をお願いすることはありません</div>
+          </div>
+          <div class="participation-note">
+            町内会では、子どもから大人まで、地域の皆さまが顔を合わせるきっかけを大切にしています。運動が得意でなくても、初めてでも、少しだけの参加でも大丈夫です。無理のない範囲で、地域の行事を一緒に楽しんでいただければ幸いです。
+          </div>
+          <div class="participation-actions">
+            <a class="button button-primary" href="./events.html">年間行事予定を見る</a>
+            <a class="button button-secondary" href="./community-info.html">町内会からのお知らせを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <section id="community-entry">
       <div class="container">
         <div class="community-entry-grid">
@@ -3587,6 +3577,30 @@
         </div>
       </div>
     </section>
+
+<section id="local-promotion" class="local-promotion-section">
+      <div class="container">
+        <div class="local-promotion-card">
+          <div class="local-promotion-main">
+            <span class="badge">地域情報を届ける</span>
+            <h2>地域の活動・体験会・お店の情報を掲載できます</h2>
+            <p>第四町内会ホームページでは、子ども向け体験会、地域スポーツ、習い事、地域イベント、地域のお店や小規模事業者からのお知らせなど、地域に関係する情報を掲載できます。</p>
+            <div class="local-promotion-points" aria-label="掲載できる情報の例">
+              <div class="local-promotion-point"><b>参加者募集</b>体験会、地域スポーツ、子ども向け活動など</div>
+              <div class="local-promotion-point"><b>地域イベント</b>催し物、交流会、地域団体の活動案内など</div>
+              <div class="local-promotion-point"><b>地域のお店紹介</b>地域向けのお知らせ、営業案内、活動紹介など</div>
+              <div class="local-promotion-point"><b>スマホで確認</b>回覧板だけでは届きにくい情報も、いつでも確認できます</div>
+            </div>
+            <p>まずは無料掲載を基本に、地域の情報を集めて「見てもらえるホームページ」に育てていきます。</p>
+            <div class="local-promotion-actions">
+              <a class="button button-primary" href="./posting-request.html">地域情報の掲載を依頼する</a>
+              <a class="button button-secondary" href="./posting-guidelines.html">掲載ルールを見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <section id="safety" class="home-short-section">
       <div class="container">
         <div class="home-short-card">
@@ -3610,6 +3624,7 @@
         </div>
       </div>
     </section>
+
 <section id="living" class="home-short-section">
       <div class="container">
         <div class="home-short-card">
@@ -3625,6 +3640,7 @@
         </div>
       </div>
     </section>
+
 <section id="about" class="home-short-section">
       <div class="container">
         <div class="home-short-card">
@@ -3641,6 +3657,7 @@
         </div>
       </div>
     </section>
+
 <section id="join">
       <div class="container">
         <div class="contact-card">
@@ -3672,7 +3689,7 @@
       </div>
     </section>
 
-    <section id="home-screen-guide" class="home-screen-guide" aria-label="ホーム画面追加の案内">
+<section id="home-screen-guide" class="home-screen-guide" aria-label="ホーム画面追加の案内">
       <div class="home-screen-guide-main">
         <div class="home-screen-guide-icon" aria-hidden="true">
           <img src="./icons/icon-192.png" alt="" />
@@ -3694,9 +3711,6 @@
         </div>
       </div>
     </section>
-
-
-
 
   </main>
 
@@ -4124,9 +4138,9 @@
 
 
   <script>
-    // よく見られているページ（ページ別アクセス集計）
+    // よく見られているページ（よく使われているページ）
     const D4_PAGE_RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
-    const D4_PAGE_RANKING_ITEMS = [{"file":"about.html","title":"町内会について","url":"./about.html","pathEnd":"/about.html"},{"file":"community-info.html","title":"町内会・地域からのお知らせ","url":"./community-info.html","pathEnd":"/community-info.html"},{"file":"contact.html","title":"お問い合わせ","url":"./contact.html","pathEnd":"/contact.html"},{"file":"disaster-flow.html","title":"大規模地震時の初期行動","url":"./disaster-flow.html","pathEnd":"/disaster-flow.html"},{"file":"disaster-plan.html","title":"地区防災計画の要約","url":"./disaster-plan.html","pathEnd":"/disaster-plan.html"},{"file":"disaster-prevention.html","title":"防災・防犯","url":"./disaster-prevention.html","pathEnd":"/disaster-prevention.html"},{"file":"events.html","title":"年間行事予定","url":"./events.html","pathEnd":"/events.html"},{"file":"faq.html","title":"よくある質問","url":"./faq.html","pathEnd":"/faq.html"},{"file":"homepage-flyer.html","title":"ホームページ案内チラシ","url":"./homepage-flyer.html","pathEnd":"/homepage-flyer.html"},{"file":"index.html","title":"川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会","url":"./index.html","pathEnd":"/index.html"},{"file":"living-guide.html","title":"暮らしの案内","url":"./living-guide.html","pathEnd":"/living-guide.html"},{"file":"monthly-notices.html","title":"月別お知らせ","url":"./monthly-notices.html","pathEnd":"/monthly-notices.html"},{"file":"posting-guidelines.html","title":"地域情報の掲載について","url":"./posting-guidelines.html","pathEnd":"/posting-guidelines.html"},{"file":"posting-request.html","title":"地域情報掲載依頼","url":"./posting-request.html","pathEnd":"/posting-request.html"},{"file":"privacy-policy.html","title":"プライバシーポリシー","url":"./privacy-policy.html","pathEnd":"/privacy-policy.html"},{"file":"search.html","title":"サイト内検索","url":"./search.html","pathEnd":"/search.html"},{"file":"sitemap.html","title":"サイトマップ","url":"./sitemap.html","pathEnd":"/sitemap.html"}];
+    const D4_PAGE_RANKING_ITEMS = [{"file":"about.html","title":"町内会について","url":"./about.html","pathEnd":"/about.html"},{"file":"community-info.html","title":"町内会・地域からのお知らせ","url":"./community-info.html","pathEnd":"/community-info.html"},{"file":"contact.html","title":"お問い合わせ","url":"./contact.html","pathEnd":"/contact.html"},{"file":"disaster-flow.html","title":"大規模地震時の初期行動","url":"./disaster-flow.html","pathEnd":"/disaster-flow.html"},{"file":"disaster-plan.html","title":"地区防災計画の要約","url":"./disaster-plan.html","pathEnd":"/disaster-plan.html"},{"file":"disaster-prevention.html","title":"防災・防犯","url":"./disaster-prevention.html","pathEnd":"/disaster-prevention.html"},{"file":"events.html","title":"年間行事予定","url":"./events.html","pathEnd":"/events.html"},{"file":"faq.html","title":"よくある質問","url":"./faq.html","pathEnd":"/faq.html"},{"file":"first-guide.html","title":"初めてアクセスされる方へ","url":"./first-guide.html","pathEnd":"/first-guide.html"},{"file":"homepage-flyer.html","title":"ホームページ案内チラシ","url":"./homepage-flyer.html","pathEnd":"/homepage-flyer.html"},{"file":"index.html","title":"川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会","url":"./index.html","pathEnd":"/index.html"},{"file":"living-guide.html","title":"暮らしの案内","url":"./living-guide.html","pathEnd":"/living-guide.html"},{"file":"monthly-notices.html","title":"月別お知らせ","url":"./monthly-notices.html","pathEnd":"/monthly-notices.html"},{"file":"posting-guidelines.html","title":"地域情報の掲載について","url":"./posting-guidelines.html","pathEnd":"/posting-guidelines.html"},{"file":"posting-request.html","title":"地域情報掲載依頼","url":"./posting-request.html","pathEnd":"/posting-request.html"},{"file":"privacy-policy.html","title":"プライバシーポリシー","url":"./privacy-policy.html","pathEnd":"/privacy-policy.html"},{"file":"search.html","title":"サイト内検索","url":"./search.html","pathEnd":"/search.html"},{"file":"sitemap.html","title":"サイトマップ","url":"./sitemap.html","pathEnd":"/sitemap.html"}];
 
     function findPageRankingItem(pageValue) {
       const value = String(pageValue || '');
@@ -4149,7 +4163,7 @@
       window[callbackName] = function(payload) {
         try {
           if (!payload || payload.ok !== true) {
-            status.textContent = 'アクセス集計データが集まると表示されます。';
+            status.textContent = 'アクセスが集まると表示されます。';
             return;
           }
 
@@ -4180,7 +4194,7 @@
             .slice(0, 5);
 
           if (!rows.length) {
-            status.textContent = 'アクセス集計データが集まると表示されます。';
+            status.textContent = 'アクセスが集まると表示されます。';
             return;
           }
 
@@ -4208,7 +4222,7 @@
       script = document.createElement('script');
       script.src = D4_PAGE_RANKING_API_URL + separator + params.toString();
       script.onerror = function() {
-        status.textContent = 'アクセス集計データが集まると表示されます。';
+        status.textContent = 'アクセスが集まると表示されます。';
         delete window[callbackName];
         if (script && script.parentNode) script.parentNode.removeChild(script);
       };
