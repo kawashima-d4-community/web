@@ -805,3 +805,9 @@ Text files:
 - 対象記事はcommunity-info.html内の町内会からのお知らせ掲載中記事から生成。
 - search-data.js を再生成。
 - 対象記事数: 7
+
+
+2026-06-07 index.html 更新情報の確認方法を削除:
+- What's New下の『更新情報の確認方法』ブロックを削除。
+- 『よく読まれているお知らせ』欄は維持。
+- search-data.js を再生成。
