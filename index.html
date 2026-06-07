@@ -3086,6 +3086,108 @@
       }
     }
 
+  
+    /* よく見られているページ */
+    .page-ranking {
+      margin-top: 12px;
+      padding: 14px 15px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 8px 20px rgba(127,29,29,0.045);
+    }
+    .page-ranking-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .page-ranking-head h3 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .page-ranking-head span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .page-ranking-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-ranking-list li {
+      display: grid;
+      grid-template-columns: 42px minmax(0,1fr) auto;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 14px;
+      background: #fff8f6;
+      border: 1px solid rgba(238,216,201,0.8);
+    }
+    .page-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 34px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 1000;
+    }
+    .page-ranking-list a {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+    .page-ranking-list a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .page-ranking-count {
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 1000;
+      white-space: nowrap;
+    }
+    .page-ranking-empty {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+    @media (max-width: 560px) {
+      .page-ranking {
+        padding: 12px;
+        border-radius: 18px;
+      }
+      .page-ranking-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .page-ranking-list li {
+        grid-template-columns: 36px minmax(0,1fr);
+        gap: 6px 8px;
+      }
+      .page-ranking-count {
+        grid-column: 2;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -3287,6 +3389,16 @@
         </div>
 
 </div>
+
+        <div class="page-ranking" id="page-ranking" aria-live="polite">
+          <div class="page-ranking-head">
+            <h3>よく見られているページ</h3>
+            <span>ページ別アクセス集計</span>
+          </div>
+          <p class="page-ranking-empty" id="pageRankingStatus">アクセス集計データが集まると表示されます。</p>
+          <ol class="page-ranking-list" id="pageRankingList"></ol>
+        </div>
+
     </section>
 <section id="festival">
       <div class="container">
@@ -4007,6 +4119,106 @@
       document.addEventListener('DOMContentLoaded', loadPopularNotices);
     } else {
       loadPopularNotices();
+    }
+  </script>
+
+
+  <script>
+    // よく見られているページ（ページ別アクセス集計）
+    const D4_PAGE_RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
+    const D4_PAGE_RANKING_ITEMS = [{"file":"about.html","title":"町内会について","url":"./about.html","pathEnd":"/about.html"},{"file":"community-info.html","title":"町内会・地域からのお知らせ","url":"./community-info.html","pathEnd":"/community-info.html"},{"file":"contact.html","title":"お問い合わせ","url":"./contact.html","pathEnd":"/contact.html"},{"file":"disaster-flow.html","title":"大規模地震時の初期行動","url":"./disaster-flow.html","pathEnd":"/disaster-flow.html"},{"file":"disaster-plan.html","title":"地区防災計画の要約","url":"./disaster-plan.html","pathEnd":"/disaster-plan.html"},{"file":"disaster-prevention.html","title":"防災・防犯","url":"./disaster-prevention.html","pathEnd":"/disaster-prevention.html"},{"file":"events.html","title":"年間行事予定","url":"./events.html","pathEnd":"/events.html"},{"file":"faq.html","title":"よくある質問","url":"./faq.html","pathEnd":"/faq.html"},{"file":"homepage-flyer.html","title":"ホームページ案内チラシ","url":"./homepage-flyer.html","pathEnd":"/homepage-flyer.html"},{"file":"index.html","title":"川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会","url":"./index.html","pathEnd":"/index.html"},{"file":"living-guide.html","title":"暮らしの案内","url":"./living-guide.html","pathEnd":"/living-guide.html"},{"file":"monthly-notices.html","title":"月別お知らせ","url":"./monthly-notices.html","pathEnd":"/monthly-notices.html"},{"file":"posting-guidelines.html","title":"地域情報の掲載について","url":"./posting-guidelines.html","pathEnd":"/posting-guidelines.html"},{"file":"posting-request.html","title":"地域情報掲載依頼","url":"./posting-request.html","pathEnd":"/posting-request.html"},{"file":"privacy-policy.html","title":"プライバシーポリシー","url":"./privacy-policy.html","pathEnd":"/privacy-policy.html"},{"file":"search.html","title":"サイト内検索","url":"./search.html","pathEnd":"/search.html"},{"file":"sitemap.html","title":"サイトマップ","url":"./sitemap.html","pathEnd":"/sitemap.html"}];
+
+    function findPageRankingItem(pageValue) {
+      const value = String(pageValue || '');
+      return D4_PAGE_RANKING_ITEMS.find((item) => {
+        return value === item.file ||
+               value === item.url ||
+               value.endsWith(item.pathEnd) ||
+               value.endsWith('/web' + item.pathEnd);
+      });
+    }
+
+    function loadPageRanking() {
+      const list = document.getElementById('pageRankingList');
+      const status = document.getElementById('pageRankingStatus');
+      if (!list || !status || !D4_PAGE_RANKING_API_URL) return;
+
+      const callbackName = 'pageRankingCallback_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      let script;
+
+      window[callbackName] = function(payload) {
+        try {
+          if (!payload || payload.ok !== true) {
+            status.textContent = 'アクセス集計データが集まると表示されます。';
+            return;
+          }
+
+          let rows = [];
+          if (Array.isArray(payload.ranking)) {
+            rows = payload.ranking.map((row) => {
+              const matched = findPageRankingItem(row.page || row.path || row.url || row.file);
+              return {
+                title: row.title || (matched ? matched.title : row.page || row.path || 'ページ'),
+                url: matched ? matched.url : (row.url || './index.html'),
+                count: Number(row.count || row.views || row.total || 0)
+              };
+            });
+          } else if (payload.counts && typeof payload.counts === 'object') {
+            rows = Object.keys(payload.counts).map((key) => {
+              const matched = findPageRankingItem(key);
+              return matched ? {
+                title: matched.title,
+                url: matched.url,
+                count: Number(payload.counts[key] || 0)
+              } : null;
+            }).filter(Boolean);
+          }
+
+          rows = rows
+            .filter((row) => row.count > 0)
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 5);
+
+          if (!rows.length) {
+            status.textContent = 'アクセス集計データが集まると表示されます。';
+            return;
+          }
+
+          status.style.display = 'none';
+          list.innerHTML = rows.map((row, index) => `
+            <li>
+              <span class="page-rank">${index + 1}位</span>
+              <a href="${row.url}">${row.title}</a>
+              <span class="page-ranking-count">${row.count.toLocaleString()}回</span>
+            </li>
+          `).join('');
+        } finally {
+          delete window[callbackName];
+          if (script && script.parentNode) script.parentNode.removeChild(script);
+        }
+      };
+
+      const params = new URLSearchParams({
+        action: 'ranking',
+        limit: '5',
+        callback: callbackName,
+        cacheBust: String(Date.now())
+      });
+      const separator = D4_PAGE_RANKING_API_URL.includes('?') ? '&' : '?';
+      script = document.createElement('script');
+      script.src = D4_PAGE_RANKING_API_URL + separator + params.toString();
+      script.onerror = function() {
+        status.textContent = 'アクセス集計データが集まると表示されます。';
+        delete window[callbackName];
+        if (script && script.parentNode) script.parentNode.removeChild(script);
+      };
+      document.body.appendChild(script);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadPageRanking);
+    } else {
+      loadPageRanking();
     }
   </script>
 

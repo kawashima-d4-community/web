@@ -811,3 +811,12 @@ Text files:
 - What's New下の『更新情報の確認方法』ブロックを削除。
 - 『よく読まれているお知らせ』欄は維持。
 - search-data.js を再生成。
+
+
+2026-06-07 ページ別アクセスランキング追加:
+- index.htmlに『よく見られているページ』欄を追加。
+- 既存の訪問者カウンターAPIを使い、action=rankingで上位5ページを表示する処理を追加。
+- index.html以外のHTMLにページ別アクセス記録スクリプトを追加。
+- Apps Script側の実装参考として PAGE_RANKING_APPS_SCRIPT_TEMPLATE.txt を追加。
+- search-data.js を再生成。
+- ランキング対象ページ数: 17

@@ -1,0 +1,109 @@
+/*
+川島第四町内会ホームページ
+ページ別アクセスランキング対応 Apps Script テンプレート
+
+このテンプレートは、既存の訪問者カウンター用Apps Scriptに
+「ページ別アクセス記録」と「ランキング取得」を追加するための参考コードです。
+
+HTML側は以下のURLを使用しています。
+https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec
+
+想定するGETパラメータ:
+- action=pageview  : ページアクセスを記録
+- action=ranking   : ページ別ランキングを返す
+- visitorId        : ブラウザ単位の簡易ID
+- page             : location.pathname
+- title            : document.title
+- callback         : JSONP callback名
+
+戻り値:
+callback({
+  ok: true,
+  ranking: [
+    { page: "/web/index.html", title: "トップページ", count: 10 }
+  ]
+})
+*/
+
+const SHEET_NAME_PAGE_VIEWS = 'PageViews';
+
+function doGet(e) {
+  const params = e.parameter || {};
+  const action = params.action || 'visit';
+  const callback = params.callback || 'callback';
+
+  let result;
+  if (action === 'ranking') {
+    result = getPageRanking_(Number(params.limit || 5));
+  } else {
+    result = recordPageView_(params);
+  }
+
+  return ContentService
+    .createTextOutput(callback + '(' + JSON.stringify(result) + ')')
+    .setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
+
+function getPageViewSheet_() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(SHEET_NAME_PAGE_VIEWS);
+  if (!sheet) {
+    sheet = ss.insertSheet(SHEET_NAME_PAGE_VIEWS);
+    sheet.appendRow(['date', 'day', 'visitorId', 'page', 'title', 'uniqueKey']);
+  }
+  return sheet;
+}
+
+function recordPageView_(params) {
+  const sheet = getPageViewSheet_();
+  const now = new Date();
+  const day = Utilities.formatDate(now, 'Asia/Tokyo', 'yyyy-MM-dd');
+  const visitorId = params.visitorId || 'unknown';
+  const page = params.page || '/';
+  const title = params.title || page;
+  const uniqueKey = day + '|' + visitorId + '|' + page;
+
+  const values = sheet.getDataRange().getValues();
+  const exists = values.some((row, index) => index > 0 && row[5] === uniqueKey);
+  if (!exists) {
+    sheet.appendRow([now, day, visitorId, page, title, uniqueKey]);
+  }
+
+  const ranking = getPageRanking_(5);
+  const todayCount = values.filter((row, index) => index > 0 && row[1] === day).length + (exists ? 0 : 1);
+  const totalCount = Math.max(0, values.length - 1) + (exists ? 0 : 1);
+
+  return {
+    ok: true,
+    today: todayCount,
+    total: totalCount,
+    ranking: ranking.ranking
+  };
+}
+
+function getPageRanking_(limit) {
+  const sheet = getPageViewSheet_();
+  const values = sheet.getDataRange().getValues();
+  const map = {};
+
+  values.slice(1).forEach(row => {
+    const page = row[3] || '/';
+    const title = row[4] || page;
+    if (!map[page]) {
+      map[page] = { page: page, title: title, count: 0 };
+    }
+    map[page].count++;
+    if (title && title.length > 0) {
+      map[page].title = title;
+    }
+  });
+
+  const ranking = Object.values(map)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit || 5);
+
+  return {
+    ok: true,
+    ranking: ranking
+  };
+}

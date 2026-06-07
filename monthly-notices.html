@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-03" />
-  <meta name="d4-site-version" content="2026-06-03" />
+  <meta name="last-modified" content="2026-06-07" />
+  <meta name="d4-site-version" content="2026-06-07" />
   <title>月別お知らせ｜川島第四町内会</title>
   <meta name="description" content="町内会役員定例会で共有された横浜市・保土ケ谷区などからのお知らせを、月別に整理して掲載しています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -162,7 +162,7 @@
       <span class="badge">Monthly Notices</span>
       <h1>月別お知らせ</h1>
       <p>町内会役員定例会で配布・共有された、横浜市・保土ケ谷区などからのお知らせを月別に整理して掲載します。</p>
-      <p class="site-updated">最終更新日：<time datetime="2026-06-03">2026-06-03</time></p>
+      <p class="site-updated">最終更新日：<time datetime="2026-06-07">2026-06-07</time></p>
       <div class="month-nav" aria-label="月別お知らせ一覧">
         <a href="#2026-05">2026年5月度</a>
       </div>
@@ -307,7 +307,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br />最終更新日：<time datetime="2026-06-03">2026-06-03</time><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br />最終更新日：<time datetime="2026-06-07">2026-06-07</time><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
@@ -317,6 +317,62 @@
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./service-worker.js').catch(() => {});
       });
+    }
+  </script>
+
+
+  <script>
+    // ページ別アクセス集計
+    const D4_PAGE_VIEW_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
+
+    function getD4PageViewVisitorId() {
+      const key = 'kawashimaD4VisitorId';
+      let visitorId = localStorage.getItem(key);
+      if (!visitorId) {
+        visitorId = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : 'v-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+        localStorage.setItem(key, visitorId);
+      }
+      return visitorId;
+    }
+
+    function recordD4PageView() {
+      if (!D4_PAGE_VIEW_API_URL) return;
+
+      const today = new Date().toISOString().slice(0, 10);
+      const page = location.pathname || '/';
+      const localKey = 'kawashimaD4PageView:' + today + ':' + page;
+      if (localStorage.getItem(localKey) === '1') return;
+      localStorage.setItem(localKey, '1');
+
+      const callbackName = 'pageViewCallback_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      let script;
+      window[callbackName] = function() {
+        delete window[callbackName];
+        if (script && script.parentNode) script.parentNode.removeChild(script);
+      };
+
+      const params = new URLSearchParams({
+        action: 'pageview',
+        callback: callbackName,
+        visitorId: getD4PageViewVisitorId(),
+        page: page,
+        title: document.title || '',
+        cacheBust: String(Date.now())
+      });
+      const separator = D4_PAGE_VIEW_API_URL.includes('?') ? '&' : '?';
+      script = document.createElement('script');
+      script.src = D4_PAGE_VIEW_API_URL + separator + params.toString();
+      script.onerror = function() {
+        delete window[callbackName];
+        if (script && script.parentNode) script.parentNode.removeChild(script);
+      };
+      document.body.appendChild(script);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', recordD4PageView);
+    } else {
+      recordD4PageView();
     }
   </script>
 
