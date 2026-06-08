@@ -3488,7 +3488,7 @@
         <div class="page-ranking" id="page-ranking" aria-live="polite">
                   <div class="page-ranking-head">
                     <h3>よく見られているページ</h3>
-                    <span>よく使われているページ</span>
+                    <span>よく見られているページ</span>
                   </div>
                   <p class="page-ranking-empty" id="pageRankingStatus">アクセスが集まると表示されます。</p>
                   <ol class="page-ranking-list" id="pageRankingList"></ol>
@@ -4138,7 +4138,7 @@
 
 
   <script>
-    // よく見られているページ（よく使われているページ）
+    // よく見られているページ（よく見られているページ）
     const D4_PAGE_RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
     const D4_PAGE_RANKING_ITEMS = [{"file":"about.html","title":"町内会について","url":"./about.html","pathEnd":"/about.html"},{"file":"community-info.html","title":"町内会・地域からのお知らせ","url":"./community-info.html","pathEnd":"/community-info.html"},{"file":"contact.html","title":"お問い合わせ","url":"./contact.html","pathEnd":"/contact.html"},{"file":"disaster-flow.html","title":"大規模地震時の初期行動","url":"./disaster-flow.html","pathEnd":"/disaster-flow.html"},{"file":"disaster-plan.html","title":"地区防災計画の要約","url":"./disaster-plan.html","pathEnd":"/disaster-plan.html"},{"file":"disaster-prevention.html","title":"防災・防犯","url":"./disaster-prevention.html","pathEnd":"/disaster-prevention.html"},{"file":"events.html","title":"年間行事予定","url":"./events.html","pathEnd":"/events.html"},{"file":"faq.html","title":"よくある質問","url":"./faq.html","pathEnd":"/faq.html"},{"file":"first-guide.html","title":"初めてアクセスされる方へ","url":"./first-guide.html","pathEnd":"/first-guide.html"},{"file":"homepage-flyer.html","title":"ホームページ案内チラシ","url":"./homepage-flyer.html","pathEnd":"/homepage-flyer.html"},{"file":"index.html","title":"川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会","url":"./index.html","pathEnd":"/index.html"},{"file":"living-guide.html","title":"暮らしの案内","url":"./living-guide.html","pathEnd":"/living-guide.html"},{"file":"monthly-notices.html","title":"月別お知らせ","url":"./monthly-notices.html","pathEnd":"/monthly-notices.html"},{"file":"posting-guidelines.html","title":"地域情報の掲載について","url":"./posting-guidelines.html","pathEnd":"/posting-guidelines.html"},{"file":"posting-request.html","title":"地域情報掲載依頼","url":"./posting-request.html","pathEnd":"/posting-request.html"},{"file":"privacy-policy.html","title":"プライバシーポリシー","url":"./privacy-policy.html","pathEnd":"/privacy-policy.html"},{"file":"search.html","title":"サイト内検索","url":"./search.html","pathEnd":"/search.html"},{"file":"sitemap.html","title":"サイトマップ","url":"./sitemap.html","pathEnd":"/sitemap.html"}];
 
@@ -4169,6 +4169,9 @@
       };
 
       const source = rawPage || rawTitle;
+      if (rawTitle.indexOf('川島第四町内会｜川島第四一致団結') === 0) {
+        return 'トップページ';
+      }
       const match = source.match(/([^\/?#]+\.html)$/);
       const fileName = match ? match[1] : '';
 
@@ -4226,7 +4229,7 @@
               const matched = findPageRankingItem(row.page || row.path || row.url || row.file);
               const pageValue = row.page || row.path || row.url || row.file || '';
               return {
-                title: matched ? matched.title : cleanPageRankingTitle(row.title, pageValue),
+                title: cleanPageRankingTitle(matched ? matched.title : row.title, pageValue),
                 url: matched ? matched.url : (row.url || './index.html'),
                 count: Number(row.count || row.views || row.total || 0)
               };
@@ -4235,7 +4238,7 @@
             rows = Object.keys(payload.counts).map((key) => {
               const matched = findPageRankingItem(key);
               return matched ? {
-                title: matched.title,
+                title: cleanPageRankingTitle(matched.title, key),
                 url: matched.url,
                 count: Number(payload.counts[key] || 0)
               } : {
