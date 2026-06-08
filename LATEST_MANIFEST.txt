@@ -850,3 +850,10 @@ Text files:
 - トップページのランキング表示を『川島第四町内会｜川島第四一致団結...』ではなく『トップページ』に変換。
 - 右上ラベルを『よく見られているページ』へ統一。
 - search-data.js を再生成。
+
+
+2026-06-08 index.html 更新日付同期:
+- HTML冒頭コメントの Last Updated をページ下部の最終更新日と同じ日付へ統一。
+- meta last-modified、d4-site-version、フッター最終更新日を同じ日付で確認。
+- Update Note を現在の主な更新内容へ更新。
+- search-data.js を再生成。
