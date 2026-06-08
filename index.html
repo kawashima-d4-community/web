@@ -8,8 +8,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-07" />
-  <meta name="d4-site-version" content="2026-06-07" />
+  <meta name="last-modified" content="2026-06-08" />
+  <meta name="d4-site-version" content="2026-06-08" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -3718,7 +3718,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-07">2026-06-07</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-08">2026-06-08</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
           <div class="footer-mascot">
             <img src="./d4-karugamo.png" alt="川島第四町内会の第四かるがも親子" />
             <span>第四かるがも親子<small>AI生成画像</small></span>
@@ -4142,13 +4142,66 @@
     const D4_PAGE_RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
     const D4_PAGE_RANKING_ITEMS = [{"file":"about.html","title":"町内会について","url":"./about.html","pathEnd":"/about.html"},{"file":"community-info.html","title":"町内会・地域からのお知らせ","url":"./community-info.html","pathEnd":"/community-info.html"},{"file":"contact.html","title":"お問い合わせ","url":"./contact.html","pathEnd":"/contact.html"},{"file":"disaster-flow.html","title":"大規模地震時の初期行動","url":"./disaster-flow.html","pathEnd":"/disaster-flow.html"},{"file":"disaster-plan.html","title":"地区防災計画の要約","url":"./disaster-plan.html","pathEnd":"/disaster-plan.html"},{"file":"disaster-prevention.html","title":"防災・防犯","url":"./disaster-prevention.html","pathEnd":"/disaster-prevention.html"},{"file":"events.html","title":"年間行事予定","url":"./events.html","pathEnd":"/events.html"},{"file":"faq.html","title":"よくある質問","url":"./faq.html","pathEnd":"/faq.html"},{"file":"first-guide.html","title":"初めてアクセスされる方へ","url":"./first-guide.html","pathEnd":"/first-guide.html"},{"file":"homepage-flyer.html","title":"ホームページ案内チラシ","url":"./homepage-flyer.html","pathEnd":"/homepage-flyer.html"},{"file":"index.html","title":"川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会","url":"./index.html","pathEnd":"/index.html"},{"file":"living-guide.html","title":"暮らしの案内","url":"./living-guide.html","pathEnd":"/living-guide.html"},{"file":"monthly-notices.html","title":"月別お知らせ","url":"./monthly-notices.html","pathEnd":"/monthly-notices.html"},{"file":"posting-guidelines.html","title":"地域情報の掲載について","url":"./posting-guidelines.html","pathEnd":"/posting-guidelines.html"},{"file":"posting-request.html","title":"地域情報掲載依頼","url":"./posting-request.html","pathEnd":"/posting-request.html"},{"file":"privacy-policy.html","title":"プライバシーポリシー","url":"./privacy-policy.html","pathEnd":"/privacy-policy.html"},{"file":"search.html","title":"サイト内検索","url":"./search.html","pathEnd":"/search.html"},{"file":"sitemap.html","title":"サイトマップ","url":"./sitemap.html","pathEnd":"/sitemap.html"}];
 
+
+    function cleanPageRankingTitle(title, pageValue) {
+      const rawTitle = String(title || '').trim();
+      const rawPage = String(pageValue || '').trim();
+
+      const pageNameMap = {
+        'index.html': 'トップページ',
+        'community-info.html': '町内会・地域からのお知らせ',
+        'disaster-prevention.html': '防災・防犯',
+        'about.html': '町内会について',
+        'events.html': '年間行事予定',
+        'living-guide.html': '暮らしの案内',
+        'contact.html': 'お問い合わせ',
+        'sitemap.html': 'サイトマップ',
+        'search.html': 'サイト内検索',
+        'first-guide.html': '初めてアクセスされる方へ',
+        'posting-request.html': '地域情報の掲載依頼',
+        'posting-guidelines.html': '地域情報の掲載について',
+        'faq.html': 'よくある質問',
+        'homepage-flyer.html': 'ホームページ案内チラシ',
+        'monthly-notices.html': '月別お知らせ',
+        'privacy-policy.html': 'プライバシーポリシー',
+        'disaster-flow.html': '大規模地震時の初期行動',
+        'disaster-plan.html': '地区防災計画'
+      };
+
+      const source = rawPage || rawTitle;
+      const match = source.match(/([^\/?#]+\.html)$/);
+      const fileName = match ? match[1] : '';
+
+      if (fileName && pageNameMap[fileName]) {
+        return pageNameMap[fileName];
+      }
+
+      if (source === '/web/' || source === '/web' || source === '/' || source.endsWith('/web/index.html') || source.endsWith('/index.html')) {
+        return 'トップページ';
+      }
+
+      if (!rawTitle || rawTitle === rawPage || rawTitle.indexOf('/web/') === 0 || rawTitle.indexOf('/') === 0) {
+        return rawPage || 'ページ';
+      }
+
+      return rawTitle;
+    }
+
     function findPageRankingItem(pageValue) {
-      const value = String(pageValue || '');
+      const value = String(pageValue || '').split('?')[0].split('#')[0];
+      const normalized = value.replace(/\/web\/?$/, '/web/index.html').replace(/\/$/, '/index.html');
+
       return D4_PAGE_RANKING_ITEMS.find((item) => {
-        return value === item.file ||
-               value === item.url ||
-               value.endsWith(item.pathEnd) ||
-               value.endsWith('/web' + item.pathEnd);
+        const itemFile = item.file || '';
+        const itemUrl = item.url || '';
+        const itemPathEnd = item.pathEnd || ('/' + itemFile);
+
+        return normalized === itemFile ||
+               normalized === itemUrl ||
+               normalized === itemPathEnd ||
+               normalized.endsWith(itemPathEnd) ||
+               normalized.endsWith('/web' + itemPathEnd) ||
+               normalized.endsWith('/' + itemFile);
       });
     }
 
@@ -4171,8 +4224,9 @@
           if (Array.isArray(payload.ranking)) {
             rows = payload.ranking.map((row) => {
               const matched = findPageRankingItem(row.page || row.path || row.url || row.file);
+              const pageValue = row.page || row.path || row.url || row.file || '';
               return {
-                title: row.title || (matched ? matched.title : row.page || row.path || 'ページ'),
+                title: matched ? matched.title : cleanPageRankingTitle(row.title, pageValue),
                 url: matched ? matched.url : (row.url || './index.html'),
                 count: Number(row.count || row.views || row.total || 0)
               };
@@ -4184,7 +4238,11 @@
                 title: matched.title,
                 url: matched.url,
                 count: Number(payload.counts[key] || 0)
-              } : null;
+              } : {
+                title: cleanPageRankingTitle('', key),
+                url: './index.html',
+                count: Number(payload.counts[key] || 0)
+              };
             }).filter(Boolean);
           }
 

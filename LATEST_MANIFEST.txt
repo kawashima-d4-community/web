@@ -836,3 +836,10 @@ Text files:
 - first-guide.html を新規作成し、ホームページの説明・使い方・よく使うページを掲載。
 - sitemap.html に first-guide.html へのリンクを追加。
 - index.html のページランキング対象と search-data.js を再生成。
+
+
+2026-06-08 index.html ページランキング表示名補正:
+- よく見られているページで /web/index.html のようなURLが表示される問題を修正。
+- index.html は『トップページ』、community-info.html は『町内会・地域からのお知らせ』など、分かりやすいページ名へ変換。
+- ページ照合ロジックを強化し、/web/index.html、/index.html、index.html を同一ページとして扱うよう補正。
+- search-data.js を再生成。
