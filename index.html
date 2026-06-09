@@ -1,15 +1,15 @@
 <!--
   川島第四町内会ホームページ index.html
-  Last Updated: 2026-06-08
-  Update Note: トップページの表示順整理、初めてアクセスされる方への導線追加、ページランキング表示名調整
+  Last Updated: 2026-06-09
+  Update Note: 管理者用ダッシュボードを追加し、公開トップページからページ別アクセスランキング表示を削除
 -->
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-08" />
-  <meta name="d4-site-version" content="2026-06-08" />
+  <meta name="last-modified" content="2026-06-09" />
+  <meta name="d4-site-version" content="2026-06-09" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -3086,107 +3086,6 @@
       }
     }
 
-  
-    /* よく見られているページ */
-    .page-ranking {
-      margin-top: 12px;
-      padding: 14px 15px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.88);
-      border: 1px solid rgba(238,216,201,0.95);
-      box-shadow: 0 8px 20px rgba(127,29,29,0.045);
-    }
-    .page-ranking-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .page-ranking-head h3 {
-      margin: 0;
-      color: var(--primary-dark);
-      font-size: 17px;
-      line-height: 1.35;
-    }
-    .page-ranking-head span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-    .page-ranking-list {
-      display: grid;
-      gap: 7px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .page-ranking-list li {
-      display: grid;
-      grid-template-columns: 42px minmax(0,1fr) auto;
-      gap: 8px;
-      align-items: center;
-      padding: 8px 10px;
-      border-radius: 14px;
-      background: #fff8f6;
-      border: 1px solid rgba(238,216,201,0.8);
-    }
-    .page-rank {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 34px;
-      height: 28px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--ink);
-      font-size: 12px;
-      font-weight: 1000;
-    }
-    .page-ranking-list a {
-      color: var(--ink);
-      font-size: 13px;
-      font-weight: 900;
-      line-height: 1.45;
-      text-decoration: none;
-    }
-    .page-ranking-list a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .page-ranking-count {
-      color: var(--primary-dark);
-      font-size: 12px;
-      font-weight: 1000;
-      white-space: nowrap;
-    }
-    .page-ranking-empty {
-      margin: 0;
-      color: var(--muted);
-      font-size: 12.5px;
-      font-weight: 800;
-      line-height: 1.6;
-    }
-    @media (max-width: 560px) {
-      .page-ranking {
-        padding: 12px;
-        border-radius: 18px;
-      }
-      .page-ranking-head {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 2px;
-      }
-      .page-ranking-list li {
-        grid-template-columns: 36px minmax(0,1fr);
-        gap: 6px 8px;
-      }
-      .page-ranking-count {
-        grid-column: 2;
-      }
-    }
 
   
     /* トップページ導線の整理：ページランキングは探す導線内に配置 */
@@ -3484,16 +3383,7 @@
           <a class="gateway-card" href="#join"><span class="icon">🤝</span><h3>加入案内</h3><p>町内会への加入方法、町内会費、Googleフォームを確認できます。</p><span class="more">加入案内を見る →</span></a>
           <a class="gateway-card" href="./living-guide.html"><span class="icon">🧹</span><h3>暮らしの案内</h3><p>ごみ出し、資源回収、回覧板など日々の暮らし情報をまとめています。</p><span class="more">暮らしの案内を見る →</span></a>
         </div>
-
-        <div class="page-ranking" id="page-ranking" aria-live="polite">
-                  <div class="page-ranking-head">
-                    <h3>よく見られているページ</h3>
-                    <span>よく見られているページ</span>
-                  </div>
-                  <p class="page-ranking-empty" id="pageRankingStatus">アクセスが集まると表示されます。</p>
-                  <ol class="page-ranking-list" id="pageRankingList"></ol>
-                </div>
-      </div>
+</div>
     </section>
 
 <section id="events" class="home-short-section events-compact-section">
@@ -3718,7 +3608,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-08">2026-06-08</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-09">2026-06-09</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
           <div class="footer-mascot">
             <img src="./d4-karugamo.png" alt="川島第四町内会の第四かるがも親子" />
             <span>第四かるがも親子<small>AI生成画像</small></span>

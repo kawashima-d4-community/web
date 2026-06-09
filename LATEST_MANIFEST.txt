@@ -857,3 +857,12 @@ Text files:
 - meta last-modified、d4-site-version、フッター最終更新日を同じ日付で確認。
 - Update Note を現在の主な更新内容へ更新。
 - search-data.js を再生成。
+
+
+2026-06-09 管理者用ダッシュボード追加:
+- admin-dashboard.html を新規作成。
+- 公開トップページから「よく見られているページ」表示を削除し、管理者用ページへ移動。
+- admin-dashboard.html でページアクセスTOP5、アクセスページ一覧、確認ボタンTOP5を確認可能。
+- admin-dashboard.html はサイトマップ・ナビ・サイト内検索には掲載しない裏ページ扱い。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成（admin-dashboard.html は検索対象外）。
