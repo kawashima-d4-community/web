@@ -866,3 +866,10 @@ Text files:
 - admin-dashboard.html はサイトマップ・ナビ・サイト内検索には掲載しない裏ページ扱い。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成（admin-dashboard.html は検索対象外）。
+
+
+2026-06-09 管理者用ダッシュボードのファイル名変更:
+- admin-dashboard.html を add.html に変更。
+- add.html は引き続きナビ・サイトマップ・サイト内検索には掲載しない裏ページ扱い。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成（add.html は検索対象外）。
