@@ -873,3 +873,10 @@ Text files:
 - add.html は引き続きナビ・サイトマップ・サイト内検索には掲載しない裏ページ扱い。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成（add.html は検索対象外）。
+
+
+2026-06-09 add.html 本日・累計アクセス数追加:
+- 管理者用ダッシュボードのサマリーに『本日のアクセス数』『累計アクセス数』を追加。
+- action=ranking の応答に含まれる today / total を表示。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成（add.html は検索対象外）。
