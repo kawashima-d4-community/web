@@ -880,3 +880,12 @@ Text files:
 - action=ranking の応答に含まれる today / total を表示。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成（add.html は検索対象外）。
+
+
+2026-06-11 さわやか清掃のお知らせ追加:
+- community-info.html の町内会からのお知らせに『6月28日（日）さわやか清掃のお知らせ』を追加。
+- Googleドライブ上のチラシ資料への『資料を見る』ボタンを追加。ローカルPDFは同梱していません。
+- index.html の What's New に『さわやか清掃のお知らせを掲載しました』を追加。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- add.html の確認ボタン集計対象も更新。
+- search-data.js を再生成（add.html は検索対象外）。
