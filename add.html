@@ -31,6 +31,21 @@
     <section class="summary-grid"><div class="summary-card"><span>本日のアクセス数</span><strong id="summaryTodayVisitors">取得中</strong></div><div class="summary-card"><span>累計アクセス数</span><strong id="summaryTotalVisitors">取得中</strong></div><div class="summary-card"><span>ページアクセス合計</span><strong id="summaryPageViews">取得中</strong></div><div class="summary-card"><span>集計済みページ数</span><strong id="summaryPages">取得中</strong></div><div class="summary-card"><span>確認ボタン合計</span><strong id="summaryReactions">取得中</strong></div><div class="summary-card"><span>最終取得</span><strong id="summaryFetched">--:--</strong></div></section>
     <section class="section-grid"><article class="panel"><div class="panel-head"><div><h2>ページアクセス TOP5</h2><p>ページ別アクセス集計から、よく見られているページを表示します。</p></div><button class="button primary" type="button" onclick="loadDashboard()">更新</button></div><p class="empty" id="pageTopStatus">ページランキングを取得中です。</p><ol class="ranking-list" id="pageTopList"></ol></article><article class="panel"><div class="panel-head"><div><h2>確認ボタン TOP5</h2><p>町内会からのお知らせの「確認しました」ボタンの集計です。</p></div></div><p class="empty" id="noticeTopStatus">確認ボタン集計を取得中です。</p><ol class="ranking-list" id="noticeTopList"></ol></article></section>
     <section class="panel"><div class="panel-head"><div><h2>アクセスされているページ一覧</h2><p>アクセス数が記録されているページを一覧で確認できます。</p></div></div><div class="table-wrap"><table><thead><tr><th>順位</th><th>ページ</th><th>アクセス数</th></tr></thead><tbody id="pageTableBody"><tr><td colspan="3">取得中です。</td></tr></tbody></table></div></section>
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>リンク切れ対策</h2>
+          <p>サイト内リンク・資料リンクの確認、404ページの確認ができます。</p>
+        </div>
+      </div>
+      <div class="tools">
+        <a class="button primary" href="./link-check.html">リンク確認ページを開く</a>
+        <a class="button" href="./404.html">404ページを確認</a>
+        <a class="button" href="./sitemap.html">サイトマップを確認</a>
+        <a class="button" href="./contact.html">リンク切れ報告先を確認</a>
+      </div>
+    </section>
+
   </main>
   <footer><div class="container footer-inner"><div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-11">2026-06-11</time></span></div><div>管理者用ダッシュボード</div></div></footer>
   <script>

@@ -898,3 +898,13 @@ Text files:
 - 『よく見られているページ』は公開トップページには表示せず、管理者用 add.html で確認する運用を維持。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成（add.html は検索対象外）。
+
+
+2026-06-11 リンク切れ対策追加:
+- GitHub Pages用の 404.html を新規作成。
+- 旧管理者用URL admin-dashboard.html から add.html へ自動移動するリダイレクトページを追加。
+- 管理者用の link-check.html を新規作成し、サイト内リンク・資料リンク・外部リンク一覧を確認可能にしました。
+- add.html に『リンク切れ対策』パネルを追加。
+- robots.txt に管理者用ページのDisallowを追加。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成（管理系ページと404ページは検索対象外）。
