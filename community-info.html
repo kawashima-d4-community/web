@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-11" />
-  <meta name="d4-site-version" content="2026-06-11" />
+  <meta name="last-modified" content="2026-06-13" />
+  <meta name="d4-site-version" content="2026-06-13" />
   <title>町内会・地域からのお知らせ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。" />
   <style>
@@ -531,6 +531,119 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     }
 
   
+
+    /* 確認ボタン応援施策 */
+    .support-guide {
+      display: grid;
+      gap: 10px;
+    }
+    .support-guide-main {
+      display: grid;
+      gap: 4px;
+    }
+    .support-guide-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .support-guide-point {
+      padding: 10px 11px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .support-guide-point b {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 12.5px;
+      margin-bottom: 2px;
+    }
+    .support-stage-card {
+      margin: 0 0 18px;
+      padding: 14px 15px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff7e8, #fff 58%, #fff4ee);
+      border: 1px solid rgba(242,166,90,0.48);
+      box-shadow: 0 8px 20px rgba(127,29,29,0.045);
+    }
+    .support-stage-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 9px;
+    }
+    .support-stage-title {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 15px;
+      font-weight: 1000;
+      line-height: 1.35;
+    }
+    .support-stage-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 1000;
+      white-space: nowrap;
+    }
+    .support-stage-message {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+    .support-stage-progress {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(238,216,201,0.76);
+      border: 1px solid rgba(238,216,201,0.95);
+    }
+    .support-stage-progress span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width .35s ease;
+    }
+    .support-stage-foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.55;
+    }
+    @media (max-width: 760px) {
+      .support-guide-points {
+        grid-template-columns: 1fr;
+      }
+      .support-stage-head,
+      .support-stage-foot {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .support-stage-label {
+        width: fit-content;
+      }
+    }
+
+
     /* フローティング：確認ボタン説明 */
     .floating-actions a.seen-help {
       background: #fff7e8;
@@ -583,13 +696,32 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
           <h2>掲載中のお知らせ</h2>
           <p class="small-note">「町内会からのお知らせ」と「地域からのお知らせ」を分けて掲載します。町内会からのお知らせ・地域からのお知らせともに、原則1か月で自動非表示になります。</p>
 
-          <div class="seen-guide-note" id="seen-guide-note">
-            <strong>「確認しました」ボタンについて：</strong>
-            記事を確認したら、各お知らせの「😊 確認しました」を押してください。
+          <div class="seen-guide-note support-guide" id="seen-guide-note">
+            <div class="support-guide-main">
+              <strong>「確認しました」ボタンは、地域のお知らせへの応援です。</strong>
+              <span>記事を確認したら「😊 確認しました」を押してください。確認数が増えると、トップページの「よく読まれているお知らせ」に表示されやすくなります。</span>
+            </div>
+            <div class="support-guide-points" aria-label="確認ボタンの効果">
+              <div class="support-guide-point"><b>読んだことが伝わる</b>町内会からのお知らせが届いている目安になります。</div>
+              <div class="support-guide-point"><b>お知らせを応援</b>確認数が多いお知らせほど注目されやすくなります。</div>
+              <div class="support-guide-point"><b>参加のきっかけ</b>清掃・防災・行事など、地域活動に気づく人が増えます。</div>
+            </div>
           </div>
 
+          <div class="support-stage-card" id="support-stage-card" aria-live="polite">
+            <div class="support-stage-head">
+              <p class="support-stage-title">あなたの確認応援ステージ</p>
+              <span class="support-stage-label" id="supportStageLabel">準備中</span>
+            </div>
+            <p class="support-stage-message" id="supportStageMessage">お知らせを確認すると、応援ステージが少しずつ上がります。</p>
+            <div class="support-stage-progress" aria-hidden="true"><span id="supportStageProgress"></span></div>
+            <div class="support-stage-foot">
+              <span id="supportStageCount">確認済み：0件</span>
+              <span id="supportStageNext">まずは1件確認してみましょう</span>
+            </div>
+          </div>
 
-        </div>
+</div>
         <span class="badge" id="totalPostCount">確認中</span>
       </div>
       <div class="sheet-status" id="sheetStatus" aria-live="polite"></div>
@@ -830,7 +962,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-11">2026-06-11</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-13">2026-06-13</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
@@ -1070,6 +1202,59 @@ ${thumbnail}
       return `kawashimaD4ReactionSeen:${articleId}`;
     }
 
+
+    function getReactionSupportArticles() {
+      return Array.from(document.querySelectorAll('#chonaikaiPostList article.community-post[data-board="chonaikai"][id]'));
+    }
+
+    function getReactionSupportCount() {
+      return getReactionSupportArticles().filter((article) => {
+        return localStorage.getItem(getReactionLocalKey(article.id)) === '1';
+      }).length;
+    }
+
+    function getReactionSupportStage(count) {
+      const stages = [
+        { min: 0, next: 1, label: '地域見守りスタート', message: 'まずは気になるお知らせを1件確認して、地域情報の見守りを始めましょう。' },
+        { min: 1, next: 3, label: '地域見守り隊', message: '町内会情報の確認ありがとうございます。地域のお知らせが届く力になっています。' },
+        { min: 3, next: 5, label: '地域応援隊', message: '複数のお知らせを確認済みです。地域活動への関心が広がる応援になっています。' },
+        { min: 5, next: 10, label: '第四サポーター', message: '川島第四のお知らせをしっかり支えてくれています。確認の積み重ねが地域の力になります。' },
+        { min: 10, next: null, label: '一致団結メンバー', message: 'いつも確認ありがとうございます。川島第四一致団結の心強い応援メンバーです。' }
+      ];
+      let current = stages[0];
+      stages.forEach((stage) => {
+        if (count >= stage.min) current = stage;
+      });
+      return current;
+    }
+
+    function updateReactionSupportStage() {
+      const card = document.getElementById('support-stage-card');
+      if (!card) return;
+
+      const count = getReactionSupportCount();
+      const stage = getReactionSupportStage(count);
+      const label = document.getElementById('supportStageLabel');
+      const message = document.getElementById('supportStageMessage');
+      const progress = document.getElementById('supportStageProgress');
+      const countEl = document.getElementById('supportStageCount');
+      const nextEl = document.getElementById('supportStageNext');
+
+      if (label) label.textContent = stage.label;
+      if (message) message.textContent = stage.message;
+      if (countEl) countEl.textContent = `確認済み：${count.toLocaleString()}件`;
+
+      if (stage.next) {
+        const width = Math.min(100, Math.max(8, Math.round((count / stage.next) * 100)));
+        if (progress) progress.style.width = width + '%';
+        if (nextEl) nextEl.textContent = `次のステージまであと${Math.max(0, stage.next - count)}件`;
+      } else {
+        if (progress) progress.style.width = '100%';
+        if (nextEl) nextEl.textContent = '最高ステージです。いつもありがとうございます';
+      }
+    }
+
+
     function callReactionApi(params, callback) {
       if (!CHONAIKAI_REACTION_API_URL) {
         callback({ ok: false, error: 'not_configured' });
@@ -1128,7 +1313,7 @@ ${thumbnail}
 
       const note = document.createElement('span');
       note.className = 'reaction-note';
-      note.textContent = '確認したら押してください';
+      note.textContent = '押すと地域のお知らせの応援になります';
 
       area.appendChild(button);
       area.appendChild(note);
@@ -1148,6 +1333,7 @@ ${thumbnail}
           if (payload && payload.ok) {
             localStorage.setItem(getReactionLocalKey(articleId), '1');
             setArticleReactionButtons(article, payload.count, true);
+            updateReactionSupportStage();
           } else {
             article.querySelectorAll('.reaction-button').forEach((targetButton) => {
               targetButton.disabled = false;
@@ -1176,6 +1362,8 @@ ${thumbnail}
 
       });
 
+      updateReactionSupportStage();
+
       callReactionApi({ action: 'summary', articleIds: articleIds.join(',') }, function(payload) {
         if (!payload || !payload.ok || !payload.counts) {
           return;
@@ -1185,6 +1373,7 @@ ${thumbnail}
           const locallyReacted = localStorage.getItem(getReactionLocalKey(article.id)) === '1';
           setArticleReactionButtons(article, payload.counts[article.id] || 0, locallyReacted);
         });
+        updateReactionSupportStage();
       });
     }
 

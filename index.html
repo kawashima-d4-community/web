@@ -1,15 +1,15 @@
 <!--
   川島第四町内会ホームページ index.html
-  Last Updated: 2026-06-11
-  Update Note: リンク切れ対策として404ページ、旧URLリダイレクト、管理者用リンク確認ページを追加
+  Last Updated: 2026-06-13
+  Update Note: 確認ボタン応援施策を反映し、確認数によるお知らせ応援の説明を追加
 -->
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-11" />
-  <meta name="d4-site-version" content="2026-06-11" />
+  <meta name="last-modified" content="2026-06-13" />
+  <meta name="d4-site-version" content="2026-06-13" />
   <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
   <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせなどを掲載しています。" />
   <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
@@ -3013,6 +3013,15 @@
       font-weight: 800;
       white-space: nowrap;
     }
+
+    .popular-support-copy {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
     .popular-notice-list {
       display: grid;
       gap: 7px;
@@ -3317,8 +3326,9 @@
         <div class="popular-notices" id="popular-notices" aria-live="polite">
           <div class="popular-notices-head">
             <h3>よく読まれているお知らせ</h3>
-            <span>確認ボタンの集計</span>
+            <span>確認ボタンで応援</span>
           </div>
+          <p class="popular-support-copy">お知らせを読んで「確認しました」を押すと、地域のお知らせへの応援になります。確認が多いお知らせほど、ここに表示されやすくなります。</p>
           <p class="popular-empty" id="popularNoticesStatus">確認数を集計中です。</p>
           <ol class="popular-notice-list" id="popularNoticesList"></ol>
         </div>
@@ -3611,7 +3621,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-11">2026-06-11</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
+      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-13">2026-06-13</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
           <div class="footer-mascot">
             <img src="./d4-karugamo.png" alt="川島第四町内会の第四かるがも親子" />
             <span>第四かるがも親子<small>AI生成画像</small></span>

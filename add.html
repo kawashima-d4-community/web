@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow,noarchive" />
-  <meta name="last-modified" content="2026-06-11" />
-  <meta name="d4-site-version" content="2026-06-11" />
+  <meta name="last-modified" content="2026-06-13" />
+  <meta name="d4-site-version" content="2026-06-13" />
   <title>管理者用ダッシュボード｜川島第四町内会</title>
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <style>
@@ -27,7 +27,7 @@
 <body>
   <header><div class="container nav"><a class="brand" href="./index.html"><span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span><span>管理者用ダッシュボード<small>川島第四町内会ホームページ</small></span></a><a class="button" href="./index.html">ホームページへ戻る</a></div></header>
   <main class="container">
-    <section class="hero"><span class="badge">Admin Dashboard</span><h1>管理者用ダッシュボード</h1><p>ページ別アクセス、よく見られているページ、確認ボタンの反応数を確認するための裏ページです。トップページ・サイトマップ・サイト内検索には掲載していません。</p><p class="site-updated">最終更新日：<time datetime="2026-06-11">2026-06-11</time></p><div class="notice">このページはリンク非掲載の管理用ページです。ただし、静的サイトのため完全な認証保護ではありません。外部に見せたくない個人情報や機密情報は掲載しないでください。</div></section>
+    <section class="hero"><span class="badge">Admin Dashboard</span><h1>管理者用ダッシュボード</h1><p>ページ別アクセス、よく見られているページ、確認ボタンの反応数を確認するための裏ページです。トップページ・サイトマップ・サイト内検索には掲載していません。</p><p class="site-updated">最終更新日：<time datetime="2026-06-13">2026-06-13</time></p><div class="notice">このページはリンク非掲載の管理用ページです。ただし、静的サイトのため完全な認証保護ではありません。外部に見せたくない個人情報や機密情報は掲載しないでください。</div></section>
     <section class="summary-grid"><div class="summary-card"><span>本日のアクセス数</span><strong id="summaryTodayVisitors">取得中</strong></div><div class="summary-card"><span>累計アクセス数</span><strong id="summaryTotalVisitors">取得中</strong></div><div class="summary-card"><span>ページアクセス合計</span><strong id="summaryPageViews">取得中</strong></div><div class="summary-card"><span>集計済みページ数</span><strong id="summaryPages">取得中</strong></div><div class="summary-card"><span>確認ボタン合計</span><strong id="summaryReactions">取得中</strong></div><div class="summary-card"><span>最終取得</span><strong id="summaryFetched">--:--</strong></div></section>
     <section class="section-grid"><article class="panel"><div class="panel-head"><div><h2>ページアクセス TOP5</h2><p>ページ別アクセス集計から、よく見られているページを表示します。</p></div><button class="button primary" type="button" onclick="loadDashboard()">更新</button></div><p class="empty" id="pageTopStatus">ページランキングを取得中です。</p><ol class="ranking-list" id="pageTopList"></ol></article><article class="panel"><div class="panel-head"><div><h2>確認ボタン TOP5</h2><p>町内会からのお知らせの「確認しました」ボタンの集計です。</p></div></div><p class="empty" id="noticeTopStatus">確認ボタン集計を取得中です。</p><ol class="ranking-list" id="noticeTopList"></ol></article></section>
     <section class="panel"><div class="panel-head"><div><h2>アクセスされているページ一覧</h2><p>アクセス数が記録されているページを一覧で確認できます。</p></div></div><div class="table-wrap"><table><thead><tr><th>順位</th><th>ページ</th><th>アクセス数</th></tr></thead><tbody id="pageTableBody"><tr><td colspan="3">取得中です。</td></tr></tbody></table></div></section>
@@ -47,7 +47,7 @@
     </section>
 
   </main>
-  <footer><div class="container footer-inner"><div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-11">2026-06-11</time></span></div><div>管理者用ダッシュボード</div></div></footer>
+  <footer><div class="container footer-inner"><div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-13">2026-06-13</time></span></div><div>管理者用ダッシュボード</div></div></footer>
   <script>
     const D4_ADMIN_PAGE_RANKING_API_URL = "https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec";
     const D4_ADMIN_REACTION_API_URL = "https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec";
