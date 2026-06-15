@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-14" />
-  <meta name="d4-site-version" content="2026-06-14" />
+  <meta name="last-modified" content="2026-06-15" />
+  <meta name="d4-site-version" content="2026-06-15" />
   <title>町内会・地域からのお知らせ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。" />
   <style>
@@ -713,7 +713,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
               <p class="support-stage-title">あなたの確認応援ステージ</p>
               <span class="support-stage-label" id="supportStageLabel">準備中</span>
             </div>
-            <p class="support-stage-message" id="supportStageMessage">お知らせを確認すると、応援ステージが少しずつ上がります。</p>
+            <p class="support-stage-message" id="supportStageMessage">お知らせを確認すると、応援ステージが少しずつ上がります。10件以上は一致団結メンバーとして、ブロンズ、シルバー、ゴールド、プレミアム、その先のステージへ進みます。</p>
             <div class="support-stage-progress" aria-hidden="true"><span id="supportStageProgress"></span></div>
             <div class="support-stage-foot">
               <span id="supportStageCount">確認済み：0件</span>
@@ -747,7 +747,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
                 <img class="post-thumb" src="./thumbnails/dodgeball-20260614-thumb.jpg" alt="2026年6月14日 ドッジボール大会の様子" />
               </a>
               <p><strong>2026年6月14日（土）</strong>、川島小学校体育館にて子どもドッジボール大会が開催されました。会場は元気な声と応援でいっぱいとなり、にぎやかで楽しい一日となりました。</p>
-              <p>第四町内会からは<strong>4人</strong>での参加となりましたが、少人数ながらも一生懸命にボールを追いかけ、笑顔いっぱいでプレーしていました。赤い第四Tシャツもよく映え、チーム一丸となって頑張る姿がとても印象的でした。</p>
+              <p>第四町内会からは<strong>5人</strong>での参加となりましたが、少人数ながらも一生懸命にボールを追いかけ、笑顔いっぱいでプレーしていました。赤い第四Tシャツもよく映え、チーム一丸となって頑張る姿がとても印象的でした。</p>
               <p>参加した子どもたちにとって、他町内会の皆さんとの交流や、仲間と力を合わせてプレーする時間は、楽しい思い出になったことと思います。応援に来てくださった皆さまもありがとうございました。</p>
               <p>また、スポーツ推進委員の皆さまには、朝早くからの準備、当日の運営、そして片付けまでご対応いただき、ありがとうございました。おかげさまで、子どもたちが安心して楽しく参加できる大会となりました。</p>
               <p><strong>大会結果</strong>は以下のとおりです。</p>
@@ -996,7 +996,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-14">2026-06-14</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-15">2026-06-15</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
@@ -1253,7 +1253,12 @@ ${thumbnail}
         { min: 1, next: 3, label: '地域見守り隊', message: '町内会情報の確認ありがとうございます。地域のお知らせが届く力になっています。' },
         { min: 3, next: 5, label: '地域応援隊', message: '複数のお知らせを確認済みです。地域活動への関心が広がる応援になっています。' },
         { min: 5, next: 10, label: '第四サポーター', message: '川島第四のお知らせをしっかり支えてくれています。確認の積み重ねが地域の力になります。' },
-        { min: 10, next: null, label: '一致団結メンバー', message: 'いつも確認ありがとうございます。川島第四一致団結の心強い応援メンバーです。' }
+        { min: 10, next: 15, label: '一致団結ブロンズメンバー', message: '10件以上確認ありがとうございます。川島第四一致団結を支えるブロンズメンバーです。' },
+        { min: 15, next: 20, label: '一致団結シルバーメンバー', message: '15件以上確認ありがとうございます。地域のお知らせを継続して応援してくれています。' },
+        { min: 20, next: 30, label: '一致団結ゴールドメンバー', message: '20件以上確認ありがとうございます。町内会情報の広がりを力強く支えるゴールドメンバーです。' },
+        { min: 30, next: 50, label: '一致団結プレミアムメンバー', message: '30件以上確認ありがとうございます。川島第四の活動を長く見守る心強い応援メンバーです。' },
+        { min: 50, next: 100, label: '一致団結プラチナメンバー', message: '50件以上確認ありがとうございます。地域のお知らせを大切にしてくださる特別な応援メンバーです。' },
+        { min: 100, next: null, label: '川島第四レジェンドサポーター', message: '100件以上確認ありがとうございます。川島第四一致団結を支えるレジェンドサポーターです。' }
       ];
       let current = stages[0];
       stages.forEach((stage) => {
