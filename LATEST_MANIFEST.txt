@@ -941,3 +941,12 @@ Text files:
 - 町内会からのお知らせ記事への導線を追加。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成。
+
+
+2026-06-16 防災記事・防災ページ表示修正:
+- community-info.html の防災・学校記事からサムネイル画像表示を削除。
+- community-info.html の防災記事に防災・防犯ページへの案内文とボタンを追加。
+- disaster-prevention.html から回覧資料案内セクションを削除。
+- 不要になった防災・学校記事用サムネイル2点をZIPから削除。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成。
