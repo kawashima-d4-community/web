@@ -950,3 +950,10 @@ Text files:
 - 不要になった防災・学校記事用サムネイル2点をZIPから削除。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成。
+
+
+2026-06-16 川島小学校だよりリンク修正:
+- community-info.html の『川島小学校だより 6月号』のリンクをGoogleドライブの個別PDFリンクへ修正。
+- ボタン文言を『川島小学校だよりを見る』へ変更。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成。
