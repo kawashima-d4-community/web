@@ -966,3 +966,11 @@ Text files:
 - Googleドライブの写真フォルダリンクを追加。
 - index.html の更新情報、人気記事候補、ソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成。
+
+
+2026-06-20 6月度役員定例会資料追加:
+- community-info.html に6月度役員定例会資料の記事を追加。
+- 公開日を2026年6月28日に設定。
+- PDF資料 monthly-meeting-202606.pdf を追加。
+- index.html のWhat's Newに6月28日付で追加し、data-startにより6月28日から表示する制御を追加。
+- search-data.js を再生成。
