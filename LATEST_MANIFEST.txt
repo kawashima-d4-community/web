@@ -974,3 +974,11 @@ Text files:
 - PDF資料 monthly-meeting-202606.pdf を追加。
 - index.html のWhat's Newに6月28日付で追加し、data-startにより6月28日から表示する制御を追加。
 - search-data.js を再生成。
+
+
+2026-06-20 6月度役員定例会資料PDFリンク修正:
+- community-info.html の6月度役員定例会資料PDFリンクをGoogleドライブの個別PDFリンクに変更。
+- GitHub上にPDFを置かない方針に合わせ、monthly-meeting-202606.pdf をZIPから削除。
+- ボタン文言を『資料PDFを見る（Googleドライブ）』に変更。
+- index.html のソース冒頭コメント、meta、フッター更新日を更新。
+- search-data.js を再生成。
