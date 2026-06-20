@@ -1,6 +1,6 @@
 川島第四町内会ホームページ 最新ファイル一覧
 作成日時: 2026-06-21
-更新内容: index.htmlの最終更新日を2026-06-21へ修正、service-worker更新
+更新内容: 会長X閲覧にXアカウントが必要な場合の案内とアカウント作成リンクを追加、about.html最終更新日を更新、service-worker更新
 
 ファイル	サイズ(bytes)
 404.html	5707
@@ -14,7 +14,7 @@ about-ko.html	15828
 about-pt.html	15514
 about-vi.html	15850
 about-zh.html	15039
-about.html	90874
+about.html	91566
 add.html	20148
 admin-dashboard.html	1661
 arai-president-portrait.png	2098778
@@ -40,7 +40,7 @@ homepage-flyer.pdf	322504
 icons/app-icon-original.png	1916444
 icons/icon-192.png	60933
 icons/icon-512.png	325952
-index.html	156565
+index.html	157404
 link-check.html	93167
 living-guide.html	78782
 manifest.webmanifest	868
@@ -49,7 +49,7 @@ posting-guidelines.html	15077
 posting-request.html	19157
 privacy-policy.html	15493
 robots.txt	169
-search-data.js	114659
+search-data.js	115202
 search.html	15369
 service-worker.js	1924
 sitemap.html	17140
