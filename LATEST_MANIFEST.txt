@@ -1037,3 +1037,12 @@ Text files:
 - スマホでは縦並びになるよう調整。
 - about.html とindex.html のmeta、フッター更新日を更新。
 - search-data.js を再生成。
+
+
+2026-06-20 新井会長Xタイムライン反映安定化:
+- index.html のXタイムライン埋め込みURLをtwitter.com形式に変更。
+- 表示用の外部リンクはx.comのまま維持。
+- Xウィジェットの再読込処理を追加。
+- PWAのservice-worker.jsキャッシュバージョンを更新。
+- index.html/about.htmlのmeta、フッター更新日を更新。
+- search-data.jsを再生成。

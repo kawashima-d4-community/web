@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-06-20
-  Update Note: about.htmlの新井会長X枠と外部メディア掲載を同一行に調整
+  Update Note: 新井会長Xタイムラインの反映安定化対応
 -->
 <!doctype html>
 <html lang="ja">
@@ -3329,17 +3329,18 @@
             <span class="badge">会長の活動発信</span>
             <h3>新井会長のX</h3>
             <p>町内会活動や地域の様子を、Xでも発信しています。ホームページの補足情報としてご覧ください。</p>
-            <p class="president-x-mini-note">表示されない場合は、下のボタンからXで直接ご確認ください。</p>
+            <p class="president-x-mini-note">投稿が表示されない場合や反映に時間がかかる場合は、下のボタンからXで直接ご確認ください。</p>
             <div class="actions">
               <a class="button secondary" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener">Xで見る</a>
             </div>
           </div>
           <div class="president-x-mini-box" aria-label="新井会長のXタイムライン">
             <a class="twitter-timeline"
+               data-dnt="true"
                data-height="300"
                data-chrome="noheader nofooter transparent"
-               href="https://x.com/yoshimi44444444">
-              @yoshimi44444444 の投稿
+               href="https://twitter.com/yoshimi44444444?ref_src=twsrc%5Etfw">
+              新井会長のX投稿
             </a>
           </div>
         </div>
@@ -4310,6 +4311,28 @@
     }
     applyNoticeStartDates();
   });
+</script>
+
+
+<script>
+(function() {
+  function loadPresidentXTimeline() {
+    var area = document.getElementById('president-x');
+    if (!area) return;
+    if (window.twttr && window.twttr.widgets && typeof window.twttr.widgets.load === 'function') {
+      window.twttr.widgets.load(area);
+    }
+  }
+  window.addEventListener('load', function() {
+    setTimeout(loadPresidentXTimeline, 800);
+    setTimeout(loadPresidentXTimeline, 2500);
+  });
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+      setTimeout(loadPresidentXTimeline, 600);
+    }
+  });
+})();
 </script>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
