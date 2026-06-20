@@ -1055,3 +1055,12 @@ Text files:
 - PWAのservice-worker.jsキャッシュバージョンを更新。
 - index.html/about.htmlのmeta、フッター更新日を更新。
 - search-data.jsを再生成。
+
+
+2026-06-20 X公式埋め込み表示再調整:
+- index.html の新井会長X枠を、X Publish公式アンカー＋platform.x.com/widgets.js単体の構成に変更。
+- カスタム再読込スクリプトを削除し、CSSの固定height/overflowの影響を排除。
+- Xで見るボタンは維持。
+- service-worker.jsのキャッシュバージョンを更新。
+- index.html/about.htmlのmeta、フッター更新日を更新。
+- search-data.jsを再生成。
