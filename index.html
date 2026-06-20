@@ -1,33 +1,34 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-06-20
-  Update Note: What's Newに会長のX活動投稿開始のお知らせを追加し、会長X導線を補強
+  Update Note: GA4アクセス解析と会長Xリンクのクリック計測を追加
 -->
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-20" />
-  <meta name="d4-site-version" content="2026-06-20" />
-  <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
-  <meta name="description" content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせ、会長の活動投稿（X）へのリンク・開始案内などを掲載しています。" />
-  <meta name="keywords" content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" />
-  <meta property="og:title" content="川島第四町内会｜川島第四一致団結" />
-  <meta property="og:description" content="川島第四一致団結を合言葉に、横浜市保土ヶ谷区東川島町で活動する川島第四町内会のホームページです。" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#d9684f" />
-  <link rel="icon" type="image/png" href="./d4-mark2.png" />
-  <!-- PWA / ホーム画面追加対応 -->
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <meta name="theme-color" content="#d9684f" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-  <link rel="apple-touch-icon" href="./d4-mark2.png" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="2026-06-20" name="last-modified"/>
+<meta content="2026-06-20" name="d4-site-version"/>
+<title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
+<meta content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせ、会長の活動投稿（X）へのリンク・開始案内などを掲載しています。" name="description"/>
+<meta content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" name="keywords"/>
+<meta content="川島第四町内会｜川島第四一致団結" property="og:title"/>
+<meta content="川島第四一致団結を合言葉に、横浜市保土ヶ谷区東川島町で活動する川島第四町内会のホームページです。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="#d9684f" name="theme-color"/>
+<link href="./d4-mark2.png" rel="icon" type="image/png"/>
+<!-- PWA / ホーム画面追加対応 -->
+<link href="./manifest.webmanifest" rel="manifest"/>
+<meta content="#d9684f" name="theme-color"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="川島第四町内会" name="apple-mobile-web-app-title"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<link href="./icons/icon-192.png" rel="apple-touch-icon"/>
+<link href="./d4-mark2.png" rel="apple-touch-icon"/>
+<style>
     :root {
       --bg: #fff8f6;
       --paper: #ffffff;
@@ -3208,8 +3209,7 @@
     }
 
   </style>
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -3220,538 +3220,510 @@
     "areaServed": "横浜市保土ヶ谷区東川島町1番地より21番地までの区域"
   }
   </script>
+<!-- Google Analytics 4 / アクセス解析 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FEX7JP4M1Z');
 
+    // 会長の活動投稿（X）へのクリック数をGA4で計測
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="x.com/yoshimi44444444"], a[href*="twitter.com/yoshimi44444444"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_president_x', {
+              event_category: 'external_link',
+              event_label: link.getAttribute('data-ga-label') || document.title || 'president_x',
+              link_text: (link.textContent || '').trim(),
+              link_url: link.href
+            });
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へスキップ</a>
-
-  <header>
-    <div class="container nav" aria-label="サイトメニュー">
-      <a class="brand" href="#top" aria-label="川島第四町内会 トップへ">
-        <span class="brand-mark"><img src="./d4-mark2.png" alt="川島第四町内会ロゴ" /></span>
-        <span>川島第四町内会<small>保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
-      </a>
-      <button class="menu-button" type="button" aria-controls="navLinks" aria-expanded="false">メニュー</button>
-      <nav id="navLinks" class="nav-links">
-        <a class="nav-direct" href="#top">トップ</a>
-        <a class="nav-direct" href="#news">What's New</a>
-        <a class="nav-direct nav-x-link" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener noreferrer">会長の活動投稿</a>
-        <a class="nav-direct" href="./community-info.html">地域情報</a>
-        <a class="nav-direct" href="./disaster-prevention.html">防災・防犯</a>
-
-        <div class="nav-group">
-          <button class="nav-group-button" type="button" aria-expanded="false">町内会について</button>
-          <div class="nav-submenu">
-            <a href="./about.html">活動方針</a>
-            <a href="./about.html#greeting">会長あいさつ</a>
-            <a href="./about.html#basic">基本情報</a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-group-button" type="button" aria-expanded="false">行事・活動</button>
-          <div class="nav-submenu">
-            <a href="#festival">夏祭り</a>
-            <a href="./events.html">年間行事予定</a>
-            <a href="./about.html#cleaning">さわやか清掃</a>
-            <a href="./about.html#children">子ども会</a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-group-button" type="button" aria-expanded="false">暮らし・加入</button>
-          <div class="nav-submenu">
-            <a href="#join">加入案内</a>
-            <a href="./living-guide.html">暮らしの案内</a>
-            <a href="./contact.html">お問い合わせ</a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-group-button" type="button" aria-expanded="false">探す</button>
-          <div class="nav-submenu">
-            <a href="./first-guide.html">初めてアクセスされる方へ</a>
-            <a href="./search.html">サイト内検索</a>
-            <a href="./sitemap.html">サイトマップ</a>
-            <a href="./faq.html">よくある質問</a>
-          </div>
-        </div>
-
-      </nav>
-    </div>
-  </header>
-
-    <section id="daily-info" class="top-status" aria-label="今日の地域情報">
-      <div class="container top-status-inner top-status-ordered">
-        <div class="top-status-row top-status-mainrow" aria-label="訪問者カウンター・日付・天気">
-          <span class="top-status-pill counter-compact top-status-counter">
-            <span aria-hidden="true">👀</span>
-            <span>本日 <strong id="visitorToday">確認中</strong></span>
-            <span>累計 <strong id="visitorTotal">確認中</strong></span>
-          </span>
-          <span class="top-status-pill top-status-date">
-            <span class="pill-label">今日</span>
-            <span id="todayDate">日付確認中</span>
-          </span>
-          <span class="top-status-pill weather-compact top-status-weather">
-            <span class="compact-weather-icon" id="weatherIcon" aria-hidden="true">☀️</span>
-            <span class="compact-weather-summary" id="weatherSummary">
-              <span class="weather-pill">天気確認中</span>
-            </span>
-          </span>
-        </div>
-
-        <div class="top-status-row top-status-subrow" aria-label="今日の地域メッセージ・季節の花">
-          <div class="top-status-message" aria-label="今日の地域メッセージ">
-            <span class="top-status-label">今日の地域メッセージ</span>
-            <span id="dailyMessageText">地域メッセージを準備中...</span>
-          </div>
-          <div class="season-flower" aria-label="季節の花と花言葉">
-            <span class="season-flower-icon" id="seasonFlowerIcon" aria-hidden="true">🌸</span>
-            <span id="seasonFlowerText">季節の花を準備中...</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
+<header>
+<div aria-label="サイトメニュー" class="container nav">
+<a aria-label="川島第四町内会 トップへ" class="brand" href="#top">
+<span class="brand-mark"><img alt="川島第四町内会ロゴ" src="./d4-mark2.png"/></span>
+<span>川島第四町内会<small>保土ヶ谷区東川島町1番地より21番地までの区域</small></span>
+</a>
+<button aria-controls="navLinks" aria-expanded="false" class="menu-button" type="button">メニュー</button>
+<nav class="nav-links" id="navLinks">
+<a class="nav-direct" href="#top">トップ</a>
+<a class="nav-direct" href="#news">What's New</a>
+<a class="nav-direct nav-x-link" data-ga-label="index_header_nav" href="https://x.com/yoshimi44444444" rel="noopener noreferrer" target="_blank">会長の活動投稿</a>
+<a class="nav-direct" href="./community-info.html">地域情報</a>
+<a class="nav-direct" href="./disaster-prevention.html">防災・防犯</a>
+<div class="nav-group">
+<button aria-expanded="false" class="nav-group-button" type="button">町内会について</button>
+<div class="nav-submenu">
+<a href="./about.html">活動方針</a>
+<a href="./about.html#greeting">会長あいさつ</a>
+<a href="./about.html#basic">基本情報</a>
+</div>
+</div>
+<div class="nav-group">
+<button aria-expanded="false" class="nav-group-button" type="button">行事・活動</button>
+<div class="nav-submenu">
+<a href="#festival">夏祭り</a>
+<a href="./events.html">年間行事予定</a>
+<a href="./about.html#cleaning">さわやか清掃</a>
+<a href="./about.html#children">子ども会</a>
+</div>
+</div>
+<div class="nav-group">
+<button aria-expanded="false" class="nav-group-button" type="button">暮らし・加入</button>
+<div class="nav-submenu">
+<a href="#join">加入案内</a>
+<a href="./living-guide.html">暮らしの案内</a>
+<a href="./contact.html">お問い合わせ</a>
+</div>
+</div>
+<div class="nav-group">
+<button aria-expanded="false" class="nav-group-button" type="button">探す</button>
+<div class="nav-submenu">
+<a href="./first-guide.html">初めてアクセスされる方へ</a>
+<a href="./search.html">サイト内検索</a>
+<a href="./sitemap.html">サイトマップ</a>
+<a href="./faq.html">よくある質問</a>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section aria-label="今日の地域情報" class="top-status" id="daily-info">
+<div class="container top-status-inner top-status-ordered">
+<div aria-label="訪問者カウンター・日付・天気" class="top-status-row top-status-mainrow">
+<span class="top-status-pill counter-compact top-status-counter">
+<span aria-hidden="true">👀</span>
+<span>本日 <strong id="visitorToday">確認中</strong></span>
+<span>累計 <strong id="visitorTotal">確認中</strong></span>
+</span>
+<span class="top-status-pill top-status-date">
+<span class="pill-label">今日</span>
+<span id="todayDate">日付確認中</span>
+</span>
+<span class="top-status-pill weather-compact top-status-weather">
+<span aria-hidden="true" class="compact-weather-icon" id="weatherIcon">☀️</span>
+<span class="compact-weather-summary" id="weatherSummary">
+<span class="weather-pill">天気確認中</span>
+</span>
+</span>
+</div>
+<div aria-label="今日の地域メッセージ・季節の花" class="top-status-row top-status-subrow">
+<div aria-label="今日の地域メッセージ" class="top-status-message">
+<span class="top-status-label">今日の地域メッセージ</span>
+<span id="dailyMessageText">地域メッセージを準備中...</span>
+</div>
+<div aria-label="季節の花と花言葉" class="season-flower">
+<span aria-hidden="true" class="season-flower-icon" id="seasonFlowerIcon">🌸</span>
+<span id="seasonFlowerText">季節の花を準備中...</span>
+</div>
+</div>
+</div>
+</section>
 <main id="main">
-
-<section id="top" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">横浜市保土ヶ谷区東川島町1番地より21番地までの区域</span>
-          <h1>笑顔あふれる、<br />安心の街を目指して。</h1>
-          <p>
+<section class="hero" id="top">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">横浜市保土ヶ谷区東川島町1番地より21番地までの区域</span>
+<h1>笑顔あふれる、<br/>安心の街を目指して。</h1>
+<p>
             川島第四町内会のホームページへようこそ。当町内会は、約400世帯が暮らす地域です。合言葉は「川島第四一致団結」。『一致団結』の精神を大切に、子育て世代からご年配の方まで、誰もが「この街に住んでよかった」と思える温かいコミュニティづくりを進めています。
           </p>
-          <div class="lead-box hero-posting-guide">
-            <h3>地域の情報掲載を受け付けています</h3>
-            <p>
+<div class="lead-box hero-posting-guide">
+<h3>地域の情報掲載を受け付けています</h3>
+<p>
               子ども会、少年野球、消防団、PTA、地域スポーツ、趣味の集まり、地域イベントなど、
               第四町内会エリアに関係するお知らせをホームページに掲載できます。
             </p>
-          </div>
-          <div class="hero-actions">
-            <a class="button button-x" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener noreferrer">会長の活動投稿をXで見る</a>
-            <a class="button button-primary" href="#festival">夏祭り情報を見る</a>
-            <a class="button button-secondary" href="./posting-request.html">地域情報を掲載する</a>
-            <a class="button button-secondary" href="#join">町内会に加入する</a>
-            <a class="button button-secondary" href="./events.html">行事予定を見る</a>
-            <a class="button button-secondary" href="./first-guide.html">初めてアクセスされる方へ</a>
-          </div>
-        </div>
-        <div class="visual-card" aria-label="川島第四町内会の活動イメージ">
-          <div class="visual-inner">
-            <div class="community-icon" aria-hidden="true"><img src="./d4-mark1.png" alt="" /></div>
-            <div>
-              <h2>一致団結。顔の見えるつながりで、安心して暮らせるまちへ。</h2>
-              <p>防災・防犯、清掃活動、子ども会、地域行事、回覧板。日々の暮らしを地域で支え合います。</p>
-            </div>
-            <div class="stats">
-              <div class="stat"><b>約400世帯</b><span>地域の暮らしを支える</span></div>
-              <div class="stat"><b>23班</b><span>班ごとの輪番運営</span></div>
-              <div class="stat"><b>5カ所</b><span>いっとき避難場所</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="president-x" class="president-x-section" aria-label="会長の活動投稿（X）">
-      <div class="container">
-        <div class="president-x-card">
-          <div class="president-x-text">
-            <span class="president-x-kicker">📣 会長の活動発信</span>
-            <h2>会長の活動投稿をXでチェック！</h2>
-            <p>町内会活動の様子や地域の話題を、会長がX（旧Twitter）で発信しています。最新の投稿はこちらからご覧ください。</p>
-          </div>
-          <div class="president-x-actions">
-            <a class="president-x-button" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener noreferrer">会長の投稿をXで開く →</a>
-            <span class="president-x-handle">@yoshimi44444444</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section id="news">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="badge">What's New</span>
-            <h2>更新情報</h2>
-            <p>川島第四町内会ホームページの主な更新内容をお知らせします。</p>
-          </div>
-        </div>
-
-                <div class="notice-list notice-list-compact" aria-label="更新情報一覧">
-          
-
-          <article class="notice-item">
-            <time datetime="2026-06-20">2026年6月20日</time>
-            <strong><a href="#president-x">会長の活動投稿をXで発信開始しました</a></strong>
-            <span>会長の活動発信</span>
-          </article>
-
-          
-          
-          <article class="notice-item" data-start="2026-06-28">
-            <time datetime="2026-06-28">2026年6月28日</time>
-            <strong><a href="./community-info.html#monthly-meeting-202606">6月度 役員定例会資料を掲載しました</a></strong>
-            <span>役員定例会資料</span>
-          </article>
-
-          <article class="notice-item">
-            <time datetime="2026-06-17">2026年6月17日</time>
-            <strong><a href="./community-info.html#mizuhiroba-20260602">東川島水道みち公園「水のひろば」の案内を掲載しました</a></strong>
-            <span>公園・水遊び</span>
-          </article>
-
-          <article class="notice-item">
-            <time datetime="2026-06-16">2026年6月16日</time>
-            <strong><a href="./community-info.html#disaster-plan-map-20260616">地区防災計画・防災マップの回覧について掲載しました</a></strong>
-            <span>防災</span>
-          </article>
-
-          <article class="notice-item">
-            <time datetime="2026-06-16">2026年6月16日</time>
-            <strong><a href="./community-info.html#kawashima-school-letter-202606">川島小学校だより 6月号を掲載しました</a></strong>
-            <span>学校情報</span>
-          </article>
-
-          <article class="notice-item">
-            <time datetime="2026-06-14">2026年6月14日</time>
-            <strong><a href="./community-info.html#dodgeball-20260614">ドッジボール大会の開催報告を掲載しました</a></strong>
-            <span>活動報告</span>
-          </article>
-
-
-
-
-          
-        </div>
-        <div class="notice-more">
-          <a class="button button-secondary" href="./community-info.html">過去のお知らせ・地域情報を見る</a>
-        </div>
-
-        <div class="popular-notices" id="popular-notices" aria-live="polite">
-          <div class="popular-notices-head">
-            <h3>よく読まれているお知らせ</h3>
-            <span>確認ボタンで応援</span>
-          </div>
-          <p class="popular-support-copy">お知らせを読んで「確認しました」を押すと、地域のお知らせへの応援になります。確認が多いお知らせほど、ここに表示されやすくなります。</p>
-          <p class="popular-empty" id="popularNoticesStatus">確認数を集計中です。</p>
-          <ol class="popular-notice-list" id="popularNoticesList"></ol>
-        </div>
-
+</div>
+<div class="hero-actions">
+<a class="button button-x" data-ga-label="index_hero_button" href="https://x.com/yoshimi44444444" rel="noopener noreferrer" target="_blank">会長の活動投稿をXで見る</a>
+<a class="button button-primary" href="#festival">夏祭り情報を見る</a>
+<a class="button button-secondary" href="./posting-request.html">地域情報を掲載する</a>
+<a class="button button-secondary" href="#join">町内会に加入する</a>
+<a class="button button-secondary" href="./events.html">行事予定を見る</a>
+<a class="button button-secondary" href="./first-guide.html">初めてアクセスされる方へ</a>
+</div>
+</div>
+<div aria-label="川島第四町内会の活動イメージ" class="visual-card">
+<div class="visual-inner">
+<div aria-hidden="true" class="community-icon"><img alt="" src="./d4-mark1.png"/></div>
+<div>
+<h2>一致団結。顔の見えるつながりで、安心して暮らせるまちへ。</h2>
+<p>防災・防犯、清掃活動、子ども会、地域行事、回覧板。日々の暮らしを地域で支え合います。</p>
+</div>
+<div class="stats">
+<div class="stat"><b>約400世帯</b><span>地域の暮らしを支える</span></div>
+<div class="stat"><b>23班</b><span>班ごとの輪番運営</span></div>
+<div class="stat"><b>5カ所</b><span>いっとき避難場所</span></div>
+</div>
+</div>
+</div>
 </div>
 </section>
-
+<section aria-label="会長の活動投稿（X）" class="president-x-section" id="president-x">
+<div class="container">
+<div class="president-x-card">
+<div class="president-x-text">
+<span class="president-x-kicker">📣 会長の活動発信</span>
+<h2>会長の活動投稿をXでチェック！</h2>
+<p>町内会活動の様子や地域の話題を、会長がX（旧Twitter）で発信しています。最新の投稿はこちらからご覧ください。</p>
+</div>
+<div class="president-x-actions">
+<a class="president-x-button" data-ga-label="index_president_x_card" href="https://x.com/yoshimi44444444" rel="noopener noreferrer" target="_blank">会長の投稿をXで開く →</a>
+<span class="president-x-handle">@yoshimi44444444</span>
+</div>
+</div>
+</div>
+</section>
+<section id="news">
+<div class="container">
+<div class="section-head">
+<div>
+<span class="badge">What's New</span>
+<h2>更新情報</h2>
+<p>川島第四町内会ホームページの主な更新内容をお知らせします。</p>
+</div>
+</div>
+<div aria-label="更新情報一覧" class="notice-list notice-list-compact">
+<article class="notice-item">
+<time datetime="2026-06-20">2026年6月20日</time>
+<strong><a href="#president-x">会長の活動投稿をXで発信開始しました</a></strong>
+<span>会長の活動発信</span>
+</article>
+<article class="notice-item" data-start="2026-06-28">
+<time datetime="2026-06-28">2026年6月28日</time>
+<strong><a href="./community-info.html#monthly-meeting-202606">6月度 役員定例会資料を掲載しました</a></strong>
+<span>役員定例会資料</span>
+</article>
+<article class="notice-item">
+<time datetime="2026-06-17">2026年6月17日</time>
+<strong><a href="./community-info.html#mizuhiroba-20260602">東川島水道みち公園「水のひろば」の案内を掲載しました</a></strong>
+<span>公園・水遊び</span>
+</article>
+<article class="notice-item">
+<time datetime="2026-06-16">2026年6月16日</time>
+<strong><a href="./community-info.html#disaster-plan-map-20260616">地区防災計画・防災マップの回覧について掲載しました</a></strong>
+<span>防災</span>
+</article>
+<article class="notice-item">
+<time datetime="2026-06-16">2026年6月16日</time>
+<strong><a href="./community-info.html#kawashima-school-letter-202606">川島小学校だより 6月号を掲載しました</a></strong>
+<span>学校情報</span>
+</article>
+<article class="notice-item">
+<time datetime="2026-06-14">2026年6月14日</time>
+<strong><a href="./community-info.html#dodgeball-20260614">ドッジボール大会の開催報告を掲載しました</a></strong>
+<span>活動報告</span>
+</article>
+</div>
+<div class="notice-more">
+<a class="button button-secondary" href="./community-info.html">過去のお知らせ・地域情報を見る</a>
+</div>
+<div aria-live="polite" class="popular-notices" id="popular-notices">
+<div class="popular-notices-head">
+<h3>よく読まれているお知らせ</h3>
+<span>確認ボタンで応援</span>
+</div>
+<p class="popular-support-copy">お知らせを読んで「確認しました」を押すと、地域のお知らせへの応援になります。確認が多いお知らせほど、ここに表示されやすくなります。</p>
+<p class="popular-empty" id="popularNoticesStatus">確認数を集計中です。</p>
+<ol class="popular-notice-list" id="popularNoticesList"></ol>
+</div>
+</div>
+</section>
 <section id="festival">
-      <div class="container">
-        <div class="festival-highlight">
-          <div class="festival-grid">
-            <div class="festival-main">
-              <span class="eyebrow" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.34);color:#fff;">今いちばん見てほしいお知らせ・町内会の一大イベント</span>
-              <h2>川島第四町内会 夏祭り</h2>
-              <p>
+<div class="container">
+<div class="festival-highlight">
+<div class="festival-grid">
+<div class="festival-main">
+<span class="eyebrow" style="background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.34);color:#fff;">今いちばん見てほしいお知らせ・町内会の一大イベント</span>
+<h2>川島第四町内会 夏祭り</h2>
+<p>
                 地域の皆様が集まり、子どもから大人まで楽しめる夏の恒例行事です。模擬店や素人演芸、神輿・山車巡業などを通じて、地域のつながりを深めます。
               </p>
-
-              <div class="festival-main-content">
-                <h3>主な内容</h3>
-                <ul>
-                  <li>模擬店の出店</li>
-                  <li>素人演芸</li>
-                  <li>13日午前：神輿・山車巡業</li>
-                  <li>子ども会による演芸参加予定</li>
-                  <li>地域の皆様の交流の場</li>
-                </ul>
-              </div>
+<div class="festival-main-content">
+<h3>主な内容</h3>
+<ul>
+<li>模擬店の出店</li>
+<li>素人演芸</li>
+<li>13日午前：神輿・山車巡業</li>
+<li>子ども会による演芸参加予定</li>
+<li>地域の皆様の交流の場</li>
+</ul>
+</div>
 <div class="festival-points">
-              <div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
-              <div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
-              <div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
-            </div>
-            </div>
-
-            <a class="festival-archive-side-card" href="https://drive.google.com/drive/folders/1fa4umg5Rsli2u-qBW6WgxIqvoOOnGcoT?usp=sharing" target="_blank" rel="noopener" aria-label="過去の夏祭り写真をGoogleドライブで開く">
-              <span class="festival-archive-icon" aria-hidden="true">📷</span>
-              <span class="festival-archive-title">過去の夏祭り写真</span>
-              <span class="festival-archive-text">これまでの夏祭りの様子を写真でご覧いただけます。</span>
-              <span class="festival-archive-button">写真を見る</span>
-            </a>
-
+<div class="festival-point"><b>9月12日（土）</b><span>宵宮・模擬店・素人演芸</span></div>
+<div class="festival-point"><b>9月13日（日）</b><span>本宮・神輿・山車巡業</span></div>
+<div class="festival-point"><b>会場</b><span>川島町水道みち公園</span></div>
+</div>
+</div>
+<a aria-label="過去の夏祭り写真をGoogleドライブで開く" class="festival-archive-side-card" href="https://drive.google.com/drive/folders/1fa4umg5Rsli2u-qBW6WgxIqvoOOnGcoT?usp=sharing" rel="noopener" target="_blank">
+<span aria-hidden="true" class="festival-archive-icon">📷</span>
+<span class="festival-archive-title">過去の夏祭り写真</span>
+<span class="festival-archive-text">これまでの夏祭りの様子を写真でご覧いただけます。</span>
+<span class="festival-archive-button">写真を見る</span>
+</a>
 <p class="small-note" style="grid-column:1 / -1;color:rgba(255,255,255,0.82);margin:0;">
               ※開催内容・時間・雨天時対応などの詳細は、決まり次第、回覧板・掲示・ホームページでお知らせします。
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section id="gateway" class="gateway-section">
-      <div class="container">
-        <div class="section-head compact-section-head">
-          <div>
-            <span class="badge">Guide</span>
-            <h2>知りたい情報を選んでください</h2>
-            
-          </div>
-        </div>
-        <div class="gateway-grid">
-          <a class="gateway-card" href="./community-info.html"><span class="icon">📢</span><h3>お知らせ</h3><p>町内会からのお知らせ、地域からのお知らせを確認できます。</p><span class="more">お知らせを見る →</span></a>
-          <a class="gateway-card" href="./disaster-prevention.html"><span class="icon">🧯</span><h3>防災・防犯</h3><p>地震時の行動、防災マップ、地区防災計画、備蓄情報をまとめています。</p><span class="more">防災・防犯を見る →</span></a>
-          <a class="gateway-card" href="./events.html"><span class="icon">📅</span><h3>行事予定</h3><p>年間行事、夏祭り、地域イベントの予定を確認できます。</p><span class="more">行事予定を見る →</span></a>
-          <a class="gateway-card" href="./about.html"><span class="icon">🏘️</span><h3>町内会について</h3><p>活動方針、会長あいさつ、基本情報、清掃活動、子ども会を掲載しています。</p><span class="more">町内会について見る →</span></a>
-          <a class="gateway-card" href="#join"><span class="icon">🤝</span><h3>加入案内</h3><p>町内会への加入方法、町内会費、Googleフォームを確認できます。</p><span class="more">加入案内を見る →</span></a>
-          <a class="gateway-card" href="./living-guide.html"><span class="icon">🧹</span><h3>暮らしの案内</h3><p>ごみ出し、資源回収、回覧板など日々の暮らし情報をまとめています。</p><span class="more">暮らしの案内を見る →</span></a>
-        </div>
 </div>
-    </section>
-
-<section id="events" class="home-short-section events-compact-section">
-      <div class="container">
-        <div class="home-short-card events-compact-card">
-          <div>
-            <span class="badge">Events</span>
-            <h2>直近の行事予定</h2>
-            <p>トップページでは直近の予定をコンパクトに表示します。年間行事予定は詳細ページで確認できます。</p>
-            <div class="home-upcoming-list events-compact-list" aria-label="直近の行事予定">
-              <div class="home-upcoming-row" data-event-end="2026-06-14"><b>6/14（日）</b><span>川島東部ドッジボール大会 ／ 川島小学校体育館</span></div>
-              <div class="home-upcoming-row" data-event-end="2026-06-21"><b>6/21（日）</b><span>わんぱくっ子竹細工・木工細工教室 ／ 川島第四町内会館・横広場</span></div>
-              <div class="home-upcoming-row" data-event-end="2026-06-27"><b>6/27（土）</b><span>ソフトバレーボール大会 ／ 川島小学校体育館</span></div>
-            </div>
-            <p class="event-empty-message" id="homeEventEmptyMessage" hidden>現在表示できる直近の行事予定はありません。新しい予定が決まり次第お知らせします。</p>
-
-            <div class="events-festival-note">
-              <b>夏祭り</b>
-              <span>9/12（土）・9/13（日）開催予定。詳しくは夏祭り欄をご確認ください。</span>
-              <a href="#festival">夏祭り欄を見る</a>
-            </div>
-
-            <div class="home-short-actions events-actions">
-              <a class="button button-primary" href="./events.html">年間行事予定を見る</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section id="event-participation" class="participation-section">
-      <div class="container">
-        <div class="participation-card">
-          <span class="badge">イベント参加について</span>
-          <h2>参加だけでも、見学だけでも大歓迎です</h2>
-          <p class="participation-lead">町内会イベントは、地域の皆さまみんなで楽しむための行事です。まずは気軽に参加して、地域のつながりを感じていただければ嬉しく思います。</p>
-          <div class="participation-grid" aria-label="イベント参加の考え方">
-            <div class="participation-point"><span>🙌</span>参加だけで大丈夫</div>
-            <div class="participation-point"><span>👀</span>見学だけでも大歓迎</div>
-            <div class="participation-point"><span>🤝</span>お手伝いはできる人だけで大丈夫</div>
-            <div class="participation-point"><span>🌿</span>参加を理由に役員をお願いすることはありません</div>
-          </div>
-          <div class="participation-note">
+</div>
+</div>
+</section>
+<section class="gateway-section" id="gateway">
+<div class="container">
+<div class="section-head compact-section-head">
+<div>
+<span class="badge">Guide</span>
+<h2>知りたい情報を選んでください</h2>
+</div>
+</div>
+<div class="gateway-grid">
+<a class="gateway-card" href="./community-info.html"><span class="icon">📢</span><h3>お知らせ</h3><p>町内会からのお知らせ、地域からのお知らせを確認できます。</p><span class="more">お知らせを見る →</span></a>
+<a class="gateway-card" href="./disaster-prevention.html"><span class="icon">🧯</span><h3>防災・防犯</h3><p>地震時の行動、防災マップ、地区防災計画、備蓄情報をまとめています。</p><span class="more">防災・防犯を見る →</span></a>
+<a class="gateway-card" href="./events.html"><span class="icon">📅</span><h3>行事予定</h3><p>年間行事、夏祭り、地域イベントの予定を確認できます。</p><span class="more">行事予定を見る →</span></a>
+<a class="gateway-card" href="./about.html"><span class="icon">🏘️</span><h3>町内会について</h3><p>活動方針、会長あいさつ、基本情報、清掃活動、子ども会を掲載しています。</p><span class="more">町内会について見る →</span></a>
+<a class="gateway-card" href="#join"><span class="icon">🤝</span><h3>加入案内</h3><p>町内会への加入方法、町内会費、Googleフォームを確認できます。</p><span class="more">加入案内を見る →</span></a>
+<a class="gateway-card" href="./living-guide.html"><span class="icon">🧹</span><h3>暮らしの案内</h3><p>ごみ出し、資源回収、回覧板など日々の暮らし情報をまとめています。</p><span class="more">暮らしの案内を見る →</span></a>
+</div>
+</div>
+</section>
+<section class="home-short-section events-compact-section" id="events">
+<div class="container">
+<div class="home-short-card events-compact-card">
+<div>
+<span class="badge">Events</span>
+<h2>直近の行事予定</h2>
+<p>トップページでは直近の予定をコンパクトに表示します。年間行事予定は詳細ページで確認できます。</p>
+<div aria-label="直近の行事予定" class="home-upcoming-list events-compact-list">
+<div class="home-upcoming-row" data-event-end="2026-06-14"><b>6/14（日）</b><span>川島東部ドッジボール大会 ／ 川島小学校体育館</span></div>
+<div class="home-upcoming-row" data-event-end="2026-06-21"><b>6/21（日）</b><span>わんぱくっ子竹細工・木工細工教室 ／ 川島第四町内会館・横広場</span></div>
+<div class="home-upcoming-row" data-event-end="2026-06-27"><b>6/27（土）</b><span>ソフトバレーボール大会 ／ 川島小学校体育館</span></div>
+</div>
+<p class="event-empty-message" hidden="" id="homeEventEmptyMessage">現在表示できる直近の行事予定はありません。新しい予定が決まり次第お知らせします。</p>
+<div class="events-festival-note">
+<b>夏祭り</b>
+<span>9/12（土）・9/13（日）開催予定。詳しくは夏祭り欄をご確認ください。</span>
+<a href="#festival">夏祭り欄を見る</a>
+</div>
+<div class="home-short-actions events-actions">
+<a class="button button-primary" href="./events.html">年間行事予定を見る</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="participation-section" id="event-participation">
+<div class="container">
+<div class="participation-card">
+<span class="badge">イベント参加について</span>
+<h2>参加だけでも、見学だけでも大歓迎です</h2>
+<p class="participation-lead">町内会イベントは、地域の皆さまみんなで楽しむための行事です。まずは気軽に参加して、地域のつながりを感じていただければ嬉しく思います。</p>
+<div aria-label="イベント参加の考え方" class="participation-grid">
+<div class="participation-point"><span>🙌</span>参加だけで大丈夫</div>
+<div class="participation-point"><span>👀</span>見学だけでも大歓迎</div>
+<div class="participation-point"><span>🤝</span>お手伝いはできる人だけで大丈夫</div>
+<div class="participation-point"><span>🌿</span>参加を理由に役員をお願いすることはありません</div>
+</div>
+<div class="participation-note">
             町内会では、子どもから大人まで、地域の皆さまが顔を合わせるきっかけを大切にしています。運動が得意でなくても、初めてでも、少しだけの参加でも大丈夫です。無理のない範囲で、地域の行事を一緒に楽しんでいただければ幸いです。
           </div>
-          <div class="participation-actions">
-            <a class="button button-primary" href="./events.html">年間行事予定を見る</a>
-            <a class="button button-secondary" href="./community-info.html">町内会からのお知らせを見る</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+<div class="participation-actions">
+<a class="button button-primary" href="./events.html">年間行事予定を見る</a>
+<a class="button button-secondary" href="./community-info.html">町内会からのお知らせを見る</a>
+</div>
+</div>
+</div>
+</section>
 <section id="community-entry">
-      <div class="container">
-        <div class="community-entry-grid">
-          <article class="community-entry-card">
-            <span class="badge">町内会</span>
-            <h3>町内会からのお知らせ</h3>
-            <p>川島第四町内会の行事、活動報告、写真掲載、清掃・防災などの公式なお知らせを掲載します。</p>
-            <div class="community-entry-actions">
-              <a class="button button-primary" href="./community-info.html#chonaikai-news">町内会のお知らせを見る</a>
-            </div>
-          </article>
-          <article class="community-entry-card">
-            <span class="badge">地域</span>
-            <h3>地域からのお知らせ</h3>
-            <p>小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載します。</p>
-            <div class="community-entry-actions">
-              <a class="button button-secondary" href="./community-info.html#local-news">地域のお知らせを見る</a>
-            </div>
-          </article>
-          <article class="community-entry-card">
-            <span class="badge">Request</span>
-            <h3>地域情報を掲載したい方へ</h3>
-            <p>掲載したい地域情報がある場合は、スマートフォンからGoogleフォームで掲載依頼できます。</p>
-            <div class="community-entry-actions">
-              <a class="button button-secondary" href="./posting-request.html">掲載依頼ページへ</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<section id="local-promotion" class="local-promotion-section">
-      <div class="container">
-        <div class="local-promotion-card">
-          <div class="local-promotion-main">
-            <span class="badge">地域情報を届ける</span>
-            <h2>地域の活動・体験会・お店の情報を掲載できます</h2>
-            <p>第四町内会ホームページでは、子ども向け体験会、地域スポーツ、習い事、地域イベント、地域のお店や小規模事業者からのお知らせなど、地域に関係する情報を掲載できます。</p>
-            <div class="local-promotion-points" aria-label="掲載できる情報の例">
-              <div class="local-promotion-point"><b>参加者募集</b>体験会、地域スポーツ、子ども向け活動など</div>
-              <div class="local-promotion-point"><b>地域イベント</b>催し物、交流会、地域団体の活動案内など</div>
-              <div class="local-promotion-point"><b>地域のお店紹介</b>地域向けのお知らせ、営業案内、活動紹介など</div>
-              <div class="local-promotion-point"><b>スマホで確認</b>回覧板だけでは届きにくい情報も、いつでも確認できます</div>
-            </div>
-            <p>まずは無料掲載を基本に、地域の情報を集めて「見てもらえるホームページ」に育てていきます。</p>
-            <div class="local-promotion-actions">
-              <a class="button button-primary" href="./posting-request.html">地域情報の掲載を依頼する</a>
-              <a class="button button-secondary" href="./posting-guidelines.html">掲載ルールを見る</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section id="safety" class="home-short-section">
-      <div class="container">
-        <div class="home-short-card">
-          <div>
-            <span class="badge">Safety</span>
-            <h2>防災・防犯</h2>
-            <p>大規模地震時の行動、避難場所、防災マップ、地区防災計画、町内会の防災備蓄など、いざという時に役立つ情報をまとめています。</p>
-            <div class="home-mini-grid">
-              <div class="home-mini-card"><b>初期行動</b><span>地震発生時にまず何をするか</span></div>
-              <div class="home-mini-card"><b>防災マップ</b><span>いっとき避難場所・拠点を確認</span></div>
-              <div class="home-mini-card"><b>地区防災計画</b><span>町内会の防災の考え方を確認</span></div>
-              <div class="home-mini-card"><b>公式情報リンク</b><span>災害時は横浜市・神奈川県・気象庁などの公式情報を確認</span></div>
-            </div>
-            <div class="home-short-actions">
-              <a class="button button-primary" href="./disaster-prevention.html">防災・防犯ページを見る</a>
-              <a class="button button-secondary" href="./disaster-flow.html">初期行動を見る</a>
-              <a class="button button-secondary" href="./disaster-prevention.html#official-disaster-links">災害時の公式情報を見る</a>
-            </div>
-          </div>
-          <div class="home-mini-card"><b>備蓄情報</b><span>防犯上の観点から保管場所が特定される表現は控え、防災・防犯ページに備蓄品の概要を掲載しています。</span></div>
-        </div>
-      </div>
-    </section>
-
-<section id="living" class="home-short-section">
-      <div class="container">
-        <div class="home-short-card">
-          <div>
-            <span class="badge">Living</span>
-            <h2>暮らしの案内</h2>
-            <p>ごみ出し・資源回収、回覧板など、日々の暮らしに関する情報をまとめています。必要なときにご確認ください。</p>
-            <div class="home-short-actions">
-              <a class="button button-primary" href="./living-guide.html">暮らしの案内を見る</a>
-            </div>
-          </div>
-          <div class="home-mini-card"><b>暮らしの情報</b><span>ごみ出し・資源回収・回覧板など、日々の暮らしに関する情報を確認できます。</span></div>
-        </div>
-      </div>
-    </section>
-
-<section id="about" class="home-short-section">
-      <div class="container">
-        <div class="home-short-card">
-          <div>
-            <span class="badge">About</span>
-            <h2>町内会について</h2>
-            <p>活動方針、会長あいさつ、基本情報、さわやか清掃、子ども会は、前回内容のまま個別ページに整理しました。</p>
-            <div class="home-short-actions">
-              <a class="button button-primary" href="./about.html">町内会について詳しく見る</a>
-              <a class="button button-secondary" href="./about.html#greeting">会長あいさつを見る</a>
-            </div>
-          </div>
-          <figure class="basic-hall-mini"><img src="./d4kaikan.jpg" alt="川島第四町内会館の外観写真" /><figcaption>川島第四町内会館</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
+<div class="container">
+<div class="community-entry-grid">
+<article class="community-entry-card">
+<span class="badge">町内会</span>
+<h3>町内会からのお知らせ</h3>
+<p>川島第四町内会の行事、活動報告、写真掲載、清掃・防災などの公式なお知らせを掲載します。</p>
+<div class="community-entry-actions">
+<a class="button button-primary" href="./community-info.html#chonaikai-news">町内会のお知らせを見る</a>
+</div>
+</article>
+<article class="community-entry-card">
+<span class="badge">地域</span>
+<h3>地域からのお知らせ</h3>
+<p>小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載します。</p>
+<div class="community-entry-actions">
+<a class="button button-secondary" href="./community-info.html#local-news">地域のお知らせを見る</a>
+</div>
+</article>
+<article class="community-entry-card">
+<span class="badge">Request</span>
+<h3>地域情報を掲載したい方へ</h3>
+<p>掲載したい地域情報がある場合は、スマートフォンからGoogleフォームで掲載依頼できます。</p>
+<div class="community-entry-actions">
+<a class="button button-secondary" href="./posting-request.html">掲載依頼ページへ</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="local-promotion-section" id="local-promotion">
+<div class="container">
+<div class="local-promotion-card">
+<div class="local-promotion-main">
+<span class="badge">地域情報を届ける</span>
+<h2>地域の活動・体験会・お店の情報を掲載できます</h2>
+<p>第四町内会ホームページでは、子ども向け体験会、地域スポーツ、習い事、地域イベント、地域のお店や小規模事業者からのお知らせなど、地域に関係する情報を掲載できます。</p>
+<div aria-label="掲載できる情報の例" class="local-promotion-points">
+<div class="local-promotion-point"><b>参加者募集</b>体験会、地域スポーツ、子ども向け活動など</div>
+<div class="local-promotion-point"><b>地域イベント</b>催し物、交流会、地域団体の活動案内など</div>
+<div class="local-promotion-point"><b>地域のお店紹介</b>地域向けのお知らせ、営業案内、活動紹介など</div>
+<div class="local-promotion-point"><b>スマホで確認</b>回覧板だけでは届きにくい情報も、いつでも確認できます</div>
+</div>
+<p>まずは無料掲載を基本に、地域の情報を集めて「見てもらえるホームページ」に育てていきます。</p>
+<div class="local-promotion-actions">
+<a class="button button-primary" href="./posting-request.html">地域情報の掲載を依頼する</a>
+<a class="button button-secondary" href="./posting-guidelines.html">掲載ルールを見る</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="home-short-section" id="safety">
+<div class="container">
+<div class="home-short-card">
+<div>
+<span class="badge">Safety</span>
+<h2>防災・防犯</h2>
+<p>大規模地震時の行動、避難場所、防災マップ、地区防災計画、町内会の防災備蓄など、いざという時に役立つ情報をまとめています。</p>
+<div class="home-mini-grid">
+<div class="home-mini-card"><b>初期行動</b><span>地震発生時にまず何をするか</span></div>
+<div class="home-mini-card"><b>防災マップ</b><span>いっとき避難場所・拠点を確認</span></div>
+<div class="home-mini-card"><b>地区防災計画</b><span>町内会の防災の考え方を確認</span></div>
+<div class="home-mini-card"><b>公式情報リンク</b><span>災害時は横浜市・神奈川県・気象庁などの公式情報を確認</span></div>
+</div>
+<div class="home-short-actions">
+<a class="button button-primary" href="./disaster-prevention.html">防災・防犯ページを見る</a>
+<a class="button button-secondary" href="./disaster-flow.html">初期行動を見る</a>
+<a class="button button-secondary" href="./disaster-prevention.html#official-disaster-links">災害時の公式情報を見る</a>
+</div>
+</div>
+<div class="home-mini-card"><b>備蓄情報</b><span>防犯上の観点から保管場所が特定される表現は控え、防災・防犯ページに備蓄品の概要を掲載しています。</span></div>
+</div>
+</div>
+</section>
+<section class="home-short-section" id="living">
+<div class="container">
+<div class="home-short-card">
+<div>
+<span class="badge">Living</span>
+<h2>暮らしの案内</h2>
+<p>ごみ出し・資源回収、回覧板など、日々の暮らしに関する情報をまとめています。必要なときにご確認ください。</p>
+<div class="home-short-actions">
+<a class="button button-primary" href="./living-guide.html">暮らしの案内を見る</a>
+</div>
+</div>
+<div class="home-mini-card"><b>暮らしの情報</b><span>ごみ出し・資源回収・回覧板など、日々の暮らしに関する情報を確認できます。</span></div>
+</div>
+</div>
+</section>
+<section class="home-short-section" id="about">
+<div class="container">
+<div class="home-short-card">
+<div>
+<span class="badge">About</span>
+<h2>町内会について</h2>
+<p>活動方針、会長あいさつ、基本情報、さわやか清掃、子ども会は、前回内容のまま個別ページに整理しました。</p>
+<div class="home-short-actions">
+<a class="button button-primary" href="./about.html">町内会について詳しく見る</a>
+<a class="button button-secondary" href="./about.html#greeting">会長あいさつを見る</a>
+</div>
+</div>
+<figure class="basic-hall-mini"><img alt="川島第四町内会館の外観写真" src="./d4kaikan.jpg"/><figcaption>川島第四町内会館</figcaption></figure>
+</div>
+</div>
+</section>
 <section id="join">
-      <div class="container">
-        <div class="contact-card">
-          <div>
-            <span class="badge">Join</span>
-            <h2>町内会加入方法・お問い合わせ</h2>
-            <p>町内会への加入は、メールでのお申し込み、またはGoogleフォームからお申し込みいただけます。</p>
-            <p><strong>メール：</strong><a href="mailto:kawashimadai4@gmail.com" style="color:#fff;text-decoration:underline;">kawashimadai4@gmail.com</a></p>
-            <div class="qr-box">
-              <img alt="川島第四町内会 加入申込Googleフォーム QRコード" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA%2Fviewform" />
-              <div>
-                <p><strong>スマートフォンでQRコードを読み取り、Googleフォームからお申し込みください。</strong></p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA/viewform" target="_blank" rel="noopener">Googleフォームを開く</a>
-              </div>
-            </div>
-          </div>
-          <div class="contact-panel">
-            <h3>班長・町内会費について</h3>
-            <ul>
-              <li>班長の選出方法：エリアごとの輪番制（持ち回り）</li>
-              <li>班長の任期：1年間</li>
-              <li>町内会費：月額300円（年額3,600円）</li>
-              <li>納入方法：年度初めに1年分を一括して班長へお支払いください。</li>
-              <li>途中入会・退会：月割り計算にて対応します。</li>
-            </ul>
-            <p>転入される方は入会月からの月数分を納入、転居される方は未経過月分を計算し、後日返金いたします。異動が発生する際は、お早めに班長までお知らせください。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section id="home-screen-guide" class="home-screen-guide" aria-label="ホーム画面追加の案内">
-      <div class="home-screen-guide-main">
-        <div class="home-screen-guide-icon" aria-hidden="true">
-          <img src="./icons/icon-192.png" alt="" />
-        </div>
-        <div class="home-screen-guide-copy">
-          <span class="badge">スマホで便利に</span>
-          <h2>ホーム画面に追加して、アプリのように開けます</h2>
-          <p>川島第四町内会ホームページは、スマートフォンのホーム画面に追加できます。追加しておくと、回覧板を見逃したときや行事予定を確認したいときに、アイコンからすぐ開けます。</p>
-        </div>
-      </div>
-      <div class="home-screen-steps" aria-label="追加方法">
-        <div class="home-screen-step">
-          <b>iPhoneの場合</b>
+<div class="container">
+<div class="contact-card">
+<div>
+<span class="badge">Join</span>
+<h2>町内会加入方法・お問い合わせ</h2>
+<p>町内会への加入は、メールでのお申し込み、またはGoogleフォームからお申し込みいただけます。</p>
+<p><strong>メール：</strong><a href="mailto:kawashimadai4@gmail.com" style="color:#fff;text-decoration:underline;">kawashimadai4@gmail.com</a></p>
+<div class="qr-box">
+<img alt="川島第四町内会 加入申込Googleフォーム QRコード" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA%2Fviewform"/>
+<div>
+<p><strong>スマートフォンでQRコードを読み取り、Googleフォームからお申し込みください。</strong></p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfJq_X4pYWlzhpoXvlqjhO7itx7TQCMoQJo1VO68cfWMXzdFA/viewform" rel="noopener" target="_blank">Googleフォームを開く</a>
+</div>
+</div>
+</div>
+<div class="contact-panel">
+<h3>班長・町内会費について</h3>
+<ul>
+<li>班長の選出方法：エリアごとの輪番制（持ち回り）</li>
+<li>班長の任期：1年間</li>
+<li>町内会費：月額300円（年額3,600円）</li>
+<li>納入方法：年度初めに1年分を一括して班長へお支払いください。</li>
+<li>途中入会・退会：月割り計算にて対応します。</li>
+</ul>
+<p>転入される方は入会月からの月数分を納入、転居される方は未経過月分を計算し、後日返金いたします。異動が発生する際は、お早めに班長までお知らせください。</p>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="ホーム画面追加の案内" class="home-screen-guide" id="home-screen-guide">
+<div class="home-screen-guide-main">
+<div aria-hidden="true" class="home-screen-guide-icon">
+<img alt="" src="./icons/icon-192.png"/>
+</div>
+<div class="home-screen-guide-copy">
+<span class="badge">スマホで便利に</span>
+<h2>ホーム画面に追加して、アプリのように開けます</h2>
+<p>川島第四町内会ホームページは、スマートフォンのホーム画面に追加できます。追加しておくと、回覧板を見逃したときや行事予定を確認したいときに、アイコンからすぐ開けます。</p>
+</div>
+</div>
+<div aria-label="追加方法" class="home-screen-steps">
+<div class="home-screen-step">
+<b>iPhoneの場合</b>
           Safariでこのページを開き、共有ボタンから「ホーム画面に追加」を選んでください。
         </div>
-        <div class="home-screen-step">
-          <b>Androidの場合</b>
+<div class="home-screen-step">
+<b>Androidの場合</b>
           Chromeでこのページを開き、メニューから「ホーム画面に追加」または「アプリをインストール」を選んでください。
         </div>
-      </div>
-    </section>
-
-  </main>
-
-  <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ <span>トップへ</span></a>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-20">2026-06-20</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
-          <div class="footer-mascot">
-            <img src="./d4-karugamo.png" alt="川島第四町内会の第四かるがも親子" />
-            <span>第四かるがも親子<small>AI生成画像</small></span>
-          </div><br /></div>
-      <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
-    </div>
-    <div class="container creator-credit">
-      <div class="creator-credit-content">
-        <img class="creator-logo" src="./metachan-logo.png" alt="めたちゃんDX相談所 ロゴ" onerror="this.style.display='none'" />
-        <span>
+</div>
+</section>
+</main>
+<a aria-label="ページ上部へ戻る" class="back-to-top" href="#top">↑ <span>トップへ</span></a>
+<footer>
+<div class="container footer-inner">
+<div>© <span id="year"></span> 川島第四町内会<br/><span class="site-updated">最終更新日：<time datetime="2026-06-20">2026-06-20</time></span><br/><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br/><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
+<div class="footer-mascot">
+<img alt="川島第四町内会の第四かるがも親子" src="./d4-karugamo.png"/>
+<span>第四かるがも親子<small>AI生成画像</small></span>
+</div><br/></div>
+<div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
+</div>
+<div class="container creator-credit">
+<div class="creator-credit-content">
+<img alt="めたちゃんDX相談所 ロゴ" class="creator-logo" onerror="this.style.display='none'" src="./metachan-logo.png"/>
+<span>
           ホームページ制作協力：
-          <a href="https://metachan.jp/" target="_blank" rel="noopener">めたちゃんDX相談所</a>
+          <a href="https://metachan.jp/" rel="noopener" target="_blank">めたちゃんDX相談所</a>
           ｜町内会・自治会向けホームページ制作支援
         </span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+</div>
+</div>
+</footer>
+<script>
     const menuButton = document.querySelector('.menu-button');
     const navLinks = document.getElementById('navLinks');
     const navGroupButtons = document.querySelectorAll('.nav-group-button');
@@ -4007,8 +3979,7 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <script>
+<script>
     /*
       訪問者カウンター設定
       Apps ScriptをWebアプリとしてデプロイしたあと、下の VISITOR_COUNTER_API_URL を
@@ -4072,9 +4043,7 @@
 
     loadVisitorCounter();
 </script>
-
-
-  <script>
+<script>
     // よく読まれているお知らせ（確認ボタン集計）
     const D4_POPULAR_NOTICE_API_URL = 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec';
     const D4_POPULAR_NOTICE_ITEMS = [{"id":"monthly-meeting-202606","title":"6月度 役員定例会資料を掲載しました","url":"./community-info.html#monthly-meeting-202606"},{"id":"mizuhiroba-20260602","title":"東川島水道みち公園「水のひろば」が利用できます","url":"./community-info.html#mizuhiroba-20260602"},{"id":"disaster-plan-map-20260616","title":"地区防災計画・防災マップの回覧について","url":"./community-info.html#disaster-plan-map-20260616"},{"id":"kawashima-school-letter-202606","title":"川島小学校だより 6月号のご案内","url":"./community-info.html#kawashima-school-letter-202606"},{"id":"dodgeball-20260614","title":"ドッジボール大会が開催されました","url":"./community-info.html#dodgeball-20260614"},{"id":"sawayaka-cleaning-20260628","title":"6月28日（日）さわやか清掃のお知らせ","url":"./community-info.html#sawayaka-cleaning-20260628"},{"id":"police-news-202606","title":"保土ケ谷警察署からのお知らせを掲載しました","url":"./community-info.html#police-news-202606"},{"id":"home-screen-app-20260603","title":"ホーム画面に追加して、アプリのように開けます","url":"./community-info.html#home-screen-app-20260603"},{"id":"monthly-city-notices-202605","title":"2026年5月度 定例会配布資料からのお知らせを掲載しました","url":"./community-info.html#monthly-city-notices-202605"},{"id":"soft-volleyball-20260627","title":"ソフトバレーボール大会 参加者募集のお知らせ","url":"./community-info.html#soft-volleyball-20260627"},{"id":"crime-prevention-20260523","title":"警察官をかたる詐欺の電話にご注意ください","url":"./community-info.html#crime-prevention-20260523"},{"id":"softball-20260517","title":"ソフトボール大会の写真を掲載しました","url":"./community-info.html#softball-20260517"},{"id":"sawayaka-cleaning-2026","title":"さわやか清掃の実施日を更新しました","url":"./community-info.html#sawayaka-cleaning-2026"}];
@@ -4149,9 +4118,7 @@
       loadPopularNotices();
     }
   </script>
-
-
-  <script>
+<script>
     // よく見られているページ（よく見られているページ）
     const D4_PAGE_RANKING_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
     const D4_PAGE_RANKING_ITEMS = [{"file":"about.html","title":"町内会について","url":"./about.html","pathEnd":"/about.html"},{"file":"community-info.html","title":"町内会・地域からのお知らせ","url":"./community-info.html","pathEnd":"/community-info.html"},{"file":"contact.html","title":"お問い合わせ","url":"./contact.html","pathEnd":"/contact.html"},{"file":"disaster-flow.html","title":"大規模地震時の初期行動","url":"./disaster-flow.html","pathEnd":"/disaster-flow.html"},{"file":"disaster-plan.html","title":"地区防災計画の要約","url":"./disaster-plan.html","pathEnd":"/disaster-plan.html"},{"file":"disaster-prevention.html","title":"防災・防犯","url":"./disaster-prevention.html","pathEnd":"/disaster-prevention.html"},{"file":"events.html","title":"年間行事予定","url":"./events.html","pathEnd":"/events.html"},{"file":"faq.html","title":"よくある質問","url":"./faq.html","pathEnd":"/faq.html"},{"file":"first-guide.html","title":"初めてアクセスされる方へ","url":"./first-guide.html","pathEnd":"/first-guide.html"},{"file":"homepage-flyer.html","title":"ホームページ案内チラシ","url":"./homepage-flyer.html","pathEnd":"/homepage-flyer.html"},{"file":"index.html","title":"川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会","url":"./index.html","pathEnd":"/index.html"},{"file":"living-guide.html","title":"暮らしの案内","url":"./living-guide.html","pathEnd":"/living-guide.html"},{"file":"monthly-notices.html","title":"月別お知らせ","url":"./monthly-notices.html","pathEnd":"/monthly-notices.html"},{"file":"posting-guidelines.html","title":"地域情報の掲載について","url":"./posting-guidelines.html","pathEnd":"/posting-guidelines.html"},{"file":"posting-request.html","title":"地域情報掲載依頼","url":"./posting-request.html","pathEnd":"/posting-request.html"},{"file":"privacy-policy.html","title":"プライバシーポリシー","url":"./privacy-policy.html","pathEnd":"/privacy-policy.html"},{"file":"search.html","title":"サイト内検索","url":"./search.html","pathEnd":"/search.html"},{"file":"sitemap.html","title":"サイトマップ","url":"./sitemap.html","pathEnd":"/sitemap.html"}];
@@ -4310,8 +4277,7 @@
       loadPageRanking();
     }
   </script>
-
-  <script>
+<script>
     // PWA / ホーム画面追加対応
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -4319,8 +4285,6 @@
       });
     }
   </script>
-
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     function localDateKey() {
@@ -4340,6 +4304,5 @@
     applyNoticeStartDates();
   });
 </script>
-
 </body>
 </html>

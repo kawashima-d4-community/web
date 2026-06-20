@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-06-07" />
-  <meta name="d4-site-version" content="2026-06-07" />
+  <meta name="last-modified" content="2026-06-20" />
+  <meta name="d4-site-version" content="2026-06-20" />
   <title>关于川岛第四町内会｜Kawashima Daiyon Neighborhood Association</title>
   <meta name="description" content="川岛第四町内会是以横滨市保土谷区东川岛町1番地至21番地为对象的地区自治组织。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -99,6 +99,30 @@
     }
 
   </style>
+  <!-- Google Analytics 4 / アクセス解析 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FEX7JP4M1Z');
+
+    // 会長の活動投稿（X）へのクリック数をGA4で計測
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="x.com/yoshimi44444444"], a[href*="twitter.com/yoshimi44444444"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_president_x', {
+              event_category: 'external_link',
+              event_label: link.getAttribute('data-ga-label') || document.title || 'president_x',
+              link_text: (link.textContent || '').trim(),
+              link_url: link.href
+            });
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body id="top">
   <header>

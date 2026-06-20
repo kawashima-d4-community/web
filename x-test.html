@@ -4,15 +4,16 @@
   Last Updated: 2026-06-20
   Update Note: X埋め込み単独テストページを比較診断版へ更新（twitter.com形式／x.com形式、表示サイズ判定、詳細ログを追加）
 -->
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta name="description" content="川島第四町内会ホームページ用のXタイムライン埋め込みを比較診断する単独検証ページです。" />
-  <title>X埋め込み表示テスト｜川島第四町内会</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<meta content="川島第四町内会ホームページ用のXタイムライン埋め込みを比較診断する単独検証ページです。" name="description"/>
+<title>X埋め込み表示テスト｜川島第四町内会</title>
+<style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
@@ -159,73 +160,83 @@
       font-size: 0.95em;
     }
   </style>
+<!-- Google Analytics 4 / アクセス解析 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FEX7JP4M1Z');
+
+    // 会長の活動投稿（X）へのクリック数をGA4で計測
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="x.com/yoshimi44444444"], a[href*="twitter.com/yoshimi44444444"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_president_x', {
+              event_category: 'external_link',
+              event_label: link.getAttribute('data-ga-label') || document.title || 'president_x',
+              link_text: (link.textContent || '').trim(),
+              link_url: link.href
+            });
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
-  <main>
-    <div class="card">
-      <h1>X埋め込み表示テスト</h1>
-      <p>
+<main>
+<div class="card">
+<h1>X埋め込み表示テスト</h1>
+<p>
         このページは、新井会長のXタイムラインがGitHub Pages上で表示できるかを確認するための単独テストページです。
         町内会サイト本体のCSSやJavaScriptは読み込まず、X公式ウィジェットだけで比較確認します。
       </p>
-      <div class="button-row">
-        <a class="button" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener">Xで直接見る</a>
-        <a class="button secondary" href="https://twitter.com/yoshimi44444444" target="_blank" rel="noopener">twitter.com形式で開く</a>
-      </div>
-
-      <div class="test-grid">
-        <section class="test-panel">
-          <h3>テストA：twitter.com形式（推奨確認）</h3>
-          <div class="test-box" id="x-test-box-twitter">
-            <a
-              class="twitter-timeline"
-              data-height="520"
-              data-dnt="true"
-              href="https://twitter.com/yoshimi44444444?ref_src=twsrc%5Etfw">
+<div class="button-row">
+<a class="button" data-ga-label="x_test_x_direct" href="https://x.com/yoshimi44444444" rel="noopener" target="_blank">Xで直接見る</a>
+<a class="button secondary" data-ga-label="x_test_twitter_direct" href="https://twitter.com/yoshimi44444444" rel="noopener" target="_blank">twitter.com形式で開く</a>
+</div>
+<div class="test-grid">
+<section class="test-panel">
+<h3>テストA：twitter.com形式（推奨確認）</h3>
+<div class="test-box" id="x-test-box-twitter">
+<a class="twitter-timeline" data-dnt="true" data-ga-label="x_test_timeline_link" data-height="520" href="https://twitter.com/yoshimi44444444?ref_src=twsrc%5Etfw">
               Posts by yoshimi44444444
             </a>
-          </div>
-        </section>
-
-        <section class="test-panel">
-          <h3>テストB：x.com形式（比較確認）</h3>
-          <div class="test-box" id="x-test-box-x">
-            <a
-              class="twitter-timeline"
-              data-height="520"
-              data-dnt="true"
-              href="https://x.com/yoshimi44444444?ref_src=twsrc%5Etfw">
+</div>
+</section>
+<section class="test-panel">
+<h3>テストB：x.com形式（比較確認）</h3>
+<div class="test-box" id="x-test-box-x">
+<a class="twitter-timeline" data-dnt="true" data-ga-label="x_test_timeline_link" data-height="520" href="https://x.com/yoshimi44444444?ref_src=twsrc%5Etfw">
               Posts by yoshimi44444444
             </a>
-          </div>
-        </section>
-      </div>
-
-      <div class="fallback" id="fallback-message">
-        タイムラインの見えるiframeが確認できません。<br>
-        画面に「Posts by yoshimi44444444」のリンクだけが残る場合、X公式ウィジェットの表示がブラウザ・ネットワーク・拡張機能・X側の条件で止まっている可能性があります。<br>
+</div>
+</section>
+</div>
+<div class="fallback" id="fallback-message">
+        タイムラインの見えるiframeが確認できません。<br/>
+        画面に「Posts by yoshimi44444444」のリンクだけが残る場合、X公式ウィジェットの表示がブラウザ・ネットワーク・拡張機能・X側の条件で止まっている可能性があります。<br/>
         Chromeのシークレットウィンドウ、Edge、スマートフォン回線でも確認してください。
       </div>
-
-      <div class="diagnostics">
-        <h2>診断表示</h2>
-        <ul>
-          <li>公式ウィジェット読み込み：<span id="status-script" class="status-wait">確認中</span></li>
-          <li>iframe総数：<span id="status-iframe-count" class="status-wait">確認中</span></li>
-          <li>見えるiframe：<span id="status-visible-iframe" class="status-wait">確認中</span></li>
-          <li>確認経過：<span id="status-seconds">0</span> 秒</li>
-        </ul>
-        <pre id="diagnostic-log">診断ログを確認中です。</pre>
-      </div>
-
-      <div class="note">
-        確認方法：このファイルをGitHub Pagesのルートにアップロードし、<strong>https://kawashima-d4-community.github.io/web/x-test.html</strong> をChromeで直接開いてください。<br>
+<div class="diagnostics">
+<h2>診断表示</h2>
+<ul>
+<li>公式ウィジェット読み込み：<span class="status-wait" id="status-script">確認中</span></li>
+<li>iframe総数：<span class="status-wait" id="status-iframe-count">確認中</span></li>
+<li>見えるiframe：<span class="status-wait" id="status-visible-iframe">確認中</span></li>
+<li>確認経過：<span id="status-seconds">0</span> 秒</li>
+</ul>
+<pre id="diagnostic-log">診断ログを確認中です。</pre>
+</div>
+<div class="note">
+        確認方法：このファイルをGitHub Pagesのルートにアップロードし、<strong>https://kawashima-d4-community.github.io/web/x-test.html</strong> をChromeで直接開いてください。<br/>
         テストAまたはBのどちらかでタイムラインが表示されれば、その形式を採用できます。どちらも表示されない場合は、町内会サイト側ではなくX公式ウィジェット側・対象アカウント状態・ブラウザ/ネットワーク制限の影響が疑われます。
       </div>
-    </div>
-  </main>
-
-  <script>
+</div>
+</main>
+<script>
     (function () {
       const fallback = document.getElementById('fallback-message');
       const statusScript = document.getElementById('status-script');
