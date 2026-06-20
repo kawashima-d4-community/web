@@ -1,60 +1,16 @@
-川島第四町内会ホームページ 最新ファイル一覧
-作成日時: 2026-06-21
-更新内容: PC表示時のトップページ主要メニューを2列グリッドに整え、ボタン幅を均等化、service-worker更新
+川島第四町内会ホームページ 最新版マニフェスト
 
-ファイル	サイズ(bytes)
-404.html	5707
-CONTACT_FORM_TEMPLATE.txt	1525
-LINK_CHECK_REPORT.txt	1759
-PAGE_RANKING_APPS_SCRIPT_TEMPLATE.txt	3214
-PWA_README.txt	766
-about-en.html	15478
-about-es.html	15443
-about-ko.html	15828
-about-pt.html	15514
-about-vi.html	15850
-about-zh.html	15039
-about.html	90874
-add.html	20148
-admin-dashboard.html	1661
-arai-president-portrait.png	2098778
-araiy.jpg	48324
-community-info.html	76916
-contact.html	14140
-d4-isshidanketsu-icon.png	417173
-d4-karugamo.png	2797132
-d4-logo-icon.png	621194
-d4-mark1.png	982260
-d4-mark2.png	1890154
-d4kaikan.jpg	307831
-disaster-flow.html	14969
-disaster-plan.html	15933
-disaster-prevention.html	27616
-events.html	75704
-faq.html	13045
-first-guide.html	16548
-homepage-flyer-thumb.jpg	344986
-homepage-flyer.html	10369
-homepage-flyer.jpg	709065
-homepage-flyer.pdf	322504
-icons/app-icon-original.png	1916444
-icons/icon-192.png	60933
-icons/icon-512.png	325952
-index.html	156753
-link-check.html	93167
-living-guide.html	78782
-manifest.webmanifest	868
-monthly-notices.html	20009
-posting-guidelines.html	15077
-posting-request.html	19157
-privacy-policy.html	15493
-robots.txt	169
-search-data.js	115202
-search.html	15369
-service-worker.js	1935
-sitemap.html	17140
-thumbnails/dodgeball-20260614-thumb.jpg	117787
-thumbnails/mizuhiroba-20260602-thumb.jpg	69281
-thumbnails/police-news-202606-thumb.jpg	61938
-thumbnails/softball-20260517-thumb.jpg	81396
-x-test.html	12568
+作成日時: 2026-06-21 07:45
+更新内容:
+- about.html のスマートフォン表示で横スライドを廃止
+- 活動方針・さわやか清掃カードを縦並びのコンパクト表示に整理
+- PC表示のトップページ主要メニューを2列グリッドで整列
+- 会長X閲覧時のXアカウント作成案内は継続
+- search-data.js を更新
+- service-worker.js のキャッシュ名を更新
+
+主な更新ファイル:
+- index.html
+- about.html
+- search-data.js
+- service-worker.js
