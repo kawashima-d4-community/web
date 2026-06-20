@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-06-20
-  Update Note: 6月度役員定例会資料PDFをGoogleドライブリンクに変更し、GitHub上のPDF配置を削除
+  Update Note: 新井会長XタイムラインをWhat’s Newの上に移動
 -->
 <!doctype html>
 <html lang="ja">
@@ -3126,6 +3126,54 @@
       margin-right: auto;
     }
 
+    .president-x-mini {
+      margin-top: 18px;
+    }
+    .president-x-mini-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.045);
+    }
+    .president-x-mini-copy h3 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+      font-size: 18px;
+    }
+    .president-x-mini-copy p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+    .president-x-mini-box {
+      height: 300px;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.9);
+    }
+    .president-x-mini-note {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    @media (max-width: 760px) {
+      .president-x-mini-card {
+        grid-template-columns: 1fr;
+      }
+      .president-x-mini-box {
+        height: 260px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -3274,6 +3322,29 @@
         </div>
       </div>
     </section>
+<section id="president-x" class="president-x-mini">
+      <div class="container">
+        <div class="president-x-mini-card">
+          <div class="president-x-mini-copy">
+            <span class="badge">会長の活動発信</span>
+            <h3>新井会長のX</h3>
+            <p>町内会活動や地域の様子を、Xでも発信しています。ホームページの補足情報としてご覧ください。</p>
+            <p class="president-x-mini-note">表示されない場合は、下のボタンからXで直接ご確認ください。</p>
+            <div class="actions">
+              <a class="button secondary" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener">Xで見る</a>
+            </div>
+          </div>
+          <div class="president-x-mini-box" aria-label="新井会長のXタイムライン">
+            <a class="twitter-timeline"
+               data-height="300"
+               data-chrome="noheader nofooter transparent"
+               href="https://x.com/yoshimi44444444">
+              @yoshimi44444444 の投稿
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 <section id="news">
       <div class="container">
@@ -3290,7 +3361,13 @@
 
           
           
-          <article class="notice-item" data-start="2026-06-28">
+          
+          <article class="notice-item">
+            <time datetime="2026-06-20">2026年6月20日</time>
+            <strong><a href="./index.html#president-x">新井会長のXタイムラインを掲載しました</a></strong>
+            <span>会長の活動発信</span>
+          </article>
+<article class="notice-item" data-start="2026-06-28">
             <time datetime="2026-06-28">2026年6月28日</time>
             <strong><a href="./community-info.html#monthly-meeting-202606">6月度 役員定例会資料を掲載しました</a></strong>
             <span>役員定例会資料</span>
@@ -3624,8 +3701,7 @@
   </main>
 
   <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ <span>トップへ</span></a>
-
-  <footer>
+<footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-06-20">2026-06-20</time></span><br /><span class="site-published">ホームページ公開日：<time datetime="2026-05-30">2026.5.30</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span>
           <div class="footer-mascot">
@@ -4236,5 +4312,6 @@
   });
 </script>
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
