@@ -1,9 +1,16 @@
+<!--
+  Kawashima D4 Community Website
+  File: x-test.html
+  Last Updated: 2026-06-20
+  Update Note: X埋め込み単独テストページに診断表示・代替読み込み・フォールバック案内を追加
+-->
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="川島第四町内会ホームページ用のXタイムライン埋め込み単独検証ページです。" />
   <title>X埋め込み表示テスト｜川島第四町内会</title>
   <style>
     body {
@@ -31,18 +38,16 @@
       font-size: 28px;
       line-height: 1.35;
     }
+    h2 {
+      margin: 0 0 8px;
+      color: #9f4c3c;
+      font-size: 18px;
+      line-height: 1.5;
+    }
     p {
       margin: 0 0 14px;
       color: #7b5d52;
       font-weight: 700;
-    }
-    .test-box {
-      margin-top: 18px;
-      padding: 12px;
-      border: 1px dashed #eed8c9;
-      border-radius: 16px;
-      background: #fff;
-      min-height: 320px;
     }
     .button {
       display: inline-flex;
@@ -56,6 +61,16 @@
       text-decoration: none;
       font-weight: 900;
     }
+    .test-box {
+      margin-top: 18px;
+      padding: 12px;
+      border: 1px dashed #eed8c9;
+      border-radius: 16px;
+      background: #fff;
+      min-height: 420px;
+      overflow: hidden;
+    }
+    .diagnostics,
     .note {
       margin-top: 14px;
       padding: 12px 14px;
@@ -65,6 +80,43 @@
       font-size: 13px;
       color: #7b5d52;
     }
+    .diagnostics ul {
+      margin: 8px 0 0;
+      padding-left: 1.3em;
+    }
+    .diagnostics li {
+      margin: 2px 0;
+    }
+    .status-ok {
+      color: #166534;
+      font-weight: 900;
+    }
+    .status-ng {
+      color: #b42318;
+      font-weight: 900;
+    }
+    .status-wait {
+      color: #7b5d52;
+      font-weight: 900;
+    }
+    .fallback {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 14px;
+      background: #fff3ed;
+      border: 1px solid #f0c8b8;
+      color: #7b3d2c;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .fallback.is-visible {
+      display: block;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.95em;
+    }
   </style>
 </head>
 <body>
@@ -73,23 +125,108 @@
       <h1>X埋め込み表示テスト</h1>
       <p>
         このページは、新井会長のXタイムラインがGitHub Pages上で表示できるかを確認するための単独テストページです。
-        町内会サイト本体のCSSやJavaScriptは読み込まず、X Publishで生成された公式コードだけを配置しています。
+        町内会サイト本体のCSSやJavaScriptは読み込まず、X Publishで生成された公式埋め込みコードを最小構成で配置しています。
       </p>
       <p>
         <a class="button" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener">Xで直接見る</a>
       </p>
 
-      <div class="test-box">
-        <a class="twitter-timeline" href="https://x.com/yoshimi44444444?ref_src=twsrc%5Etfw">Posts by yoshimi44444444</a>
+      <div class="test-box" id="x-test-box">
+        <a
+          class="twitter-timeline"
+          data-height="520"
+          data-dnt="true"
+          data-chrome="noheader nofooter transparent"
+          href="https://x.com/yoshimi44444444?ref_src=twsrc%5Etfw">
+          Posts by yoshimi44444444
+        </a>
+      </div>
+
+      <div class="fallback" id="fallback-message">
+        タイムラインが表示されていません。<br>
+        画面に「Posts by yoshimi44444444」のリンクだけが残る場合、X公式ウィジェットの読み込みがブラウザ・ネットワーク・拡張機能・X側の条件で止まっている可能性があります。<br>
+        町内会ホームページ本体へ組み込む前に、Chromeのシークレットウィンドウ、Edge、スマートフォン回線でも確認してください。
+      </div>
+
+      <div class="diagnostics">
+        <h2>診断表示</h2>
+        <ul>
+          <li>公式ウィジェット読み込み：<span id="status-script" class="status-wait">確認中</span></li>
+          <li>タイムラインiframe生成：<span id="status-iframe" class="status-wait">確認中</span></li>
+          <li>確認経過：<span id="status-seconds">0</span> 秒</li>
+        </ul>
       </div>
 
       <div class="note">
-        確認方法：このファイルをGitHub Pagesのルートにアップロードし、<strong>https://kawashima-d4-community.github.io/web/x-test.html</strong> をChromeで直接開いてください。
-        このページでも表示されない場合は、町内会サイト側ではなく、X公式ウィジェット側・アカウント状態・ブラウザ/ネットワーク制限の可能性が高くなります。
+        確認方法：このファイルをGitHub Pagesのルートにアップロードし、<strong>https://kawashima-d4-community.github.io/web/x-test.html</strong> をChromeで直接開いてください。<br>
+        このページでも表示されない場合は、町内会サイト側のCSS/JavaScriptではなく、X公式ウィジェット側・対象アカウント状態・ブラウザ/ネットワーク制限の影響が疑われます。
       </div>
     </div>
   </main>
 
-  <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+  <script>
+    (function () {
+      const box = document.getElementById('x-test-box');
+      const fallback = document.getElementById('fallback-message');
+      const statusScript = document.getElementById('status-script');
+      const statusIframe = document.getElementById('status-iframe');
+      const statusSeconds = document.getElementById('status-seconds');
+      let seconds = 0;
+      let fallbackLoaded = false;
+
+      function setStatus(el, text, className) {
+        el.textContent = text;
+        el.className = className;
+      }
+
+      function loadWidgetScript(src, markAsFallback) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.charset = 'utf-8';
+        script.src = src;
+        script.onload = function () {
+          setStatus(statusScript, markAsFallback ? '読み込み済み（代替URL）' : '読み込み済み', 'status-ok');
+          if (window.twttr && window.twttr.widgets && typeof window.twttr.widgets.load === 'function') {
+            window.twttr.widgets.load(box);
+          }
+        };
+        script.onerror = function () {
+          if (!markAsFallback && !fallbackLoaded) {
+            fallbackLoaded = true;
+            loadWidgetScript('https://platform.twitter.com/widgets.js', true);
+          } else {
+            setStatus(statusScript, '読み込み失敗', 'status-ng');
+          }
+        };
+        document.body.appendChild(script);
+      }
+
+      loadWidgetScript('https://platform.x.com/widgets.js', false);
+
+      const timer = setInterval(function () {
+        seconds += 1;
+        statusSeconds.textContent = String(seconds);
+
+        const iframe = box.querySelector('iframe');
+        if (iframe) {
+          setStatus(statusIframe, '生成済み', 'status-ok');
+          fallback.classList.remove('is-visible');
+          clearInterval(timer);
+          return;
+        }
+
+        if (seconds === 4 && !fallbackLoaded) {
+          fallbackLoaded = true;
+          loadWidgetScript('https://platform.twitter.com/widgets.js', true);
+        }
+
+        if (seconds >= 10) {
+          setStatus(statusIframe, '未生成', 'status-ng');
+          fallback.classList.add('is-visible');
+          clearInterval(timer);
+        }
+      }, 1000);
+    }());
+  </script>
 </body>
 </html>
