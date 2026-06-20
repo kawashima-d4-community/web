@@ -1,11 +1,10 @@
 川島第四町内会ホームページ 最新ファイル一覧
-作成日時: 2026-06-20
-更新内容: GA4アクセス解析、会長Xリンククリック計測、プライバシーポリシー追記、service-worker/search-data更新
+作成日時: 2026-06-21
+更新内容: index.htmlの最終更新日を2026-06-21へ修正、service-worker更新
 
 ファイル	サイズ(bytes)
 404.html	5707
 CONTACT_FORM_TEMPLATE.txt	1525
-LATEST_MANIFEST.txt	51098
 LINK_CHECK_REPORT.txt	1759
 PAGE_RANKING_APPS_SCRIPT_TEMPLATE.txt	3214
 PWA_README.txt	766
@@ -41,7 +40,7 @@ homepage-flyer.pdf	322504
 icons/app-icon-original.png	1916444
 icons/icon-192.png	60933
 icons/icon-512.png	325952
-index.html	156520
+index.html	156565
 link-check.html	93167
 living-guide.html	78782
 manifest.webmanifest	868
@@ -52,7 +51,7 @@ privacy-policy.html	15493
 robots.txt	169
 search-data.js	114659
 search.html	15369
-service-worker.js	1979
+service-worker.js	1924
 sitemap.html	17140
 thumbnails/dodgeball-20260614-thumb.jpg	117787
 thumbnails/mizuhiroba-20260602-thumb.jpg	69281
