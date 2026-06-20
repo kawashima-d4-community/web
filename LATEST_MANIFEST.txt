@@ -1046,3 +1046,12 @@ Text files:
 - PWAのservice-worker.jsキャッシュバージョンを更新。
 - index.html/about.htmlのmeta、フッター更新日を更新。
 - search-data.jsを再生成。
+
+
+2026-06-20 X Publish公式コード差し替え:
+- index.html の新井会長Xタイムラインを、ユーザー確認済みのX Publish公式コードへ差し替え。
+- platform.twitter.com/widgets.js から platform.x.com/widgets.js へ変更。
+- Xで見るボタンは x.com のプロフィールURLを維持。
+- PWAのservice-worker.jsキャッシュバージョンを更新。
+- index.html/about.htmlのmeta、フッター更新日を更新。
+- search-data.jsを再生成。
