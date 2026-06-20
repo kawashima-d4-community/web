@@ -2256,6 +2256,102 @@
       -webkit-touch-callout: none;
     }
 
+  
+    .president-x-link-mini {
+      max-width: 720px;
+      margin: 28px auto 0;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.045);
+    }
+    .president-x-link-mini h2 {
+      margin-top: 8px;
+      font-size: 22px;
+    }
+    .president-x-link-mini p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 700;
+    }
+    .president-x-link-mini .actions {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    @media (max-width: 760px) {
+      .president-x-link-mini {
+        max-width: none;
+        margin-top: 20px;
+        padding: 16px;
+      }
+    }
+
+  
+    .president-media-row-wrap {
+      margin-top: 22px;
+    }
+    .president-media-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+    .about-link-card {
+      height: 100%;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid rgba(238,216,201,0.95);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.045);
+    }
+    .about-link-card.media {
+      background: #fffaf7;
+    }
+    .about-link-card h2 {
+      margin: 8px 0 8px;
+      font-size: 21px;
+      color: var(--primary-dark);
+    }
+    .about-link-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .about-link-card .actions,
+    .about-link-card .media-feature-action {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      text-align: left;
+    }
+    .about-link-card .media-feature-action a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 10px 18px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(127,29,29,0.14);
+    }
+    @media (max-width: 760px) {
+      .president-media-row {
+        grid-template-columns: 1fr;
+      }
+      .about-link-card {
+        padding: 16px;
+      }
+    }
+
   </style>
 
   <style>
@@ -2418,8 +2514,7 @@
         <p>川島第四町内会の活動方針、会長あいさつ、基本情報、清掃活動、子ども会をまとめています。</p>
         <p class="site-updated">最終更新日：<time datetime="2026-06-20">2026-06-20</time></p>
       </section>
-
-      <section class="foreign-language-box" aria-label="外国語ページ">
+<section class="foreign-language-box" aria-label="外国語ページ">
         <h2>外国語ページ</h2>
         <p>町内会についての概要を、英語・中国語・韓国語などで確認できます。各ページには、Google翻訳機能を使ってサイト全体を外国語で見る手順も掲載しています。</p>
         <div class="foreign-language-links">
@@ -2520,24 +2615,28 @@
         </div>
       </div>
 
-      <div class="container">
-        <section class="media-feature" aria-label="外部メディア掲載">
-          <div class="media-feature-inner">
-            <div class="media-feature-text">
-              <span class="media-badge">外部メディア掲載</span>
-              <h3>タウンニュースで紹介されました</h3>
-              <p>
-                川島第四町内会の活動や、地域への思いが紹介された記事です。
-                <strong>2024年8月掲載</strong>の記事です。
-              </p>
+
+      <div class="container president-media-row-wrap">
+        <div class="president-media-row" aria-label="会長の活動発信と外部メディア掲載">
+          <section class="about-link-card" id="president-x-link">
+            <span class="badge">会長の活動発信</span>
+            <h2>新井会長のX</h2>
+            <p>川島第四町内会の活動や地域の様子を、新井会長がXでも発信しています。トップページではタイムラインも確認できます。</p>
+            <div class="actions">
+              <a class="button" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener">新井会長のXを見る</a>
+              <a class="button secondary" href="./index.html#president-x">タイムラインを見る</a>
             </div>
+          </section>
+
+          <section class="about-link-card media" aria-label="外部メディア掲載">
+            <span class="badge">外部メディア掲載</span>
+            <h2>タウンニュースで紹介されました</h2>
+            <p>川島第四町内会の活動や、地域への思いが紹介された記事です。<strong>2024年8月掲載</strong>の記事です。</p>
             <div class="media-feature-action">
-              <a href="https://www.townnews.co.jp/0115/2024/08/29/748468.html" target="_blank" rel="noopener noreferrer">
-                タウンニュースの記事を見る
-              </a>
+              <a href="https://www.townnews.co.jp/0115/2024/08/29/748468.html" target="_blank" rel="noopener noreferrer">タウンニュースの記事を見る</a>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
     </section>
@@ -2634,18 +2733,7 @@
         </div>
       </div>
     </section>
-  
-      <section class="card" id="president-x-link">
-        <span class="badge">会長の活動発信</span>
-        <h2>新井会長のX</h2>
-        <p>川島第四町内会の活動や地域の様子を、新井会長がXでも発信しています。トップページではタイムラインも確認できます。</p>
-        <div class="actions">
-          <a class="button" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener">新井会長のXを見る</a>
-          <a class="button secondary" href="./index.html#president-x">トップページのタイムラインを見る</a>
-        </div>
-      </section>
-
-    </main>
+</main>
   <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ トップへ</a>
   <footer>
     <div class="container footer-inner">

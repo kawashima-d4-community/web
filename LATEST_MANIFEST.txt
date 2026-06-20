@@ -1007,3 +1007,33 @@ Text files:
 - 小さめのサブコンテンツ枠、300px表示は維持。
 - index.html のソース冒頭コメント、meta、フッター更新日を更新。
 - search-data.js を再生成。
+
+
+2026-06-20 about.html 新井会長X枠表示調整:
+- about.html の新井会長Xリンク枠を横幅最大720pxのコンパクト枠に変更。
+- 横に伸びすぎないよう中央寄せに調整。
+- ボタン文言を短くし、見た目のバランスを調整。
+- about.html とindex.html のmeta、フッター更新日を更新。
+- search-data.js を再生成。
+
+
+2026-06-20 about.html 新井会長X枠位置変更:
+- about.html の新井会長X枠を外部メディア掲載セクションの下へ移動。
+- コンパクト枠、最大幅720pxの表示は維持。
+- about.html とindex.html のmeta、フッター更新日を更新。
+- search-data.js を再生成。
+
+
+2026-06-20 about.html 新井会長X枠位置変更:
+- about.html の新井会長X枠を会長あいさつと外部メディア掲載の間へ移動。
+- コンパクト枠、最大幅720pxの表示は維持。
+- about.html とindex.html のmeta、フッター更新日を更新。
+- search-data.js を再生成。
+
+
+2026-06-20 about.html X枠・外部メディア掲載レイアウト調整:
+- about.html の新井会長X枠と外部メディア掲載を同じ行の2カラム表示に変更。
+- 会長あいさつと同じcontainer幅に合わせて配置。
+- スマホでは縦並びになるよう調整。
+- about.html とindex.html のmeta、フッター更新日を更新。
+- search-data.js を再生成。
