@@ -3,7 +3,7 @@
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
 // Update Note: 会長X外部ウィジェット表示追加に伴いキャッシュ名を更新。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260621_090500';
+const CACHE_NAME = 'kawashima-d4-pwa-20260621_093000';
 const STATIC_ASSETS = [
   './',
   './index.html',
