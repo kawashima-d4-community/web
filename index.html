@@ -1,7 +1,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-06-21
-  Update Note: Elfsight Xウィジェットの埋め込みコードIDを正規コードへ修正
+  Update Note: index.htmlの構成整理、Elfsight X投稿タイムラインを主表示・案内カードをコンパクト化
 -->
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
 <meta content="2026-06-21" name="last-modified"/>
 <meta content="2026-06-21" name="d4-site-version"/>
 <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
-<meta content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせ、会長の活動投稿（X）タイムライン、Xへのリンク、Xアカウント作成案内などを掲載しています。" name="description"/>
+<meta content="川島第四町内会は、横浜市保土ヶ谷区東川島町1番地より21番地までの区域で活動する町内会です。合言葉は「川島第四一致団結」。町内会の紹介、行事予定、防災・防犯、地域からのお知らせ、会長のX投稿タイムラインなどを掲載しています。" name="description"/>
 <meta content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" name="keywords"/>
 <meta content="川島第四町内会｜川島第四一致団結" property="og:title"/>
 <meta content="川島第四一致団結を合言葉に、横浜市保土ヶ谷区東川島町で活動する川島第四町内会のホームページです。" property="og:description"/>
@@ -285,6 +285,108 @@
       font-weight: 800;
       line-height: 1.75;
     }
+
+
+    /* 会長X投稿タイムライン：主表示をコンパクト化 */
+    .president-x-section { padding: 0 0 28px; margin-top: 0; }
+    .president-x-widget-panel {
+      margin-top: 0;
+      padding: 18px;
+      border-radius: 26px;
+    }
+    .president-x-widget-head {
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .president-x-widget-head h2,
+    .president-x-widget-head h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(22px, 3vw, 30px);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+    .president-x-widget-head p {
+      margin-top: 5px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .president-x-widget-badge { display: none !important; }
+    .president-x-widget-frame {
+      max-height: 500px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      border-radius: 20px;
+    }
+    .president-x-support-card {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border-radius: 20px;
+      background: #fff8f6;
+      border: 1px solid rgba(217,104,79,0.18);
+      box-shadow: none;
+    }
+    .president-x-support-card h3 {
+      margin: 0 0 5px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+    .president-x-support-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.65;
+      font-weight: 800;
+    }
+    .president-x-support-card .president-x-note {
+      margin-top: 5px !important;
+      color: #8a5b4c !important;
+      font-size: 11.5px;
+      line-height: 1.55;
+      font-weight: 700 !important;
+    }
+    .president-x-support-actions {
+      display: grid;
+      gap: 6px;
+      min-width: 190px;
+    }
+    .president-x-support-actions .president-x-button {
+      min-height: 40px;
+      padding: 8px 14px;
+      background: #111827;
+      color: #fff;
+      font-size: 13.5px;
+      box-shadow: 0 8px 18px rgba(17,24,39,0.14);
+    }
+    .president-x-support-actions .president-x-button:hover { background: #000; color: #fff; }
+    .president-x-support-actions .president-x-signup {
+      min-height: 34px;
+      padding: 7px 12px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      border-color: rgba(217,104,79,0.2);
+    }
+    .president-x-support-actions .president-x-signup:hover { background: #fff1eb; color: var(--ink); }
+    .president-x-support-actions .president-x-handle {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      .president-x-widget-panel { padding: 14px; border-radius: 22px; }
+      .president-x-widget-frame { max-height: 420px; border-radius: 18px; }
+      .president-x-support-card { grid-template-columns: 1fr; padding: 12px; }
+      .president-x-support-actions { min-width: 0; }
+    }
+
     .visual-card { position: relative; min-height: 430px; border-radius: 32px; padding: 26px; background: linear-gradient(145deg, #9f4c3c 0%, #d9684f 54%, #f2a65a 115%); box-shadow: var(--shadow); color: #fff; overflow: hidden; }
     .visual-card::after { content: ""; position: absolute; width: 290px; height: 290px; right: -90px; bottom: -80px; border-radius: 50%; background: rgba(255,255,255,0.18); }
     .visual-inner { position: relative; z-index: 1; height: 100%; display: grid; align-content: space-between; gap: 24px; }
@@ -3288,7 +3390,23 @@
       margin-right: auto;
     }
 
-  </style>
+  
+
+    /* 会長Xタイムライン最終調整：タイムラインを主役に、案内を小さく表示 */
+    .president-x-widget-panel .president-x-kicker {
+      background: #111827;
+      color: #fff;
+      border-color: rgba(17,24,39,0.14);
+      margin-bottom: 8px;
+    }
+    @media (max-width: 760px) {
+      .president-x-widget-head h2,
+      .president-x-widget-head h3 { font-size: 23px; }
+      .president-x-support-card h3 { font-size: 16px; }
+      .president-x-support-actions .president-x-button { min-height: 40px; font-size: 13.5px; }
+    }
+
+</style>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -3425,7 +3543,6 @@
             </p>
 </div>
 <div class="hero-actions">
-<a class="button button-x" data-ga-label="index_hero_button" href="https://x.com/yoshimi44444444" rel="noopener noreferrer" target="_blank">会長の活動投稿をXで見る</a>
 <a class="button button-primary" href="#festival">夏祭り情報を見る</a>
 <a class="button button-secondary" href="./posting-request.html">地域情報を掲載する</a>
 <a class="button button-secondary" href="#join">町内会に加入する</a>
@@ -3449,35 +3566,33 @@
 </div>
 </div>
 </section>
-<section aria-label="会長の活動投稿（X）" class="president-x-section" id="president-x">
+<section aria-label="会長のX投稿タイムライン" class="president-x-section" id="president-x">
 <div class="container">
-<div class="president-x-card">
-<div class="president-x-text">
-<span class="president-x-kicker">📣 会長の活動発信</span>
-<h2>会長の活動投稿をXでチェック！</h2>
-<p>町内会活動の様子や地域の話題を、会長がX（旧Twitter）で発信しています。最新の投稿はこちらからご覧ください。</p>
-<p class="president-x-note">※Xの投稿は、閲覧環境によってXアカウントでログインしていないと表示されない場合があります。表示されない場合は、Xアカウントを作成またはログインしてご覧ください。</p>
-</div>
-<div class="president-x-actions">
-<a class="president-x-button" data-ga-label="index_president_x_card" href="https://x.com/yoshimi44444444" rel="noopener noreferrer" target="_blank">会長の投稿をXで開く →</a>
-<a class="president-x-signup" href="https://x.com/i/flow/signup" rel="noopener noreferrer" target="_blank">Xアカウントを作成する</a>
-<span class="president-x-handle">@yoshimi44444444</span>
-</div>
-</div>
 <div class="president-x-widget-panel" aria-label="会長のX投稿タイムライン">
 <div class="president-x-widget-head">
 <div>
-<h3>会長のX投稿タイムライン</h3>
-<p>外部ウィジェットサービスを利用して、会長のX投稿をホームページ上にも表示します。</p>
+<span class="president-x-kicker">📣 会長の活動発信</span>
+<h2>会長のX投稿タイムライン</h2>
+<p>会長がX（旧Twitter）で発信している町内会活動や地域の話題を、ホームページ上でも確認できるようにしました。</p>
 </div>
-<span class="president-x-widget-badge">X連携テスト中</span>
 </div>
 <div class="president-x-widget-frame">
 <!-- Elfsight Twitter Feed | Untitled Twitter Feed -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-d105cf75-afe6-4132-beda-4d17bfa2e4be" data-elfsight-app-lazy></div>
 </div>
-<p class="president-x-widget-note">※表示されない場合は、通信環境・ブラウザ設定・X側の仕様により読み込みが制限されている可能性があります。その場合は上の「会長の投稿をXで開く」から直接ご覧ください。</p>
+<div class="president-x-support-card" aria-label="会長のX投稿を見るための案内">
+<div>
+<h3>会長の活動投稿をXでチェック</h3>
+<p>タイムラインが表示されない場合や、さらに詳しく見たい場合はXで直接ご覧ください。</p>
+<p class="president-x-note">※Xの投稿は、閲覧環境によってXアカウントでログインしていないと表示されない場合があります。</p>
+</div>
+<div class="president-x-support-actions">
+<a class="president-x-button" data-ga-label="index_president_x_card" href="https://x.com/yoshimi44444444" rel="noopener noreferrer" target="_blank">Xで直接見る →</a>
+<a class="president-x-signup" href="https://x.com/i/flow/signup" rel="noopener noreferrer" target="_blank">Xアカウントを作成する</a>
+<span class="president-x-handle">@yoshimi44444444</span>
+</div>
+</div>
 </div>
 </div>
 </section>
