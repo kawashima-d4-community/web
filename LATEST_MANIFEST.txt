@@ -1,13 +1,17 @@
 川島第四町内会ホームページ 最新版マニフェスト
 
-作成日時: 2026-06-21 07:55
+作成日時: 2026-06-21 08:25
 更新内容:
-- x-test.html を個人Xアカウント（MetachanGolf）検証用に更新
-- twitter.com形式／x.com形式の比較診断は継続
-- index.html / about.html など本番ページは変更なし
+- index.html に Elfsight のXフィード外部ウィジェットを追加
+- 会長のX投稿タイムラインをトップページ上で表示できるように試験導入
+- 表示できない場合に備え、X直接リンクとXアカウント作成案内は継続
+- privacy-policy.html に外部SNS表示ウィジェット利用の記載を追加
+- search-data.js を更新
 - service-worker.js のキャッシュ名を更新
 
 主な更新ファイル:
-- x-test.html
+- index.html
+- privacy-policy.html
+- search-data.js
 - service-worker.js
 - LATEST_MANIFEST.txt

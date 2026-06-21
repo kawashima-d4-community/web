@@ -1,8 +1,8 @@
 <!--
   Kawashima D4 Community Website
   File: x-test.html
-  Last Updated: 2026-06-21
-  Update Note: X埋め込み単独テストページを個人アカウント検証用（MetachanGolf）へ更新
+  Last Updated: 2026-06-20
+  Update Note: X埋め込み単独テストページを比較診断版へ更新（twitter.com形式／x.com形式、表示サイズ判定、詳細ログを追加）
 -->
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="noindex,nofollow" name="robots"/>
-<meta content="個人Xアカウント（MetachanGolf）のタイムライン埋め込みを比較診断する単独検証ページです。" name="description"/>
+<meta content="川島第四町内会ホームページ用のXタイムライン埋め込みを比較診断する単独検証ページです。" name="description"/>
 <title>X埋め込み表示テスト｜川島第四町内会</title>
 <style>
     body {
@@ -168,14 +168,14 @@
     gtag('js', new Date());
     gtag('config', 'G-FEX7JP4M1Z');
 
-    // テスト用Xアカウントへのクリック数をGA4で計測
+    // 会長の活動投稿（X）へのクリック数をGA4で計測
     document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('a[href*="x.com/MetachanGolf"], a[href*="twitter.com/MetachanGolf"]').forEach(function (link) {
+      document.querySelectorAll('a[href*="x.com/yoshimi44444444"], a[href*="twitter.com/yoshimi44444444"]').forEach(function (link) {
         link.addEventListener('click', function () {
           if (typeof gtag === 'function') {
-            gtag('event', 'click_x_test_metachan', {
+            gtag('event', 'click_president_x', {
               event_category: 'external_link',
-              event_label: link.getAttribute('data-ga-label') || document.title || 'metachan_x_test',
+              event_label: link.getAttribute('data-ga-label') || document.title || 'president_x',
               link_text: (link.textContent || '').trim(),
               link_url: link.href
             });
@@ -190,34 +190,34 @@
 <div class="card">
 <h1>X埋め込み表示テスト</h1>
 <p>
-        このページは、テスト用Xアカウント（MetachanGolf）のタイムラインがGitHub Pages上で表示できるかを確認するための単独テストページです。
+        このページは、新井会長のXタイムラインがGitHub Pages上で表示できるかを確認するための単独テストページです。
         町内会サイト本体のCSSやJavaScriptは読み込まず、X公式ウィジェットだけで比較確認します。
       </p>
 <div class="button-row">
-<a class="button" data-ga-label="x_test_x_direct" href="https://x.com/MetachanGolf" rel="noopener" target="_blank">Xで直接見る</a>
-<a class="button secondary" data-ga-label="x_test_twitter_direct" href="https://twitter.com/MetachanGolf" rel="noopener" target="_blank">twitter.com形式で開く</a>
+<a class="button" data-ga-label="x_test_x_direct" href="https://x.com/yoshimi44444444" rel="noopener" target="_blank">Xで直接見る</a>
+<a class="button secondary" data-ga-label="x_test_twitter_direct" href="https://twitter.com/yoshimi44444444" rel="noopener" target="_blank">twitter.com形式で開く</a>
 </div>
 <div class="test-grid">
 <section class="test-panel">
 <h3>テストA：twitter.com形式（推奨確認）</h3>
 <div class="test-box" id="x-test-box-twitter">
-<a class="twitter-timeline" data-dnt="true" data-ga-label="x_test_timeline_link" data-height="520" href="https://twitter.com/MetachanGolf?ref_src=twsrc%5Etfw">
-              Posts by MetachanGolf
+<a class="twitter-timeline" data-dnt="true" data-ga-label="x_test_timeline_link" data-height="520" href="https://twitter.com/yoshimi44444444?ref_src=twsrc%5Etfw">
+              Posts by yoshimi44444444
             </a>
 </div>
 </section>
 <section class="test-panel">
 <h3>テストB：x.com形式（比較確認）</h3>
 <div class="test-box" id="x-test-box-x">
-<a class="twitter-timeline" data-dnt="true" data-ga-label="x_test_timeline_link" data-height="520" href="https://x.com/MetachanGolf?ref_src=twsrc%5Etfw">
-              Posts by MetachanGolf
+<a class="twitter-timeline" data-dnt="true" data-ga-label="x_test_timeline_link" data-height="520" href="https://x.com/yoshimi44444444?ref_src=twsrc%5Etfw">
+              Posts by yoshimi44444444
             </a>
 </div>
 </section>
 </div>
 <div class="fallback" id="fallback-message">
         タイムラインの見えるiframeが確認できません。<br/>
-        画面に「Posts by MetachanGolf」のリンクだけが残る場合、X公式ウィジェットの表示がブラウザ・ネットワーク・拡張機能・X側の条件で止まっている可能性があります。<br/>
+        画面に「Posts by yoshimi44444444」のリンクだけが残る場合、X公式ウィジェットの表示がブラウザ・ネットワーク・拡張機能・X側の条件で止まっている可能性があります。<br/>
         Chromeのシークレットウィンドウ、Edge、スマートフォン回線でも確認してください。
       </div>
 <div class="diagnostics">
