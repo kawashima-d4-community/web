@@ -3,7 +3,7 @@
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
 // Update Note: トップページ最終更新日の修正に伴いキャッシュ名を更新。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260621_074500';
+const CACHE_NAME = 'kawashima-d4-pwa-20260621_07550000';
 const STATIC_ASSETS = [
   './',
   './index.html',

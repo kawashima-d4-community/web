@@ -1,16 +1,13 @@
 川島第四町内会ホームページ 最新版マニフェスト
 
-作成日時: 2026-06-21 07:45
+作成日時: 2026-06-21 07:55
 更新内容:
-- about.html のスマートフォン表示で横スライドを廃止
-- 活動方針・さわやか清掃カードを縦並びのコンパクト表示に整理
-- PC表示のトップページ主要メニューを2列グリッドで整列
-- 会長X閲覧時のXアカウント作成案内は継続
-- search-data.js を更新
+- x-test.html を個人Xアカウント（MetachanGolf）検証用に更新
+- twitter.com形式／x.com形式の比較診断は継続
+- index.html / about.html など本番ページは変更なし
 - service-worker.js のキャッシュ名を更新
 
 主な更新ファイル:
-- index.html
-- about.html
-- search-data.js
+- x-test.html
 - service-worker.js
+- LATEST_MANIFEST.txt
