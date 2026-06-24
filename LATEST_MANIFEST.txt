@@ -1,7 +1,7 @@
 川島第四町内会ホームページ 最新修正版
 
-作成日時：2026-06-25 09:00
-ベース：kawashima_d4_index_simplified_20260621_102000.zip
+作成日時：2026-06-25 09:35
+ベース：kawashima_d4_soft_volleyball_reannounce_20260625_090000.zip
 
 更新内容：
 - index.html の What's New 先頭に、6/27ソフトバレーボール大会の開催直前案内を追加
@@ -16,3 +16,9 @@
 注意：
 - トップページは「今知りたい情報への入口」としての整理方針を維持
 - Elfsightの会長X投稿タイムラインは維持
+
+追加更新（2026-06-25 09:35）：
+- index.html のイベント告知に event-auto-hide / data-event-end を付与
+- 6/27ソフトバレーボール大会のトップ告知とWhat's New告知を、実施日の翌日（6/28）以降に自動非表示化
+- 今後のイベント告知は、実施日を data-event-end="YYYY-MM-DD" として設定する方針
+- service-worker.js のキャッシュ名を更新

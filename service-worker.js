@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-06-25-20260625_090000
+// Version: 2026-06-25-20260625_093500
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 6/27ソフトバレーボール大会の直前案内追加に伴いキャッシュ名を更新。
+// Update Note: イベント告知の自動非表示対応に伴いキャッシュ名を更新。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260625_090000';
+const CACHE_NAME = 'kawashima-d4-pwa-20260625_093500';
 const STATIC_ASSETS = [
   './',
   './index.html',
