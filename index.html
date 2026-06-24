@@ -3,7 +3,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-06-25
-  Update Note: イベント告知の自動非表示対応を追加。実施日の翌日以降、トップページ上のイベント告知を非表示にする。
+  Update Note: 更新情報（What's New）の表示件数を最大5件に整理。イベント告知の自動非表示対応は継続。
 -->
 <!DOCTYPE html>
 
@@ -14,7 +14,7 @@
 <meta content="2026-06-25" name="last-modified"/>
 <meta content="2026-06-21" name="d4-site-version"/>
 <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
-<meta content="川島第四町内会ホームページのトップページです。町内会からのお知らせ、会長のX投稿タイムライン、行事予定、防災・防犯、暮らしの案内、加入・お問い合わせなど、今知りたい情報へすぐ進める入口として整理しています。6/27ソフトバレーボール大会は参加・見学・応援も歓迎しています。イベント告知は実施後に自動で整理されます。" name="description"/>
+<meta content="川島第四町内会ホームページのトップページです。町内会からのお知らせ、会長のX投稿タイムライン、行事予定、防災・防犯、暮らしの案内、加入・お問い合わせなど、今知りたい情報へすぐ進める入口として整理しています。6/27ソフトバレーボール大会は参加・見学・応援も歓迎しています。イベント告知は実施後に自動で整理され、更新情報は最大5件表示です。" name="description"/>
 <meta content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" name="keywords"/>
 <meta content="川島第四町内会｜川島第四一致団結" property="og:title"/>
 <meta content="川島第四一致団結を合言葉に、横浜市保土ヶ谷区東川島町で活動する川島第四町内会のホームページです。" property="og:description"/>
@@ -1575,7 +1575,7 @@
       font-weight: 700;
     }
 
-    /* What's Newをスマホでも見やすい最新3件コンパクト表示にする */
+    /* What's Newをスマホでも見やすい最大5件コンパクト表示にする */
     .notice-list-compact {
       gap: 8px;
     }
@@ -1596,6 +1596,9 @@
     .notice-list-compact .notice-item span {
       font-size: 11px;
       padding: 3px 8px;
+    }
+    .notice-list-compact .notice-item.notice-over-limit-hidden {
+      display: none !important;
     }
     .notice-more {
       display: flex;
@@ -3633,7 +3636,7 @@
 </div>
 </div>
 <div aria-label="更新情報一覧" class="notice-list notice-list-compact">
-<!-- イベント告知は event-auto-hide と data-event-end を付けると、実施日の翌日以降にトップページから自動で非表示になります。 -->
+<!-- 更新情報は表示中の項目から最大5件まで表示します。イベント告知は event-auto-hide と data-event-end を付けると、実施日の翌日以降にトップページから自動で非表示になります。 -->
 <article class="notice-item soft-volley-news event-auto-hide" data-event-end="2026-06-27">
 <time datetime="2026-06-25">2026年6月25日</time>
 <strong><a href="./community-info.html#soft-volleyball-20260627">6/27 ソフトバレーボール大会は参加・見学・応援も大歓迎です</a></strong>
@@ -4467,14 +4470,35 @@
       const day = String(d.getDate()).padStart(2, '0');
       return `${y}-${m}-${day}`;
     }
+
     function applyNoticeStartDates() {
       const todayKey = localDateKey();
       document.querySelectorAll('.notice-item[data-start]').forEach((item) => {
         const start = item.getAttribute('data-start');
+        item.style.display = '';
         if (start && start > todayKey) item.style.display = 'none';
       });
     }
+
+    function limitVisibleNoticeItems(maxCount) {
+      const notices = Array.from(document.querySelectorAll('#news .notice-list-compact .notice-item'));
+      let visibleCount = 0;
+
+      notices.forEach((item) => {
+        item.classList.remove('notice-over-limit-hidden');
+        const isDateHidden = item.style.display === 'none';
+        const isEventHidden = item.classList.contains('event-hidden');
+        if (isDateHidden || isEventHidden) return;
+
+        visibleCount += 1;
+        if (visibleCount > maxCount) {
+          item.classList.add('notice-over-limit-hidden');
+        }
+      });
+    }
+
     applyNoticeStartDates();
+    limitVisibleNoticeItems(5);
   });
 </script>
 </body>
