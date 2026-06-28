@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-06-25-20260625_101500
+// Version: 2026-06-28-20260628_164500
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 明推協だより令和8年度6月号の掲載に伴いキャッシュ名を更新。
+// Update Note: events.htmlの年間行事予定を日程昇順に整列し、キャッシュ名を更新。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260625_103000';
+const CACHE_NAME = 'kawashima-d4-pwa-20260628_164500';
 const STATIC_ASSETS = [
   './',
   './index.html',
