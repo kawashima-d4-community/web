@@ -2,8 +2,8 @@
 
 <!--
   川島第四町内会ホームページ index.html
-  Last Updated: 2026-06-25
-  Update Note: 6/27ソフトバレーボール大会は台風の影響を考慮して中止・秋頃実施予定へ変更。更新情報最大5件表示とイベント翌日自動非表示は継続。
+  Last Updated: 2026-06-28
+  Update Note: What's New（更新情報）を日付の新しい順に並び替え、今後も表示時に日付順へ整列する処理を追加。
 -->
 <!DOCTYPE html>
 
@@ -11,10 +11,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="2026-06-25" name="last-modified"/>
+<meta content="2026-06-28" name="last-modified"/>
 <meta content="2026-06-21" name="d4-site-version"/>
 <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
-<meta content="川島第四町内会ホームページのトップページです。町内会からのお知らせ、会長のX投稿タイムライン、行事予定、防災・防犯、暮らしの案内、加入・お問い合わせなど、今知りたい情報へすぐ進める入口として整理しています。6/27ソフトバレーボール大会の中止・秋頃実施予定への変更、明推協だより令和8年度6月号などの更新情報を掲載しています。更新情報は最大5件表示です。" name="description"/>
+<meta content="川島第四町内会ホームページのトップページです。町内会からのお知らせ、会長のX投稿タイムライン、行事予定、防災・防犯、暮らしの案内、加入・お問い合わせなど、今知りたい情報へすぐ進める入口として整理しています。6/27ソフトバレーボール大会の中止・秋頃実施予定への変更、明推協だより令和8年度6月号などの更新情報を掲載しています。更新情報は日付の新しい順に最大5件表示です。" name="description"/>
 <meta content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン" name="keywords"/>
 <meta content="川島第四町内会｜川島第四一致団結" property="og:title"/>
 <meta content="川島第四一致団結を合言葉に、横浜市保土ヶ谷区東川島町で活動する川島第四町内会のホームページです。" property="og:description"/>
@@ -3636,19 +3636,22 @@
 </div>
 </div>
 <div aria-label="更新情報一覧" class="notice-list notice-list-compact">
-<!-- 更新情報は表示中の項目から最大5件まで表示します。イベント告知は event-auto-hide と data-event-end を付けると、実施日の翌日以降にトップページから自動で非表示になります。 -->
+<!-- 更新情報は日付の新しい順に並べ、表示中の項目から最大5件まで表示します。イベント告知は event-auto-hide と data-event-end を付けると、実施日の翌日以降にトップページから自動で非表示になります。 -->
+<article class="notice-item" data-start="2026-06-28">
+<time datetime="2026-06-28">2026年6月28日</time>
+<strong><a href="./community-info.html#monthly-meeting-202606">6月度 役員定例会資料を掲載しました</a></strong>
+<span>役員定例会資料</span>
+</article>
 <article class="notice-item soft-volley-news event-auto-hide" data-event-end="2026-06-27">
 <time datetime="2026-06-25">2026年6月25日</time>
 <strong><a href="./community-info.html#soft-volleyball-20260627">6/27 ソフトバレーボール大会は中止・秋頃実施予定へ変更となりました</a></strong>
 <span>重要なお知らせ</span>
 </article>
-
 <article class="notice-item">
 <time datetime="2026-06-25">2026年6月25日</time>
 <strong><a href="./community-info.html#meisuikyo-dayori-202606">明推協だより 令和8年度6月号のトピックを掲載しました</a></strong>
 <span>地域・選挙啓発情報</span>
 </article>
-
 <article class="notice-item">
 <time datetime="2026-06-21">2026年6月21日</time>
 <strong><a href="./community-info.html#wanpaku-takezaiku-20260621">わんぱくっ子竹細工・木工細工教室の開催報告を掲載しました</a></strong>
@@ -3658,11 +3661,6 @@
 <time datetime="2026-06-20">2026年6月20日</time>
 <strong><a href="#president-x">会長の活動投稿をXで発信開始しました</a></strong>
 <span>会長の活動発信</span>
-</article>
-<article class="notice-item" data-start="2026-06-28">
-<time datetime="2026-06-28">2026年6月28日</time>
-<strong><a href="./community-info.html#monthly-meeting-202606">6月度 役員定例会資料を掲載しました</a></strong>
-<span>役員定例会資料</span>
 </article>
 <article class="notice-item">
 <time datetime="2026-06-17">2026年6月17日</time>
@@ -4476,6 +4474,23 @@
       return `${y}-${m}-${day}`;
     }
 
+    function sortNoticeItemsByDateDesc() {
+      const list = document.querySelector('#news .notice-list-compact');
+      if (!list) return;
+      const notices = Array.from(list.querySelectorAll('.notice-item'));
+      notices
+        .map((item, index) => {
+          const time = item.querySelector('time[datetime]');
+          const key = time ? time.getAttribute('datetime') : '';
+          return { item, index, key };
+        })
+        .sort((a, b) => {
+          if (a.key === b.key) return a.index - b.index;
+          return a.key < b.key ? 1 : -1;
+        })
+        .forEach(({ item }) => list.appendChild(item));
+    }
+
     function applyNoticeStartDates() {
       const todayKey = localDateKey();
       document.querySelectorAll('.notice-item[data-start]').forEach((item) => {
@@ -4502,6 +4517,7 @@
       });
     }
 
+    sortNoticeItemsByDateDesc();
     applyNoticeStartDates();
     limitVisibleNoticeItems(5);
   });
