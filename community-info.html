@@ -199,6 +199,170 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     .flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .flow-card { padding: 16px; border-radius: 18px; background: #fff; border: 1px solid var(--border); }
     .flow-card b { display: block; color: var(--primary-dark); margin-bottom: 4px; }
+
+
+    /* 7/1回覧板情報：読みやすいカード型レイアウト */
+    .kairan-post .post-body h3 {
+      margin-bottom: 8px;
+    }
+    .kairan-lead {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff7ed;
+      border: 1px solid var(--border);
+      color: var(--primary-dark);
+      font-weight: 800;
+      line-height: 1.75;
+    }
+    .kairan-summary-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 14px;
+    }
+    .kairan-summary-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--soft-orange);
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .kairan-topic-list {
+      display: grid;
+      gap: 14px;
+      margin: 16px 0 0;
+    }
+    .kairan-topic-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(127,29,29,0.05);
+    }
+    .kairan-topic-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .kairan-topic-card h4 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+    .kairan-topic-tag {
+      flex: 0 0 auto;
+      display: inline-flex;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--soft-red);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .kairan-topic-card p {
+      line-height: 1.75;
+    }
+    .kairan-point-list {
+      margin: 10px 0 0;
+      padding-left: 1.2em;
+      display: grid;
+      gap: 5px;
+    }
+    .kairan-detail-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+    .kairan-detail-list div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #fffaf0;
+      border: 1px solid rgba(180,83,9,0.18);
+    }
+    .kairan-detail-list dt {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 3px;
+    }
+    .kairan-detail-list dd {
+      margin: 0;
+      color: var(--text);
+      font-weight: 800;
+      line-height: 1.5;
+    }
+    .kairan-schedule-list {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+    .kairan-schedule-item {
+      display: grid;
+      grid-template-columns: 135px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: #fffaf0;
+      border: 1px solid rgba(180,83,9,0.18);
+      line-height: 1.55;
+    }
+    .kairan-schedule-item b {
+      color: var(--primary-dark);
+    }
+    .kairan-note-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fef2f2;
+      border: 1px solid rgba(185,28,28,0.16);
+      color: var(--primary-dark);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+    .kairan-contact-box {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 18px;
+      background: #fff7ed;
+      border: 1px solid var(--border);
+    }
+    .kairan-contact-box h4 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+      font-size: 16px;
+    }
+    .kairan-contact-box ul {
+      margin: 0;
+      padding-left: 1.2em;
+      display: grid;
+      gap: 4px;
+    }
+    @media (max-width: 720px) {
+      .kairan-topic-head {
+        display: grid;
+        gap: 6px;
+      }
+      .kairan-topic-tag {
+        width: fit-content;
+      }
+      .kairan-detail-list {
+        grid-template-columns: 1fr;
+      }
+      .kairan-schedule-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+
     @media (max-width: 760px) {
       .community-post { grid-template-columns: 1fr; padding: 14px; }
       .post-category { justify-content: flex-start; width: fit-content; }
@@ -762,45 +926,98 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
         <div class="post-list" id="chonaikaiPostList">
 
-          <article id="kairan-20260701" class="community-post" data-board="chonaikai" data-start="2026-07-01" data-expire="2026-08-01">
+          <article id="kairan-20260701" class="community-post kairan-post" data-board="chonaikai" data-start="2026-07-01" data-expire="2026-08-01">
             <span class="post-category">回覧板情報・地域情報</span>
             <div class="post-body">
               <h3>7月1日 回覧板情報を掲載しました</h3>
-              <p><strong>2026年7月1日回覧の主な情報</strong>を、町内会ホームページでも確認できるように掲載します。詳細は、下記の回覧板PDFもあわせてご確認ください。</p>
+              <p class="kairan-lead">2026年7月1日の回覧板から、地域の皆さまに関係する主な情報を4つに分けて掲載します。詳しい日程・申込方法・二次元コードは、回覧板PDFでご確認ください。</p>
 
-              <p><strong>1．アドベンチャーつうしん（川島町公園こどもログハウス）</strong></p>
-              <p>川島町公園こどもログハウスから、夏休み期間を中心にした子ども向けイベントが案内されています。夏休みスタンプラリー、夏休み工作、おはなし会、親子リトミック、まどにお絵かき、チャレンジタイム、秋まつりなど、楽しいイベントが盛りだくさんです。</p>
-              <p>開催日・対象・申込開始日などはイベントごとに異なります。詳しくは、回覧板PDFまたは川島町公園こどもログハウスのホームページをご確認ください。</p>
+              <div class="kairan-summary-row" aria-label="回覧板情報の概要">
+                <span>回覧日：2026年7月1日</span>
+                <span>掲載期間：8月1日まで</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
 
-              <p><strong>2．川島町こどもログハウス スタッフ募集</strong></p>
-              <p>川島町こどもログハウスでは、スタッフを若干名募集しています。子どもが好きで、子どもの遊びに関心がある方、近隣地域にお住まいで徒歩または自転車で通勤できる方、パソコンの基本操作ができる方などが対象です。</p>
-              <p>勤務は午前9時から午後1時、または午後1時から午後5時のシフト制で、週3日程度・1日4時間の案内です。業務内容は、利用者の受付・案内、安全で公平に利用できるようにするための声かけ、施設の清掃・消毒、遊具の点検、自主事業の企画・実施・集計・広報業務などです。</p>
-              <p>お問い合わせは、<strong>一般社団法人 保土ケ谷区民利用施設協会 事務局 根本さん</strong>までお願いします。</p>
+              <div class="kairan-topic-list">
+                <section class="kairan-topic-card">
+                  <div class="kairan-topic-head">
+                    <h4>1．アドベンチャーつうしん</h4>
+                    <span class="kairan-topic-tag">川島町公園こどもログハウス</span>
+                  </div>
+                  <p>川島町公園こどもログハウスから、夏休み期間を中心にした子ども向けイベントが案内されています。</p>
+                  <ul class="kairan-point-list">
+                    <li>夏休みスタンプラリー、夏休み工作、おはなし会、親子リトミックなど</li>
+                    <li>まどにお絵かき、チャレンジタイム、秋まつりなども案内されています</li>
+                    <li>参加費無料のイベントもあります</li>
+                  </ul>
+                  <p class="kairan-note-box">イベントごとに開催日、対象、申込開始日が異なります。詳細は回覧板PDFまたはログハウスのホームページをご確認ください。</p>
+                </section>
 
-              <p><strong>3．横浜市川島地域ケアプラザからのお知らせ</strong></p>
-              <p>横浜市川島地域ケアプラザ広報誌「リーベル川島」では、<strong>かわしまユースボランティアセミナーの参加者募集</strong>、貸室予約のオンライン化予定、川島文化祭の開催予定などが案内されています。</p>
-              <p>貸室については、2026年1月の開始に向けて、空き状況の確認や予約申し込みがオンライン（パソコン・スマートフォン）で行えるようになる予定です。9月下旬ごろに操作説明会も予定されているとのことです。</p>
-              <p>また、今年の<strong>川島文化祭は2026年11月29日（日）</strong>に決定しています。詳細は今後のお知らせをご確認ください。</p>
+                <section class="kairan-topic-card">
+                  <div class="kairan-topic-head">
+                    <h4>2．川島町こどもログハウス スタッフ募集</h4>
+                    <span class="kairan-topic-tag">スタッフ募集</span>
+                  </div>
+                  <p>川島町こどもログハウスでは、スタッフを若干名募集しています。子どもの遊びに関心がある方、近隣地域にお住まいで徒歩または自転車で通勤できる方、パソコンの基本操作ができる方などが対象です。</p>
+                  <dl class="kairan-detail-list">
+                    <div><dt>勤務時間帯</dt><dd>午前9時〜13時、または13時〜17時</dd></div>
+                    <div><dt>勤務体制</dt><dd>1日4時間・週3日程度の案内</dd></div>
+                    <div><dt>主な業務</dt><dd>受付・案内、施設清掃、遊具点検、イベント運営補助など</dd></div>
+                    <div><dt>問い合わせ</dt><dd>保土ケ谷区民利用施設協会事務局</dd></div>
+                  </dl>
+                </section>
 
-              <p><strong>4．かわしまユースボランティアセミナー 参加者募集</strong></p>
-              <p>中学生・高校生を対象に、毎年秋に開催される「川島文化祭」で地域の人に喜んでもらえるブースを企画・出展・運営するボランティアセミナーが案内されています。参加費は無料、定員は20名で、地域にお住まいでなくても参加できます。参加者にはボランティア活動証明書も発行されます。</p>
-              <ul>
-                <li>第1回：8月1日（土）14:00〜16:30　オリエンテーション</li>
-                <li>第2回：9月19日（土）14:00〜16:30　イベント企画について</li>
-                <li>第3回：10月10日（土）14:00〜16:30　イベント企画立案</li>
-                <li>第4回：11月7日（土）14:00〜16:30　イベント企画立案</li>
-                <li>第5回：11月29日（日）9:30〜15:30　川島文化祭当日</li>
-              </ul>
-              <p>全回参加できなくても大丈夫との案内があります。興味のある中学生・高校生の皆さんは、回覧板PDFの二次元コードまたは川島地域ケアプラザへお問い合わせください。</p>
+                <section class="kairan-topic-card">
+                  <div class="kairan-topic-head">
+                    <h4>3．横浜市川島地域ケアプラザからのお知らせ</h4>
+                    <span class="kairan-topic-tag">地域情報</span>
+                  </div>
+                  <p>横浜市川島地域ケアプラザ広報誌「リーベル川島」から、次の情報が案内されています。</p>
+                  <ul class="kairan-point-list">
+                    <li>かわしまユースボランティアセミナー参加者募集</li>
+                    <li>貸室の空き状況確認・予約申し込みがオンラインでできるようになる予定</li>
+                    <li>川島文化祭は2026年11月29日（日）に開催予定</li>
+                  </ul>
+                  <p class="kairan-note-box">貸室のオンライン予約については、2026年1月の開始に向けて、9月下旬ごろに操作説明会も予定されているとの案内があります。</p>
+                </section>
+
+                <section class="kairan-topic-card">
+                  <div class="kairan-topic-head">
+                    <h4>4．かわしまユースボランティアセミナー 参加者募集</h4>
+                    <span class="kairan-topic-tag">中学生・高校生向け</span>
+                  </div>
+                  <p>中学生・高校生を対象に、川島文化祭で地域の人に喜んでもらえるブースを企画・出展・運営するボランティアセミナーが案内されています。</p>
+                  <dl class="kairan-detail-list">
+                    <div><dt>対象</dt><dd>中学生・高校生</dd></div>
+                    <div><dt>定員</dt><dd>20名</dd></div>
+                    <div><dt>参加費</dt><dd>無料</dd></div>
+                    <div><dt>その他</dt><dd>ボランティア活動証明書を発行</dd></div>
+                  </dl>
+                  <div class="kairan-schedule-list" aria-label="かわしまユースボランティアセミナー日程">
+                    <div class="kairan-schedule-item"><b>第1回：8月1日（土）</b><span>14:00〜16:30　オリエンテーション</span></div>
+                    <div class="kairan-schedule-item"><b>第2回：9月19日（土）</b><span>14:00〜16:30　イベント企画について</span></div>
+                    <div class="kairan-schedule-item"><b>第3回：10月10日（土）</b><span>14:00〜16:30　イベント企画立案</span></div>
+                    <div class="kairan-schedule-item"><b>第4回：11月7日（土）</b><span>14:00〜16:30　イベント企画立案</span></div>
+                    <div class="kairan-schedule-item"><b>第5回：11月29日（日）</b><span>9:30〜15:30　川島文化祭当日</span></div>
+                  </div>
+                  <p class="kairan-note-box">全回参加できなくても大丈夫との案内があります。興味のある方は、回覧板PDFの二次元コードまたは川島地域ケアプラザへお問い合わせください。</p>
+                </section>
+              </div>
+
+              <div class="kairan-contact-box">
+                <h4>問い合わせ先</h4>
+                <ul>
+                  <li>川島町公園こどもログハウス：045-373-8566</li>
+                  <li>スタッフ募集：045-442-7571（平日10:00〜16:00）</li>
+                  <li>横浜市川島地域ケアプラザ：045-370-1550</li>
+                </ul>
+              </div>
 
               <div class="post-meta">
                 <span>回覧日：2026年7月1日</span>
                 <span>掲載開始：2026年7月1日</span>
                 <span>掲載終了：2026年8月1日</span>
                 <span>区分：町内会からのお知らせ</span>
-                <span>ログハウス問合せ：045-373-8566</span>
-                <span>スタッフ募集問合せ：045-442-7571（平日10〜16時）</span>
-                <span>川島地域ケアプラザ問合せ：045-370-1550</span>
               </div>
               <div class="post-actions">
                 <a class="button" href="https://drive.google.com/file/d/1v902T0xBrGtjN-TDSRm4I4T7sf1BMqU3/view?usp=sharing" target="_blank" rel="noopener noreferrer">7/1回覧板PDFを見る</a>
