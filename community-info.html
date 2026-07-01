@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-07-01" />
-  <meta name="d4-site-version" content="2026-07-01" />
+  <meta name="last-modified" content="2026-07-02" />
+  <meta name="d4-site-version" content="2026-07-02" />
   <title>町内会・地域からのお知らせ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。7/1回覧板情報、川島町公園こどもログハウス、川島地域ケアプラザ、活動報告、行事案内、地域情報を掲載期間に応じて整理しています。" />
+  <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。川島町公園こどもログハウスのすべり台再開、7/1回覧板情報、川島地域ケアプラザ、活動報告、行事案内、地域情報を掲載期間に応じて整理しています。" />
   <style>
 
 :root {
@@ -345,6 +345,54 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       padding-left: 1.2em;
       display: grid;
       gap: 4px;
+    }
+
+    /* 川島町公園こどもログハウス：すべり台再開のお知らせ */
+    .loghouse-slide-post .post-body h3 {
+      margin-bottom: 8px;
+    }
+    .loghouse-hero-card {
+      margin: 12px 0 14px;
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(127,29,29,0.06);
+    }
+    .loghouse-hero-card b {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .loghouse-hero-card p {
+      margin: 0;
+      line-height: 1.8;
+    }
+    .loghouse-appeal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .loghouse-appeal-card {
+      padding: 13px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      line-height: 1.65;
+      font-weight: 800;
+    }
+    .loghouse-appeal-card span {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    @media (max-width: 720px) {
+      .loghouse-appeal-grid {
+        grid-template-columns: 1fr;
+      }
     }
     @media (max-width: 720px) {
       .kairan-topic-head {
@@ -926,6 +974,38 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
         <div class="post-list" id="chonaikaiPostList">
 
+
+          <article id="loghouse-slide-20260702" class="community-post loghouse-slide-post" data-board="chonaikai" data-start="2026-07-02" data-expire="2026-08-02">
+            <span class="post-category">地域情報・子ども向け</span>
+            <div class="post-body">
+              <h3>川島町公園こどもログハウスのすべり台が利用できるようになりました</h3>
+              <div class="loghouse-hero-card">
+                <b>7月2日（木）から、すべり台で遊べるようになりました。</b>
+                <p>川島町公園こどもログハウスから、館内のすべり台が利用できるようになったとの案内がありました。お子さんと一緒に、雨の日や暑い日のお出かけ先としても利用しやすい地域の遊び場です。</p>
+              </div>
+
+              <div class="loghouse-appeal-grid" aria-label="ログハウスのおすすめポイント">
+                <div class="loghouse-appeal-card"><span>室内で遊べる</span>天候に左右されにくく、親子で立ち寄りやすい遊び場です。</div>
+                <div class="loghouse-appeal-card"><span>すべり台再開</span>子どもたちに人気のすべり台で、元気に遊べます。</div>
+                <div class="loghouse-appeal-card"><span>イベント情報も確認</span>夏休みイベントなどの最新情報も公式ページで確認できます。</div>
+              </div>
+
+              <p>利用時間や休館日、イベント情報などは変更される場合があります。お出かけ前に、川島町公園こどもログハウスの公式お知らせをご確認ください。</p>
+
+              <div class="post-meta">
+                <span>掲載日：2026年7月2日</span>
+                <span>利用開始案内：2026年7月2日（木）から</span>
+                <span>掲載終了：2026年8月2日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+              <div class="post-actions">
+                <a class="button" href="https://kawashima-log.hodogaya-kumin.com/smartphone/news.cgi" target="_blank" rel="noopener noreferrer">ログハウス公式お知らせを見る</a>
+                <a class="button secondary" href="https://kawashima-log.hodogaya-kumin.com/smartphone/" target="_blank" rel="noopener noreferrer">川島町公園こどもログハウス</a>
+                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+              </div>
+            </div>
+          </article>
+
           <article id="kairan-20260701" class="community-post kairan-post" data-board="chonaikai" data-start="2026-07-01" data-expire="2026-08-01">
             <span class="post-category">回覧板情報・地域情報</span>
             <div class="post-body">
@@ -1466,7 +1546,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-07-01">2026-07-01</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-07-02">2026-07-02</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>

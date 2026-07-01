@@ -28,3 +28,12 @@
 - 個人名を出さない問い合わせ先表記は継続
 - search-data.js を再生成
 - service-worker.js のキャッシュ名を更新
+
+
+追記：2026-07-02 09:00
+- community-info.html の「町内会からのお知らせ」に、川島町公園こどもログハウスのすべり台再開のお知らせを追加
+- index.html の What's New に、2026年7月2日の更新情報を追加
+- D4_POPULAR_NOTICE_ITEMS に、すべり台再開のお知らせを追加
+- 個人名・個人情報を掲載しない方針を維持
+- search-data.js を再生成
+- service-worker.js のキャッシュ名を更新
