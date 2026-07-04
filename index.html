@@ -3,7 +3,7 @@
 <!--
   川島第四町内会ホームページ index.html
   Last Updated: 2026-07-02
-  Update Note: 川島町公園こどもログハウスのすべり台再開のお知らせを追加。
+  Update Note: トップページの直近の行事予定を7/5以降の年間行事に更新し、今日以降の予定から近い順に最大5件表示するよう修正。
 -->
 <!DOCTYPE html>
 
@@ -2384,6 +2384,7 @@
     .home-upcoming-list { display: grid; gap: 8px; margin-top: 10px; }
     .home-upcoming-row { display: grid; grid-template-columns: 110px 1fr; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 16px; background: var(--soft-red); border: 1px solid rgba(238,216,201,0.9); }
     .home-upcoming-row.event-hidden { display: none !important; }
+    .home-upcoming-row.event-extra-hidden { display: none !important; }
     .home-upcoming-row b { display: inline-flex; justify-content: center; padding: 5px 8px; border-radius: 999px; background: #fff; color: var(--primary-dark); font-size: 12px; white-space: nowrap; }
     .home-upcoming-row span { color: var(--ink); font-size: 13px; font-weight: 900; line-height: 1.35; }
     @media (max-width: 900px) {
@@ -3757,14 +3758,22 @@
 <div>
 <span class="badge">Events</span>
 <h2>直近の行事予定</h2>
-<p>トップページでは直近の予定をコンパクトに表示します。年間行事予定は詳細ページで確認できます。</p>
+<p>今日以降の予定から、近い順に最大5件まで表示します。年間行事予定は詳細ページで確認できます。</p>
 <div aria-label="直近の行事予定" class="home-upcoming-list events-compact-list">
-<div class="home-upcoming-row" data-event-end="2026-06-14"><b>6/14（日）</b><span>川島東部ドッジボール大会 ／ 川島小学校体育館</span></div>
-<div class="home-upcoming-row" data-event-end="2026-06-21"><b>6/21（日）</b><span>わんぱくっ子竹細工・木工細工教室 ／ 川島第四町内会館・横広場</span></div>
-<div class="home-upcoming-row" data-event-end="2026-06-27"><b>6/27（土）</b><span>ソフトバレーボール大会（中止・秋頃に実施予定） ／ 川島小学校体育館</span></div>
+<div class="home-upcoming-row" data-event-start="2026-07-05" data-event-end="2026-07-05"><b>7/5（日）</b><span>わんぱくっ子紙ヒコーキ大会 ／ 川島小学校体育館</span></div>
+<div class="home-upcoming-row" data-event-start="2026-07-26" data-event-end="2026-07-26"><b>7/26（日）</b><span>わんぱくっ子紙ヒコーキ大会区大会 ／ 保土ヶ谷スポーツセンター</span></div>
+<div class="home-upcoming-row" data-event-start="2026-09-05" data-event-end="2026-09-05"><b>9/5（土）</b><span>ボッチャ大会 ／ 川島小学校体育館</span></div>
+<div class="home-upcoming-row" data-event-start="2026-09-12" data-event-end="2026-09-13"><b>9/12（土）・13（日）</b><span>夏祭り ／ 川島町水道みち公園</span></div>
+<div class="home-upcoming-row" data-event-start="2026-09-27" data-event-end="2026-09-27"><b>9/27（日）</b><span>川島小学校地域防災拠点訓練 ／ 川島小学校</span></div>
+<div class="home-upcoming-row" data-event-start="2026-10-18" data-event-end="2026-10-18"><b>10/18（日）</b><span>川島東部連合大運動会 ／ 川島町公園グラウンド</span></div>
+<div class="home-upcoming-row" data-event-start="2026-11-03" data-event-end="2026-11-03"><b>11/3（火・祝）</b><span>芋掘り交流会＆わいわいクッキング ／ 西谷河原農園・川島地域ケアプラザ</span></div>
+<div class="home-upcoming-row" data-event-start="2026-11-07" data-event-end="2026-11-07"><b>11/7（土）</b><span>グラウンド・ゴルフ大会（団体戦） ／ 川島町公園グラウンド</span></div>
+<div class="home-upcoming-row" data-event-start="2026-11-15" data-event-end="2026-11-15"><b>11/15（日）</b><span>わんぱくっ子デイ・キャンプ ／ こども自然公園</span></div>
+<div class="home-upcoming-row" data-event-start="2026-12-13" data-event-end="2026-12-13"><b>12/13（日）</b><span>オセロ大会 ／ 川島第四町内会館</span></div>
+<div class="home-upcoming-row" data-event-start="2026-12-13" data-event-end="2026-12-13"><b>12/13（日）</b><span>ゴルフ大会区大会 ／ 保土ヶ谷公園</span></div>
 </div>
 <p class="event-empty-message" hidden="" id="homeEventEmptyMessage">現在表示できる直近の行事予定はありません。新しい予定が決まり次第お知らせします。</p>
-<div class="events-festival-note">
+<div class="events-festival-note event-auto-hide" data-event-end="2026-09-13">
 <b>夏祭り</b>
 <span>9/12（土）・9/13（日）開催予定。詳しくは夏祭り欄をご確認ください。</span>
 <a href="#festival">夏祭り欄を見る</a>
@@ -4012,8 +4021,21 @@
       return new Date(parts[0], parts[1] - 1, parts[2]);
     }
 
+    function sortHomeUpcomingRows() {
+      const list = document.querySelector('.home-upcoming-list');
+      if (!list) return;
+      const rows = Array.from(list.querySelectorAll('.home-upcoming-row[data-event-end]'));
+      rows.sort((a, b) => {
+        const aDate = parseLocalDateOnly(a.dataset.eventStart || a.dataset.eventEnd);
+        const bDate = parseLocalDateOnly(b.dataset.eventStart || b.dataset.eventEnd);
+        return (aDate ? aDate.getTime() : 0) - (bDate ? bDate.getTime() : 0);
+      });
+      rows.forEach((row) => list.appendChild(row));
+    }
+
     function hidePastEvents() {
       const today = getLocalTodayDateOnly();
+      sortHomeUpcomingRows();
       const eventRows = Array.from(document.querySelectorAll('.event-compact-row[data-event-end], .home-upcoming-row[data-event-end], .event-auto-hide[data-event-end]'));
       let visibleEventCompactCount = 0;
 
@@ -4027,12 +4049,23 @@
         if (!isPast && row.matches('.event-compact-row[data-event-end]')) visibleEventCompactCount += 1;
       });
 
+      const homeRows = Array.from(document.querySelectorAll('.home-upcoming-row[data-event-end]'));
+      let visibleHomeCount = 0;
+      homeRows.forEach((row) => {
+        row.classList.remove('event-extra-hidden');
+        if (row.classList.contains('event-hidden')) return;
+        visibleHomeCount += 1;
+        const overLimit = visibleHomeCount > 5;
+        row.classList.toggle('event-extra-hidden', overLimit);
+        if (overLimit) row.setAttribute('aria-hidden', 'true');
+      });
+
       const emptyMessage = document.getElementById('eventEmptyMessage');
       if (emptyMessage) emptyMessage.hidden = visibleEventCompactCount !== 0;
 
       const homeEmptyMessage = document.getElementById('homeEventEmptyMessage');
       if (homeEmptyMessage) {
-        const homeVisibleCount = Array.from(document.querySelectorAll('.home-upcoming-row[data-event-end]')).filter((row) => !row.classList.contains('event-hidden')).length;
+        const homeVisibleCount = homeRows.filter((row) => !row.classList.contains('event-hidden') && !row.classList.contains('event-extra-hidden')).length;
         homeEmptyMessage.hidden = homeVisibleCount !== 0;
       }
     }

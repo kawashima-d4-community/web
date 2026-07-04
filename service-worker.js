@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-02-20260702_090000
+// Version: 2026-07-02-20260702_093000
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 川島町公園こどもログハウスのすべり台再開のお知らせを追加し、キャッシュ名を更新。
+// Update Note: トップページの直近の行事予定を、今日以降の予定から近い順に最大5件表示するよう更新。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260702_090000';
+const CACHE_NAME = 'kawashima-d4-pwa-20260702_093000';
 const STATIC_ASSETS = [
   './',
   './index.html',

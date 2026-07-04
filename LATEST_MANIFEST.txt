@@ -37,3 +37,8 @@
 - 個人名・個人情報を掲載しない方針を維持
 - search-data.js を再生成
 - service-worker.js のキャッシュ名を更新
+
+Update: 2026-07-02 09:30
+- index.html: 「直近の行事予定」を7/5以降の年間行事へ更新。
+- index.html: 今日以降の予定から近い順に最大5件表示する制御を追加。
+- service-worker.js: キャッシュ名を更新。
