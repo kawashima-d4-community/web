@@ -48,3 +48,25 @@ Update: 2026-07-05 07:55
 - index.html: 最終更新日・メタ情報を 2026-07-05 に更新。
 - index.html: Service Worker 登録にバージョン指定を追加し、古いキャッシュの影響を受けにくいよう修正。
 - service-worker.js: キャッシュ名を更新し、HTMLの古いキャッシュを残しにくい設定へ調整。
+
+
+--- 2026-07-05 夏祭り特設ページサンプル追加 ---
+- summer-festival.html を追加
+- index.html のナビ・更新情報・夏祭り欄に特設ページ導線を追加
+- events.html の夏祭り行事に特設ページリンクを追加
+- sitemap.html / search-data.js / service-worker.js を更新
+
+--- 2026-07-05 夏祭り特設ページサンプル更新 ---
+- summer-festival.html: 神輿の担ぎ手募集、ソーラン節を踊る子ども募集、準備・片づけサポート募集、飲料ブース等ボランティア募集を追加
+- summer-festival.html: 夏まつりをイメージした赤・橙・金・夜空色のカラーへ調整
+- index.html: 夏祭り特設ページの案内文を、参加募集を含む内容へ更新
+- events.html / sitemap.html / search-data.js / service-worker.js を更新
+- 個人名・個人情報を掲載しない方針を維持
+
+
+--- 2026-07-05 夏祭り特設ページ 青系コンパクト版 ---
+- summer-festival.html: 赤系から青系・夜空イメージの特設ページデザインへ変更
+- summer-festival.html: 余白・カード間隔・見出しサイズを見直し、全体をコンパクト化
+- summer-festival.html: 募集カードをタグ型表示にして、読みやすく楽しい雰囲気へ調整
+- search-data.js / service-worker.js を更新
+- 個人名・個人情報を掲載しない方針を維持
