@@ -72,11 +72,11 @@ Update: 2026-07-05 07:55
 - 個人名・個人情報を掲載しない方針を維持
 
 
---- 2026-07-05 夏祭り特設ページ 本番リリース ---
-- summer-festival.html: サンプル表記を削除し、本番公開版として更新
+--- 2026-07-05 夏祭り特設ページ 正式リリース ---
+- summer-festival.html: サンプル表記を削除し、正式版として更新
 - summer-festival.html: 9/12（土）・13（日）を開催決定として明記
 - summer-festival.html: 町内会ホームページへ戻るボタンを追加
-- index.html: 夏祭り特設ページの案内と What's New を本番公開版へ更新
+- index.html: 夏祭り特設ページの案内と What's New を正式版へ更新
 - events.html / sitemap.html / search-data.js / service-worker.js を更新
 - 個人名・個人情報を掲載しない方針を維持
 
@@ -86,3 +86,7 @@ Update: 2026-07-05 07:55
 - index.html: What's New をSNS共有ボタン追加の内容へ更新
 - search-data.js / service-worker.js を更新
 - 個人名・個人情報を掲載しない方針を維持
+
+--- 2026-07-05 夏祭り特設ページ 文言調整 ---
+- summer-festival.html: 公開案内の表記を削除し、通常のお知らせ文へ調整。
+- service-worker.js: キャッシュ名を更新。
