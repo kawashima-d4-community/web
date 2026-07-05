@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-07-05" />
-  <meta name="d4-site-version" content="2026-07-05-115500-mikoshi-photo" />
+  <meta name="d4-site-version" content="2026-07-05-124500-mikoshi-watermark-facefix" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -64,7 +64,7 @@
       position:relative;overflow:hidden;margin:18px 0 12px;border-radius:26px;color:#fff;
       background:
         linear-gradient(135deg,rgba(6,27,61,.78) 0%,rgba(7,89,184,.60) 48%,rgba(0,163,217,.45) 100%),
-        url("./summer-festival-mikoshi.jpg") center 44% / cover no-repeat;
+        url("./summer-festival-mikoshi.jpg") center 18% / cover no-repeat;
       box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.32);
     }
     .hero::before{content:"🎆  🏮  ✨  🎐  🏮  🎆";position:absolute;left:18px;right:18px;top:12px;display:flex;justify-content:space-between;font-size:22px;opacity:.78;pointer-events:none}
@@ -117,7 +117,7 @@
     .matsuri-callout{background:linear-gradient(135deg,#edf9ff,#ffffff);border:1px solid rgba(0,163,217,.25);box-shadow:0 12px 24px rgba(5,58,120,.06)}
 
     .mikoshi-photo-feature{display:grid;grid-template-columns:minmax(0,.82fr) minmax(260px,1.18fr);gap:12px;align-items:center;margin:10px 0 12px;padding:12px;border-radius:20px;background:linear-gradient(135deg,#eaf8ff,#ffffff);border:1px solid var(--border);box-shadow:0 12px 24px rgba(5,58,120,.08)}
-    .mikoshi-photo-feature img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 45%;border-radius:16px;display:block;box-shadow:0 10px 24px rgba(6,27,61,.16)}
+    .mikoshi-photo-feature img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 18%;border-radius:16px;display:block;box-shadow:0 10px 24px rgba(6,27,61,.16)}
     .mikoshi-photo-feature b{display:block;color:var(--primary-dark);font-size:19px;margin-bottom:4px}
     .mikoshi-photo-feature span{display:block;color:var(--muted);font-weight:900;font-size:13.5px}
     .matsuri-callout h3{display:flex;align-items:center;gap:7px}
@@ -405,7 +405,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260705_115500_mikoshi_photo', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260705_124500_mikoshi_watermark_facefix', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
