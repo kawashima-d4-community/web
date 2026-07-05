@@ -118,3 +118,28 @@ Update: 2026-07-05 07:55
 - summer-festival.html: community-info.htmlと同様に「ホームページに戻る」ボタン表記へ統一
 - search-data.js / service-worker.js を更新
 - 個人名・個人情報を掲載しない方針を維持
+
+--- 2026-07-05 夏祭り特設ページ 戻るボタン固定表示化 ---
+- summer-festival.html: 「ホームページに戻る」ボタンを「↑ 上へ」と同じ固定表示エリアに移動
+- summer-festival.html: ページ本文中の重複した戻るボタンを整理
+- service-worker.js: キャッシュ名を更新
+- 個人名・個人情報を掲載しない方針を維持
+
+--- 2026-07-05 夏祭り特設ページ キャッチコピー修正 ---
+- summer-festival.html: メインコピーを「第四の夏祭り、みんなでイッチダンケツ！」に修正
+- search-data.js / service-worker.js を更新
+- 個人名・個人情報を掲載しない方針を維持
+
+--- 2026-07-05 夏祭り特設ページ 駐車場情報追加 ---
+- summer-festival.html: 駐車場は東電置場が利用可能である旨をヒーロー、NEWS、会場案内に追加
+- index.html: 夏祭り案内・直近行事予定・What's Newに駐車場情報を反映
+- events.html / sitemap.html: 夏祭りの駐車場情報を反映
+- search-data.js / service-worker.js を更新
+- 個人名・個人情報を掲載しない方針を維持
+
+--- 2026-07-05 夏祭り特設ページ 神輿写真追加 ---
+- summer-festival.html: 神輿写真をヒーロー背景として使用し、青系オーバーレイで文字の視認性を確保
+- summer-festival.html: 参加募集エリアに神輿写真付きの案内カードを追加
+- index.html: What's Newを「夏祭り特設ページに神輿写真を追加しました」に更新
+- sitemap.html / search-data.js / service-worker.js を更新
+- 個人名・個人情報は掲載しない方針を維持

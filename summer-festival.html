@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-07-05" />
-  <meta name="d4-site-version" content="2026-07-05-104500" />
+  <meta name="d4-site-version" content="2026-07-05-115500-mikoshi-photo" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
+  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -63,10 +63,8 @@
     .hero{
       position:relative;overflow:hidden;margin:18px 0 12px;border-radius:26px;color:#fff;
       background:
-        radial-gradient(circle at 12% 18%, rgba(125,211,255,.35), transparent 24%),
-        radial-gradient(circle at 84% 16%, rgba(255,226,119,.35), transparent 20%),
-        radial-gradient(circle at 68% 82%, rgba(0,163,217,.30), transparent 26%),
-        linear-gradient(135deg,#061b3d 0%,#0759b8 52%,#00a3d9 100%);
+        linear-gradient(135deg,rgba(6,27,61,.78) 0%,rgba(7,89,184,.60) 48%,rgba(0,163,217,.45) 100%),
+        url("./summer-festival-mikoshi.jpg") center 44% / cover no-repeat;
       box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.32);
     }
     .hero::before{content:"🎆  🏮  ✨  🎐  🏮  🎆";position:absolute;left:18px;right:18px;top:12px;display:flex;justify-content:space-between;font-size:22px;opacity:.78;pointer-events:none}
@@ -92,8 +90,6 @@
     .button-red{background:var(--primary);color:#fff}
     .button-outline{background:#fff;color:var(--primary-dark);border-color:var(--border);box-shadow:none}
     .release-note{margin:10px 0 0;padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.92);font-weight:900;font-size:12px}
-    .home-return-strip{margin:10px 0 14px;text-align:right}
-    .home-return-strip a{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:8px 14px;border-radius:999px;background:#fff;color:var(--primary-dark);font-weight:1000;border:1px solid var(--border);box-shadow:0 8px 18px rgba(5,58,120,.10)}
     .page-menu{position:sticky;top:62px;z-index:12;margin:0 0 12px;padding:8px 0;background:rgba(238,248,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(185,222,245,.78)}
     .page-menu .container{display:flex;gap:6px;overflow:auto;padding-bottom:2px}
     .page-menu a{flex:0 0 auto;padding:7px 11px;border-radius:999px;background:#fff;border:1px solid var(--border);font-size:12px;font-weight:1000;color:var(--primary-dark)}
@@ -119,6 +115,11 @@
     .video-card b{font-size:16px}.video-card span{color:rgba(255,255,255,.78);font-weight:900;font-size:12px}.video-card em{font-style:normal;margin-top:4px;font-weight:1000;color:var(--gold)}
     .notice{padding:11px 13px;border-radius:17px;background:#fffbea;border:1px solid rgba(255,226,119,.75);color:#4f5870;font-weight:900}
     .matsuri-callout{background:linear-gradient(135deg,#edf9ff,#ffffff);border:1px solid rgba(0,163,217,.25);box-shadow:0 12px 24px rgba(5,58,120,.06)}
+
+    .mikoshi-photo-feature{display:grid;grid-template-columns:minmax(0,.82fr) minmax(260px,1.18fr);gap:12px;align-items:center;margin:10px 0 12px;padding:12px;border-radius:20px;background:linear-gradient(135deg,#eaf8ff,#ffffff);border:1px solid var(--border);box-shadow:0 12px 24px rgba(5,58,120,.08)}
+    .mikoshi-photo-feature img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 45%;border-radius:16px;display:block;box-shadow:0 10px 24px rgba(6,27,61,.16)}
+    .mikoshi-photo-feature b{display:block;color:var(--primary-dark);font-size:19px;margin-bottom:4px}
+    .mikoshi-photo-feature span{display:block;color:var(--muted);font-weight:900;font-size:13.5px}
     .matsuri-callout h3{display:flex;align-items:center;gap:7px}
     .recruit-list{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;padding:0;list-style:none;color:var(--muted);font-weight:900}
     .recruit-list li{padding:5px 8px;border-radius:999px;background:#fff;border:1px solid rgba(185,222,245,.9);font-size:12px;line-height:1.25}
@@ -130,11 +131,19 @@
     .program-tags em{font-style:normal;padding:5px 8px;border-radius:999px;background:#e7f6ff;color:var(--primary-dark);border:1px solid rgba(185,222,245,.95);font-size:12px;font-weight:1000}
     .program-note{margin-top:10px;padding:11px 13px;border-radius:17px;background:#eef8ff;border:1px solid var(--border);color:var(--muted);font-weight:900}
     .map-box{padding:16px;border-radius:20px;background:linear-gradient(135deg,#f0f9ff,#ffffff);border:1px solid var(--border)}
+    .parking-box{margin-top:10px;padding:14px;border-radius:18px;background:linear-gradient(135deg,#fffbea,#f4fbff);border:1px solid rgba(255,226,119,.88);box-shadow:0 10px 20px rgba(5,58,120,.06)}
+    .parking-box h3{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+    .parking-box h3::before{content:"🅿️"}
+    .parking-box p{font-weight:900}
     .footer-links{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:12px;font-weight:800}.footer-links a{text-decoration:underline;text-underline-offset:3px}
     footer{padding:22px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 0 22px;border-top:1px solid var(--border);font-weight:800}
-    .back-to-top{position:fixed;right:16px;bottom:16px;z-index:50;display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;background:var(--primary);color:#fff;font-size:13px;font-weight:1000;box-shadow:0 10px 24px rgba(5,58,120,.20)}
+    .floating-actions{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:10px}
+    .floating-actions a{display:inline-flex;align-items:center;justify-content:center;min-width:142px;min-height:42px;padding:8px 14px;border-radius:999px;background:var(--primary);color:#fff;font-size:13px;font-weight:1000;box-shadow:0 10px 24px rgba(5,58,120,.20);border:1px solid rgba(255,255,255,.42)}
+    .floating-actions a.secondary{background:#fff;color:var(--primary-dark);border-color:var(--border)}
+    .floating-actions a:hover{background:var(--primary-dark);color:#fff}
     @media(max-width:980px){.grid,.program-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-inner{grid-template-columns:1fr}.date-panel{max-width:560px}.page-menu{top:0}}
-    @media(max-width:640px){.container{width:min(100% - 20px,var(--max))}.nav{align-items:flex-start;flex-direction:column;padding:8px 0}.nav-links{width:100%;overflow:auto;flex-wrap:nowrap;padding-bottom:2px}.hero{border-radius:22px}.hero-inner{padding:46px 16px 18px}h1{font-size:40px}.hero-copy{font-size:15px}.grid,.two-grid,.video-links,.program-grid{grid-template-columns:1fr}section.block{padding:16px;border-radius:20px}.time-row{grid-template-columns:1fr}.button{width:100%}.back-to-top{right:12px;bottom:12px}}
+    @media(max-width:780px){.mikoshi-photo-feature{grid-template-columns:1fr}}
+    @media(max-width:640px){.container{width:min(100% - 20px,var(--max))}.nav{align-items:flex-start;flex-direction:column;padding:8px 0}.nav-links{width:100%;overflow:auto;flex-wrap:nowrap;padding-bottom:2px}.hero{border-radius:22px}.hero-inner{padding:46px 16px 18px}h1{font-size:40px}.hero-copy{font-size:15px}.grid,.two-grid,.video-links,.program-grid{grid-template-columns:1fr}section.block{padding:16px;border-radius:20px}.time-row{grid-template-columns:1fr}.button{width:100%}.floating-actions{right:12px;bottom:12px;left:12px;flex-direction:row}.floating-actions a{flex:1;min-width:0;min-height:40px;padding:8px 10px;font-size:12px}footer{padding-bottom:84px}}
   </style>
   <!-- Google Analytics 4 / アクセス解析 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
@@ -169,20 +178,19 @@
         <div class="hero-inner">
           <div>
             <span class="eyebrow">🏮 川島第四町内会の一大イベント</span>
-            <h1>第四の夏まつり、<br />みんなでワッショイ！</h1>
-            <p class="hero-copy">9月12日（土）・13日（日）開催決定！青い夜空に提灯、太鼓、踊り、笑顔。第四町内会の楽しい2日間を、みんなでつくりましょう。</p>
+            <h1>第四の夏祭り、<br />みんなでイッチダンケツ！</h1>
+            <p class="hero-copy">9月12日（土）・13日（日）開催決定！神輿、提灯、太鼓、踊り、笑顔。第四町内会の楽しい2日間を、みんなでつくりましょう。</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#stage">演芸募集を見る</a>
               <a class="button button-secondary" href="#bon-odori">盆踊り参加を見る</a>
               <a class="button button-secondary" href="#join">参加募集を見る</a>
               <a class="button button-secondary" href="#program">昨年の参考プログラムを見る</a>
               <a class="button button-secondary" href="#movie">過去の祭り動画を見る</a>
-              <a class="button button-secondary" href="./index.html">ホームページに戻る</a>
             </div>
             <p class="release-note">時間・出店・出演・募集方法などの詳細は、決まり次第このページで更新します。</p>
             <div class="share-strip" aria-label="夏祭り特設ページのSNS共有">
               <strong>みんなに広める</strong>
-              <a class="share-button share-x" href="https://twitter.com/intent/tweet?text=%E5%B7%9D%E5%B3%B6%E7%AC%AC%E5%9B%9B%E7%94%BA%E5%86%85%E4%BC%9A%E3%81%AE%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%80%819%2F12%EF%BC%88%E5%9C%9F%EF%BC%89%E3%83%BB13%EF%BC%88%E6%97%A5%EF%BC%89%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%A7%E3%83%AF%E3%83%83%E3%82%B7%E3%83%A7%E3%82%A4%EF%BC%81%E7%89%B9%E8%A8%AD%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%94%E8%A6%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82&url=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2Fsummer-festival.html" target="_blank" rel="noopener">Xで共有</a>
+              <a class="share-button share-x" href="https://twitter.com/intent/tweet?text=%E5%B7%9D%E5%B3%B6%E7%AC%AC%E5%9B%9B%E7%94%BA%E5%86%85%E4%BC%9A%E3%81%AE%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%80%819/12%EF%BC%88%E5%9C%9F%EF%BC%89%E3%83%BB13%EF%BC%88%E6%97%A5%EF%BC%89%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81%E9%A7%90%E8%BB%8A%E5%A0%B4%E3%81%AF%E6%9D%B1%E9%9B%BB%E7%BD%AE%E5%A0%B4%E3%81%8C%E5%88%A9%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%80%82%E3%81%BF%E3%82%93%E3%81%AA%E3%81%A7%E3%82%A4%E3%83%83%E3%83%81%E3%83%80%E3%83%B3%E3%82%B1%E3%83%84%EF%BC%81%E7%89%B9%E8%A8%AD%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%94%E8%A6%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82&url=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2Fsummer-festival.html" target="_blank" rel="noopener">Xで共有</a>
               <button class="share-button share-instagram" type="button" data-share-copy>Instagram用にリンクコピー</button>
               <span id="share-copy-status" class="share-copy-status" aria-live="polite"></span>
             </div>
@@ -192,14 +200,12 @@
             <b>開催決定</b>
             <strong>9/12（土）<br />9/13（日）</strong>
             <span>会場：川島町水道みち公園</span>
+            <span>駐車場：東電置場が利用可能</span>
             <span>13日午前：神輿・山車巡業</span>
             <span>神輿・ソーラン節・お手伝いも募集中</span>
           </div>
         </div>
       </section>
-      <div class="home-return-strip" aria-label="ホームページに戻る案内">
-        <a href="./index.html">← ホームページに戻る</a>
-      </div>
     </div>
 
     <nav class="page-menu" aria-label="夏祭りページ内メニュー">
@@ -212,8 +218,7 @@
         <a href="#schedule">日程</a>
         <a href="#program">昨年参考</a>
         <a href="#movie">過去動画</a>
-        <a href="#access">会場</a>
-        <a href="./index.html">ホームページに戻る</a>
+        <a href="#access">会場・駐車場</a>
       </div>
     </nav>
 
@@ -226,7 +231,8 @@
           </div>
         </div>
         <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催決定です。演芸、盆踊り、神輿、ソーラン節、出店など、内容はこれから順次決めていきます。</p>
-        <div class="notice">出演・踊り・神輿・お手伝い・親子ボランティアなど、地域の皆様の参加をお待ちしています。</div>
+        <div class="notice">出演・踊り・神輿・お手伝い・親子ボランティアなど、地域の皆様の参加をお待ちしています。神輿の担ぎ手も大募集です。</div>
+        <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
       </section>
 
       <section class="block" id="contents">
@@ -268,6 +274,13 @@
         <span class="badge">JOIN US</span>
         <h2>参加・お手伝い 大募集！</h2>
         <p class="lead">見るだけでなく、参加して、手伝って、みんなでつくる夏祭りです。大人も子どもも、親子でも歓迎します。</p>
+        <div class="mikoshi-photo-feature" aria-label="神輿の写真と参加募集">
+          <div>
+            <b>今年も神輿で、町内を元気に。</b>
+            <span>大人も子どもも一緒に担いで、声を出して、夏祭りを盛り上げましょう。初めての方や親子参加も歓迎です。</span>
+          </div>
+          <img src="./summer-festival-mikoshi.jpg" alt="第四町内会夏祭りの神輿の様子" loading="lazy" />
+        </div>
         <div class="grid">
           <article class="card matsuri-callout"><span class="icon">🥁</span><h3>神輿の担ぎ手募集</h3><p>大人も子どもも一緒に神輿を担いで、町内を元気に盛り上げましょう。</p><ul class="recruit-list"><li>親子での参加も歓迎</li><li>初めての方も参加しやすい形を検討します</li><li>詳細は決まり次第お知らせします</li></ul></article>
           <article class="card matsuri-callout"><span class="icon">🌊</span><h3>ソーラン節を踊る子ども募集</h3><p>ソーラン節で会場を元気いっぱいに。子どもたちの参加を募集します。</p><ul class="recruit-list"><li>地域の子どもたちの参加を歓迎</li><li>みんなで楽しく練習・参加できる形を検討します</li><li>募集方法は後日掲載します</li></ul></article>
@@ -332,13 +345,18 @@
           <p>会場は、川島町水道みち公園です。</p>
           <p>会場案内、通行方法、ごみの分別などは、詳細決定後にお知らせします。</p>
         </div>
+        <div class="parking-box" aria-label="駐車場のご案内">
+          <h3>駐車場のご案内</h3>
+          <p>駐車場は、東電置場が利用可能です。</p>
+          <p>場所・利用時間・誘導方法など、当日の詳しい案内は決まり次第このページでお知らせします。</p>
+        </div>
       </section>
 
       <section class="block" id="contact">
         <span class="badge">CONTACT</span>
         <h2>出演・参加・ご協力について</h2>
         <p class="lead">演芸、盆踊り、神輿、ソーラン節、準備・片づけ、飲料ブースのお手伝いについては、決まり次第お知らせします。</p>
-        <div class="actions"><a class="button button-red" href="./contact.html">町内会へのお問い合わせ</a><a class="button button-outline" href="./events.html">年間行事予定を見る</a><a class="button button-outline" href="./index.html">ホームページに戻る</a></div>
+        <div class="actions"><a class="button button-red" href="./contact.html">町内会へのお問い合わせ</a><a class="button button-outline" href="./events.html">年間行事予定を見る</a></div>
       </section>
     </div>
   </main>
@@ -351,10 +369,13 @@
       </div>
     </div>
   </footer>
-  <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ 上へ</a>
+  <div class="floating-actions" aria-label="ページ内ナビゲーション">
+    <a href="#top">↑ 上へ</a>
+    <a class="secondary" href="./index.html">ホームページに戻る</a>
+  </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const festivalShareText = "川島第四町内会の夏祭り、9/12（土）・13（日）開催決定！みんなでワッショイ！特設ページをご覧ください。\nhttps://kawashima-d4-community.github.io/web/summer-festival.html";
+    const festivalShareText = "川島第四町内会の夏祭り、9/12（土）・13（日）開催決定！駐車場は東電置場が利用可能です。みんなでイッチダンケツ！特設ページをご覧ください。\nhttps://kawashima-d4-community.github.io/web/summer-festival.html";
     function fallbackCopyText(text) {
       const textarea = document.createElement('textarea');
       textarea.value = text;
@@ -384,7 +405,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260705_104500', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260705_115500_mikoshi_photo', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>

@@ -1,15 +1,16 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-05-20260705_113000_homebutton_textfix
+// Version: 2026-07-05-20260705_115500_mikoshi_photo
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り特設ページの戻るボタン表記を「ホームページに戻る」に統一。HTMLは常に最新取得を優先。
+// Update Note: 夏祭り特設ページに神輿写真を追加。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260705_113000_homebutton';
+const CACHE_NAME = 'kawashima-d4-pwa-20260705_115500_mikoshi_photo';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './d4-mark2.png',
-  './d4-mark1.png'
+  './d4-mark1.png',
+  './summer-festival-mikoshi.jpg'
 ];
 
 self.addEventListener('install', (event) => {
