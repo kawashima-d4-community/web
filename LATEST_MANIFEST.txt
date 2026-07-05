@@ -111,3 +111,10 @@ Update: 2026-07-05 07:55
 - 連続実行時に古い実行が残りにくいよう concurrency 設定を追加
 - artifact作成時に .github / .git / _site / zip を公開物から除外
 - service-worker.js のキャッシュ名を更新
+
+
+--- 2026-07-05 夏祭り特設ページ 戻るボタン文言修正 ---
+- summer-festival.html: 「トップページ（index.html）へ戻る」表記を削除
+- summer-festival.html: community-info.htmlと同様に「ホームページに戻る」ボタン表記へ統一
+- search-data.js / service-worker.js を更新
+- 個人名・個人情報を掲載しない方針を維持
