@@ -103,3 +103,11 @@ Update: 2026-07-05 07:55
 - 個人名・個人情報は掲載せず、演目カテゴリと構成のみを掲載
 - index.html: What's New を更新
 - search-data.js / service-worker.js / sitemap.html を更新
+
+
+--- 2026-07-05 GitHub Pages デプロイ安定化対応 ---
+- .nojekyll を追加し、GitHub Pagesで静的HTMLとして公開しやすい構成に調整
+- .github/workflows/pages.yml を追加し、Pagesデプロイ用ワークフローを安定化
+- 連続実行時に古い実行が残りにくいよう concurrency 設定を追加
+- artifact作成時に .github / .git / _site / zip を公開物から除外
+- service-worker.js のキャッシュ名を更新
