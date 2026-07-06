@@ -145,3 +145,5 @@ Update: 2026-07-05 07:55
 - 個人名・個人情報は掲載しない方針を維持
 
 [2026-07-06 12:10] event date fix: わんぱくっ子紙ヒコーキ大会区大会を7/26（日）から9/13（日）へ変更。
+
+[2026-07-06 13:15] countdown: summer-festival.html に夏祭りまでのカウントダウンタイマーを追加。index.html / sitemap.html / search-data.js / service-worker.js を更新。

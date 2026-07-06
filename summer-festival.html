@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-07-05" />
-  <meta name="d4-site-version" content="2026-07-05-124500-mikoshi-watermark-facefix" />
+  <meta name="last-modified" content="2026-07-06" />
+  <meta name="d4-site-version" content="2026-07-06-20260706_131500_countdown" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
+  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、夏祭りまでのカウントダウン、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -76,6 +76,10 @@
     .date-panel b{display:block;color:var(--primary);font-size:13px;letter-spacing:.04em}
     .date-panel strong{display:block;margin:4px 0 2px;font-size:clamp(24px,3.4vw,36px);line-height:1.05;color:var(--primary-dark)}
     .date-panel span{display:block;color:var(--muted);font-weight:900;font-size:13px;margin-top:2px}
+    .countdown-box{margin:12px 0;padding:12px 14px;border-radius:18px;background:linear-gradient(135deg,#fffbea,#eaf8ff);border:1px solid rgba(255,226,119,.9);text-align:center;box-shadow:0 10px 22px rgba(5,58,120,.10)}
+    .countdown-label{display:block;color:var(--primary-dark);font-size:13px;font-weight:1000;line-height:1.2}
+    .countdown-box strong{display:block;margin-top:2px;color:var(--primary);font-size:clamp(30px,5vw,48px);line-height:1.05;letter-spacing:-.04em}
+    .countdown-box small{display:block;margin-top:5px;color:var(--muted);font-size:12px;font-weight:900;line-height:1.35}
     .hero-actions,.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
     .share-strip{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;padding:10px;border-radius:18px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.24)}
     .share-strip strong{font-size:13px;color:#fff;margin-right:2px;white-space:nowrap}
@@ -199,6 +203,11 @@
           <div class="date-panel">
             <b>開催決定</b>
             <strong>9/12（土）<br />9/13（日）</strong>
+            <div class="countdown-box" aria-label="夏祭りまでのカウントダウン">
+              <span class="countdown-label">夏祭りまで</span>
+              <strong id="festival-countdown">計算中</strong>
+              <small id="festival-countdown-note">初日 9/12（土）まで</small>
+            </div>
             <span>会場：川島町水道みち公園</span>
             <span>駐車場：東電置場が利用可能</span>
             <span>13日午前：神輿・山車巡業</span>
@@ -364,7 +373,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br />
-        <span class="site-updated">最終更新日：<time datetime="2026-07-05">2026-07-05</time></span><br />
+        <span class="site-updated">最終更新日：<time datetime="2026-07-06">2026-07-06</time></span><br />
         <span class="footer-links"><a href="./index.html">トップ</a><a href="./events.html">行事予定</a><a href="./community-info.html">お知らせ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span>
       </div>
     </div>
@@ -375,6 +384,32 @@
   </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function updateFestivalCountdown() {
+      const countdown = document.getElementById('festival-countdown');
+      const note = document.getElementById('festival-countdown-note');
+      if (!countdown) return;
+
+      const today = new Date();
+      const todayDateOnly = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const festivalStart = new Date(2026, 8, 12);
+      const festivalEnd = new Date(2026, 8, 13);
+      const oneDay = 24 * 60 * 60 * 1000;
+      const diffDays = Math.ceil((festivalStart - todayDateOnly) / oneDay);
+
+      if (todayDateOnly < festivalStart) {
+        countdown.textContent = `あと${diffDays}日`;
+        if (note) note.textContent = '初日 9/12（土）まで';
+      } else if (todayDateOnly <= festivalEnd) {
+        countdown.textContent = '本日開催中！';
+        if (note) note.textContent = '会場でお待ちしています';
+      } else {
+        countdown.textContent = '開催終了';
+        if (note) note.textContent = 'ご参加ありがとうございました';
+      }
+    }
+
+    updateFestivalCountdown();
     const festivalShareText = "川島第四町内会の夏祭り、9/12（土）・13（日）開催決定！駐車場は東電置場が利用可能です。みんなでイッチダンケツ！特設ページをご覧ください。\nhttps://kawashima-d4-community.github.io/web/summer-festival.html";
     function fallbackCopyText(text) {
       const textarea = document.createElement('textarea');
@@ -405,7 +440,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260705_124500_mikoshi_watermark_facefix', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260706_131500_countdown', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
