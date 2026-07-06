@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-06-20260706_131500_countdown
+// Version: 2026-07-06-20260706_143000_voice_box
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り特設ページにカウントダウンタイマーを追加。HTMLは常に最新取得を優先。
+// Update Note: 夏祭り特設ページにご意見・ご協力BOXを追加。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260706_131500_countdown';
+const CACHE_NAME = 'kawashima-d4-pwa-20260706_143000_voice_box';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
