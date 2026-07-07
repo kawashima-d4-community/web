@@ -151,3 +151,5 @@ Update: 2026-07-05 07:55
 [2026-07-06 14:30] summer festival voice box: 特設サイトに「夏祭り ご意見・ご協力BOX」を追加。Googleフォームへの導線を設置。
 
 [2026-07-07 19:30] summer festival flyer: Googleドライブの夏祭りフライヤーをcommunity-info.htmlとsummer-festival.htmlに掲載。index/sitemap/search/swも更新。
+
+[2026-07-08 06:30] admin dashboard access fix: summer-festival.htmlに独自ページビュー送信を追加し、add.htmlのページ一覧に「夏祭り特設ページ」を追加。
