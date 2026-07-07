@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-07-02" />
-  <meta name="d4-site-version" content="2026-07-02" />
+  <meta name="last-modified" content="2026-07-07" />
+  <meta name="d4-site-version" content="2026-07-07-20260707_193000_flyer" />
   <title>町内会・地域からのお知らせ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。川島町公園こどもログハウスのすべり台再開、7/1回覧板情報、川島地域ケアプラザ、活動報告、行事案内、地域情報を掲載期間に応じて整理しています。" />
+  <meta name="description" content="川島第四町内会からのお知らせと、西谷・上星川周辺の地域情報を区別して掲載します。夏祭りフライヤー、川島町公園こどもログハウスのすべり台再開、7/1回覧板情報、川島地域ケアプラザ、活動報告、行事案内、地域情報を掲載期間に応じて整理しています。" />
   <style>
 
 :root {
@@ -195,6 +195,45 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       box-shadow: 0 8px 18px rgba(127,29,29,0.06);
       background: #fff;
     }
+    .flyer-post .post-body h3 {
+      font-size: clamp(22px, 3vw, 30px);
+      color: var(--primary-dark);
+    }
+    .flyer-lead {
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--ink);
+    }
+    .flyer-preview {
+      overflow: hidden;
+      margin: 12px 0 10px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 10px 22px rgba(127,29,29,0.08);
+    }
+    .flyer-preview iframe {
+      display: block;
+      width: 100%;
+      min-height: 560px;
+      border: 0;
+      background: #fff;
+    }
+    .flyer-note {
+      padding: 10px 12px;
+      border-radius: 15px;
+      background: #fff7e8;
+      border: 1px solid rgba(242,166,90,0.42);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 850;
+    }
+    @media (max-width: 760px) {
+      .flyer-preview iframe {
+        min-height: 460px;
+      }
+    }
+
     .empty-state { display: none; }
     .flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .flow-card { padding: 16px; border-radius: 18px; background: #fff; border: 1px solid var(--border); }
@@ -975,6 +1014,31 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         <div class="post-list" id="chonaikaiPostList">
 
 
+          <article id="summer-festival-flyer-20260707" class="community-post flyer-post" data-board="chonaikai" data-start="2026-07-07" data-expire="2026-09-14">
+            <span class="post-category">町内会行事・夏祭り</span>
+            <div class="post-body">
+              <h3>夏祭りフライヤーを公開しました</h3>
+              <p class="flyer-lead">9月12日（土）・13日（日）開催の川島第四町内会 夏祭りフライヤーを公開しました。開催日、会場、夏祭りの雰囲気をぜひご確認ください。</p>
+
+              <div class="flyer-preview" aria-label="夏祭りフライヤープレビュー">
+                <iframe src="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/preview" title="夏祭りフライヤー" loading="lazy" allow="autoplay"></iframe>
+              </div>
+
+              <p class="flyer-note">プレビューが表示されない場合は、下の「フライヤーを開く」ボタンからGoogleドライブでご確認ください。閲覧には、ファイルの共有設定が「リンクを知っている全員が閲覧可」になっている必要があります。</p>
+
+              <div class="post-meta">
+                <span>掲載日：2026年7月7日</span>
+                <span>開催日：2026年9月12日（土）・13日（日）</span>
+                <span>掲載終了：2026年9月14日</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+              <div class="post-actions">
+                <a class="button" href="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/view?usp=sharing" target="_blank" rel="noopener noreferrer">フライヤーを開く</a>
+                <a class="button secondary" href="./summer-festival.html">夏祭り特設ページを見る</a>
+              </div>
+            </div>
+          </article>
+
           <article id="loghouse-slide-20260702" class="community-post loghouse-slide-post" data-board="chonaikai" data-start="2026-07-02" data-expire="2026-08-02">
             <span class="post-category">地域情報・子ども向け</span>
             <div class="post-body">
@@ -1546,7 +1610,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-07-02">2026-07-02</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-07-07">2026-07-07</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
