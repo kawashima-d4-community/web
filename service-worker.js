@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-09-20260709_090000_kairan
+// Version: 2026-07-09-20260709_100000_security_notice
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 7月9日の回覧板情報を町内会からのお知らせに掲載。HTMLは常に最新取得を優先。
+// Update Note: 保土ケ谷防犯協会・保土ケ谷警察署からのお知らせを町内会からのお知らせに掲載。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260709_090000_kairan';
+const CACHE_NAME = 'kawashima-d4-pwa-20260709_100000_security_notice';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
