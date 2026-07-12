@@ -157,3 +157,5 @@ Update: 2026-07-05 07:55
 [2026-07-09 09:00] kairan update: 7月9日の回覧板情報をcommunity-info.htmlに掲載。敬老お祝い該当者調査、西谷地区センターだよりの概要とGoogle Driveリンクを追加。
 
 [2026-07-09 10:00] security notice: 保土ケ谷防犯協会・保土ケ谷警察署からのお知らせをcommunity-info.htmlに掲載。index/sitemap/search/swも更新。
+
+[2026-07-09 11:30] taiko notice: 太鼓の会からの案内をcommunity-info.htmlとsummer-festival.htmlに掲載。ローカル画像 taiko-kai-flyer.jpg とGoogleドライブリンクを設置。

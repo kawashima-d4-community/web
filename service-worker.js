@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-09-20260709_100000_security_notice
+// Version: 2026-07-09-20260709_113000_taiko
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 保土ケ谷防犯協会・保土ケ谷警察署からのお知らせを町内会からのお知らせに掲載。HTMLは常に最新取得を優先。
+// Update Note: 太鼓の会からの案内を町内会からのお知らせと夏祭り特設サイトに掲載。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260709_100000_security_notice';
+const CACHE_NAME = 'kawashima-d4-pwa-20260709_113000_taiko';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
@@ -11,6 +11,7 @@ const STATIC_ASSETS = [
   './d4-mark2.png',
   './d4-mark1.png',
   './summer-festival-mikoshi.jpg'
+  './taiko-kai-flyer.jpg',
 ];
 
 self.addEventListener('install', (event) => {
