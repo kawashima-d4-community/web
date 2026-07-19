@@ -163,3 +163,5 @@ Update: 2026-07-05 07:55
 [2026-07-09 12:00] mikoshi image replace: summer-festival-mikoshi.jpg を差し替え。service-worker cache versionを更新。
 
 [2026-07-19 09:00] summer festival progress update: 特設ページに準備だより、参加・お手伝い募集強調、よくある質問を追加。index/sitemap/search/swも更新。
+
+[2026-07-19 09:30] remove special flyer: summer-festival.htmlから夏祭りフライヤーセクションとページ内メニューリンクを削除。community-info.htmlの町内会からのお知らせ掲載は維持。

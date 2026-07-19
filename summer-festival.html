@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-07-19" />
-  <meta name="d4-site-version" content="2026-07-19-20260719_090000_progress_update" />
+  <meta name="d4-site-version" content="2026-07-19-20260719_093000_remove_special_flyer" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、夏祭りフライヤー、太鼓の会からの案内、夏祭り準備だより、よくある質問、夏祭りまでのカウントダウン、夏祭りご意見・ご協力BOX、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
+  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、太鼓の会からの案内、夏祭り準備だより、よくある質問、夏祭りまでのカウントダウン、夏祭りご意見・ご協力BOX、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -145,12 +145,6 @@
     .voice-points{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0 0}
     .voice-point{padding:10px;border-radius:16px;background:rgba(255,255,255,.86);border:1px solid rgba(185,222,245,.95);color:var(--primary-dark);font-size:12px;font-weight:1000;text-align:center}
     .voice-note{margin-top:12px;padding:10px 12px;border-radius:16px;background:#fff;border:1px dashed rgba(7,89,184,.35);color:var(--muted);font-size:12.5px;font-weight:900}
-    .festival-flyer-card{padding:16px;border-radius:22px;background:linear-gradient(135deg,#fffbea,#eef8ff);border:1px solid rgba(255,226,119,.9);box-shadow:0 14px 28px rgba(5,58,120,.08)}
-    .festival-flyer-preview{overflow:hidden;margin:12px 0 10px;border-radius:18px;border:1px solid var(--border);background:#fff;box-shadow:0 10px 22px rgba(5,58,120,.10)}
-    .festival-flyer-preview iframe{display:block;width:100%;min-height:560px;border:0;background:#fff}
-    .festival-flyer-note{padding:10px 12px;border-radius:15px;background:#fff;border:1px dashed rgba(7,89,184,.35);color:var(--muted);font-size:13px;font-weight:900}
-    @media(max-width:760px){.festival-flyer-preview iframe{min-height:460px}}
-
     .festival-flyer-preview img{display:block;width:100%;max-height:860px;object-fit:contain;background:#fff}
     .taiko-card{padding:16px;border-radius:22px;background:linear-gradient(135deg,#fffbea,#eef8ff);border:1px solid rgba(255,226,119,.9);box-shadow:0 14px 28px rgba(5,58,120,.08)}
     .taiko-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 0}
@@ -258,7 +252,6 @@
     <nav class="page-menu" aria-label="夏祭りページ内メニュー">
       <div class="container">
         <a href="#news">お知らせ</a>
-        <a href="#flyer">フライヤー</a>
         <a href="#taiko">太鼓の会</a>
         <a href="#progress">準備だより</a>
         <a href="#faq">よくある質問</a>
@@ -287,21 +280,6 @@
         <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
       </section>
 
-      <section class="block" id="flyer">
-        <span class="badge">FLYER</span>
-        <h2>夏祭りフライヤーを公開しました</h2>
-        <p class="lead">9月12日（土）・13日（日）開催の夏祭りフライヤーを公開しました。ご家族、ご近所の方にもぜひ共有してください。</p>
-        <div class="festival-flyer-card">
-          <div class="festival-flyer-preview" aria-label="夏祭りフライヤープレビュー">
-            <iframe src="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/preview" title="夏祭りフライヤー" loading="lazy" allow="autoplay"></iframe>
-          </div>
-          <p class="festival-flyer-note">プレビューが表示されない場合は、下のボタンからGoogleドライブでご確認ください。閲覧には、ファイルの共有設定が「リンクを知っている全員が閲覧可」になっている必要があります。</p>
-          <div class="actions">
-            <a class="button button-red" href="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/view?usp=sharing" target="_blank" rel="noopener noreferrer">フライヤーを開く</a>
-            <a class="button button-outline" href="./community-info.html#summer-festival-flyer-20260707">町内会からのお知らせを見る</a>
-          </div>
-        </div>
-      </section>
 
       <section class="block" id="taiko">
         <span class="badge">TAIKO</span>
@@ -619,7 +597,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260719_090000_progress_update', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260719_093000_remove_special_flyer', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
