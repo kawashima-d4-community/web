@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-07-09" />
-  <meta name="d4-site-version" content="2026-07-09-20260709_113000_taiko" />
+  <meta name="last-modified" content="2026-07-19" />
+  <meta name="d4-site-version" content="2026-07-19-20260719_090000_progress_update" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、夏祭りフライヤー、太鼓の会からの案内、夏祭りまでのカウントダウン、夏祭りご意見・ご協力BOX、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
+  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、夏祭りフライヤー、太鼓の会からの案内、夏祭り準備だより、よくある質問、夏祭りまでのカウントダウン、夏祭りご意見・ご協力BOX、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -157,6 +157,26 @@
     .taiko-summary span{display:block;padding:10px;border-radius:15px;background:rgba(255,255,255,.9);border:1px solid rgba(185,222,245,.95);color:var(--primary-dark);font-size:12.5px;font-weight:1000;text-align:center}
     @media(max-width:780px){.taiko-summary{grid-template-columns:1fr}}
 
+    .progress-board{position:relative;overflow:hidden;padding:18px;border-radius:24px;background:linear-gradient(135deg,#fff7e8,#eef8ff 78%);border:1px solid rgba(255,226,119,.9);box-shadow:0 14px 28px rgba(5,58,120,.08)}
+    .progress-board::before{content:"準備中";position:absolute;right:14px;top:12px;font-size:44px;font-weight:1000;color:rgba(7,89,184,.08);letter-spacing:.03em;transform:rotate(-6deg)}
+    .progress-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .progress-head h3{margin:0;color:var(--primary-dark);font-size:clamp(22px,3vw,30px)}
+    .progress-date{display:inline-flex;align-items:center;justify-content:center;padding:7px 11px;border-radius:999px;background:#fff;color:var(--primary-dark);border:1px solid var(--border);font-size:12px;font-weight:1000}
+    .progress-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+    .progress-card{padding:14px;border-radius:18px;background:rgba(255,255,255,.9);border:1px solid rgba(185,222,245,.95);box-shadow:0 8px 18px rgba(5,58,120,.05)}
+    .progress-card b{display:block;color:var(--primary-dark);margin-bottom:5px}
+    .progress-card span{display:block;color:var(--muted);font-size:13px;font-weight:900}
+    .priority-join{padding:18px;border-radius:24px;background:linear-gradient(135deg,#eaf8ff,#ffffff);border:2px solid rgba(7,89,184,.18);box-shadow:0 16px 30px rgba(5,58,120,.08)}
+    .priority-join h3{font-size:clamp(22px,3vw,30px);color:var(--primary-dark);margin-bottom:6px}
+    .priority-tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+    .priority-tags li{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid rgba(185,222,245,.95);color:var(--primary-dark);font-size:12px;font-weight:1000}
+    .faq-list{display:grid;gap:10px;margin-top:12px}
+    .faq-item{padding:14px;border-radius:18px;background:#fff;border:1px solid var(--border);box-shadow:0 8px 18px rgba(5,58,120,.05)}
+    .faq-item b{display:block;color:var(--primary-dark);margin-bottom:6px}
+    .faq-item p{margin:0;color:var(--muted);font-weight:900}
+    @media(max-width:980px){.progress-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.progress-grid{grid-template-columns:1fr}}
+
     .footer-links{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:12px;font-weight:800}.footer-links a{text-decoration:underline;text-underline-offset:3px}
     footer{padding:22px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 0 22px;border-top:1px solid var(--border);font-weight:800}
     .floating-actions{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:10px}
@@ -240,6 +260,8 @@
         <a href="#news">お知らせ</a>
         <a href="#flyer">フライヤー</a>
         <a href="#taiko">太鼓の会</a>
+        <a href="#progress">準備だより</a>
+        <a href="#faq">よくある質問</a>
         <a href="#contents">見どころ</a>
         <a href="#stage">演芸募集</a>
         <a href="#bon-odori">盆踊り</a>
@@ -261,7 +283,7 @@
           </div>
         </div>
         <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催決定です。演芸、盆踊り、神輿、ソーラン節、出店など、内容はこれから順次決めていきます。</p>
-        <div class="notice">出演・踊り・神輿・お手伝い・親子ボランティアなど、地域の皆様の参加をお待ちしています。神輿の担ぎ手も大募集です。</div>
+        <div class="notice">出演・踊り・神輿・太鼓・お手伝い・親子ボランティアなど、地域の皆様の参加をお待ちしています。準備状況は「夏祭り準備だより」で順次お知らせします。</div>
         <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
       </section>
 
@@ -305,6 +327,54 @@
           <div class="actions">
             <a class="button button-red" href="https://drive.google.com/file/d/1BjWTrTxBW3ttsObQ0v-ItB77erwjY2ua/view?usp=sharing" target="_blank" rel="noopener noreferrer">案内チラシを開く</a>
             <a class="button button-outline" href="./community-info.html#taiko-kai-20260709">町内会からのお知らせを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="progress">
+        <span class="badge">PROGRESS</span>
+        <h2>夏祭り準備だより</h2>
+        <div class="progress-board">
+          <div class="progress-head">
+            <div>
+              <h3>Vol.1　夏祭りに向けて準備中です</h3>
+              <p class="lead">9月12日（土）・13日（日）の夏祭りに向けて、少しずつ準備が進んでいます。</p>
+            </div>
+            <span class="progress-date">更新日：2026年7月19日</span>
+          </div>
+          <p>現在、演芸、盆踊り、神輿、太鼓、ソーラン節、お手伝い、出店内容などについて、関係者で調整を進めています。決まった内容から順次、この特設サイトでお知らせしていきます。</p>
+          <div class="progress-grid" aria-label="現在準備中の内容">
+            <div class="progress-card"><b>演芸・ステージ</b><span>出演内容や進行について、調整を進めています。</span></div>
+            <div class="progress-card"><b>盆踊り・太鼓</b><span>太鼓の会からの案内を掲載しました。子どもたちの参加も募集中です。</span></div>
+            <div class="progress-card"><b>神輿・山車</b><span>神輿の担ぎ手や、子どもたちの参加しやすい形を検討しています。</span></div>
+            <div class="progress-card"><b>ソーラン節</b><span>子どもたちが楽しく参加できる内容を検討しています。</span></div>
+            <div class="progress-card"><b>お手伝い</b><span>準備、片づけ、飲料ブースなど、できる範囲でのご協力を募集予定です。</span></div>
+            <div class="progress-card"><b>お知らせ</b><span>回覧、掲示、ホームページで順次お知らせしていきます。</span></div>
+          </div>
+          <div class="actions">
+            <a class="button button-red" href="./community-info.html#taiko-kai-20260709">太鼓の会の案内を見る</a>
+            <a class="button button-outline" href="#voice">ご意見・ご協力BOXへ</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="participation">
+        <span class="badge">JOIN / SUPPORT</span>
+        <h2>参加してみませんか？</h2>
+        <div class="priority-join">
+          <h3>見るだけでなく、参加して、手伝って、みんなでつくる夏祭りへ</h3>
+          <p class="lead">詳細はこれから決まりますが、「興味がある」「少しなら手伝えるかも」という声を募集しています。</p>
+          <ul class="priority-tags">
+            <li>神輿を担いでみたい方</li>
+            <li>太鼓に興味がある子どもたち</li>
+            <li>盆踊りを一緒に盛り上げたい方</li>
+            <li>ソーラン節に参加したい子どもたち</li>
+            <li>準備・片づけを少しだけ手伝える方</li>
+            <li>飲料ブースなどを手伝える方</li>
+          </ul>
+          <div class="actions">
+            <a class="button button-red" href="#voice">ご意見・ご協力を送る</a>
+            <a class="button button-outline" href="#join">参加募集を見る</a>
           </div>
         </div>
       </section>
@@ -411,6 +481,30 @@
         </div>
       </section>
 
+      <section class="block" id="faq">
+        <span class="badge">FAQ</span>
+        <h2>よくある質問</h2>
+        <p class="lead">詳細は調整中ですが、現時点でお伝えできる内容をまとめています。</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <b>Q. 夏祭りは誰でも参加できますか？</b>
+            <p>A. 川島第四町内会の皆さまを中心に、地域の方に楽しんでいただける行事として準備しています。</p>
+          </div>
+          <div class="faq-item">
+            <b>Q. 子どもも参加できますか？</b>
+            <p>A. はい。太鼓、ソーラン節、神輿など、子どもたちも参加しやすい内容を検討しています。</p>
+          </div>
+          <div class="faq-item">
+            <b>Q. お手伝いは少しだけでも大丈夫ですか？</b>
+            <p>A. 大丈夫です。準備、片づけ、飲料ブースなど、できる範囲でのご協力をお願いできればと考えています。</p>
+          </div>
+          <div class="faq-item">
+            <b>Q. 詳細はいつ分かりますか？</b>
+            <p>A. 決まり次第、この特設サイト、回覧、掲示などでお知らせします。</p>
+          </div>
+        </div>
+      </section>
+
       <section class="block" id="access">
         <span class="badge">MAP / ACCESS</span>
         <h2>会場案内</h2>
@@ -458,7 +552,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br />
-        <span class="site-updated">最終更新日：<time datetime="2026-07-09">2026-07-09</time></span><br />
+        <span class="site-updated">最終更新日：<time datetime="2026-07-19">2026-07-19</time></span><br />
         <span class="footer-links"><a href="./index.html">トップ</a><a href="./events.html">行事予定</a><a href="./community-info.html">お知らせ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span>
       </div>
     </div>
@@ -525,7 +619,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260709_113000_taiko', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260719_090000_progress_update', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>

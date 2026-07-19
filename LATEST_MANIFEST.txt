@@ -159,3 +159,7 @@ Update: 2026-07-05 07:55
 [2026-07-09 10:00] security notice: 保土ケ谷防犯協会・保土ケ谷警察署からのお知らせをcommunity-info.htmlに掲載。index/sitemap/search/swも更新。
 
 [2026-07-09 11:30] taiko notice: 太鼓の会からの案内をcommunity-info.htmlとsummer-festival.htmlに掲載。ローカル画像 taiko-kai-flyer.jpg とGoogleドライブリンクを設置。
+
+[2026-07-09 12:00] mikoshi image replace: summer-festival-mikoshi.jpg を差し替え。service-worker cache versionを更新。
+
+[2026-07-19 09:00] summer festival progress update: 特設ページに準備だより、参加・お手伝い募集強調、よくある質問を追加。index/sitemap/search/swも更新。
