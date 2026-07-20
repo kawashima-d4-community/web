@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-19-20260719_093000_remove_special_flyer
+// Version: 2026-07-20-20260720_120000_about_nav
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り特設サイトから夏祭りフライヤーセクションを削除。HTMLは常に最新取得を優先。
+// Update Note: 上段メニューバーに「町内会について」を追加。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260719_093000_remove_special_flyer';
+const CACHE_NAME = 'kawashima-d4-pwa-20260720_120000_about_nav';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
