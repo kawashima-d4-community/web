@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-20-20260720_120000_about_nav
+// Version: 2026-07-26-20260726_183000_stage_performer_recruit
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 上段メニューバーに「町内会について」を追加。HTMLは常に最新取得を優先。
+// Update Note: 夏祭り特設ページで演芸出演募集を強化し、9/13出演枠を案内。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260720_120000_about_nav';
+const CACHE_NAME = 'kawashima-d4-pwa-20260726_183000_stage_performer_recruit';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
