@@ -169,3 +169,7 @@ Update: 2026-07-05 07:55
 [2026-07-20 12:00] about nav: index.htmlの上段メニューバーに「町内会について」を追加。summer-festival.htmlのサイトメニューにも同導線を追加。
 
 [2026-07-26 18:30] stage performer recruit: 夏祭り特設ページの演芸出演募集を全面強化。9/13（日）枠の募集、応募時必須事項、問い合わせページ導線を追加。
+
+[2026-07-29 09:00] stage closed notice: 夏祭り特設ページの演芸出演募集を受付終了案内へ変更。音楽バンド、弾き語り、ブレイクダンスバトル、フラダンス、川島ソーラン等の楽しい演芸イベント案内を掲載。index/sitemap/search/swも更新。
+
+[2026-07-29 10:00] volunteer recruit special: 夏祭り特設ページに祭礼ボランティア大募集セクションを追加。申込QRコードをローカル画像として掲載し、フライヤーはGoogle Driveリンクとして掲載。index/sitemap/search/swも更新。

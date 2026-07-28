@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-07-26" />
-  <meta name="d4-site-version" content="2026-07-26-20260726_183000_stage_performer_recruit" />
+  <meta name="last-modified" content="2026-07-29" />
+  <meta name="d4-site-version" content="2026-07-29-20260729_100000_volunteer_recruit" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、太鼓の会からの案内、夏祭り準備だより、よくある質問、演芸出演募集、夏祭りまでのカウントダウン、夏祭りご意見・ご協力BOX、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
+  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。駐車場は東電置場が利用可能です。神輿写真を使ったメインビジュアル、太鼓の会からの案内、夏祭り準備だより、よくある質問、演芸イベント案内、祭礼ボランティア募集、夏祭りまでのカウントダウン、夏祭りご意見・ご協力BOX、X共有・Instagram紹介用のリンクコピーにも対応しています。演芸募集、盆踊りサークル参加募集、神輿の担ぎ手、ソーラン節に参加する子ども、運営ボランティア募集、昨年の参考プログラム、過去動画、今後のお知らせを掲載します。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -186,6 +186,27 @@
     @media(max-width:980px){.stage-slot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:640px){.stage-slot-grid{grid-template-columns:1fr}.stage-recruit-emphasis{border-radius:16px;align-items:flex-start}}
 
+    .stage-closed-banner{display:inline-flex;align-items:center;gap:8px;margin:6px 0 12px;padding:9px 13px;border-radius:999px;background:#0759b8;color:#fff;font-weight:1000;box-shadow:0 10px 22px rgba(7,89,184,.18)}
+    .stage-event-list{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;padding:0;list-style:none}
+    .stage-event-list li{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid rgba(185,222,245,.95);color:var(--primary-dark);font-size:13px;font-weight:1000}
+    .stage-thanks-box{margin-top:12px;padding:14px;border-radius:18px;background:#fff;border:1px dashed rgba(7,89,184,.35);color:var(--muted);font-weight:900}
+    .stage-thanks-box b{display:block;color:var(--primary-dark);font-size:16px;margin-bottom:6px}
+
+    .volunteer-recruit-card{position:relative;overflow:hidden;padding:20px;border-radius:26px;background:linear-gradient(135deg,#fff7e8,#eef8ff 76%);border:2px solid rgba(242,166,90,.45);box-shadow:0 18px 36px rgba(5,58,120,.10)}
+    .volunteer-recruit-card::before{content:"大募集";position:absolute;right:14px;top:10px;font-size:42px;font-weight:1000;color:rgba(217,104,79,.10);letter-spacing:.03em;transform:rotate(-6deg)}
+    .volunteer-recruit-card h3{margin:0 0 8px;color:var(--primary-dark);font-size:clamp(24px,3.2vw,34px)}
+    .volunteer-recruit-emphasis{display:inline-flex;align-items:center;gap:6px;margin:6px 0 12px;padding:8px 12px;border-radius:999px;background:#d9684f;color:#fff;font-weight:1000;box-shadow:0 10px 22px rgba(217,104,79,.18)}
+    .volunteer-detail-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(230px,.85fr);gap:16px;align-items:start;margin-top:14px}
+    .volunteer-detail-list{display:grid;gap:8px}
+    .volunteer-detail-row{display:grid;grid-template-columns:minmax(140px,.75fr) 1fr;gap:10px;padding:11px;border-radius:16px;background:#fff;border:1px solid var(--border)}
+    .volunteer-detail-row b{color:var(--primary-dark)}
+    .volunteer-detail-row span{color:var(--muted);font-weight:900}
+    .volunteer-qr-box{padding:16px;border-radius:22px;background:#fff;border:1px solid rgba(185,222,245,.95);text-align:center;box-shadow:0 10px 22px rgba(5,58,120,.06)}
+    .volunteer-qr-box img{width:min(260px,100%);height:auto;display:block;margin:8px auto 10px;border-radius:12px}
+    .volunteer-qr-box b{display:block;color:var(--primary-dark);font-size:16px}
+    .volunteer-qr-box p{margin:8px 0 0;color:var(--muted);font-size:13px;font-weight:900}
+    @media(max-width:880px){.volunteer-detail-grid{grid-template-columns:1fr}.volunteer-detail-row{grid-template-columns:1fr}}
+
     .footer-links{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:12px;font-weight:800}.footer-links a{text-decoration:underline;text-underline-offset:3px}
     footer{padding:22px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 0 22px;border-top:1px solid var(--border);font-weight:800}
     .floating-actions{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:10px}
@@ -275,6 +296,7 @@
         <a href="#stage">演芸募集</a>
         <a href="#bon-odori">盆踊り</a>
         <a href="#join">参加募集</a>
+        <a href="#festival-volunteer">祭礼ボランティア</a>
         <a href="#schedule">日程</a>
         <a href="#program">昨年参考</a>
         <a href="#movie">過去動画</a>
@@ -292,7 +314,7 @@
           </div>
         </div>
         <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催決定です。演芸、盆踊り、神輿、ソーラン節、出店など、内容はこれから順次決めていきます。</p>
-        <div class="notice">演芸出演を募集中です。出演可能枠は複数あり、特に9/13（日）の出演枠を募集しています。出演希望の方は、お問い合わせページからご連絡ください。</div>
+        <div class="notice">演芸出演者は応募多数となり、受付を終了しました。今年も音楽バンド、弾き語り、ブレイクダンスバトル、フラダンス、川島ソーランなど、楽しい演芸イベントが盛りだくさんです。あわせて、祭礼ボランティアも大募集しています。</div>
         <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
       </section>
 
@@ -338,11 +360,11 @@
           </div>
           <p>現在、演芸、盆踊り、神輿、太鼓、ソーラン節、お手伝い、出店内容などについて、関係者で調整を進めています。決まった内容から順次、この特設サイトでお知らせしていきます。</p>
           <div class="progress-grid" aria-label="現在準備中の内容">
-            <div class="progress-card"><b>演芸・ステージ</b><span>出演者を募集中です。特に9/13（日）の出演枠を募集しています。</span></div>
+            <div class="progress-card"><b>演芸・ステージ</b><span>応募多数となり受付を終了しました。音楽バンド、弾き語り、ブレイクダンスバトル、フラダンス、川島ソーランなどを予定しています。</span></div>
             <div class="progress-card"><b>盆踊り・太鼓</b><span>太鼓の会からの案内を掲載しました。子どもたちの参加も募集中です。</span></div>
             <div class="progress-card"><b>神輿・山車</b><span>神輿の担ぎ手や、子どもたちの参加しやすい形を検討しています。</span></div>
             <div class="progress-card"><b>ソーラン節</b><span>子どもたちが楽しく参加できる内容を検討しています。</span></div>
-            <div class="progress-card"><b>お手伝い</b><span>準備、片づけ、飲料ブースなど、できる範囲でのご協力を募集予定です。</span></div>
+            <div class="progress-card"><b>祭礼ボランティア</b><span>短時間のみ・親子での参加も大歓迎です。お祭りを一緒に盛り上げてくださる方を募集しています。</span></div>
             <div class="progress-card"><b>お知らせ</b><span>回覧、掲示、ホームページで順次お知らせしていきます。</span></div>
           </div>
           <div class="actions">
@@ -388,30 +410,26 @@
       </section>
 
       <section class="block recruit" id="stage">
-        <span class="badge">STAGE RECRUIT</span>
-        <h2>演芸出演を募集します</h2>
+        <span class="badge">STAGE EVENT</span>
+        <h2>演芸出演の受付は終了しました</h2>
         <div class="stage-recruit-hero">
-          <h3>夏祭りのステージを一緒に盛り上げてください</h3>
-          <div class="stage-recruit-emphasis">9/13（日）の出演枠を特に募集しています</div>
-          <p class="lead">歌、ダンス、バンド、楽器演奏、演舞、パフォーマンスなど、地域の夏祭りを楽しく盛り上げてくださる出演者を募集しています。</p>
-          <p>出演可能枠は複数あります。特に、9月13日（日）の出演枠について、積極的に募集しています。地域の皆さまの発表の場として、ぜひご参加ください。</p>
-          <div class="stage-slot-grid" aria-label="演芸出演募集の内容">
-            <div class="stage-slot-card"><b>9/13（日）枠を重点募集</b><span>本宮の日曜日に出演できる方・グループを特に募集しています。</span></div>
-            <div class="stage-slot-card"><b>出演可能枠あり</b><span>出演時間や順番などは、応募状況を見ながら調整します。</span></div>
-            <div class="stage-slot-card"><b>地域の発表を歓迎</b><span>歌、ダンス、楽器演奏、演舞、パフォーマンスなど幅広く募集します。</span></div>
-          </div>
-          <div class="stage-required-box">
-            <b>応募方法</b>
-            <p>応募は「お問い合わせページ」からお願いします。お問い合わせの際、以下の内容を必ず記載してください。</p>
-            <ul>
-              <li>氏名</li>
-              <li>連絡先メールアドレス</li>
-              <li>電話番号</li>
-              <li>出演希望内容</li>
-            </ul>
+          <h3>たくさんのご応募ありがとうございました</h3>
+          <div class="stage-closed-banner">応募多数となったため、演芸出演者の受付を終了しました</div>
+          <p class="lead">今年も、音楽バンドや弾き語り、ブレイクダンスバトルにフラダンス、川島ソーランなどなど、たくさんの楽しいイベントが盛りだくさんです。</p>
+          <ul class="stage-event-list" aria-label="予定している演芸イベント">
+            <li>音楽バンド</li>
+            <li>弾き語り</li>
+            <li>ブレイクダンスバトル</li>
+            <li>フラダンス</li>
+            <li>川島ソーラン</li>
+            <li>その他楽しい演芸</li>
+          </ul>
+          <div class="stage-thanks-box">
+            <b>演芸イベントをお楽しみに！</b>
+            <p>出演内容や時間などの詳細は、全体のプログラム調整後、決まり次第この特設サイト、回覧、掲示などでお知らせします。</p>
           </div>
           <div class="actions">
-            <a class="button button-red" href="./contact.html">お問い合わせページから応募する</a>
+            <a class="button button-red" href="#progress">夏祭り準備だよりを見る</a>
             <a class="button button-outline" href="#voice">ご意見・ご協力BOXを見る</a>
           </div>
         </div>
@@ -424,6 +442,37 @@
         <div class="two-grid">
           <article class="card"><span class="icon">🏮</span><h3>参加してほしい方</h3><ul><li>盆踊りサークル</li><li>地域の有志グループ</li><li>親子・ご近所同士の参加</li><li>踊りを覚えて一緒に盛り上げたい方</li></ul></article>
           <article class="card"><span class="icon">✨</span><h3>目指したい雰囲気</h3><p>上手・下手ではなく、みんなで輪になって楽しむ盆踊りを目指します。初めての方も歓迎です。</p></article>
+        </div>
+      </section>
+
+      <section class="block recruit" id="festival-volunteer">
+        <span class="badge">VOLUNTEER</span>
+        <h2>祭礼ボランティア大募集</h2>
+        <div class="volunteer-recruit-card">
+          <h3>短時間のみ・親子での参加も大歓迎です</h3>
+          <div class="volunteer-recruit-emphasis">お祭りを一緒に盛り上げてくださる方を募集しています</div>
+          <p class="lead">ボランティアはお祭りの裏側を知ることができ、地域の方々と楽しく交流できる良い機会です。ご自身の都合に合わせ、無理のない範囲でお力をお貸しください。</p>
+
+          <div class="volunteer-detail-grid">
+            <div class="volunteer-detail-list" aria-label="祭礼ボランティア日時・内容">
+              <div class="volunteer-detail-row"><b>9/6（日）9:00〜15:00の間</b><span>のぼり旗の設置・やぐらの飾り付け等</span></div>
+              <div class="volunteer-detail-row"><b>9/12（土）9:00〜14:30の間</b><span>お神輿の組み立て・飾り付け等</span></div>
+              <div class="volunteer-detail-row"><b>9/12（土）宵宮 16:30〜20:30の間</b><span>出店補助（ドリンク販売、射的、輪投げ等）</span></div>
+              <div class="volunteer-detail-row"><b>9/13（日）9:40〜13:30の間</b><span>お神輿巡行・お神輿解体・山車解体等</span></div>
+              <div class="volunteer-detail-row"><b>9/13（日）本宮 16:00〜22:00位の間</b><span>出店補助・お祭り終了後の会場撤収作業</span></div>
+              <div class="volunteer-detail-row"><b>9/20（日）10:00〜12:00位の間</b><span>のぼり旗の撤収作業等</span></div>
+            </div>
+            <div class="volunteer-qr-box">
+              <b>お申し込みフォームQRコード</b>
+              <img src="./festival-volunteer-form-qr.png" alt="祭礼ボランティアお申し込みフォームのQRコード" loading="lazy" />
+              <p>スマートフォンでQRコードを読み取り、Googleフォームからお申し込みください。</p>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="button button-red" href="https://drive.google.com/file/d/1dLy18bpY_vkdQjnl-AI_RZLJAL7x9kQw/view?usp=sharing" target="_blank" rel="noopener noreferrer">祭礼ボランティア募集フライヤーを見る</a>
+            <a class="button button-outline" href="#voice">ご意見・ご協力BOXを見る</a>
+          </div>
         </div>
       </section>
 
@@ -565,7 +614,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br />
-        <span class="site-updated">最終更新日：<time datetime="2026-07-26">2026-07-26</time></span><br />
+        <span class="site-updated">最終更新日：<time datetime="2026-07-29">2026-07-29</time></span><br />
         <span class="footer-links"><a href="./index.html">トップ</a><a href="./events.html">行事予定</a><a href="./community-info.html">お知らせ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span>
       </div>
     </div>
@@ -632,7 +681,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260726_183000_stage_performer_recruit', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260729_100000_volunteer_recruit', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>

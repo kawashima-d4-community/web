@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-07-26-20260726_183000_stage_performer_recruit
+// Version: 2026-07-29-20260729_100000_volunteer_recruit
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り特設ページで演芸出演募集を強化し、9/13出演枠を案内。HTMLは常に最新取得を優先。
+// Update Note: 夏祭り特設ページに演芸出演受付終了と祭礼ボランティア大募集を掲載。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260726_183000_stage_performer_recruit';
+const CACHE_NAME = 'kawashima-d4-pwa-20260729_100000_volunteer_recruit';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
@@ -12,6 +12,7 @@ const STATIC_ASSETS = [
   './d4-mark1.png',
   './summer-festival-mikoshi.jpg'
   './taiko-kai-flyer.jpg',
+  './festival-volunteer-form-qr.png',
 ];
 
 self.addEventListener('install', (event) => {
