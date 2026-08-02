@@ -173,3 +173,5 @@ Update: 2026-07-05 07:55
 [2026-07-29 09:00] stage closed notice: 夏祭り特設ページの演芸出演募集を受付終了案内へ変更。音楽バンド、弾き語り、ブレイクダンスバトル、フラダンス、川島ソーラン等の楽しい演芸イベント案内を掲載。index/sitemap/search/swも更新。
 
 [2026-07-29 10:00] volunteer recruit special: 夏祭り特設ページに祭礼ボランティア大募集セクションを追加。申込QRコードをローカル画像として掲載し、フライヤーはGoogle Driveリンクとして掲載。index/sitemap/search/swも更新。
+
+[2026-08-03 05:35] summer festival progress vol2: 夏祭り準備だよりVol.2を追加。7/27第2回祭礼実行委員会、演芸受付終了、8/30盆踊り練習を掲載。参加・募集関連の重複セクションを整理し、参加案内まとめへ集約。index/sitemap/search/swも更新。
