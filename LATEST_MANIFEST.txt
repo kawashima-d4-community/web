@@ -175,3 +175,7 @@ Update: 2026-07-05 07:55
 [2026-07-29 10:00] volunteer recruit special: 夏祭り特設ページに祭礼ボランティア大募集セクションを追加。申込QRコードをローカル画像として掲載し、フライヤーはGoogle Driveリンクとして掲載。index/sitemap/search/swも更新。
 
 [2026-08-03 05:35] summer festival progress vol2: 夏祭り準備だよりVol.2を追加。7/27第2回祭礼実行委員会、演芸受付終了、8/30盆踊り練習を掲載。参加・募集関連の重複セクションを整理し、参加案内まとめへ集約。index/sitemap/search/swも更新。
+
+[2026-08-03 06:40] progress Vol.2 public update: 第2回祭礼実行委員会記録を確認し、個人名・費用・警備・仕入れ等の内部調整を避け、公開向け情報にしぼって夏祭り準備だよりVol.2を更新。index/sitemap/search/swも更新。
+
+[2026-08-03 06:45] progress Vol.2 public update minor: 第2回祭礼実行委員会の日付を記録に合わせて7/26（日）表記へ統一し、NEWS本文も公開向け内容へ整理。
