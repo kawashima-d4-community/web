@@ -183,3 +183,5 @@ Update: 2026-07-05 07:55
 [2026-08-03 06:50] remove progress vol1: 夏祭り準備だよりVol.1を削除し、Vol.2中心の表示に整理。index/search/sitemap/swも更新。
 
 [2026-08-04 06:40] progress vol2 cleanup: 夏祭り準備だよりVol.2から公開向け注記2文を削除。トップページ更新情報の分類文言を「夏祭り・準備だより」に修正。
+
+[2026-08-04 08:40] august kairan: community-info.htmlに8月 回覧板情報・町内会を追加。Google Driveプレビューと回覧資料リンク、概要カードを掲載。index/sitemap/search/swも更新。

@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-08-04-20260804_064000_progress_vol2_cleanup
+// Version: 2026-08-04-20260804_084000_august_kairan
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り準備だよりVol.2の公開向け表現を調整。HTMLは常に最新取得を優先。
+// Update Note: 8月の回覧板情報・町内会を掲載。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260804_064000_progress_vol2_cleanup';
+const CACHE_NAME = 'kawashima-d4-pwa-20260804_084000_august_kairan';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
