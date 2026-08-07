@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-08-04" />
-  <meta name="d4-site-version" content="2026-08-04-20260804_064000_progress_vol2_cleanup" />
+  <meta name="last-modified" content="2026-08-07" />
+  <meta name="d4-site-version" content="2026-08-07-20260807_232100_volunteer_reregistration" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。第2回祭礼実行委員会の記録から公開できる内容にしぼった夏祭り準備だよりVol.2、演芸イベント案内、盆踊り練習、祭礼ボランティア募集、太鼓の会、ご意見BOXなどを掲載しています。" />
+  <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。夏祭り準備だよりVol.2、演芸イベント案内、盆踊り練習、祭礼ボランティア再募集、太鼓の会、ご意見BOXなどを掲載しています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -219,6 +219,13 @@
     .join-summary-card p{margin:0 0 10px;color:var(--muted);font-weight:900}
     @media(max-width:880px){.practice-info{grid-template-columns:1fr}.join-summary-grid{grid-template-columns:1fr}}
 
+    .volunteer-second-burst{display:inline-flex;align-items:center;gap:8px;margin:6px 0 12px;padding:10px 14px;border-radius:999px;background:#d9684f;color:#fff;font-weight:1000;box-shadow:0 12px 24px rgba(217,104,79,.22)}
+    .volunteer-second-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+    .volunteer-second-point{padding:13px;border-radius:18px;background:#fff;border:1px solid rgba(242,166,90,.45);box-shadow:0 8px 18px rgba(5,58,120,.06)}
+    .volunteer-second-point b{display:block;color:var(--primary-dark);font-size:15px;margin-bottom:5px}
+    .volunteer-second-point span{display:block;color:var(--muted);font-size:13px;font-weight:900}
+    @media(max-width:780px){.volunteer-second-points{grid-template-columns:1fr}.volunteer-second-burst{border-radius:16px;align-items:flex-start}}
+
     .footer-links{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:12px;font-weight:800}.footer-links a{text-decoration:underline;text-underline-offset:3px}
     footer{padding:22px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 0 22px;border-top:1px solid var(--border);font-weight:800}
     .floating-actions{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:10px}
@@ -308,7 +315,7 @@
         <a href="#stage">演芸イベント</a>
         <a href="#bon-odori">盆踊り</a>
         <a href="#join">参加案内</a>
-        <a href="#festival-volunteer">祭礼ボランティア</a>
+        <a href="#festival-volunteer">ボランティア再登録</a>
         <a href="#schedule">日程</a>
         <a href="#program">昨年参考</a>
         <a href="#movie">過去動画</a>
@@ -326,7 +333,7 @@
           </div>
         </div>
         <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催決定です。7/26（日）の第2回祭礼実行委員会を経て、公開できる内容にしぼって準備だよりVol.2を更新しました。</p>
-        <div class="notice">夏祭り準備だより Vol.2を更新しました。演芸出演者は応募多数となり受付を終了しています。8/30（日）10:00〜12:00には、第四町内会館で盆踊り練習を実施します。祭礼ボランティアも大募集しています。</div>
+        <div class="notice">夏祭り準備だより Vol.2を更新しました。演芸出演者は応募多数となり受付を終了しています。8/30（日）10:00〜12:00には、第四町内会館で盆踊り練習を実施します。祭礼ボランティアの登録フォームでエラーがあったため、すでに登録済みの方も含めて再度登録をお願いします。短時間のみ・親子での参加も大歓迎です。</div>
         <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
       </section>
 
@@ -383,13 +390,13 @@
             <div class="progress-card"><b>演芸プログラム</b><span>応募多数のため受付は終了しました。当日の演芸イベントを楽しみにお待ちください。</span></div>
             <div class="progress-card"><b>出店予定</b><span>子ども会のくじ引き、射的、飲み物販売などを予定しています。</span></div>
             <div class="progress-card"><b>盆踊り練習</b><span>8/30（日）10:00〜12:00に第四町内会館で実施します。初めての方も歓迎です。</span></div>
-            <div class="progress-card"><b>祭礼ボランティア</b><span>射的・ドリンク販売のサポート、準備、片づけなどにご協力いただける方を募集しています。</span></div>
+            <div class="progress-card"><b>祭礼ボランティア</b><span>再募集しています。登録フォームでエラーがあったため、すでに登録済みの方も含め、再度登録をお願いします。</span></div>
             <div class="progress-card"><b>太鼓の会</b><span>子どもたちの太鼓練習も進んでいます。盆踊り練習では、本番に近い雰囲気で合わせます。</span></div>
             <div class="progress-card"><b>今後のお知らせ</b><span>詳細な時間割や追加情報は、決まり次第、特設サイト・回覧・掲示などでお知らせします。</span></div>
           </div>
 <div class="actions">
             <a class="button button-red" href="#bon-odori">盆踊り練習の案内を見る</a>
-            <a class="button button-outline" href="#festival-volunteer">祭礼ボランティアを見る</a>
+            <a class="button button-outline" href="#festival-volunteer">ボランティア再募集を見る</a>
           </div>
         </div>
 
@@ -445,15 +452,21 @@
       </section>
 
       <section class="block recruit" id="festival-volunteer">
-        <span class="badge">VOLUNTEER</span>
-        <h2>祭礼ボランティア大募集</h2>
+        <span class="badge">VOLUNTEER RE-REGISTRATION</span>
+        <h2>祭礼ボランティア 再募集のお知らせ</h2>
         <div class="volunteer-recruit-card">
-          <h3>短時間のみ・親子での参加も大歓迎です</h3>
-          <div class="volunteer-recruit-emphasis">お祭りを一緒に盛り上げてくださる方を募集しています</div>
-          <p class="lead">ボランティアはお祭りの裏側を知ることができ、地域の方々と楽しく交流できる良い機会です。ご自身の都合に合わせ、無理のない範囲でお力をお貸しください。</p>
+          <h3>登録フォームの不具合に伴い、再登録をお願いします</h3>
+          <div class="volunteer-second-burst">登録済みの方も含め、再度こちらで登録をお願いします</div>
+          <p class="lead">祭礼ボランティア登録フォームでエラーがあったため、すでに登録を済ませた方も含め、改めて登録をお願いします。お手数をおかけしますが、再登録案内フライヤー・QRコードから内容をご確認ください。短時間のみ・親子での参加も歓迎です。</p>
+
+          <div class="volunteer-second-points" aria-label="祭礼ボランティア再募集のポイント">
+            <div class="volunteer-second-point"><b>再登録をお願いします</b><span>すでに登録済みの方も、改めて登録をお願いします。</span></div>
+            <div class="volunteer-second-point"><b>短時間のみOK</b><span>できる時間帯だけの参加で大丈夫です。</span></div>
+            <div class="volunteer-second-point"><b>親子参加も歓迎</b><span>お子様と一緒に参加できる内容もあります。</span></div>
+          </div>
 
           <div class="volunteer-detail-grid">
-            <div class="volunteer-detail-list" aria-label="祭礼ボランティア日時・内容">
+            <div class="volunteer-detail-list" aria-label="祭礼ボランティア再募集の日時・内容">
               <div class="volunteer-detail-row"><b>9/6（日）9:00〜15:00の間</b><span>のぼり旗の設置・やぐらの飾り付け等</span></div>
               <div class="volunteer-detail-row"><b>9/12（土）9:00〜14:30の間</b><span>お神輿の組み立て・飾り付け等</span></div>
               <div class="volunteer-detail-row"><b>9/12（土）宵宮 16:30〜20:30の間</b><span>出店補助（ドリンク販売、射的、輪投げ等）</span></div>
@@ -462,14 +475,14 @@
               <div class="volunteer-detail-row"><b>9/20（日）10:00〜12:00位の間</b><span>のぼり旗の撤収作業等</span></div>
             </div>
             <div class="volunteer-qr-box">
-              <b>お申し込みフォームQRコード</b>
+              <b>再登録案内QRコード</b>
               <img src="./festival-volunteer-form-qr.png" alt="祭礼ボランティアお申し込みフォームのQRコード" loading="lazy" />
-              <p>スマートフォンでQRコードを読み取り、Googleフォームからお申し込みください。</p>
+              <p>スマートフォンでQRコードを読み取り、再登録案内をご確認ください。</p>
             </div>
           </div>
 
           <div class="actions">
-            <a class="button button-red" href="https://drive.google.com/file/d/1dLy18bpY_vkdQjnl-AI_RZLJAL7x9kQw/view?usp=sharing" target="_blank" rel="noopener noreferrer">祭礼ボランティア募集フライヤーを見る</a>
+            <a class="button button-red" href="https://drive.google.com/file/d/1DDrTTRi7TSVxxgso61tZfFpfFL01JZV0/view?usp=sharing" target="_blank" rel="noopener noreferrer">再登録案内フライヤーを見る</a>
             <a class="button button-outline" href="#voice">ご意見・ご協力BOXを見る</a>
           </div>
         </div>
@@ -488,7 +501,7 @@
         </div>
         <div class="join-summary-grid" aria-label="参加・協力の案内先">
           <article class="join-summary-card"><b>盆踊り練習</b><p>8/30（日）10:00〜12:00、第四町内会館で実施します。</p><a class="button button-outline" href="#bon-odori">盆踊り練習を見る</a></article>
-          <article class="join-summary-card"><b>祭礼ボランティア</b><p>準備、出店補助、撤収など、短時間のみ・親子参加も歓迎です。</p><a class="button button-outline" href="#festival-volunteer">ボランティアを見る</a></article>
+          <article class="join-summary-card"><b>祭礼ボランティア再募集</b><p>準備、出店補助、撤収など、短時間のみ・親子参加も歓迎です。</p><a class="button button-outline" href="#festival-volunteer">再募集を見る</a></article>
           <article class="join-summary-card"><b>ご意見・ご協力BOX</b><p>夏祭りへのご意見やご協力の相談はこちらからお寄せください。</p><a class="button button-outline" href="#voice">ご意見BOXを見る</a></article>
         </div>
       </section>
@@ -555,7 +568,7 @@
           </div>
           <div class="faq-item">
             <b>Q. お手伝いは少しだけでも大丈夫ですか？</b>
-            <p>A. 大丈夫です。祭礼ボランティアは、短時間のみ・親子での参加も歓迎しています。詳しくは「祭礼ボランティア大募集」をご確認ください。</p>
+            <p>A. 大丈夫です。短時間のみ・親子での参加も歓迎しています。登録フォームでエラーがあったため、すでに登録済みの方も含め、祭礼ボランティア再募集の案内から再度登録をお願いします。</p>
           </div>
           <div class="faq-item">
             <b>Q. 詳細はいつ分かりますか？</b>
@@ -602,7 +615,7 @@
       <section class="block" id="contact">
         <span class="badge">CONTACT</span>
         <h2>出演・参加・ご協力について</h2>
-        <p class="lead">演芸出演の受付は終了しています。盆踊り練習、祭礼ボランティア、神輿、ソーラン節、準備・片づけなどへのご意見・ご協力は、ご意見BOXまたはお問い合わせページからご連絡ください。</p>
+        <p class="lead">演芸出演の受付は終了しています。盆踊り練習、祭礼ボランティア再登録、神輿、ソーラン節、準備・片づけなどへのご意見・ご協力は、ご意見BOXまたはお問い合わせページからご連絡ください。</p>
         <div class="actions"><a class="button button-red" href="./contact.html">町内会へのお問い合わせ</a><a class="button button-outline" href="./events.html">年間行事予定を見る</a></div>
       </section>
     </div>
@@ -611,7 +624,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br />
-        <span class="site-updated">最終更新日：<time datetime="2026-08-04">2026-08-04</time></span><br />
+        <span class="site-updated">最終更新日：<time datetime="2026-08-07">2026-08-07</time></span><br />
         <span class="footer-links"><a href="./index.html">トップ</a><a href="./events.html">行事予定</a><a href="./community-info.html">お知らせ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span>
       </div>
     </div>
@@ -678,7 +691,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260804_064000_progress_vol2_cleanup', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260807_232100_volunteer_reregistration', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>

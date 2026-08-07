@@ -1,16 +1,16 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-08-04-20260804_084000_august_kairan
+// Version: 2026-08-07-20260807_232100_volunteer_reregistration
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 8月の回覧板情報・町内会を掲載。HTMLは常に最新取得を優先。
+// Update Note: 祭礼ボランティア登録フォーム不具合に伴う再登録案内へ修正。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260804_084000_august_kairan';
+const CACHE_NAME = 'kawashima-d4-pwa-20260807_232100_volunteer_reregistration';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './d4-mark2.png',
   './d4-mark1.png',
-  './summer-festival-mikoshi.jpg'
+  './summer-festival-mikoshi.jpg',
   './taiko-kai-flyer.jpg',
   './festival-volunteer-form-qr.png',
 ];
