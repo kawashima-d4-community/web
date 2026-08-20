@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-08-10" />
-  <meta name="d4-site-version" content="2026-08-10-20260810_090000_remove_voice_box" />
+  <meta name="last-modified" content="2026-08-20" />
+  <meta name="d4-site-version" content="2026-08-20-20260820_085500_exitium_no_personal_names" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会の一大イベント、9月12日・13日開催決定の夏祭り特設ページです。夏祭り準備だよりVol.2、演芸イベント案内、盆踊り練習、祭礼ボランティア再募集、太鼓の会、出演・参加・ご協力についてなどを掲載しています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -241,6 +241,18 @@
     .section-compact .mikoshi-photo-feature img{max-height:220px;object-fit:cover}
     @media(max-width:820px){.priority-pair{grid-template-columns:1fr}}
 
+    .artist-intro-card{position:relative;overflow:hidden;padding:18px;border-radius:24px;background:linear-gradient(135deg,#f7fbff,#fff8ef 72%);border:1px solid rgba(185,222,245,.95);box-shadow:0 14px 28px rgba(5,58,120,.08)}
+    .artist-intro-card::before{content:"PICK UP";position:absolute;right:14px;top:10px;font-size:34px;font-weight:1000;color:rgba(7,89,184,.08);letter-spacing:.04em;transform:rotate(-6deg)}
+    .artist-intro-card h3{margin:0 0 8px;color:var(--primary-dark);font-size:clamp(23px,3vw,32px)}
+    .artist-intro-card p{color:var(--muted);font-weight:900}
+    .artist-badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+    .artist-badge-row span{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid rgba(185,222,245,.95);color:var(--primary-dark);font-size:13px;font-weight:1000}
+    .artist-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .artist-links a{display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;border-radius:999px;background:#fff;border:1px solid var(--border);color:var(--primary-dark);font-size:13px;font-weight:1000;text-decoration:none}
+    .artist-links a:hover{border-color:var(--primary);box-shadow:0 8px 18px rgba(5,58,120,.08)}
+    .artist-note{margin-top:12px;padding:12px;border-radius:16px;background:#fff;border:1px dashed rgba(7,89,184,.28);color:var(--muted);font-size:14px;font-weight:900}
+    @media(max-width:700px){.artist-links a{width:100%}}
+
     .footer-links{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:12px;font-weight:800}.footer-links a{text-decoration:underline;text-underline-offset:3px}
     footer{padding:22px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 0 22px;border-top:1px solid var(--border);font-weight:800}
     .floating-actions{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:10px}
@@ -321,6 +333,7 @@
 
     <nav class="page-menu" aria-label="夏祭りページ内メニュー">
       <div class="container">
+        <a href="#exitium">出演者紹介</a>
         <a href="#news">お知らせ</a>
         <a href="#festival-volunteer">ボランティア再募集</a>
         <a href="#bon-odori">盆踊り練習</a>
@@ -336,14 +349,40 @@
     </nav>
 
     <div class="container">
-      <section class="block" id="news">
+      <section class="block recruit section-compact" id="exitium">
+        <span class="badge">ARTIST PICK UP</span>
+        <h2>地域ゆかりの出演者紹介</h2>
+        <div class="artist-intro-card">
+          <h3>Exitium Of Nemesis</h3>
+          <p class="lead">第四町内会にゆかりのあるメンバーが活動している、神奈川県発のバンドです。2023年11月に結成され、神奈川県内を中心にライブ活動を重ねています。</p>
+          <p>今年の夏祭りでは、9月13日（日）の本宮に出演予定です。近況として、フジテレビ系のバラエティ番組「新しいカギ」への出演、台湾ツアーからの帰国、今後の中国地方ツアー予定なども届いています。地域の夏祭りで、若い世代の本格的なバンド演奏をぜひお楽しみください。</p>
+          <div class="artist-badge-row" aria-label="Exitium Of Nemesisの紹介ポイント">
+            <span>第四町内会ゆかり</span>
+            <span>神奈川県発バンド</span>
+            <span>9/13（日）本宮出演予定</span>
+            <span>「新しいカギ」出演</span>
+            <span>台湾ツアー実施</span>
+            <span>公式音源・動画あり</span>
+          </div>
+          <div class="artist-note">音量や演出を含め、当日は会場全体の進行に合わせて実施します。出演時間などの詳細は、プログラム確定後にお知らせします。</div>
+          <div class="artist-links" aria-label="Exitium Of Nemesis 関連リンク">
+            <a href="https://drive.google.com/file/d/1EuwvrdfXhR6g7klr_ERPd0iPKtwmyo4a/view?usp=sharing" target="_blank" rel="noopener noreferrer">公式ツアーポスターを見る</a>
+            <a href="https://linktr.ee/exitiumofnemesis" target="_blank" rel="noopener noreferrer">公式リンク集</a>
+            <a href="https://youtube.com/@exitiumofnemesisofficial" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/exitium_of_nemesis_official/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://exitiumofnemesis.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+          </div>
+        </div>
+      </section>
+
+<section class="block" id="news">
         <div class="section-head">
           <div>
             <span class="badge">NEWS</span>
             <h2>夏祭りの情報を順次お知らせします</h2>
           </div>
         </div>
-        <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催決定です。現在、特に「祭礼ボランティア再募集」と「盆踊り練習」を大きくお知らせしています。</p>
+        <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催決定です。現在、特に「祭礼ボランティア再募集」と「盆踊り練習」を大きくお知らせしています。地域ゆかりの出演者紹介も追加しました。</p>
         <div class="notice">祭礼ボランティアを再募集しています。1日でも1時間でも結構ですので、ぜひボランティアにご協力ください。8/30（日）10:00〜12:00には、第四町内会館で盆踊り練習も実施します。</div>
         <div class="priority-pair" aria-label="特に注目してほしい夏祭り情報">
           <article class="priority-card">
@@ -360,8 +399,7 @@
 
         <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
       </section>
-
-      <section class="block recruit" id="festival-volunteer">
+<section class="block recruit" id="festival-volunteer">
         <span class="badge">VOLUNTEER RECRUIT</span>
         <h2>祭礼ボランティア 再募集のお知らせ</h2>
         <div class="volunteer-recruit-card">
@@ -460,7 +498,7 @@
           </div>
           <p>8/30（日）の練習では、本番同様に曲と太鼓の会・子どもたちの演奏に合わせて、盆踊りを行います。盆踊りを一緒に盛り上げていただける方は、ぜひ練習にご参加ください。</p>
           <div class="progress-grid" aria-label="公開向けの準備状況">
-            <div class="progress-card"><b>演芸プログラム</b><span>応募多数のため受付は終了しました。当日の演芸イベントを楽しみにお待ちください。</span></div>
+            <div class="progress-card"><b>演芸プログラム</b><span>応募多数のため受付は終了しました。地域ゆかりのバンド「Exitium Of Nemesis」など、当日の演芸イベントを楽しみにお待ちください。</span></div>
             <div class="progress-card"><b>出店予定</b><span>子ども会のくじ引き、射的、飲み物販売などを予定しています。</span></div>
             <div class="progress-card"><b>盆踊り練習</b><span>8/30（日）10:00〜12:00に第四町内会館で実施します。初めての方も歓迎です。</span></div>
             <div class="progress-card"><b>祭礼ボランティア</b><span>再募集しています。続々と応募がきていますが、まだまだボランティアが足りない状況です。1日でも1時間でもご協力ください。</span></div>
@@ -505,7 +543,7 @@
           </ul>
           <div class="stage-thanks-box">
             <b>演芸イベントをお楽しみに！</b>
-            <p>出演内容や時間などの詳細は、全体のプログラム調整後、決まり次第この特設サイト、回覧、掲示などでお知らせします。</p>
+            <p>出演内容や時間などの詳細は、全体のプログラム調整後、決まり次第この特設サイト、回覧、掲示などでお知らせします。第四町内会にゆかりのあるバンド「Exitium Of Nemesis」も紹介しています。</p>
           </div>
           <div class="actions">
             <a class="button button-red" href="#progress">夏祭り準備だよりを見る</a>
@@ -513,8 +551,7 @@
           </div>
         </div>
       </section>
-
-      <section class="block recruit section-compact" id="join">
+<section class="block recruit section-compact" id="join">
         <span class="badge">JOIN US</span>
         <h2>参加・協力の案内まとめ</h2>
         <p class="lead">夏祭りに関する参加・協力の案内を、目的別にまとめました。重複していた募集情報は、各案内へ集約しています。</p>
@@ -598,7 +635,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br />
-        <span class="site-updated">最終更新日：<time datetime="2026-08-10">2026-08-10</time></span><br />
+        <span class="site-updated">最終更新日：<time datetime="2026-08-20">2026-08-20</time></span><br />
         <span class="footer-links"><a href="./index.html">トップ</a><a href="./events.html">行事予定</a><a href="./community-info.html">お知らせ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span>
       </div>
     </div>
@@ -665,7 +702,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260810_090000_remove_voice_box', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260820_085500_exitium_no_personal_names', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>

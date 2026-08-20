@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-08-10-20260810_090000_remove_voice_box
+// Version: 2026-08-20-20260820_085500_exitium_no_personal_names
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り特設ページからご意見・ご協力BOXを削除し、出演・参加・ご協力についてへの導線に整理。HTMLは常に最新取得を優先。
+// Update Note: 夏祭り特設ページの出演者紹介から個人名表記を外し、テレビ番組名を明記。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260810_090000_remove_voice_box';
+const CACHE_NAME = 'kawashima-d4-pwa-20260820_085500_exitium_no_personal_names';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
