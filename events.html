@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-07-06" />
-  <meta name="d4-site-version" content="2026-07-06-20260706_121000_event_date_fix" />
+  <meta name="last-modified" content="2026-08-25" />
+  <meta name="d4-site-version" content="2026-08-25-20260825_105500_disaster_training_full" />
   <title>年間行事予定｜川島第四町内会</title>
   <meta name="description" content="川島第四町内会と地域の主な年間行事予定をまとめています。9/12（土）・13（日）の夏祭り開催決定と駐車場情報を含む、川島第四町内会と地域の主な年間行事予定をまとめています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
@@ -2152,7 +2152,7 @@
         <span class="badge">Events</span>
         <h1>年間行事予定</h1>
         <p>川島第四町内会と地域の主な年間行事予定をまとめています。</p>
-        <p class="site-updated">最終更新日：<time datetime="2026-06-28">2026-06-28</time></p>
+        <p class="site-updated">最終更新日：<time datetime="2026-08-25">2026-08-25</time></p>
       </section>
     </div>
     <section id="events" class="events-compact-section">
@@ -2217,6 +2217,12 @@
               <span class="event-place">川島小学校</span>
             </div>
 
+            <div class="event-compact-row event-highlight" data-event-end="2026-10-04">
+              <span class="event-date">10/4（日）</span>
+              <span class="event-title">川島第四町内会 防災訓練</span>
+              <span class="event-place">川島第四町内会館</span>
+            </div>
+
             <div class="event-compact-row" data-event-end="2026-10-18">
               <span class="event-date">10/18（日）</span>
               <span class="event-title">川島東部連合大運動会 <small>予備日：10/25</small></span>
@@ -2260,7 +2266,47 @@
         </div>
       </div>
     </section>
-  </main>
+  
+    <section id="disaster-training-notices-2026">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="badge">Disaster Training</span>
+            <h2>9/27・10/4 防災訓練のお知らせ</h2>
+            <p>地域で実際に体験しながら、いざというときに役立つ行動を身につけましょう。</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <span class="date">9月27日（日）8:30～</span>
+            <div class="icon">🏫</div>
+            <h3>川島小学校 地域防災拠点訓練</h3>
+            <p><strong>会場：</strong>川島小学校（避難所）</p>
+            <p><strong>第四町内会集合：</strong>8:00 川島第四町内会館</p>
+            <p>環境衛生、炊き出し、放水、初期消火、救出救護、ペット避難、給水訓練などを予定しています。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="./disaster-training-2026.html#kawashima-school-20260927">詳しい内容を見る</a>
+              <a class="button button-secondary" href="https://drive.google.com/file/d/18oRFD740LEiUtK6kNVOTWthDGp_pAarg/view?usp=sharing" target="_blank" rel="noopener">チラシを見る</a>
+            </div>
+            <p class="small-note">※荒天中止。最後に期限間近の備蓄品配布も予定されています。</p>
+          </article>
+          <article class="card">
+            <span class="date">10月4日（日）9:00～10:30</span>
+            <div class="icon">🧯</div>
+            <h3>川島第四町内会 防災訓練</h3>
+            <p><strong>会場：</strong>川島第四町内会館</p>
+            <p>水消火器による初期消火、心肺蘇生・AED操作、防災講話を予定しています。消防団の皆さんにもご協力いただく予定です。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSezJS3aIae8yC2cfN8rsXkBrSouEqvrqVVPbamtwlYF2UdtRw/viewform" target="_blank" rel="noopener">参加を申し込む</a>
+              <a class="button button-secondary" href="./disaster-training-2026.html#d4-20261004">詳しい内容を見る</a>
+              <a class="button button-secondary" href="https://drive.google.com/file/d/15_nNncdGV3FE69XVjN6xa2TJ6C5-5tzW/view?usp=sharing" target="_blank" rel="noopener">チラシを見る</a>
+            </div>
+            <p class="small-note">※小雨決行・悪天候中止。雨天時は屋内中心に内容を変更する場合があります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+</main>
   <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">↑ トップへ</a>
   <footer>
     <div class="container footer-inner">
@@ -2309,7 +2355,7 @@
     // PWA / ホーム画面追加対応
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260706_121000_event_date_fix', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260825_105500_disaster_training_full', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
