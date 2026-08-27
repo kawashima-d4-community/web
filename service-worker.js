@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-08-25-20260825_105500_disaster_training_full
+// Version: 2026-08-28-20260828_084500_summer_festival_program_vol3
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 9/27地域防災拠点訓練・10/4町内防災訓練の告知追加。HTMLは常に最新取得を優先。
+// Update Note: 夏祭り正式プログラム公開・準備だよりVol.3追加。HTMLは常に最新取得を優先。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260825_105500_disaster_training_full';
+const CACHE_NAME = 'kawashima-d4-pwa-20260828_084500_summer_festival_program_vol3';
 const STATIC_ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',
@@ -11,6 +11,8 @@ const STATIC_ASSETS = [
   './d4-mark2.png',
   './d4-mark1.png',
   './summer-festival-mikoshi.jpg',
+  './summer-festival-program.png',
+  './summer-festival-program-flyer.jpg',
   './taiko-kai-flyer.jpg',
   './festival-volunteer-form-qr.png',
 ];

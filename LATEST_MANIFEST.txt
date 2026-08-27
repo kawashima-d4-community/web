@@ -213,3 +213,14 @@ Update: 2026-07-05 07:55
 - sitemap.html / search-data.js: 新しい防災訓練詳細ページを追加。
 - service-worker.js: PWAキャッシュ名を更新。
 - GitHubへの直接操作は行わず、ローカル完成版ZIPとして出力。
+
+--- 2026-08-28 夏祭り正式プログラム・準備だよりVol.3 ---
+- summer-festival.html: 9/12（土）宵宮・9/13（日）本宮の正式演芸プログラムを公開
+- summer-festival.html: 夏祭り準備だよりVol.3を追加。祭礼実行委員会の全会議完了、プログラム決定、川島ソーラン・役員ダンス練習を掲載
+- summer-festival.html: 新井会長のXへ練習風景を見られる導線を追加
+- summer-festival.html: Exitium Of Nemesis の出演予定時刻を9/13（日）18:50頃として反映
+- summer-festival-program.png / summer-festival-program-flyer.jpg を追加
+- index.html: What's New、夏祭り概要、正式プログラムへの導線を更新
+- sitemap.html / search-data.js / service-worker.js を更新
+- 夏祭りプログラムGoogle Drive: https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing
+
