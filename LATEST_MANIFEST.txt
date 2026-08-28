@@ -224,3 +224,4 @@ Update: 2026-07-05 07:55
 - sitemap.html / search-data.js / service-worker.js を更新
 - 夏祭りプログラムGoogle Drive: https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing
 
+[2026-08-28 09:15] remove summer festival progress vol2: 夏祭り特設ページから「Vol.2　第2回祭礼実行委員会で公開できる内容を整理しました」を削除。トップページの旧Vol.2更新情報も削除し、準備だよりはVol.3を最新表示として整理。search-data.js / service-worker.jsも更新。
