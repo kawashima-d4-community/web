@@ -1,10 +1,11 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-08-28-20260828_091500_remove_summer_festival_vol2
+// Version: 2026-09-01-20260901_083500_sawayaka_cleaning_20260920
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 夏祭り正式プログラム公開・準備だよりVol.3追加。HTMLは常に最新取得を優先。
+// Update Note: 9/20（日）さわやか清掃のお知らせ・チラシ掲載に伴う更新。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260828_091500_remove_summer_festival_vol2';
+const CACHE_NAME = 'kawashima-d4-pwa-20260901_083500_sawayaka_cleaning_20260920';
 const STATIC_ASSETS = [
+  './sawayaka-cleaning-20260920.jpg',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
