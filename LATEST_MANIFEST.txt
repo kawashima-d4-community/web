@@ -227,3 +227,12 @@ Update: 2026-07-05 07:55
 [2026-08-28 09:15] remove summer festival progress vol2: 夏祭り特設ページから「Vol.2　第2回祭礼実行委員会で公開できる内容を整理しました」を削除。トップページの旧Vol.2更新情報も削除し、準備だよりはVol.3を最新表示として整理。search-data.js / service-worker.jsも更新。
 
 [2026-09-01 08:35] sawawayaka cleaning notice 2026-09-20: 9/20（日）さわやか清掃（9:00～10:00／川島第四町内会館集合／朝から雨の場合は中止）を index.html、community-info.html、events.html、about.html に掲載。Google Driveチラシへのリンクおよびローカルチラシ画像を追加。search-data.js / service-worker.jsを更新。
+
+--- 2026-09-13 夏祭り本宮・宵宮フォトレポート ---
+- 9/12宵宮が大盛況で終了したことを特設サイトのトップに掲載。
+- 高塚いくやさん、The音研ズ、スカポンタン、aespair、Beak K kids、リズムスターズ★Sなど宵宮出演者の盛り上がりを紹介。
+- 9/13本宮の主な見どころを時間帯別に掲載（川島囃子、teamBAT!、弾き語り、極真空手、タップダンス、川島ソーラン、Exitium Of Nemesis、第四役員スリラーダンス、盆踊り）。
+- 宵宮の写真3枚を追加し、子どもの顔はプライバシー保護のため一部加工している旨を明記。
+- 最新の演芸プログラム画像へ差し替え。
+- index.htmlのWhat's Newと夏祭り導線を本宮当日版へ更新。
+- search-data.js / service-worker.js / sitemap.htmlを更新。

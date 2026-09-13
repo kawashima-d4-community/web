@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-08-28" />
-  <meta name="d4-site-version" content="20260828_091500_remove_summer_festival_vol2" />
+  <meta name="last-modified" content="2026-09-13" />
+  <meta name="d4-site-version" content="20260913_150500_summer_festival_hongu" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の9月12日・13日夏祭り特設ページです。演芸プログラムを公開し、夏祭り準備だよりVol.3として祭礼実行委員会の全会議完了、プログラム確定、川島ソーラン・ダンス練習の様子などをお知らせしています。" />
+  <meta name="description" content="川島第四町内会の2026年夏祭り特設ページです。9月12日の宵宮は大盛況で終了し、9月13日は本宮を開催。川島囃子、teamBAT!、弾き語り、極真空手、タップダンス、川島ソーラン、Exitium Of Nemesis、第四役員スリラーダンス、盆踊りなど本日の見どころと宵宮フォトレポートを掲載しています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -281,6 +281,80 @@
     .program-alert{margin-top:13px;padding:12px 14px;border-radius:16px;background:#fffbea;border:1px solid #f0dd9f;color:#6b5320;font-size:13px;font-weight:900}
     @media(max-width:760px){.program-summary-grid,.program-image-grid{grid-template-columns:1fr}}
 
+
+    /* 2026-09-13 本宮当日更新 */
+    .today-feature{
+      position:relative;overflow:hidden;
+      background:
+        radial-gradient(circle at 92% 5%,rgba(255,226,119,.36),transparent 26%),
+        linear-gradient(135deg,#fff8e9 0%,#ffffff 52%,#eaf7ff 100%) !important;
+      border:2px solid rgba(217,104,79,.30) !important;
+    }
+    .today-feature::before{
+      content:"本日開催";position:absolute;right:18px;top:8px;
+      font-size:46px;font-weight:1000;color:rgba(217,104,79,.08);
+      transform:rotate(-5deg);pointer-events:none
+    }
+    .today-banner{
+      display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+      padding:14px 16px;border-radius:18px;
+      background:linear-gradient(135deg,#d9684f,#f08b57);
+      color:#fff;font-weight:1000;box-shadow:0 12px 24px rgba(217,104,79,.18);
+      margin:10px 0 14px
+    }
+    .today-banner strong{font-size:clamp(20px,3vw,30px)}
+    .today-banner span{font-size:13px}
+    .today-highlight-grid{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;margin:14px 0
+    }
+    .today-highlight-card{
+      padding:14px;border-radius:18px;background:#fff;
+      border:1px solid var(--border);box-shadow:0 8px 18px rgba(5,58,120,.06)
+    }
+    .today-highlight-card time{
+      display:inline-flex;padding:4px 9px;border-radius:999px;
+      background:var(--soft-blue);color:var(--primary-dark);
+      font-size:12px;font-weight:1000;margin-bottom:6px
+    }
+    .today-highlight-card b{display:block;color:var(--primary-dark);font-size:16px;margin-bottom:3px}
+    .today-highlight-card span{display:block;color:var(--muted);font-size:12.5px;font-weight:850}
+    .today-climax{
+      margin-top:14px;padding:15px;border-radius:18px;
+      background:linear-gradient(135deg,#061b3d,#0759b8);
+      color:#fff;box-shadow:0 12px 24px rgba(6,27,61,.14)
+    }
+    .today-climax b{display:block;font-size:18px;color:#fff;margin-bottom:5px}
+    .today-climax span{font-weight:900;color:rgba(255,255,255,.88)}
+    .yoimiya-gallery{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;margin-top:14px
+    }
+    .festival-photo{
+      margin:0;padding:8px;border-radius:18px;background:#fff;
+      border:1px solid var(--border);box-shadow:0 10px 22px rgba(5,58,120,.07)
+    }
+    .festival-photo img{
+      display:block;width:100%;aspect-ratio:4/3;object-fit:cover;
+      border-radius:12px
+    }
+    .festival-photo figcaption{
+      padding:8px 5px 3px;color:var(--muted);
+      font-size:12px;font-weight:900;line-height:1.55
+    }
+    .photo-privacy-note{
+      margin-top:12px;padding:11px 13px;border-radius:16px;
+      background:#fffbea;border:1px solid #f0dd9f;
+      color:#6b5320;font-size:12.5px;font-weight:900
+    }
+    @media(max-width:860px){
+      .today-highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .yoimiya-gallery{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .today-highlight-grid{grid-template-columns:1fr}
+    }
+
 </style>
   <!-- Google Analytics 4 / アクセス解析 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
@@ -315,39 +389,38 @@
       <section class="hero" aria-label="夏祭り特設ページメインビジュアル">
         <div class="hero-inner">
           <div>
-            <span class="eyebrow">🏮 川島第四町内会の一大イベント</span>
-            <h1>第四の夏祭り、<br />みんなでイッチダンケツ！</h1>
-            <p class="hero-copy">9月12日（土）・13日（日）開催決定！神輿、提灯、太鼓、踊り、笑顔。第四町内会の楽しい2日間を、みんなでつくりましょう。</p>
+            <span class="eyebrow">🔥 9/13（日）本日いよいよ本宮！</span>
+            <h1>宵宮から大盛況！<br />本日、いよいよ本宮！</h1>
+            <p class="hero-copy">昨日9月12日の宵宮は、熱い演奏・ダンスとたくさんの笑顔で初日から大盛り上がり！本日9月13日は本宮です。夕方から川島囃子、演芸、川島ソーラン、HEAVY METAL、第四役員のスリラーダンス、そして盆踊りへ。最後まで一緒に盛り上がりましょう！</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#festival-volunteer">ボランティア再募集を見る</a>
-              <a class="button button-secondary" href="#bon-odori">盆踊り練習を見る</a>
-              <a class="button button-primary" href="#program">正式プログラムを見る</a>
-              <a class="button button-secondary" href="#progress">準備だより Vol.3を見る</a>
-              <a class="button button-secondary" href="#movie">過去の祭り動画を見る</a>
+              <a class="button button-primary" href="#hongu-today">本日の見どころを見る</a>
+              <a class="button button-secondary" href="#yoimiya-report">宵宮フォトレポート</a>
+              <a class="button button-primary" href="#program">本宮プログラムを見る</a>
+              <a class="button button-secondary" href="#exitium">出演者紹介を見る</a>
             </div>
-            <p class="release-note">演芸プログラム・開催時間などの詳細が決定しました。正式プログラムをこのページで公開しています。</p>
+            <p class="release-note">9/13（日）本宮当日更新：昨日の宵宮の様子と、本日の見どころを掲載しました。演芸の進行時間は当日の状況により前後する場合があります。</p>
             <div class="share-strip" aria-label="夏祭り特設ページのSNS共有">
               <strong>みんなに広める</strong>
-              <a class="share-button share-x" href="https://twitter.com/intent/tweet?text=%E5%B7%9D%E5%B3%B6%E7%AC%AC%E5%9B%9B%E7%94%BA%E5%86%85%E4%BC%9A%E3%81%AE%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%80%819/12%EF%BC%88%E5%9C%9F%EF%BC%89%E3%83%BB13%EF%BC%88%E6%97%A5%EF%BC%89%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81%E9%A7%90%E8%BB%8A%E5%A0%B4%E3%81%AF%E6%9D%B1%E9%9B%BB%E7%BD%AE%E5%A0%B4%E3%81%8C%E5%88%A9%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%80%82%E3%81%BF%E3%82%93%E3%81%AA%E3%81%A7%E3%82%A4%E3%83%83%E3%83%81%E3%83%80%E3%83%B3%E3%82%B1%E3%83%84%EF%BC%81%E7%89%B9%E8%A8%AD%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%81%94%E8%A6%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82&url=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2Fsummer-festival.html" target="_blank" rel="noopener">Xで共有</a>
+              <a class="share-button share-x" href="https://twitter.com/intent/tweet?text=%E5%B7%9D%E5%B3%B6%E7%AC%AC%E5%9B%9B%E7%94%BA%E5%86%85%E4%BC%9A%E3%81%AE%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%80%81%E6%9C%AC%E6%97%A59/13%EF%BC%88%E6%97%A5%EF%BC%89%E3%81%AF%E3%81%84%E3%82%88%E3%81%84%E3%82%88%E6%9C%AC%E5%AE%AE%EF%BC%81%E6%98%A8%E6%97%A5%E3%81%AE%E5%AE%B5%E5%AE%AE%E3%81%AF%E5%A4%A7%E7%9B%9B%E3%82%8A%E4%B8%8A%E3%81%8C%E3%82%8A%E3%81%A7%E3%81%97%E3%81%9F%E3%80%82%E5%B7%9D%E5%B3%B6%E3%82%BD%E3%83%BC%E3%83%A9%E3%83%B3%E3%80%81Exitium%20Of%20Nemesis%E3%80%81%E7%AC%AC%E5%9B%9B%E5%BD%B9%E5%93%A1%E3%82%B9%E3%83%AA%E3%83%A9%E3%83%BC%E3%83%80%E3%83%B3%E3%82%B9%E3%80%81%E7%9B%86%E8%B8%8A%E3%82%8A%E3%81%AA%E3%81%A9%E6%9C%AC%E6%97%A5%E3%81%AE%E8%A6%8B%E3%81%A9%E3%81%93%E3%82%8D%E3%82%92%E7%89%B9%E8%A8%AD%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7%E5%85%AC%E9%96%8B%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82&url=https%3A%2F%2Fkawashima-d4-community.github.io%2Fweb%2Fsummer-festival.html" target="_blank" rel="noopener">Xで共有</a>
               <button class="share-button share-instagram" type="button" data-share-copy>Instagram用にリンクコピー</button>
               <span id="share-copy-status" class="share-copy-status" aria-live="polite"></span>
             </div>
             <p class="share-note">Instagramは、コピーした紹介文とURLを投稿・ストーリーズ等に貼り付けてご利用ください。</p>
           </div>
           <div class="date-panel">
-            <b>開催決定</b>
-            <strong>9/12（土）<br />9/13（日）</strong>
+            <b>本日・本宮開催</b>
+            <strong>9/13（日）本宮</strong>
             <div class="countdown-box" aria-label="夏祭りまでのカウントダウン">
-              <span class="countdown-label">夏祭りまで</span>
+              <span class="countdown-label">夏祭り</span>
               <strong id="festival-countdown">計算中</strong>
-              <small id="festival-countdown-note">初日 9/12（土）まで</small>
+              <small id="festival-countdown-note">本宮を開催します</small>
             </div>
             <span>会場：川島町水道みち公園</span>
             <span>駐車場：東電置場が利用可能</span>
-            <span>宵宮：演芸 17:30〜20:30</span>
+            <span>昨日の宵宮：大盛況で終了しました！</span>
             <span>本宮：川島囃子 16:40〜16:55／演芸 17:00〜20:30</span>
-            <span>13日午前：神輿・山車巡業</span>
-            <span>祭礼ボランティア再募集・盆踊り練習実施</span>
+            <span>18:40 川島ソーラン／18:50 Exitium Of Nemesis</span>
+            <span>19:10 第四役員スリラーダンス／19:30〜盆踊り</span>
           </div>
         </div>
       </section>
@@ -355,13 +428,11 @@
 
     <nav class="page-menu" aria-label="夏祭りページ内メニュー">
       <div class="container">
+        <a href="#hongu-today">🔥 本日の見どころ</a>
+        <a href="#yoimiya-report">📷 宵宮フォト</a>
+        <a href="#program">本宮プログラム</a>
         <a href="#exitium">出演者紹介</a>
-        <a href="#news">お知らせ</a>
-        <a href="#festival-volunteer">ボランティア再募集</a>
-        <a href="#bon-odori">盆踊り練習</a>
-        <a href="#program">正式プログラム</a>
-        <a href="#progress">準備だより Vol.3</a>
-        <a href="#contents">見どころ</a>
+        <a href="#contents">今年の見どころ</a>
         <a href="#schedule">日程</a>
         <a href="#taiko">太鼓の会</a>
         <a href="#stage">演芸イベント</a>
@@ -378,7 +449,7 @@
         <div class="artist-intro-card">
           <h3>Exitium Of Nemesis</h3>
           <p class="lead">第四町内会にゆかりのあるメンバーが活動している、神奈川県発のバンドです。2023年11月に結成され、神奈川県内を中心にライブ活動を重ねています。</p>
-          <p>今年の夏祭りでは、9月13日（日）の本宮に出演予定です。近況として、フジテレビ系のバラエティ番組「新しいカギ」への出演、台湾ツアーからの帰国、今後の中国地方ツアー予定なども届いています。地域の夏祭りで、若い世代の本格的なバンド演奏をぜひお楽しみください。</p>
+          <p>本日9月13日（日）の本宮に出演予定です。近況として、フジテレビ系のバラエティ番組「新しいカギ」への出演、台湾ツアーからの帰国、今後の中国地方ツアー予定なども届いています。地域の夏祭りで、若い世代の本格的なバンド演奏をぜひお楽しみください。</p>
           <div class="artist-badge-row" aria-label="Exitium Of Nemesisの紹介ポイント">
             <span>第四町内会ゆかり</span>
             <span>神奈川県発バンド</span>
@@ -387,7 +458,7 @@
             <span>台湾ツアー実施</span>
             <span>公式音源・動画あり</span>
           </div>
-          <div class="artist-note">9月13日（日）の本宮で18:50頃から出演予定です。音量や演出を含め、当日は会場全体の進行に合わせて実施するため、時間は前後する場合があります。</div>
+          <div class="artist-note">本日9月13日（日）の本宮で18:50頃から出演予定です。音量や演出を含め、当日は会場全体の進行に合わせて実施するため、時間は前後する場合があります。</div>
           <div class="artist-links" aria-label="Exitium Of Nemesis 関連リンク">
             <a href="https://drive.google.com/file/d/1EuwvrdfXhR6g7klr_ERPd0iPKtwmyo4a/view?usp=sharing" target="_blank" rel="noopener noreferrer">公式ツアーポスターを見る</a>
             <a href="https://linktr.ee/exitiumofnemesis" target="_blank" rel="noopener noreferrer">公式リンク集</a>
@@ -398,37 +469,71 @@
         </div>
       </section>
 
-<section class="block" id="news">
+<section class="block today-feature" id="news">
+        <span id="hongu-today" aria-hidden="true"></span>
         <div class="section-head">
           <div>
-            <span class="badge">NEWS</span>
-            <h2>夏祭りの情報を順次お知らせします</h2>
+            <span class="badge">TODAY / 9.13 HONGU</span>
+            <h2>昨日の宵宮は大盛況！ 本日いよいよ本宮です</h2>
           </div>
         </div>
-        <p class="lead">今年の夏祭りは9/12（土）・13（日）に開催します。祭礼実行委員会の会議がすべて完了し、演芸プログラムや当日の進行が決定しました。正式プログラムと「夏祭り準備だより Vol.3」を公開しています。</p>
-        <div class="notice">🎉 夏祭りの正式プログラムが決定しました。宵宮は演芸17:30〜20:30、本宮は川島囃子16:40〜16:55・演芸17:00〜20:30です。<a href="#program" style="font-weight:1000;text-decoration:underline;">正式プログラムを見る</a></div>
-        <div class="notice">祭礼ボランティアを再募集しています。1日でも1時間でも結構ですので、ぜひボランティアにご協力ください。8/30（日）10:00〜12:00には、第四町内会館で盆踊り練習も実施します。</div>
-        <div class="priority-pair" aria-label="特に注目してほしい夏祭り情報">
-          <article class="priority-card">
-            <h3>祭礼ボランティア 再募集</h3>
-            <p>ボランティア募集には続々と応募がきていますが、まだまだボランティアが足りない状況です。1日でも1時間でも結構ですので、ぜひご協力ください。</p>
-            <a class="button button-red" href="#festival-volunteer">ボランティア再募集を見る</a>
-          </article>
-          <article class="priority-card">
-            <h3>盆踊り練習を実施します</h3>
-            <p>8/30（日）10:00〜12:00、第四町内会館で盆踊り練習を行います。本番同様に、曲と太鼓の会・子どもたちの演奏に合わせて練習します。</p>
-            <a class="button button-red" href="#bon-odori">盆踊り練習を見る</a>
-          </article>
+        <p class="lead">昨日9月12日の宵宮では、高塚いくやさん、The音研ズ、スカポンタン、aespair、Beak K kids、リズムスターズ★Sなど、プログラムに登場した演者のみなさんが熱い演奏やダンスを披露。宵宮から会場は大きな盛り上がりを見せました。ご出演・ご来場いただいた皆さま、ありがとうございました。</p>
+        <div class="today-banner">
+          <strong>🔥 本日9/13（日）本宮！</strong>
+          <span>川島囃子 16:40〜／演芸 17:00〜20:30／盆踊り 19:30〜20:30</span>
         </div>
 
-        <div class="notice" style="margin-top:10px;">🅿️ 駐車場は東電置場が利用可能です。場所・利用時間・誘導方法などの詳細は、決まり次第お知らせします。</div>
+        <h3>本日の見どころ</h3>
+        <div class="today-highlight-grid" aria-label="9月13日本宮の主な見どころ">
+          <div class="today-highlight-card"><time>16:40〜16:55</time><b>川島囃子</b><span>本宮の夕方を、お囃子の音色でスタートします。</span></div>
+          <div class="today-highlight-card"><time>17:25頃</time><b>teamBAT! de show!</b><span>14名で登場予定。ステージを一気に盛り上げます。</span></div>
+          <div class="today-highlight-card"><time>17:40頃</time><b>弾き語り</b><span>NØNさんによる弾き語りを予定しています。</span></div>
+          <div class="today-highlight-card"><time>17:55頃</time><b>極真空手演舞</b><span>二俣川支部極真空手による迫力ある演舞です。</span></div>
+          <div class="today-highlight-card"><time>18:15頃</time><b>タップダンス</b><span>安里大志さんによるタップダンスをお楽しみください。</span></div>
+          <div class="today-highlight-card"><time>18:40頃</time><b>川島ソーラン</b><span>第四の子どもたち＆大人たちが一緒に踊ります。</span></div>
+          <div class="today-highlight-card"><time>18:50頃</time><b>HEAVY METAL</b><span>Exitium Of Nemesisが本宮ステージに登場します。</span></div>
+          <div class="today-highlight-card"><time>19:10頃</time><b>第四役員 スリラーダンス</b><span>第四役員による出し物。会場みんなで盛り上がりましょう！</span></div>
+          <div class="today-highlight-card"><time>19:30〜20:30</time><b>盆踊り</b><span>本宮の締めくくり。みなさん一緒に踊って楽しみましょう。</span></div>
+        </div>
+
+        <div class="today-climax">
+          <b>18:40から本宮のクライマックスへ！</b>
+          <span>川島ソーラン → Exitium Of Nemesis → 第四役員スリラーダンス → 御礼挨拶 → 盆踊りと続きます。演芸の時間は当日の進行により前後する場合があります。</span>
+        </div>
+
+        <div class="actions">
+          <a class="button button-red" href="#program">正式プログラムを見る</a>
+          <a class="button button-outline" href="#yoimiya-report">昨日の宵宮写真を見る</a>
+        </div>
+        <div class="notice" style="margin-top:12px;">🅿️ 駐車場は東電置場が利用可能です。会場周辺ではスタッフの案内にご協力ください。</div>
+      </section>
+
+      <section class="block" id="yoimiya-report">
+        <span class="badge">PHOTO REPORT / 9.12 YOIMIYA</span>
+        <h2>宵宮からお祭りは大盛り上がり！</h2>
+        <p class="lead">初日から多くの方にご来場いただき、演奏、ダンス、ステージ企画などで会場は熱気いっぱいとなりました。本宮も、地域のみなさんと一緒にさらに盛り上げていきます。</p>
+        <div class="yoimiya-gallery" aria-label="9月12日宵宮フォトレポート">
+          <figure class="festival-photo">
+            <img src="./summer-festival-20260912-stage.jpg" alt="9月12日宵宮のステージの様子" loading="lazy" />
+            <figcaption>宵宮ステージの一コマ。出演者と会場が一体となり、初日から大きな盛り上がりとなりました。</figcaption>
+          </figure>
+          <figure class="festival-photo">
+            <img src="./summer-festival-20260912-band.jpg" alt="9月12日宵宮のバンド出演者の様子" loading="lazy" />
+            <figcaption>バンド演奏も続々登場。熱い演奏で夏祭りのステージを盛り上げていただきました。</figcaption>
+          </figure>
+          <figure class="festival-photo">
+            <img src="./summer-festival-20260912-opening.jpg" alt="9月12日宵宮のステージ進行の様子" loading="lazy" />
+            <figcaption>ステージ進行・ごあいさつの様子。地域のみなさんとともに宵宮がスタートしました。</figcaption>
+          </figure>
+        </div>
+        <div class="photo-privacy-note">※掲載写真に写るお子さんの顔については、プライバシー保護のため一部加工しています。</div>
       </section>
 
       <section class="block" id="program">
         <span class="badge">OFFICIAL PROGRAM</span>
         <h2>夏祭り演芸プログラムが決定しました</h2>
         <div class="program-showcase">
-          <p class="lead">祭礼実行委員会での調整がすべて完了し、9月12日（土）宵宮・13日（日）本宮の演芸プログラムと進行時間が決定しました。バンド、ダンス、弾き語り、空手演舞、川島ソーラン、盆踊りなど、二日間にわたり多彩な演目を予定しています。</p>
+          <p class="lead">昨日の宵宮を終え、本日9月13日（日）はいよいよ本宮です。川島囃子、バンド、弾き語り、空手演舞、タップダンス、川島ソーラン、HEAVY METAL、第四役員スリラーダンス、盆踊りなど、多彩な演目を予定しています。</p>
           <div class="program-summary-grid">
             <div class="program-summary-card"><b>9/12（土）宵宮</b><span>演芸 17:30〜20:30<br>盆踊り 19:30〜20:30</span></div>
             <div class="program-summary-card"><b>9/13（日）本宮</b><span>川島囃子 16:40〜16:55<br>演芸 17:00〜20:30<br>盆踊り 19:30〜20:30</span></div>
@@ -445,7 +550,7 @@
           </div>
           <div class="actions">
             <a class="button button-red" href="https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing" target="_blank" rel="noopener noreferrer">Googleドライブでプログラムを見る</a>
-            <a class="button button-outline" href="#progress">夏祭り準備だより Vol.3を見る</a>
+            <a class="button button-outline" href="#hongu-today">本日の見どころに戻る</a>
           </div>
           <div class="program-alert">※演芸の進行時間は当日の状況により前後する場合があります。</div>
         </div>
@@ -573,7 +678,7 @@
         <h2>今年の見どころ</h2>
         <div class="grid">
           <article class="card"><span class="icon">🎤</span><h3>演芸イベント</h3><p>音楽バンド、弾き語り、ブレイクダンスバトル、フラダンス、川島ソーラン、カラオケなど、正式プログラムが決定しました。</p></article>
-          <article class="card"><span class="icon">🏮</span><h3>盆踊り</h3><p>夏祭りは両日とも19:30〜20:30に盆踊りを予定しています。8/30（日）10:00〜12:00には第四町内会館で練習を実施します。</p></article>
+          <article class="card"><span class="icon">🏮</span><h3>本宮の盆踊り</h3><p>本日19:30〜20:30は盆踊りです。本宮の締めくくりを、子どもから大人までみんなで一緒に楽しみましょう。</p></article>
           <article class="card"><span class="icon">🍧</span><h3>出店・交流</h3><p>くじ引き、射的、飲み物販売など、子どもも大人も立ち寄りやすい交流の場を準備しています。</p></article>
           <article class="card"><span class="icon">🥁</span><h3>太鼓の会</h3><p>子どもたちの太鼓練習も進んでいます。盆踊り練習でも本番に近い形で合わせていきます。</p></article>
           <article class="card"><span class="icon">🤝</span><h3>祭礼ボランティア</h3><p>準備、出店補助、片づけなど、短時間のみ・親子参加も歓迎です。</p></article>
@@ -691,7 +796,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> 川島第四町内会<br />
-        <span class="site-updated">最終更新日：<time datetime="2026-08-28">2026-08-28</time></span><br />
+        <span class="site-updated">最終更新日：<time datetime="2026-09-13">2026-09-13</time></span><br />
         <span class="footer-links"><a href="./index.html">トップ</a><a href="./events.html">行事予定</a><a href="./community-info.html">お知らせ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a></span>
       </div>
     </div>
@@ -728,7 +833,8 @@
     }
 
     updateFestivalCountdown();
-    const festivalShareText = "川島第四町内会の夏祭り、9/12（土）・13（日）開催決定！駐車場は東電置場が利用可能です。みんなでイッチダンケツ！特設ページをご覧ください。\nhttps://kawashima-d4-community.github.io/web/summer-festival.html";
+    const festivalShareText = "川島第四町内会の夏祭り、本日9/13（日）はいよいよ本宮！昨日の宵宮は大盛り上がりでした。川島ソーラン、Exitium Of Nemesis、第四役員スリラーダンス、盆踊りなど本日の見どころを公開中です。
+https://kawashima-d4-community.github.io/web/summer-festival.html";
     function fallbackCopyText(text) {
       const textarea = document.createElement('textarea');
       textarea.value = text;
@@ -758,7 +864,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260828_091500_remove_summer_festival_vol2', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260913_150500_summer_festival_hongu', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
