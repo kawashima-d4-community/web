@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="last-modified" content="2026-09-13" />
-  <meta name="d4-site-version" content="20260913_150500_summer_festival_hongu" />
+  <meta name="d4-site-version" content="20260913_153500_hongu_special_thanks" />
   <title>夏祭り特設ページ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会の2026年夏祭り特設ページです。9月12日の宵宮は大盛況で終了し、9月13日は本宮を開催。川島囃子、teamBAT!、弾き語り、極真空手、タップダンス、川島ソーラン、Exitium Of Nemesis、第四役員スリラーダンス、盆踊りなど本日の見どころと宵宮フォトレポートを掲載しています。" />
+  <meta name="description" content="川島第四町内会の2026年夏祭り特設ページです。9月12日の宵宮は大盛況で終了し、9月13日は本宮を開催。本日の見どころ、宵宮フォトレポート、出演者情報、夏祭りを支えるボランティアのSPECIAL THANKSを掲載しています。" />
   <link rel="icon" type="image/png" href="./d4-mark2.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#0759b8" />
@@ -355,6 +355,53 @@
       .today-highlight-grid{grid-template-columns:1fr}
     }
 
+
+    /* 2026-09-13 Festival Volunteer Special Thanks */
+    .special-thanks{
+      position:relative;overflow:hidden;
+      background:linear-gradient(145deg,#fffaf0 0%,#ffffff 54%,#eef8ff 100%) !important;
+      border:2px solid rgba(231,166,56,.32) !important;
+    }
+    .special-thanks::after{
+      content:"THANK YOU";position:absolute;right:14px;top:8px;
+      font-size:52px;font-weight:1000;letter-spacing:.04em;
+      color:rgba(231,166,56,.07);pointer-events:none
+    }
+    .thanks-intro{
+      margin:8px 0 16px;padding:14px 16px;border-radius:18px;
+      background:#fff;border:1px solid var(--border);
+      box-shadow:0 8px 20px rgba(5,58,120,.05)
+    }
+    .thanks-grid{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;margin-top:14px
+    }
+    .thanks-card{
+      padding:15px;border-radius:18px;background:#fff;
+      border:1px solid var(--border);box-shadow:0 8px 18px rgba(5,58,120,.055)
+    }
+    .thanks-name{
+      display:block;margin-bottom:9px;color:var(--primary-dark);
+      font-size:18px;font-weight:1000;letter-spacing:.015em
+    }
+    .thanks-work{
+      display:grid;gap:7px
+    }
+    .thanks-work span{
+      display:block;padding:8px 10px;border-radius:12px;
+      background:#f7fbff;border:1px solid #dcecff;
+      color:#30445e;font-size:12.5px;font-weight:850;line-height:1.55
+    }
+    .thanks-note{
+      margin-top:13px;padding:11px 13px;border-radius:14px;
+      background:#fff8df;border:1px solid #efd890;
+      color:#6f5520;font-size:12.5px;font-weight:900
+    }
+    @media(max-width:760px){
+      .thanks-grid{grid-template-columns:1fr}
+      .special-thanks::after{font-size:34px}
+    }
+
 </style>
   <!-- Google Analytics 4 / アクセス解析 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
@@ -395,7 +442,7 @@
             <div class="hero-actions">
               <a class="button button-primary" href="#hongu-today">本日の見どころを見る</a>
               <a class="button button-secondary" href="#yoimiya-report">宵宮フォトレポート</a>
-              <a class="button button-primary" href="#program">本宮プログラムを見る</a>
+              <a class="button button-primary" href="#special-thanks">SPECIAL THANKS!を見る</a>
               <a class="button button-secondary" href="#exitium">出演者紹介を見る</a>
             </div>
             <p class="release-note">9/13（日）本宮当日更新：昨日の宵宮の様子と、本日の見どころを掲載しました。演芸の進行時間は当日の状況により前後する場合があります。</p>
@@ -410,10 +457,10 @@
           <div class="date-panel">
             <b>本日・本宮開催</b>
             <strong>9/13（日）本宮</strong>
-            <div class="countdown-box" aria-label="夏祭りまでのカウントダウン">
+            <div class="countdown-box" aria-label="夏祭り本日開催">
               <span class="countdown-label">夏祭り</span>
-              <strong id="festival-countdown">計算中</strong>
-              <small id="festival-countdown-note">本宮を開催します</small>
+              <strong>本日！</strong>
+              <small>本宮を開催します</small>
             </div>
             <span>会場：川島町水道みち公園</span>
             <span>駐車場：東電置場が利用可能</span>
@@ -430,13 +477,10 @@
       <div class="container">
         <a href="#hongu-today">🔥 本日の見どころ</a>
         <a href="#yoimiya-report">📷 宵宮フォト</a>
-        <a href="#program">本宮プログラム</a>
+        <a href="#special-thanks">🤝 SPECIAL THANKS!</a>
         <a href="#exitium">出演者紹介</a>
         <a href="#contents">今年の見どころ</a>
-        <a href="#schedule">日程</a>
-        <a href="#taiko">太鼓の会</a>
         <a href="#stage">演芸イベント</a>
-        <a href="#join">参加案内</a>
         <a href="#movie">過去動画</a>
         <a href="#access">会場・駐車場</a>
       </div>
@@ -502,7 +546,7 @@
         </div>
 
         <div class="actions">
-          <a class="button button-red" href="#program">正式プログラムを見る</a>
+          <a class="button button-red" href="#special-thanks">SPECIAL THANKS!を見る</a>
           <a class="button button-outline" href="#yoimiya-report">昨日の宵宮写真を見る</a>
         </div>
         <div class="notice" style="margin-top:12px;">🅿️ 駐車場は東電置場が利用可能です。会場周辺ではスタッフの案内にご協力ください。</div>
@@ -529,108 +573,114 @@
         <div class="photo-privacy-note">※掲載写真に写るお子さんの顔については、プライバシー保護のため一部加工しています。</div>
       </section>
 
-      <section class="block" id="program">
-        <span class="badge">OFFICIAL PROGRAM</span>
-        <h2>夏祭り演芸プログラムが決定しました</h2>
-        <div class="program-showcase">
-          <p class="lead">昨日の宵宮を終え、本日9月13日（日）はいよいよ本宮です。川島囃子、バンド、弾き語り、空手演舞、タップダンス、川島ソーラン、HEAVY METAL、第四役員スリラーダンス、盆踊りなど、多彩な演目を予定しています。</p>
-          <div class="program-summary-grid">
-            <div class="program-summary-card"><b>9/12（土）宵宮</b><span>演芸 17:30〜20:30<br>盆踊り 19:30〜20:30</span></div>
-            <div class="program-summary-card"><b>9/13（日）本宮</b><span>川島囃子 16:40〜16:55<br>演芸 17:00〜20:30<br>盆踊り 19:30〜20:30</span></div>
-          </div>
-          <div class="program-image-grid">
-            <a class="program-image-card" href="https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <img src="./summer-festival-program-flyer.jpg" alt="第14回 夏まつり演芸プログラム案内" loading="lazy" />
-              <span>夏まつり演芸プログラム案内</span>
-            </a>
-            <a class="program-image-card" href="https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <img src="./summer-festival-program.png" alt="9月12日・13日の夏祭り演芸プログラム詳細" loading="lazy" />
-              <span>9/12（土）・9/13（日）演芸プログラム詳細</span>
-            </a>
-          </div>
-          <div class="actions">
-            <a class="button button-red" href="https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing" target="_blank" rel="noopener noreferrer">Googleドライブでプログラムを見る</a>
-            <a class="button button-outline" href="#hongu-today">本日の見どころに戻る</a>
-          </div>
-          <div class="program-alert">※演芸の進行時間は当日の状況により前後する場合があります。</div>
+      
+      <section class="block special-thanks" id="special-thanks">
+        <span class="badge">SPECIAL THANKS!</span>
+        <h2>夏祭りを支えてくださったボランティアの皆さまへ</h2>
+        <div class="thanks-intro">
+          <p class="lead">夏祭りの準備から宵宮・本宮、そして後片づけまで、多くの皆さまに力を貸していただきました。本当にありがとうございます。ここでは、ボランティア応募時にお申し込みいただいた日程・対応内容とともに、感謝を込めてお名前を紹介します。</p>
         </div>
-      </section>
 
-<section class="block recruit" id="festival-volunteer">
-        <span class="badge">VOLUNTEER RECRUIT</span>
-        <h2>祭礼ボランティア 再募集のお知らせ</h2>
-        <div class="volunteer-recruit-card">
-          <h3>1日でも1時間でも大歓迎です</h3>
-          <div class="volunteer-urgent-note">まだまだボランティアが足りない状況です</div>
-          <p class="lead">ボランティア募集には続々と応募がきていますが、夏祭りを安全に楽しく運営するためには、まだまだ多くの方のお力が必要です。1日でも1時間でも結構ですので、ぜひ祭礼ボランティアにご協力ください。</p>
-          <p>登録フォームでエラーがあったため、すでに登録を済ませた方も含め、改めて下記の応募フォームから登録をお願いします。</p>
-
-          <div class="volunteer-second-points" aria-label="祭礼ボランティア再募集のポイント">
-            <div class="volunteer-second-point"><b>1日でもOK</b><span>参加できる日だけで大丈夫です。</span></div>
-            <div class="volunteer-second-point"><b>1時間でもOK</b><span>ご都合のよい時間帯だけで構いません。</span></div>
-            <div class="volunteer-second-point"><b>親子参加も歓迎</b><span>お子様と一緒に参加できる内容もあります。</span></div>
-          </div>
-
-          <div class="volunteer-detail-grid">
-            <div class="volunteer-detail-list" aria-label="祭礼ボランティア再募集の日時・内容">
-              <div class="volunteer-detail-row"><b>9月6日（日）9:00〜15:00の間</b><span>のぼり旗の設置・やぐらの飾り付け等（昼食あり）</span></div>
-              <div class="volunteer-detail-row"><b>9月12日（土）9:00〜14:30の間</b><span>お神輿の組み立て・飾り付け等（昼食あり）</span></div>
-              <div class="volunteer-detail-row"><b>9月12日（土）【宵宮】16:30〜20:30の間</b><span>出店補助（ドリンク販売、射的、輪投げ等）（夕食あり）</span></div>
-              <div class="volunteer-detail-row"><b>9月13日（日）9:40〜13:30の間</b><span>お神輿巡行・お神輿解体・山車解体等（昼食あり）</span></div>
-              <div class="volunteer-detail-row"><b>9月13日（日）【本宮】16:00〜22:00位の間</b><span>出店補助・お祭り終了後の会場撤収作業（夕食あり）</span></div>
-              <div class="volunteer-detail-row"><b>9月20日（日）10:00〜12:00位の間</b><span>のぼり旗の撤収作業等</span></div>
-              <div class="volunteer-detail-row"><b>その他・相談したい</b><span>参加可能な時間が限られる場合も、フォームからご相談ください。</span></div>
+        <div class="thanks-grid" aria-label="夏祭りボランティア Special Thanks">
+          <article class="thanks-card">
+            <span class="thanks-name">Yoko Yoshikawa</span>
+            <div class="thanks-work">
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
             </div>
-            <div class="volunteer-qr-box">
-              <b>応募フォームQRコード</b>
-              <img src="./festival-volunteer-form-qr.png" alt="祭礼ボランティア応募フォームのQRコード" loading="lazy" />
-              <p>スマートフォンでQRコードを読み取り、応募フォームから登録をお願いします。</p>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Hana Arai</span>
+            <div class="thanks-work">
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
             </div>
-          </div>
+          </article>
 
-          <div class="actions">
-            <a class="button button-red" href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfd_KhQ-ZeUSZNApKcWTT8nhiJnc0P9eQP6E-2Gslj3CgAzbw/viewform" target="_blank" rel="noopener noreferrer">応募フォームを開く</a>
-            <a class="button button-outline" href="https://drive.google.com/file/d/1DDrTTRi7TSVxxgso61tZfFpfFL01JZV0/view?usp=sharing" target="_blank" rel="noopener noreferrer">再募集案内フライヤーを見る</a>
-          </div>
-        </div>
-      </section>
+          <article class="thanks-card">
+            <span class="thanks-name">Yuko Hirato / Amu Hirato / Remo Hirato</span>
+            <div class="thanks-work">
+              <span>9/6（日）9:00〜15:00｜のぼり旗の設置・やぐらの飾り付け等</span>
+              <span>9/12（土）9:00〜14:30｜お神輿の組み立て・飾り付け等</span>
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+              <span>9/13（日）9:40〜13:30｜お神輿巡行・お神輿解体・山車解体等</span>
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
+            </div>
+          </article>
 
-      <section class="block recruit" id="bon-odori">
-        <span class="badge">BON ODORI PRACTICE</span>
-        <h2>盆踊り練習を実施します</h2>
-        <p class="lead">8月30日（日）10:00〜12:00に、第四町内会館で盆踊り練習を実施します。盆踊りを一緒に盛り上げていただける方は、ぜひご参加ください。</p>
-        <div class="two-grid">
-          <article class="card"><span class="icon">🏮</span><h3>本番さながらに練習します</h3><p>盆踊り指導員のもと、本番同様に曲と太鼓の会・子どもたちの演奏に合わせて、盆踊りを行います。</p></article>
-          <article class="card"><span class="icon">✨</span><h3>初めての方も歓迎です</h3><p>踊りに慣れていない方も大丈夫です。地域の夏祭りを一緒に盛り上げましょう。</p></article>
-        </div>
-      </section>
+          <article class="thanks-card">
+            <span class="thanks-name">Chika Yoshimura</span>
+            <div class="thanks-work">
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
+            </div>
+          </article>
 
-      <section class="block section-compact" id="taiko">
-        <span class="badge">TAIKO</span>
-        <h2>太鼓の会からの案内</h2>
-        <p class="lead">今年の盆踊りで太鼓をたたいてみたい子どもたちを募集しています。初めてでも大丈夫。みんなで練習して、夏祭り本番を楽しく盛り上げましょう。</p>
-        <div class="taiko-card">
-          <div class="festival-flyer-preview" aria-label="太鼓の会案内チラシ">
-            <img src="./taiko-kai-flyer.jpg" alt="今年の盆踊りで太鼓をたたきませんか？ 太鼓の会からの案内" loading="lazy" />
-          </div>
-          <div class="taiko-summary" aria-label="太鼓の会案内の概要">
-            <span>対象：小学生以上の子どもたち</span>
-            <span>場所：川島第四町内会館</span>
-            <span>持ち物：動きやすい服装・飲み物・タオル</span>
-          </div>
-          <ul class="recruit-list">
-            <li>7/26（日）午前9時から</li>
-            <li>8/2（日）午前9時から</li>
-            <li>8/9（日）午前9時から</li>
-            <li>8/16（日）午前9時から</li>
-            <li>8/23（日）午前9時から</li>
-            <li>8/30（日）午前9時から</li>
-          </ul>
-          <div class="actions">
-            <a class="button button-red" href="https://drive.google.com/file/d/1BjWTrTxBW3ttsObQ0v-ItB77erwjY2ua/view?usp=sharing" target="_blank" rel="noopener noreferrer">案内チラシを開く</a>
-            <a class="button button-outline" href="./community-info.html#taiko-kai-20260709">町内会からのお知らせを見る</a>
-          </div>
+          <article class="thanks-card">
+            <span class="thanks-name">Hiromi Imoto</span>
+            <div class="thanks-work">
+              <span>9/12（土）9:00〜14:30｜お神輿の組み立て・飾り付け等</span>
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+              <span>9/13（日）9:40〜13:30｜お神輿巡行・お神輿解体・山車解体等</span>
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Kaori Kogashiwa</span>
+            <div class="thanks-work">
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Ryoichi Shinozaki</span>
+            <div class="thanks-work">
+              <span>9/6（日）9:00〜15:00｜のぼり旗の設置・やぐらの飾り付け等</span>
+              <span>9/12（土）9:00〜14:30｜お神輿の組み立て・飾り付け等</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Yuka Hatanaka</span>
+            <div class="thanks-work">
+              <span>9/12（土）9:00〜14:30｜お神輿の組み立て・飾り付け等</span>
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Fumie Koganei</span>
+            <div class="thanks-work">
+              <span>9/12（土）9:00〜14:30｜お神輿の組み立て・飾り付け等</span>
+              <span>9/12（土）16:30〜20:30｜出店補助（ドリンク販売・射的・輪投げ等）</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Kumiko Imamura</span>
+            <div class="thanks-work">
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Serina Kato</span>
+            <div class="thanks-work">
+              <span>9/13（日）16:00〜22:00頃｜出店補助・お祭り終了後の会場撤収</span>
+            </div>
+          </article>
+
+          <article class="thanks-card">
+            <span class="thanks-name">Eriko Yanagishita</span>
+            <div class="thanks-work">
+              <span>9/20（日）10:00〜12:00頃｜のぼり旗の撤収作業等</span>
+            </div>
+          </article>
         </div>
+
+        <div class="thanks-note">THANK YOU FOR SUPPORTING KAWASHIMA DAI-4 SUMMER FESTIVAL!<br />※お名前は応募時の氏名をもとにローマ字表記しています。表記の訂正・ご希望がある場合は町内会までお知らせください。</div>
       </section>
 
       <section class="block" id="progress">
@@ -656,15 +706,15 @@
           </div>
           <p>ダンスなどの練習風景は、新井会長のXでも発信しています。準備段階から夏祭りを楽しんでいただければと思います。</p>
           <div class="progress-grid" aria-label="Vol.3の準備状況">
-            <div class="progress-card"><b>演芸プログラム</b><span>二日間の正式プログラムを公開しました。時間・出演内容はプログラムをご確認ください。</span></div>
+            <div class="progress-card"><b>本宮当日</b><span>昨日の宵宮は大盛況。本日は本宮として、夕方から演芸・川島ソーラン・盆踊りなどを実施します。</span></div>
             <div class="progress-card"><b>川島ソーラン</b><span>子どもたちと役員が本番に向けて練習を進めています。</span></div>
             <div class="progress-card"><b>役員のダンス練習</b><span>出し物のダンスも練習中です。練習風景は新井会長のXでご覧いただけます。</span></div>
-            <div class="progress-card"><b>盆踊り</b><span>両日とも19:30〜20:30を予定しています。8/30（日）には町内会館で練習を実施します。</span></div>
-            <div class="progress-card"><b>祭礼ボランティア</b><span>本番を安全に運営するため、引き続き皆さまのご協力をお願いします。</span></div>
+            <div class="progress-card"><b>盆踊り</b><span>本日19:30〜20:30を予定しています。地域のみなさんで本宮の締めくくりを楽しみましょう。</span></div>
+            <div class="progress-card"><b>ボランティアの皆さま</b><span>準備から本番、撤収までご協力いただいている皆さまを「SPECIAL THANKS!」でご紹介しています。</span></div>
             <div class="progress-card"><b>いよいよ本番へ</b><span>会議・プログラム調整を終え、会場準備や演目練習など最終段階に入っています。</span></div>
           </div>
           <div class="actions">
-            <a class="button button-red" href="#program">正式プログラムを見る</a>
+            <a class="button button-red" href="#hongu-today">本日の見どころを見る</a>
             <a class="button button-outline" href="https://x.com/yoshimi44444444" target="_blank" rel="noopener noreferrer">新井会長のXで練習風景を見る</a>
           </div>
         </div>
@@ -677,11 +727,11 @@
         <span class="badge">CONTENTS</span>
         <h2>今年の見どころ</h2>
         <div class="grid">
-          <article class="card"><span class="icon">🎤</span><h3>演芸イベント</h3><p>音楽バンド、弾き語り、ブレイクダンスバトル、フラダンス、川島ソーラン、カラオケなど、正式プログラムが決定しました。</p></article>
+          <article class="card"><span class="icon">🎤</span><h3>本宮ステージ</h3><p>バンド、弾き語り、空手演舞、タップダンス、川島ソーランなど、本日も多彩なステージが続きます。</p></article>
           <article class="card"><span class="icon">🏮</span><h3>本宮の盆踊り</h3><p>本日19:30〜20:30は盆踊りです。本宮の締めくくりを、子どもから大人までみんなで一緒に楽しみましょう。</p></article>
           <article class="card"><span class="icon">🍧</span><h3>出店・交流</h3><p>くじ引き、射的、飲み物販売など、子どもも大人も立ち寄りやすい交流の場を準備しています。</p></article>
-          <article class="card"><span class="icon">🥁</span><h3>太鼓の会</h3><p>子どもたちの太鼓練習も進んでいます。盆踊り練習でも本番に近い形で合わせていきます。</p></article>
-          <article class="card"><span class="icon">🤝</span><h3>祭礼ボランティア</h3><p>準備、出店補助、片づけなど、短時間のみ・親子参加も歓迎です。</p></article>
+          <article class="card"><span class="icon">🔥</span><h3>川島ソーラン</h3><p>18:40頃から、第四の子どもたち＆大人たちによる川島ソーランを予定しています。</p></article>
+          <article class="card"><span class="icon">🤝</span><h3>SPECIAL THANKS!</h3><p>準備・出店補助・神輿巡行・撤収など、夏祭りを支えてくださるボランティアの皆さまに感謝します。</p></article>
           <article class="card"><span class="icon">👨‍👩‍👧‍👦</span><h3>地域でつくる</h3><p>演芸、盆踊り、出店、ボランティアまで、地域みんなでつくる夏祭りです。</p></article>
         </div>
       </section>
@@ -706,34 +756,11 @@
             <p>出演内容と時間が決定し、正式プログラムを公開しました。第四町内会にゆかりのあるバンド「Exitium Of Nemesis」は9月13日（日）18:50頃から出演予定です。</p>
           </div>
           <div class="actions">
-            <a class="button button-red" href="#program">正式プログラムを見る</a>
-            <a class="button button-outline" href="#progress">夏祭り準備だより Vol.3を見る</a>
+            <a class="button button-red" href="#hongu-today">本日の見どころを見る</a>
+            <a class="button button-outline" href="#special-thanks">SPECIAL THANKS!を見る</a>
             <a class="button button-outline" href="#contact">出演・参加・ご協力について</a>
           </div>
         </div>
-      </section>
-<section class="block recruit section-compact" id="join">
-        <span class="badge">JOIN US</span>
-        <h2>参加・協力の案内まとめ</h2>
-        <p class="lead">夏祭りに関する参加・協力の案内を、目的別にまとめました。重複していた募集情報は、各案内へ集約しています。</p>
-<div class="join-summary-grid" aria-label="参加・協力の案内先">
-          <article class="join-summary-card"><b>盆踊り練習</b><p>8/30（日）10:00〜12:00、第四町内会館で実施します。</p><a class="button button-outline" href="#bon-odori">盆踊り練習を見る</a></article>
-          <article class="join-summary-card"><b>祭礼ボランティア再募集</b><p>準備、出店補助、撤収など、短時間のみ・親子参加も歓迎です。</p><a class="button button-outline" href="#festival-volunteer">再募集を見る</a></article>
-          <article class="join-summary-card"><b>出演・参加・ご協力について</b><p>夏祭りに関するお問い合わせや、参加・協力のご相談はこちらをご確認ください。</p><a class="button button-outline" href="#contact">出演・参加・ご協力について</a></article>
-        </div>
-      </section>
-
-      <section class="block" id="schedule">
-        <span class="badge">SCHEDULE</span>
-        <h2>開催日程</h2>
-        <div class="timeline">
-          <div class="time-row"><b>8/30（日）10:00〜12:00</b><span>第四町内会館で盆踊り練習を実施します。</span></div>
-          <div class="time-row"><b>9/12（土）17:30〜20:30</b><span>宵宮・演芸プログラム。19:30〜20:30は盆踊りを予定しています。</span></div>
-          <div class="time-row"><b>9/13（日）午前</b><span>神輿・山車巡行を予定しています。</span></div>
-          <div class="time-row"><b>9/13（日）16:40〜16:55</b><span>本宮・川島囃子。</span></div>
-          <div class="time-row"><b>9/13（日）17:00〜20:30</b><span>本宮・演芸プログラム。19:30〜20:30は盆踊りを予定しています。</span></div>
-        </div>
-        <p style="margin-top:12px;">※正式プログラムを公開しました。演芸の進行時間は当日の状況により前後する場合があります。<a href="https://drive.google.com/file/d/1VXYen-vBaPyaqdwI0SRS-SwvsaJcT6bP/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="font-weight:1000;text-decoration:underline;">Googleドライブでプログラムを見る</a></p>
       </section>
 
       <section class="block" id="movie">
@@ -760,12 +787,8 @@
             <p>A. はい。太鼓、ソーラン節、神輿など、子どもたちも参加しやすい内容を準備しています。</p>
           </div>
           <div class="faq-item">
-            <b>Q. お手伝いは少しだけでも大丈夫ですか？</b>
-            <p>A. 大丈夫です。短時間のみ・親子での参加も歓迎しています。登録フォームでエラーがあったため、すでに登録済みの方も含め、祭礼ボランティア再募集の案内から再度登録をお願いします。</p>
-          </div>
-          <div class="faq-item">
             <b>Q. 演芸プログラムは決まりましたか？</b>
-            <p>A. はい。祭礼実行委員会の全会議が完了し、正式プログラムを公開しました。「正式プログラム」と「夏祭り準備だより Vol.3」をご確認ください。</p>
+            <p>A. はい。本日の主な出演・時間帯は、ページ上部の「本日の見どころ」でご案内しています。</p>
           </div>
         </div>
       </section>
@@ -787,7 +810,7 @@
 <section class="block" id="contact">
         <span class="badge">CONTACT</span>
         <h2>出演・参加・ご協力について</h2>
-        <p class="lead">演芸出演の受付は終了しています。盆踊り練習、祭礼ボランティア再登録、神輿、ソーラン節、準備・片づけなどへのご意見・ご協力は、出演・参加・ご協力についてまたはお問い合わせページからご連絡ください。</p>
+        <p class="lead">夏祭りに関するお問い合わせや、当日の運営・会場についてのご連絡は、お問い合わせページからお願いします。</p>
         <div class="actions"><a class="button button-red" href="./contact.html">町内会へのお問い合わせ</a><a class="button button-outline" href="./events.html">年間行事予定を見る</a></div>
       </section>
     </div>
@@ -807,34 +830,7 @@
   </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    function updateFestivalCountdown() {
-      const countdown = document.getElementById('festival-countdown');
-      const note = document.getElementById('festival-countdown-note');
-      if (!countdown) return;
-
-      const today = new Date();
-      const todayDateOnly = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-      const festivalStart = new Date(2026, 8, 12);
-      const festivalEnd = new Date(2026, 8, 13);
-      const oneDay = 24 * 60 * 60 * 1000;
-      const diffDays = Math.ceil((festivalStart - todayDateOnly) / oneDay);
-
-      if (todayDateOnly < festivalStart) {
-        countdown.textContent = `あと${diffDays}日`;
-        if (note) note.textContent = '初日 9/12（土）まで';
-      } else if (todayDateOnly <= festivalEnd) {
-        countdown.textContent = '本日開催中！';
-        if (note) note.textContent = '会場でお待ちしています';
-      } else {
-        countdown.textContent = '開催終了';
-        if (note) note.textContent = 'ご参加ありがとうございました';
-      }
-    }
-
-    updateFestivalCountdown();
-    const festivalShareText = "川島第四町内会の夏祭り、本日9/13（日）はいよいよ本宮！昨日の宵宮は大盛り上がりでした。川島ソーラン、Exitium Of Nemesis、第四役員スリラーダンス、盆踊りなど本日の見どころを公開中です。
-https://kawashima-d4-community.github.io/web/summer-festival.html";
+    const festivalShareText = "川島第四町内会の夏祭り、本日9/13（日）はいよいよ本宮！昨日の宵宮は大盛り上がりでした。川島ソーラン、Exitium Of Nemesis、第四役員スリラーダンス、盆踊りなど本日の見どころを公開中です。\nhttps://kawashima-d4-community.github.io/web/summer-festival.html";
     function fallbackCopyText(text) {
       const textarea = document.createElement('textarea');
       textarea.value = text;
@@ -864,7 +860,7 @@ https://kawashima-d4-community.github.io/web/summer-festival.html";
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260913_150500_summer_festival_hongu', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20260913_153500_hongu_special_thanks', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
