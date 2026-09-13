@@ -1,9 +1,9 @@
 // 川島第四町内会 PWA Service Worker
-// Version: 2026-09-13-20260913_153500_hongu_special_thanks
+// Version: 2026-09-13-20260913_161500_homepage_regression_fixed
 // HTMLは最新情報を優先し、画像・アイコン等は軽くキャッシュします。
-// Update Note: 本宮当日版の整理・静的「本日！」表示・旧募集/練習案内削除・Volunteer SPECIAL THANKS追加。
+// Update Note: トップページ更新情報のデグレ修正。9月・8月の更新履歴と夏祭り特設サイト導線を復元。
 
-const CACHE_NAME = 'kawashima-d4-pwa-20260913_153500_hongu_special_thanks';
+const CACHE_NAME = 'kawashima-d4-pwa-20260913_161500_homepage_regression_fixed';
 const STATIC_ASSETS = [
   './summer-festival-20260912-stage.jpg',
   './summer-festival-20260912-band.jpg',
