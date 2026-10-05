@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-10-04" />
-  <meta name="d4-site-version" content="20261004_union_sports_day_recruit" />
+  <meta name="last-modified" content="2026-10-05" />
+  <meta name="d4-site-version" content="20261005_soft_volleyball_result_v22" />
   <title>町内会・地域からのお知らせ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会からのお知らせと地域情報を掲載します。10月25日（日）は川島東部連合大運動会を開催。川島第四町内会では競技参加者を募集中です。" />
+  <meta name="description" content="川島第四町内会からのお知らせと地域情報を掲載します。10月3日の町内対抗ソフトバレーボール大会で、第四町内会の男女混合チームが優勝、女子チームが準優勝しました。10月25日の川島東部連合大運動会では競技参加者を募集中です。" />
   <style>
 
 :root {
@@ -928,7 +928,53 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
       }
     }
 
-  </style>
+  
+    .volley-result-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 14px 0 12px;
+    }
+    .volley-result-gallery a {
+      display: block;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(127,29,29,0.06);
+    }
+    .volley-result-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .volley-result-result {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .volley-result-result strong {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: #fff7e8;
+      border: 1px solid rgba(242,166,90,0.48);
+      color: var(--primary-dark);
+      font-size: 14px;
+    }
+    @media (max-width: 760px) {
+      .volley-result-gallery {
+        grid-template-columns: 1fr;
+      }
+      .volley-result-gallery img {
+        aspect-ratio: auto;
+      }
+    }
+
+</style>
   <!-- PWA / ホーム画面追加対応 -->
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="theme-color" content="#d9684f" />
@@ -1029,6 +1075,32 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
         </div>
 
         <div class="post-list" id="chonaikaiPostList">
+
+          <article id="soft-volleyball-result-20261003" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-05">
+            <span class="post-category">スポーツ・開催報告</span>
+            <div class="post-body">
+              <h3>🏆 町内対抗ソフトバレーボール大会で第四町内会が大活躍！</h3>
+              <p class="flyer-lead">10月3日（土）に開催された町内対抗ソフトバレーボール大会で、第四町内会の男女混合チームが見事優勝！ 女子チームも準優勝と、素晴らしい成績を収めました。</p>
+              <div class="volley-result-result" aria-label="大会結果">
+                <strong>🏆 男女混合チーム　優勝</strong>
+                <strong>🥈 女子チーム　準優勝</strong>
+              </div>
+              <div class="post-meta">
+                <span>開催日：2026年10月3日（土）</span>
+                <span>行事：町内対抗ソフトバレーボール大会</span>
+                <span>区分：町内会からのお知らせ</span>
+              </div>
+              <div class="volley-result-gallery" aria-label="町内対抗ソフトバレーボール大会の写真">
+                <a href="./soft-volleyball-20261003/soft-volleyball-20261003-01.webp" target="_blank" rel="noopener"><img src="./soft-volleyball-20261003/soft-volleyball-20261003-01-thumb.webp" alt="大会終了後、好成績を喜ぶ第四町内会の参加者の皆さん" loading="lazy" /></a>
+                <a href="./soft-volleyball-20261003/soft-volleyball-20261003-02.webp" target="_blank" rel="noopener"><img src="./soft-volleyball-20261003/soft-volleyball-20261003-02-thumb.webp" alt="町内対抗ソフトバレーボール大会に参加した第四町内会の皆さん" loading="lazy" /></a>
+                <a href="./soft-volleyball-20261003/soft-volleyball-20261003-03.webp" target="_blank" rel="noopener"><img src="./soft-volleyball-20261003/soft-volleyball-20261003-03-thumb.webp" alt="町内対抗ソフトバレーボール大会の会場の様子" loading="lazy" /></a>
+              </div>
+              <p><strong>「第四はバレーボール強豪町内会！」</strong>と胸を張れる結果となり、第四町内会のチームワークと強さを広く印象づける大会となりました。</p>
+              <p>ご参加いただいた選手の皆さん、会場まで応援に駆けつけてくださった皆さん、そしてメンバーを快く送り出してくださったご家族の皆さん、本当にありがとうございました。皆さんの応援と支えが、今回の素晴らしい結果につながりました。</p>
+            </div>
+          </article>
+
+
 
           <article id="union-sports-day-20261025" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-04" data-expire="2026-10-26">
             <span class="post-category">行事・参加者募集</span>
@@ -1900,7 +1972,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
   <footer>
     <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-10-04">2026-10-04</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-10-05">2026-10-05</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
       <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
     </div>
   </footer>
@@ -2331,7 +2403,7 @@ ${thumbnail}
     // PWA / ホーム画面追加対応
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20260913_153500_hongu_special_thanks').catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20261005_soft_volleyball_result_v22').catch(() => {});
       });
     }
   </script>
