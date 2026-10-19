@@ -1,5 +1,5 @@
 // 川島第四町内会 PWA専用ホーム画面（試作版）
-// 既存のmanifestやService Worker、index.htmlは変更しません。
+// アプリ画面からも既存のService Workerを登録し、起動先の切り替えを補助します。
 // 初回公開後は、お知らせ表示を共通JSONへ移行する想定です。
 (() => {
   'use strict';
@@ -8,3 +8,12 @@
   const card = document.querySelector('.feature-card');
   if (card && Date.now() >= eventEnd.getTime()) card.hidden = true;
 })();
+
+// 公式サイトと同じスコープでService Workerを登録。
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js', { updateViaCache: 'none' })
+      .then(reg => reg.update().catch(() => {}))
+      .catch(err => console.warn('Service Worker registration:', err));
+  });
+}
