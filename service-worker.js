@@ -1,7 +1,7 @@
 // 川島第四町内会 PWA Service Worker
-// 2026-10-19 アプリ専用ホーム画面をキャッシュ対象に追加
+// 2026-10-24 大運動会中止告知・アプリ画面更新
 // HTMLはネットワーク優先、CSS/JS等はキャッシュ優先。
-const CACHE_NAME = 'kawashima-d4-pwa-20261019-apphome-v1';
+const CACHE_NAME = 'kawashima-d4-pwa-20261024-cancel-v1';
 const STATIC_ASSETS = [
   './app.html',
   './app.css',
