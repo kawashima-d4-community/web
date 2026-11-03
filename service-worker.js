@@ -1,7 +1,7 @@
 // 川島第四町内会 PWA Service Worker
 // 2026-11-03 11月メンテナンス・活動アーカイブ追加
 // HTMLはネットワーク優先、CSS/JS等はキャッシュ優先。
-const CACHE_NAME = 'kawashima-d4-pwa-20261103-archive-v1';
+const CACHE_NAME = 'kawashima-d4-pwa-20261104-daycamp-v1';
 const STATIC_ASSETS = [
   './archive-2026.html',
   './app.html',
