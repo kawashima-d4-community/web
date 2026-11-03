@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="last-modified" content="2026-10-24" />
-  <meta name="d4-site-version" content="20261024_union_sports_cancelled_v30" />
-  <title>町内会・地域からのお知らせ｜川島第四町内会</title>
-  <meta name="description" content="川島第四町内会からのお知らせと地域情報を掲載します。10月25日に予定していた川島東部連合大運動会は、安全面と天候・会場状況を踏まえ中止となりました。" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="2026-10-24" name="last-modified"/>
+<meta content="20261024_union_sports_cancelled_v30" name="d4-site-version"/>
+<title>町内会・地域からのお知らせ｜川島第四町内会</title>
+<meta content="川島第四町内会からのお知らせと地域情報を掲載します。10月25日に予定していた川島東部連合大運動会は、安全面と天候・会場状況を踏まえ中止となりました。" name="description"/>
+<style>
 
 :root {
   --bg: #fff8f6;
@@ -1025,17 +1026,17 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
     }
 
 </style>
-  <!-- PWA / ホーム画面追加対応 -->
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <meta name="theme-color" content="#d9684f" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="川島第四町内会" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-  <!-- Google Analytics 4 / アクセス解析 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
-  <script>
+<!-- PWA / ホーム画面追加対応 -->
+<link href="./manifest.webmanifest" rel="manifest"/>
+<meta content="#d9684f" name="theme-color"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="川島第四町内会" name="apple-mobile-web-app-title"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<link href="./icons/icon-192.png" rel="apple-touch-icon"/>
+<!-- Google Analytics 4 / アクセス解析 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FEX7JP4M1Z"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -1059,1078 +1060,915 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
   </script>
 </head>
 <body id="top">
-  <header>
-    <div class="container">
-      <a class="back" href="./index.html">← ホームページへ戻る</a>
-      <div class="hero">
-        <span class="badge">Community Board</span>
-        <h1>町内会・地域からのお知らせ</h1>
-        <p>川島第四町内会の公式なお知らせと、地域の皆さまから寄せられたお知らせを区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
-          <a class="button" href="./posting-request.html">地域情報の掲載を依頼する</a>
-          <a class="button secondary" href="./index.html#news">What's Newへ戻る</a>
-        </div>
-        <div class="review-note">
-          <strong>掲載依頼について：</strong>掲載には内容確認・審査があるため、公開まで少しお時間をいただく場合があります。
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section>
-      <div class="board-toolbar">
-        <div>
-          <h2>掲載中のお知らせ</h2>
-          <p class="small-note">「町内会からのお知らせ」と「地域からのお知らせ」を分けて掲載します。町内会からのお知らせ・地域からのお知らせともに、原則1か月で自動非表示になります。</p>
-
-          <div class="seen-guide-note support-guide" id="seen-guide-note">
-            <div class="support-guide-main">
-              <strong>「確認しました」ボタンは、地域のお知らせへの応援です。</strong>
-              <span>記事を確認したら「😊 確認しました」を押してください。確認数が増えると、トップページの「よく読まれているお知らせ」に表示されやすくなります。</span>
-            </div>
-            <div class="support-guide-points" aria-label="確認ボタンの効果">
-              <div class="support-guide-point"><b>読んだことが伝わる</b>町内会からのお知らせが届いている目安になります。</div>
-              <div class="support-guide-point"><b>お知らせを応援</b>確認数が多いお知らせほど注目されやすくなります。</div>
-              <div class="support-guide-point"><b>参加のきっかけ</b>清掃・防災・行事など、地域活動に気づく人が増えます。</div>
-            </div>
-          </div>
-
-          <div class="support-stage-card" id="support-stage-card" aria-live="polite">
-            <div class="support-stage-head">
-              <p class="support-stage-title">あなたの確認応援ステージ</p>
-              <span class="support-stage-label" id="supportStageLabel">準備中</span>
-            </div>
-            <p class="support-stage-message" id="supportStageMessage">お知らせを確認すると、応援ステージが少しずつ上がります。10件以上は一致団結メンバーとして、ブロンズ、シルバー、ゴールド、プレミアム、その先のステージへ進みます。</p>
-            <div class="support-stage-progress" aria-hidden="true"><span id="supportStageProgress"></span></div>
-            <div class="support-stage-foot">
-              <span id="supportStageCount">確認済み：0件</span>
-              <span id="supportStageNext">まずは1件確認してみましょう</span>
-            </div>
-          </div>
-
+<header>
+<div class="container">
+<a class="back" href="./index.html">← ホームページへ戻る</a>
+<div class="hero">
+<span class="badge">Community Board</span>
+<h1>町内会・地域からのお知らせ</h1>
+<p>川島第四町内会の公式なお知らせと、地域の皆さまから寄せられたお知らせを区別して掲載します。掲載期間を過ぎた情報は自動で非表示になります。</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+<a class="button" href="./posting-request.html">地域情報の掲載を依頼する</a>
+<a class="button secondary" href="./index.html#news">What's Newへ戻る</a>
 </div>
-        <span class="badge" id="totalPostCount">確認中</span>
-      </div>
-      <div class="sheet-status" id="sheetStatus" aria-live="polite"></div>
-
-      <div class="board-section" id="chonaikai-news">
-        <div class="board-section-head">
-          <div>
-            <span class="board-label">町内会</span>
-            <h2>町内会からのお知らせ</h2>
-            <p class="small-note">川島第四町内会の行事・活動報告・写真掲載・清掃・防災などの公式なお知らせです。町内会からのお知らせは固定掲載として管理します。</p>
-          </div>
-          <span class="badge" id="chonaikaiPostCount">確認中</span>
+<div class="review-note">
+<strong>掲載依頼について：</strong>掲載には内容確認・審査があるため、公開まで少しお時間をいただく場合があります。
         </div>
-
-        <div class="post-list" id="chonaikaiPostList">
-
-          <article id="circular-20261010" class="community-post" data-board="chonaikai" data-start="2026-10-10" data-expire="2026-11-30">
-            <span class="post-category">回覧板・10月10日</span>
-            <div class="post-body">
-              <h3>10/10 回覧板情報をまとめました</h3>
-              <p class="flyer-lead">10月10日回覧分から、地域の皆さまに関係する主なトピックを抜粋してご案内します。ここでは概要のみ掲載しています。<strong>対象・参加費・申込方法・定員・変更情報などの詳細は、必ずGoogle Drive内の回覧板PDF原本をご確認ください。</strong></p>
-
-              <div class="circular-summary">
-                <div class="circular-topic-grid">
-                  <section class="circular-topic">
-                    <h4>① 西谷地区センターだより「10月のお知らせ」</h4>
-                    <ul>
-                      <li>小学生向けの西谷探検、マタニティヨガ、親子遊び、親子英語、草花を楽しむ講座などを案内。</li>
-                      <li>10/18のカラオケフェスタ、10/31の子ども向け食事会など、地域イベントも掲載。</li>
-                      <li>ハロウィン展示、新しいサークル、新刊図書、パソコン無料相談会・子育て相談などの情報あり。</li>
-                    </ul>
-                    <p class="source-note">※各講座の対象・費用・申込開始日などはPDF原本をご確認ください。</p>
-                  </section>
-
-                  <section class="circular-topic">
-                    <h4>② 川島町公園こどもログハウス「アドベンチャーログ通信 秋冬号」</h4>
-                    <ul>
-                      <li>11/7「まどにお絵かき」、11/9「親子リトミック」、11/10「おはなし会」など秋冬のイベント情報。</li>
-                      <li>11/14の子育てサロン「たんぽぽ」や、11/18・12/16のチャレンジタイムなども案内。</li>
-                      <li>開館時間・休館日、イベント変更時の確認方法なども掲載。</li>
-                    </ul>
-                    <p class="source-note">※対象年齢や最新の開催状況はPDF原本・施設ホームページをご確認ください。</p>
-                  </section>
-
-                  <section class="circular-topic">
-                    <h4>③ 第53回 川島東部連合 大運動会</h4>
-                    <ul>
-                      <li><strong>【10/24更新】10/25（日）の大会は中止となりました。</strong></li>
-                      <li>安全面、グラウンドの現状復帰・準備の難しさ、午後からの降雨見込みを踏まえて中止が決定されました。</li>
-                      <li>会場案内図、駐車・駐輪・ごみ持ち帰り等の注意事項も確認できます。</li>
-                    </ul>
-                    <p class="source-note">※第四町内会の大会案内は、当ホームページの<a href="./union-sports-day-2026.html"><strong>大運動会特設ページ</strong></a>でもご覧いただけます。</p>
-                  </section>
-
-                  <section class="circular-topic">
-                    <h4>④ 川島地域ケアプラザからのお知らせ</h4>
-                    <ul>
-                      <li>10/21～10/26「小さな展覧会」、11/29「川島文化祭」の案内。</li>
-                      <li>10/27「ゆるっと健康クラブ」や、10月の自主事業・地域向け講座を掲載。</li>
-                      <li>福祉・保健の窓口相談時間の変更など、施設利用に関する重要なお知らせもあります。</li>
-                    </ul>
-                    <p class="source-note">※文化祭の出店・催し、各事業の申込条件や相談窓口の詳細はPDF原本をご確認ください。</p>
-                  </section>
-                </div>
-
-                <div class="post-actions" style="margin-top:18px;">
-                  <a class="button button-primary" href="https://drive.google.com/drive/folders/14RFJhM2fOXidx2lx9WAmppjChnxbApfN?usp=sharing" target="_blank" rel="noopener noreferrer">10/10回覧板PDFを見る（Google Drive）</a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-
-
-          <article id="yumekko-festival-20261114" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-09" data-expire="2026-11-15">
-            <span class="post-category">地域行事・子ども</span>
-            <div class="post-body">
-              <h3>11/14（土）川島小学校「ゆめっ子祭り」開催！</h3>
-              <p class="flyer-lead">川島小学校PTA主催の「ゆめっ子祭り」が開催されます。おいしいお店や楽しいゲームコーナーなど、子どもたちが楽しめる企画が予定されています。ご家族やお友だちと、ぜひ遊びに行ってみてください。</p>
-              <a class="post-thumb-link" href="https://drive.google.com/file/d/1heo1gS_lcOJ2jIPD28n-jrc7JFpKimGj/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="ゆめっ子祭りの案内チラシをGoogle Driveで見る">
-                <img class="post-thumb" src="./november-events-2026/yumekko-festival-20261114-thumb.webp" alt="11月14日 川島小学校 ゆめっ子祭り案内チラシ" style="width:min(100%,520px);" loading="lazy" />
-              </a>
-              <div class="post-meta">
-                <span>日時：2026年11月14日（土）10:30～14:30</span>
-                <span>場所：川島小学校 校庭</span>
-                <span>雨天時：体育館で実施</span>
-                <span>主催：横浜市立川島小学校 PTA</span>
-              </div>
-              <p><strong>パン・ジュースなどのお店、いろいろなゲームコーナーなどを予定。</strong>そのほかのお店は当日のお楽しみです。見て回るだけでも楽しめる地域のお祭りです。</p>
-              <div class="post-actions">
-                <a class="button button-primary" href="https://drive.google.com/file/d/1heo1gS_lcOJ2jIPD28n-jrc7JFpKimGj/view?usp=sharing" target="_blank" rel="noopener noreferrer">案内チラシを見る</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="shichigosan-sugiyama-20261115" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-09" data-expire="2026-11-16">
-            <span class="post-category">地域行事・七五三</span>
-            <div class="post-body">
-              <h3>11/15（日）川島杉山神社「七五三」のご案内</h3>
-              <p class="flyer-lead">川島杉山神社で七五三のご祈願が行われます。お子さまの健やかな成長を願う七五三。対象のお子さまがいらっしゃるご家庭は、ぜひご参拝ください。</p>
-              <a class="post-thumb-link" href="https://drive.google.com/file/d/1M_xtA5RWIKJ1pKdzAPXbIcquEMNYaDPM/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="川島杉山神社 七五三の案内チラシをGoogle Driveで見る">
-                <img class="post-thumb" src="./november-events-2026/shichigosan-sugiyama-20261115-thumb.webp" alt="11月15日 川島杉山神社 七五三案内チラシ" style="width:min(100%,520px);" loading="lazy" />
-              </a>
-              <div class="post-meta">
-                <span>日時：2026年11月15日（日）10:00～14:00</span>
-                <span>場所：川島杉山神社</span>
-                <span>内容：お子さまの息災と加福祈願</span>
-                <span>当日：宮司によるお祓い</span>
-              </div>
-              <p>当日は宮司がお祓いを行います。地域の神社で、お子さまの節目をお祝いしてみませんか。</p>
-              <div class="post-actions">
-                <a class="button button-primary" href="https://drive.google.com/file/d/1M_xtA5RWIKJ1pKdzAPXbIcquEMNYaDPM/view?usp=sharing" target="_blank" rel="noopener noreferrer">七五三の案内チラシを見る</a>
-              </div>
-            </div>
-          </article>
-
-
-
-          <article id="soft-volleyball-result-20261003" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-05">
-            <span class="post-category">スポーツ・開催報告</span>
-            <div class="post-body">
-              <h3>🏆 町内対抗ソフトバレーボール大会で第四町内会が大活躍！</h3>
-              <p class="flyer-lead">10月3日（土）に開催された町内対抗ソフトバレーボール大会で、第四町内会の男女混合チームが見事優勝！ 女子チームも準優勝と、素晴らしい成績を収めました。</p>
-              <div class="volley-result-result" aria-label="大会結果">
-                <strong>🏆 男女混合チーム　優勝</strong>
-                <strong>🥈 女子チーム　準優勝</strong>
-              </div>
-              <div class="post-meta">
-                <span>開催日：2026年10月3日（土）</span>
-                <span>行事：町内対抗ソフトバレーボール大会</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="volley-result-gallery" aria-label="町内対抗ソフトバレーボール大会の写真">
-                <a href="./soft-volleyball-20261003/soft-volleyball-20261003-01.webp" target="_blank" rel="noopener"><img src="./soft-volleyball-20261003/soft-volleyball-20261003-01-thumb.webp" alt="大会終了後、好成績を喜ぶ第四町内会の参加者の皆さん" loading="lazy" /></a>
-                <a href="./soft-volleyball-20261003/soft-volleyball-20261003-02.webp" target="_blank" rel="noopener"><img src="./soft-volleyball-20261003/soft-volleyball-20261003-02-thumb.webp" alt="町内対抗ソフトバレーボール大会に参加した第四町内会の皆さん" loading="lazy" /></a>
-                <a href="./soft-volleyball-20261003/soft-volleyball-20261003-03.webp" target="_blank" rel="noopener"><img src="./soft-volleyball-20261003/soft-volleyball-20261003-03-thumb.webp" alt="町内対抗ソフトバレーボール大会の会場の様子" loading="lazy" /></a>
-              </div>
-              <p><strong>「第四はバレーボール強豪町内会！」</strong>と胸を張れる結果となり、第四町内会のチームワークと強さを広く印象づける大会となりました。</p>
-              <p>ご参加いただいた選手の皆さん、会場まで応援に駆けつけてくださった皆さん、そしてメンバーを快く送り出してくださったご家族の皆さん、本当にありがとうございました。皆さんの応援と支えが、今回の素晴らしい結果につながりました。</p>
-            </div>
-          </article>
-
-
-
-          <article id="union-sports-day-20261025" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-24" data-expire="2026-10-26">
-<span class="post-category">重要・開催中止</span>
+</div>
+</div>
+</header>
+<main class="container">
+<section>
+<div class="board-toolbar">
+<div>
+<h2>掲載中のお知らせ</h2>
+<p class="small-note">「町内会からのお知らせ」と「地域からのお知らせ」を分けて掲載します。町内会からのお知らせ・地域からのお知らせともに、原則1か月で自動非表示になります。</p>
+<div class="seen-guide-note support-guide" id="seen-guide-note">
+<div class="support-guide-main">
+<strong>「確認しました」ボタンは、地域のお知らせへの応援です。</strong>
+<span>記事を確認したら「😊 確認しました」を押してください。確認数が増えると、トップページの「よく読まれているお知らせ」に表示されやすくなります。</span>
+</div>
+<div aria-label="確認ボタンの効果" class="support-guide-points">
+<div class="support-guide-point"><b>読んだことが伝わる</b>町内会からのお知らせが届いている目安になります。</div>
+<div class="support-guide-point"><b>お知らせを応援</b>確認数が多いお知らせほど注目されやすくなります。</div>
+<div class="support-guide-point"><b>参加のきっかけ</b>清掃・防災・行事など、地域活動に気づく人が増えます。</div>
+</div>
+</div>
+<div aria-live="polite" class="support-stage-card" id="support-stage-card">
+<div class="support-stage-head">
+<p class="support-stage-title">あなたの確認応援ステージ</p>
+<span class="support-stage-label" id="supportStageLabel">準備中</span>
+</div>
+<p class="support-stage-message" id="supportStageMessage">お知らせを確認すると、応援ステージが少しずつ上がります。10件以上は一致団結メンバーとして、ブロンズ、シルバー、ゴールド、プレミアム、その先のステージへ進みます。</p>
+<div aria-hidden="true" class="support-stage-progress"><span id="supportStageProgress"></span></div>
+<div class="support-stage-foot">
+<span id="supportStageCount">確認済み：0件</span>
+<span id="supportStageNext">まずは1件確認してみましょう</span>
+</div>
+</div>
+</div>
+<span class="badge" id="totalPostCount">確認中</span>
+<div class="review-note" id="archive-guide-2026"><strong>過去の活動：</strong>終了した10月の行事・活動報告は <a href="./archive-2026.html"><strong>2026年 活動アーカイブ</strong></a> に移動しました。</div></div>
+<div aria-live="polite" class="sheet-status" id="sheetStatus"></div>
+<div class="board-section" id="chonaikai-news">
+<div class="board-section-head">
+<div>
+<span class="board-label">町内会</span>
+<h2>町内会からのお知らせ</h2>
+<p class="small-note">川島第四町内会の行事・活動報告・写真掲載・清掃・防災などの公式なお知らせです。町内会からのお知らせは固定掲載として管理します。</p>
+</div>
+<span class="badge" id="chonaikaiPostCount">確認中</span>
+</div>
+<div class="post-list" id="chonaikaiPostList">
+<article class="community-post" data-board="chonaikai" data-expire="2026-11-30" data-start="2026-10-10" id="circular-20261010">
+<span class="post-category">回覧板・10月10日</span>
 <div class="post-body">
-<h3>【開催中止】10/25（日）第53回 川島東部連合大運動会</h3>
-<p class="flyer-lead">10月25日（日）に予定していた川島東部連合大運動会は、天候と会場状況を踏まえ、参加される皆さまの安全を最優先に考えた結果、<strong>中止</strong>となりました。</p>
-<a class="post-thumb-link" href="./union-sports-day-2026.html" aria-label="大運動会の中止のお知らせを見る"><img class="post-thumb" src="./sports-day-2026/sports-day-2019-04.webp" alt="過去の川島東部連合大運動会の様子" style="width:min(100%,520px);" loading="lazy" /></a>
-<div class="post-meta"><span>予定日：2026年10月25日（日）</span><span>会場：川島町公園</span><span><strong>開催：中止</strong></span></div>
-<p><strong>中止判断の主な理由：</strong>安全対策、雨天後のグラウンドの現状復帰の困難、準備の困難、25日午後からの降雨を踏まえたプログラム編成の困難。</p>
-<p>参加や応援を予定してくださっていた皆さまには残念なお知らせとなりますが、安全な運営のための判断となります。ご理解のほど、よろしくお願いいたします。</p>
-<div class="post-actions"><a class="button button-primary" href="./union-sports-day-2026.html">中止のお知らせ・詳細を見る</a></div>
+<h3>10/10 回覧板情報をまとめました</h3>
+<p class="flyer-lead">10月10日回覧分から、地域の皆さまに関係する主なトピックを抜粋してご案内します。ここでは概要のみ掲載しています。<strong>対象・参加費・申込方法・定員・変更情報などの詳細は、必ずGoogle Drive内の回覧板PDF原本をご確認ください。</strong></p>
+<div class="circular-summary">
+<div class="circular-topic-grid">
+<section class="circular-topic">
+<h4>① 西谷地区センターだより「10月のお知らせ」</h4>
+<ul>
+<li>小学生向けの西谷探検、マタニティヨガ、親子遊び、親子英語、草花を楽しむ講座などを案内。</li>
+<li>10/18のカラオケフェスタ、10/31の子ども向け食事会など、地域イベントも掲載。</li>
+<li>ハロウィン展示、新しいサークル、新刊図書、パソコン無料相談会・子育て相談などの情報あり。</li>
+</ul>
+<p class="source-note">※各講座の対象・費用・申込開始日などはPDF原本をご確認ください。</p>
+</section>
+<section class="circular-topic">
+<h4>② 川島町公園こどもログハウス「アドベンチャーログ通信 秋冬号」</h4>
+<ul>
+<li>11/7「まどにお絵かき」、11/9「親子リトミック」、11/10「おはなし会」など秋冬のイベント情報。</li>
+<li>11/14の子育てサロン「たんぽぽ」や、11/18・12/16のチャレンジタイムなども案内。</li>
+<li>開館時間・休館日、イベント変更時の確認方法なども掲載。</li>
+</ul>
+<p class="source-note">※対象年齢や最新の開催状況はPDF原本・施設ホームページをご確認ください。</p>
+</section>
+<section class="circular-topic">
+<h4>③ 第53回 川島東部連合 大運動会</h4>
+<ul>
+<li><strong>【10/24更新】10/25（日）の大会は中止となりました。</strong></li>
+<li>安全面、グラウンドの現状復帰・準備の難しさ、午後からの降雨見込みを踏まえて中止が決定されました。</li>
+<li>会場案内図、駐車・駐輪・ごみ持ち帰り等の注意事項も確認できます。</li>
+</ul>
+<p class="source-note">※第四町内会の大会案内は、当ホームページの<a href="./union-sports-day-2026.html"><strong>大運動会特設ページ</strong></a>でもご覧いただけます。</p>
+</section>
+<section class="circular-topic">
+<h4>④ 川島地域ケアプラザからのお知らせ</h4>
+<ul>
+<li>10/21～10/26「小さな展覧会」、11/29「川島文化祭」の案内。</li>
+<li>10/27「ゆるっと健康クラブ」や、10月の自主事業・地域向け講座を掲載。</li>
+<li>福祉・保健の窓口相談時間の変更など、施設利用に関する重要なお知らせもあります。</li>
+</ul>
+<p class="source-note">※文化祭の出店・催し、各事業の申込条件や相談窓口の詳細はPDF原本をご確認ください。</p>
+</section>
+</div>
+<div class="post-actions" style="margin-top:18px;">
+<a class="button button-primary" href="https://drive.google.com/drive/folders/14RFJhM2fOXidx2lx9WAmppjChnxbApfN?usp=sharing" rel="noopener noreferrer" target="_blank">10/10回覧板PDFを見る（Google Drive）</a>
+</div>
+</div>
+</div>
+</article>
+<article class="community-post flyer-post" data-board="chonaikai" data-expire="2026-11-15" data-start="2026-10-09" id="yumekko-festival-20261114">
+<span class="post-category">地域行事・子ども</span>
+<div class="post-body">
+<h3>11/14（土）川島小学校「ゆめっ子祭り」開催！</h3>
+<p class="flyer-lead">川島小学校PTA主催の「ゆめっ子祭り」が開催されます。おいしいお店や楽しいゲームコーナーなど、子どもたちが楽しめる企画が予定されています。ご家族やお友だちと、ぜひ遊びに行ってみてください。</p>
+<a aria-label="ゆめっ子祭りの案内チラシをGoogle Driveで見る" class="post-thumb-link" href="https://drive.google.com/file/d/1heo1gS_lcOJ2jIPD28n-jrc7JFpKimGj/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<img alt="11月14日 川島小学校 ゆめっ子祭り案内チラシ" class="post-thumb" loading="lazy" src="./november-events-2026/yumekko-festival-20261114-thumb.webp" style="width:min(100%,520px);"/>
+</a>
+<div class="post-meta">
+<span>日時：2026年11月14日（土）10:30～14:30</span>
+<span>場所：川島小学校 校庭</span>
+<span>雨天時：体育館で実施</span>
+<span>主催：横浜市立川島小学校 PTA</span>
+</div>
+<p><strong>パン・ジュースなどのお店、いろいろなゲームコーナーなどを予定。</strong>そのほかのお店は当日のお楽しみです。見て回るだけでも楽しめる地域のお祭りです。</p>
+<div class="post-actions">
+<a class="button button-primary" href="https://drive.google.com/file/d/1heo1gS_lcOJ2jIPD28n-jrc7JFpKimGj/view?usp=sharing" rel="noopener noreferrer" target="_blank">案内チラシを見る</a>
+</div>
+</div>
+</article>
+<article class="community-post flyer-post" data-board="chonaikai" data-expire="2026-11-16" data-start="2026-10-09" id="shichigosan-sugiyama-20261115">
+<span class="post-category">地域行事・七五三</span>
+<div class="post-body">
+<h3>11/15（日）川島杉山神社「七五三」のご案内</h3>
+<p class="flyer-lead">川島杉山神社で七五三のご祈願が行われます。お子さまの健やかな成長を願う七五三。対象のお子さまがいらっしゃるご家庭は、ぜひご参拝ください。</p>
+<a aria-label="川島杉山神社 七五三の案内チラシをGoogle Driveで見る" class="post-thumb-link" href="https://drive.google.com/file/d/1M_xtA5RWIKJ1pKdzAPXbIcquEMNYaDPM/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+<img alt="11月15日 川島杉山神社 七五三案内チラシ" class="post-thumb" loading="lazy" src="./november-events-2026/shichigosan-sugiyama-20261115-thumb.webp" style="width:min(100%,520px);"/>
+</a>
+<div class="post-meta">
+<span>日時：2026年11月15日（日）10:00～14:00</span>
+<span>場所：川島杉山神社</span>
+<span>内容：お子さまの息災と加福祈願</span>
+<span>当日：宮司によるお祓い</span>
+</div>
+<p>当日は宮司がお祓いを行います。地域の神社で、お子さまの節目をお祝いしてみませんか。</p>
+<div class="post-actions">
+<a class="button button-primary" href="https://drive.google.com/file/d/1M_xtA5RWIKJ1pKdzAPXbIcquEMNYaDPM/view?usp=sharing" rel="noopener noreferrer" target="_blank">七五三の案内チラシを見る</a>
+</div>
 </div>
 </article>
 
 
-          <article id="crime-prevention-campaign-20261011" class="community-post flyer-post" data-board="chonaikai" data-start="2026-10-01" data-expire="2026-10-12">
-            <span class="post-category">防犯・地域情報</span>
-            <div class="post-body">
-              <h3>10/11（日）鈴木萌花（moe☆moe）さんが保土ケ谷警察署「一日警察署長」に</h3>
-              <p class="flyer-lead">保土ケ谷防犯協会から情報共有いただきました。相鉄線 星川駅西口広場で「安全安心まちづくり旬間 防犯キャンペーン」が開催され、保土ケ谷区ゆかりのダンサー鈴木萌花さんが一日警察署長を務めます。</p>
-              <a class="post-thumb-link" href="./suzuki-moeka-hodogaya-crime-prevention-2026.html" aria-label="鈴木萌花さん一日警察署長 防犯キャンペーンの詳細を見る">
-                <img class="post-thumb" src="./suzuki-moeka-hodogaya-crime-prevention-20261011.jpg" alt="10月11日 鈴木萌花さん一日警察署長 安全安心まちづくり旬間 防犯キャンペーン" style="width:min(100%,520px);" />
-              </a>
-              <div class="post-meta">
-                <span>日時：2026年10月11日（日）13:30～</span>
-                <span>場所：相鉄線 星川駅西口広場</span>
-                <span>内容：一日警察署長委嘱式・安全安心まちづくり宣言・防犯啓発品配布など</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <p>鈴木萌花さんは、ダンサーネーム「moe☆moe」として活動。NHK紅白歌合戦のバックダンサー、日向坂46のMV、ウマ娘の大型イベントなどに出演し、海外でもダンスに挑戦しています。プロフィールやSNS、これまでの活動歴も専用ページで詳しく紹介しています。</p>
-              <div class="post-actions">
-                <a class="button button-primary" href="./suzuki-moeka-hodogaya-crime-prevention-2026.html">鈴木萌花さんのプロフィール・イベント詳細を見る</a>
-                <a class="button button-secondary" href="./suzuki-moeka-hodogaya-crime-prevention-20261011.jpg" target="_blank" rel="noopener">案内チラシを大きく見る</a>
-              </div>
-            </div>
-          </article>
 
-          <article id="sawayaka-cleaning-20260920" class="community-post flyer-post" data-board="chonaikai" data-start="2026-09-01" data-expire="2026-09-21">
-            <span class="post-category">清掃活動</span>
-            <div class="post-body">
-              <h3>9月20日（日）さわやか清掃のお知らせ</h3>
-              <p class="flyer-lead">町中のゴミをきれいに片づける「さわやか清掃」を実施します。子ども会・長寿会の皆さまも、ぜひご参加ください。</p>
-
-              <a class="post-thumb-link" href="https://drive.google.com/file/d/1r_5VBerm8Er38AndmuZ0_GpLryTbfUey/view?usp=sharing" target="_blank" rel="noopener" aria-label="9月20日 さわやか清掃の案内チラシをGoogleドライブで開く">
-                <img class="post-thumb" src="./sawayaka-cleaning-20260920.jpg" alt="令和8年9月20日 さわやか清掃のお知らせ" style="width:min(100%,520px);" />
-              </a>
-
-              <div class="post-meta">
-                <span>日時：2026年9月20日（日） 午前9:00～10:00</span>
-                <span>集合：川島第四町内会館</span>
-                <span>雨天：朝から雨が降っていた場合は中止</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-
-              <p>地域をきれいにしながら、ご近所同士の交流にもつながる活動です。無理のない範囲でご協力をお願いいたします。</p>
-
-              <div class="post-actions">
-                <a class="button button-primary" href="https://drive.google.com/file/d/1r_5VBerm8Er38AndmuZ0_GpLryTbfUey/view?usp=sharing" target="_blank" rel="noopener">案内チラシを大きく見る</a>
-                <a class="button button-secondary" href="./about.html#cleaning">さわやか清掃について見る</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="kairan-20260804" class="community-post kairan-post" data-board="chonaikai" data-start="2026-08-04" data-expire="2026-09-04">
-            <span class="post-category">回覧板情報・町内会</span>
-            <div class="post-body">
-              <h3>8月 回覧板情報・町内会を掲載しました</h3>
-              <p class="kairan-lead">8月の回覧板から、西谷地区センターだより、横浜市川島地域ケアプラザ広報誌「リーベル川島」などの主な内容を掲載します。詳しい内容は、下のボタンから回覧資料をご確認ください。</p>
-
-              <div class="flyer-preview" aria-label="8月回覧板情報プレビュー">
-                <iframe src="https://drive.google.com/file/d/1vmngL54pSWJ9rnrBtV18qAIoSrqCXRB8/preview" title="8月 回覧板情報・町内会" loading="lazy" allow="autoplay"></iframe>
-              </div>
-              <p class="flyer-note">プレビューが表示されない場合は、下の「8月回覧板情報を見る」ボタンからGoogleドライブでご確認ください。</p>
-
-              <div class="kairan-summary-row" aria-label="8月回覧板情報の概要">
-                <span>回覧日：2026年8月</span>
-                <span>掲載期間：9月4日まで</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-
-              <div class="kairan-topic-list">
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>1．西谷地区センターだより 8月のお知らせ</h4>
-                    <span class="kairan-topic-tag">地域情報・講座</span>
-                  </div>
-                  <p>西谷地区センターから、8月から9月にかけての講座、地域活動応援事業、センターニュース、新刊図書などが案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>小学生向け、幼児親子向け、成人向けなど、幅広い講座が掲載されています</li>
-                    <li>地域活動応援事業として、こどものための「あったか食堂」の案内があります</li>
-                    <li>申込日、参加費、申込方法などの詳細は回覧資料をご確認ください</li>
-                  </ul>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>2．リーベル川島 175号</h4>
-                    <span class="kairan-topic-tag">川島地域ケアプラザ</span>
-                  </div>
-                  <p>横浜市川島地域ケアプラザから、避難訓練・救命講習、認知症カフェ「オレンジハニー」、8月定期開催自主事業などが案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>避難訓練・救命講習：9月15日（火）14:00〜15:30</li>
-                    <li>認知症カフェ オレンジハニー：9月29日（火）10:00〜12:00</li>
-                    <li>8月の定期開催自主事業として、茶屋や水あそびなどの案内があります</li>
-                  </ul>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>3．地域ケアプラザからのお知らせ</h4>
-                    <span class="kairan-topic-tag">施設情報</span>
-                  </div>
-                  <p>地域ケアプラザの福祉・保健の窓口相談時間が、令和8年10月から変更になる案内が掲載されています。1階ホールのクールシェアスポットに関するお知らせもあります。</p>
-                  <ul class="kairan-point-list">
-                    <li>窓口相談時間の変更内容は、回覧資料をご確認ください</li>
-                    <li>来館相談は事前予約のお願いが案内されています</li>
-                    <li>駐車場利用についてのお願いも掲載されています</li>
-                  </ul>
-                </section>
-              </div>
-
-              <div class="post-meta">
-                <span>回覧日：2026年8月</span>
-                <span>掲載開始：2026年8月4日</span>
-                <span>掲載終了：2026年9月4日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1vmngL54pSWJ9rnrBtV18qAIoSrqCXRB8/view?usp=sharing" target="_blank" rel="noopener noreferrer">8月回覧板情報を見る</a>
-                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="hodogaya-security-news-20260709" class="community-post kairan-post" data-board="chonaikai" data-start="2026-07-09" data-expire="2026-08-09">
-            <span class="post-category">防犯・地域安全</span>
-            <div class="post-body">
-              <h3>保土ケ谷防犯協会・保土ケ谷警察署からのお知らせを掲載しました</h3>
-              <p class="kairan-lead">保土ケ谷区内でのオートバイ盗難被害への注意喚起と、「保土ケ谷だより」7月号の主な内容を掲載します。詳しい内容は、下のボタンからPDFをご確認ください。</p>
-
-              <div class="flyer-preview" aria-label="保土ケ谷防犯協会・保土ケ谷警察署からのお知らせプレビュー">
-                <iframe src="https://drive.google.com/file/d/1ydaYiDe4p8q-mpkDwXZVs9xccACundmu/preview" title="保土ケ谷防犯協会・保土ケ谷警察署からのお知らせ" loading="lazy" allow="autoplay"></iframe>
-              </div>
-              <p class="flyer-note">プレビューが表示されない場合は、下の「お知らせPDFを見る」ボタンからGoogleドライブでご確認ください。</p>
-
-              <div class="kairan-summary-row" aria-label="防犯情報の概要">
-                <span>掲載日：2026年7月9日</span>
-                <span>掲載期間：8月9日まで</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-
-              <div class="kairan-topic-list">
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>1．オートバイの盗難に注意</h4>
-                    <span class="kairan-topic-tag">防犯情報</span>
-                  </div>
-                  <p>保土ケ谷区内では、オートバイの盗難被害が発生しているとの注意喚起がありました。短時間でもキーを抜き、ハンドルロックをかけるなど、被害に遭わないための対策が案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>オートバイから離れるときは、短時間でも必ずキーを抜き、ハンドルロックをかける</li>
-                    <li>U字ロックやワイヤーロックは、鉄柱やコンクリートブロックなどの固定物につなぐ</li>
-                    <li>自宅敷地内でも、なるべく他人の手が届きにくい場所で保管する</li>
-                    <li>不審者や不審車両を見かけたら、迷わず110番または保土ケ谷警察署へ通報する</li>
-                  </ul>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>2．保土ケ谷だより 7月号</h4>
-                    <span class="kairan-topic-tag">警察署からのお知らせ</span>
-                  </div>
-                  <p>保土ケ谷警察署100周年、ふれあい警察展、夏の交通事故防止運動などが案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>ふれあい警察展：7月23日（木）・7月24日（金）にクイーンズスクエア横浜で開催予定</li>
-                    <li>夏の交通事故防止運動：7月11日（土）から7月20日（月）まで</li>
-                    <li>自転車の交通ルール、二輪車事故防止、高齢者・子どもを始めとする歩行者の安全確保が重点として案内されています</li>
-                  </ul>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>3．水難・山岳遭難の防止、採用試験、犯罪発生状況</h4>
-                    <span class="kairan-topic-tag">地域安全情報</span>
-                  </div>
-                  <p>夏場に向けた水難・山岳遭難防止、警察官採用試験の受付、保土ケ谷警察署管内の犯罪発生状況も掲載されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>水辺ではライフジャケットの着用、子どもだけで遊ばせないことなどが呼びかけられています</li>
-                    <li>登山では無理な計画を立てず、登山アプリの活用や早めの出発・下山が案内されています</li>
-                    <li>令和8年5月の主な犯罪発生状況として、詐欺、自転車盗、器物損壊などが掲載されています</li>
-                  </ul>
-                </section>
-              </div>
-
-              <div class="post-meta">
-                <span>掲載日：2026年7月9日</span>
-                <span>掲載終了：2026年8月9日</span>
-                <span>区分：町内会からのお知らせ</span>
-                <span>内容：防犯・交通安全・地域安全情報</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1ydaYiDe4p8q-mpkDwXZVs9xccACundmu/view?usp=sharing" target="_blank" rel="noopener noreferrer">お知らせPDFを見る</a>
-                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="kairan-20260709" class="community-post kairan-post" data-board="chonaikai" data-start="2026-07-09" data-expire="2026-08-09">
-            <span class="post-category">回覧板情報・町内会</span>
-            <div class="post-body">
-              <h3>7月9日 回覧板情報を掲載しました</h3>
-              <p class="kairan-lead">2026年7月9日の回覧板から、町内会からのお願いと西谷地区センターだよりの主な内容を掲載します。詳しい内容は、下のボタンから回覧板PDFをご確認ください。</p>
-
-              <div class="kairan-summary-row" aria-label="回覧板情報の概要">
-                <span>回覧日：2026年7月9日</span>
-                <span>掲載期間：8月9日まで</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-
-              <div class="kairan-topic-list">
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>1．敬老お祝いのつどい 該当者調査のお願い</h4>
-                    <span class="kairan-topic-tag">町内会からのお願い</span>
-                  </div>
-                  <p>町内にお住まいの70歳以上の方を対象に、敬老お祝い品および長寿のお祝いに関する該当者調査が案内されています。</p>
-                  <dl class="kairan-detail-list">
-                    <div><dt>対象</dt><dd>9月21日現在の満年齢で70歳以上の方</dd></div>
-                    <div><dt>お祝い品</dt><dd>70歳以上の方へ記念品としてお買い物カード1,000円分を予定</dd></div>
-                    <div><dt>提出先</dt><dd>川島第四町内会館 正面玄関脇の会館ポスト</dd></div>
-                    <div><dt>提出期限</dt><dd>7月31日（金）まで</dd></div>
-                  </dl>
-                  <p class="kairan-note-box">班内に70歳以上の方がいない場合も、報告書の投函が必要との案内があります。該当する方は、回覧板の記入欄をご確認ください。</p>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>2．西谷地区センターだより 7月のお知らせ</h4>
-                    <span class="kairan-topic-tag">地域情報・子ども向け</span>
-                  </div>
-                  <p>西谷地区センターから、夏休み期間の子ども向け講座やイベントが案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>夏休み科学工作「万華鏡と光の科学 ビーズ万華鏡を作ろう！」：7月23日（木）10:00〜12:00、参加費600円</li>
-                    <li>夏休み西谷こどもデー：7月27日（日）9:00〜12:00、参加費300円、先着200名</li>
-                    <li>ボルダリング、工作、縁日、展示コーナー、カレー販売などの企画が案内されています</li>
-                  </ul>
-                  <p class="kairan-note-box">申込方法、対象、持ち物、追加材料費などの詳細は、回覧板PDFまたは西谷地区センターの案内をご確認ください。</p>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>3．西谷地区センターのセンターニュース</h4>
-                    <span class="kairan-topic-tag">施設情報</span>
-                  </div>
-                  <p>個人・団体の作品展示、サークル活動応援事業、新刊図書の案内、パソコン無料相談会、子育て相談なども掲載されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>街のアーティスト応援事業：7月は川口塾の絵手紙を展示予定</li>
-                    <li>サークル活動応援事業：青竹リズム体操サークルの案内</li>
-                    <li>相談会や休館日などの施設情報も掲載されています</li>
-                  </ul>
-                </section>
-              </div>
-
-              <div class="post-meta">
-                <span>回覧日：2026年7月9日</span>
-                <span>掲載開始：2026年7月9日</span>
-                <span>掲載終了：2026年8月9日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/16Iro19roW2OFtE-dSrEOu7Fr1njvVKoN/view?usp=sharing" target="_blank" rel="noopener noreferrer">7/9回覧板PDFを見る</a>
-                <a class="button secondary" href="https://nishiya.hodogaya-kumin.com/" target="_blank" rel="noopener noreferrer">西谷地区センター</a>
-                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="summer-festival-flyer-20260707" class="community-post flyer-post" data-board="chonaikai" data-start="2026-07-07" data-expire="2026-09-14">
-            <span class="post-category">町内会行事・夏祭り</span>
-            <div class="post-body">
-              <h3>夏祭りフライヤーを公開しました</h3>
-              <p class="flyer-lead">9月12日（土）・13日（日）開催の川島第四町内会 夏祭りフライヤーを公開しました。開催日、会場、夏祭りの雰囲気をぜひご確認ください。</p>
-
-              <div class="flyer-preview" aria-label="夏祭りフライヤープレビュー">
-                <iframe src="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/preview" title="夏祭りフライヤー" loading="lazy" allow="autoplay"></iframe>
-              </div>
-
-              <p class="flyer-note">プレビューが表示されない場合は、下の「フライヤーを開く」ボタンからGoogleドライブでご確認ください。閲覧には、ファイルの共有設定が「リンクを知っている全員が閲覧可」になっている必要があります。</p>
-
-              <div class="post-meta">
-                <span>掲載日：2026年7月7日</span>
-                <span>開催日：2026年9月12日（土）・13日（日）</span>
-                <span>掲載終了：2026年9月14日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/view?usp=sharing" target="_blank" rel="noopener noreferrer">フライヤーを開く</a>
-                <a class="button secondary" href="./summer-festival.html">夏祭り特設ページを見る</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="loghouse-slide-20260702" class="community-post loghouse-slide-post" data-board="chonaikai" data-start="2026-07-02" data-expire="2026-08-02">
-            <span class="post-category">地域情報・子ども向け</span>
-            <div class="post-body">
-              <h3>川島町公園こどもログハウスのすべり台が利用できるようになりました</h3>
-              <div class="loghouse-hero-card">
-                <b>7月2日（木）から、すべり台で遊べるようになりました。</b>
-                <p>川島町公園こどもログハウスから、館内のすべり台が利用できるようになったとの案内がありました。お子さんと一緒に、雨の日や暑い日のお出かけ先としても利用しやすい地域の遊び場です。</p>
-              </div>
-
-              <div class="loghouse-appeal-grid" aria-label="ログハウスのおすすめポイント">
-                <div class="loghouse-appeal-card"><span>室内で遊べる</span>天候に左右されにくく、親子で立ち寄りやすい遊び場です。</div>
-                <div class="loghouse-appeal-card"><span>すべり台再開</span>子どもたちに人気のすべり台で、元気に遊べます。</div>
-                <div class="loghouse-appeal-card"><span>イベント情報も確認</span>夏休みイベントなどの最新情報も公式ページで確認できます。</div>
-              </div>
-
-              <p>利用時間や休館日、イベント情報などは変更される場合があります。お出かけ前に、川島町公園こどもログハウスの公式お知らせをご確認ください。</p>
-
-              <div class="post-meta">
-                <span>掲載日：2026年7月2日</span>
-                <span>利用開始案内：2026年7月2日（木）から</span>
-                <span>掲載終了：2026年8月2日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://kawashima-log.hodogaya-kumin.com/smartphone/news.cgi" target="_blank" rel="noopener noreferrer">ログハウス公式お知らせを見る</a>
-                <a class="button secondary" href="https://kawashima-log.hodogaya-kumin.com/smartphone/" target="_blank" rel="noopener noreferrer">川島町公園こどもログハウス</a>
-                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="kairan-20260701" class="community-post kairan-post" data-board="chonaikai" data-start="2026-07-01" data-expire="2026-08-01">
-            <span class="post-category">回覧板情報・地域情報</span>
-            <div class="post-body">
-              <h3>7月1日 回覧板情報を掲載しました</h3>
-              <p class="kairan-lead">2026年7月1日の回覧板から、地域の皆さまに関係する主な情報を4つに分けて掲載します。詳しい日程・申込方法・二次元コードは、回覧板PDFでご確認ください。</p>
-
-              <div class="kairan-summary-row" aria-label="回覧板情報の概要">
-                <span>回覧日：2026年7月1日</span>
-                <span>掲載期間：8月1日まで</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-
-              <div class="kairan-topic-list">
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>1．アドベンチャーつうしん</h4>
-                    <span class="kairan-topic-tag">川島町公園こどもログハウス</span>
-                  </div>
-                  <p>川島町公園こどもログハウスから、夏休み期間を中心にした子ども向けイベントが案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>夏休みスタンプラリー、夏休み工作、おはなし会、親子リトミックなど</li>
-                    <li>まどにお絵かき、チャレンジタイム、秋まつりなども案内されています</li>
-                    <li>参加費無料のイベントもあります</li>
-                  </ul>
-                  <p class="kairan-note-box">イベントごとに開催日、対象、申込開始日が異なります。詳細は回覧板PDFまたはログハウスのホームページをご確認ください。</p>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>2．川島町こどもログハウス スタッフ募集</h4>
-                    <span class="kairan-topic-tag">スタッフ募集</span>
-                  </div>
-                  <p>川島町こどもログハウスでは、スタッフを若干名募集しています。子どもの遊びに関心がある方、近隣地域にお住まいで徒歩または自転車で通勤できる方、パソコンの基本操作ができる方などが対象です。</p>
-                  <dl class="kairan-detail-list">
-                    <div><dt>勤務時間帯</dt><dd>午前9時〜13時、または13時〜17時</dd></div>
-                    <div><dt>勤務体制</dt><dd>1日4時間・週3日程度の案内</dd></div>
-                    <div><dt>主な業務</dt><dd>受付・案内、施設清掃、遊具点検、イベント運営補助など</dd></div>
-                    <div><dt>問い合わせ</dt><dd>保土ケ谷区民利用施設協会事務局</dd></div>
-                  </dl>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>3．横浜市川島地域ケアプラザからのお知らせ</h4>
-                    <span class="kairan-topic-tag">地域情報</span>
-                  </div>
-                  <p>横浜市川島地域ケアプラザ広報誌「リーベル川島」から、次の情報が案内されています。</p>
-                  <ul class="kairan-point-list">
-                    <li>かわしまユースボランティアセミナー参加者募集</li>
-                    <li>貸室の空き状況確認・予約申し込みがオンラインでできるようになる予定</li>
-                    <li>川島文化祭は2026年11月29日（日）に開催予定</li>
-                  </ul>
-                  <p class="kairan-note-box">貸室のオンライン予約については、2026年1月の開始に向けて、9月下旬ごろに操作説明会も予定されているとの案内があります。</p>
-                </section>
-
-                <section class="kairan-topic-card">
-                  <div class="kairan-topic-head">
-                    <h4>4．かわしまユースボランティアセミナー 参加者募集</h4>
-                    <span class="kairan-topic-tag">中学生・高校生向け</span>
-                  </div>
-                  <p>中学生・高校生を対象に、川島文化祭で地域の人に喜んでもらえるブースを企画・出展・運営するボランティアセミナーが案内されています。</p>
-                  <dl class="kairan-detail-list">
-                    <div><dt>対象</dt><dd>中学生・高校生</dd></div>
-                    <div><dt>定員</dt><dd>20名</dd></div>
-                    <div><dt>参加費</dt><dd>無料</dd></div>
-                    <div><dt>その他</dt><dd>ボランティア活動証明書を発行</dd></div>
-                  </dl>
-                  <div class="kairan-schedule-list" aria-label="かわしまユースボランティアセミナー日程">
-                    <div class="kairan-schedule-item"><b>第1回：8月1日（土）</b><span>14:00〜16:30　オリエンテーション</span></div>
-                    <div class="kairan-schedule-item"><b>第2回：9月19日（土）</b><span>14:00〜16:30　イベント企画について</span></div>
-                    <div class="kairan-schedule-item"><b>第3回：10月10日（土）</b><span>14:00〜16:30　イベント企画立案</span></div>
-                    <div class="kairan-schedule-item"><b>第4回：11月7日（土）</b><span>14:00〜16:30　イベント企画立案</span></div>
-                    <div class="kairan-schedule-item"><b>第5回：11月29日（日）</b><span>9:30〜15:30　川島文化祭当日</span></div>
-                  </div>
-                  <p class="kairan-note-box">全回参加できなくても大丈夫との案内があります。興味のある方は、回覧板PDFの二次元コードまたは川島地域ケアプラザへお問い合わせください。</p>
-                </section>
-              </div>
-
-              <div class="kairan-contact-box">
-                <h4>問い合わせ先</h4>
-                <ul>
-                  <li>川島町公園こどもログハウス：045-373-8566</li>
-                  <li>スタッフ募集：045-442-7571（平日10:00〜16:00）</li>
-                  <li>横浜市川島地域ケアプラザ：045-370-1550</li>
-                </ul>
-              </div>
-
-              <div class="post-meta">
-                <span>回覧日：2026年7月1日</span>
-                <span>掲載開始：2026年7月1日</span>
-                <span>掲載終了：2026年8月1日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1v902T0xBrGtjN-TDSRm4I4T7sf1BMqU3/view?usp=sharing" target="_blank" rel="noopener noreferrer">7/1回覧板PDFを見る</a>
-                <a class="button secondary" href="https://kawashima-log.hodogaya-kumin.com/smartphone/" target="_blank" rel="noopener noreferrer">川島町公園こどもログハウス</a>
-                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
-              </div>
-            </div>
-          </article>
-
-
-
-          <article id="soft-volleyball-20260627" class="community-post" data-board="chonaikai" data-start="2026-06-25" data-expire="2026-07-27">
-            <span class="post-category">スポーツ・重要なお知らせ</span>
-            <div class="post-body">
-              <h3>【6/25更新】6/27 ソフトバレーボール大会は中止・秋頃実施予定へ変更となりました</h3>
-              <p>第四町内会スポーツ推進委員担当者からのお知らせです。<strong>6月27日（土）に予定していたソフトバレーボール大会は、台風の影響を考慮し、安全面を優先して中止となりました。</strong></p>
-              <p>参加・見学・応援をご予定いただいていた皆さまには申し訳ありませんが、ご理解くださいますようお願いいたします。</p>
-              <p>大会は、<strong>秋頃の実施に向けてあらためて計画を調整する予定</strong>です。新しい日程や内容が決まりましたら、町内会ホームページや回覧等でお知らせします。</p>
-              <p>今後も、試合参加だけでなく、見学・応援・親子での参加・少しだけのお手伝いなど、幅広く関わっていただける形で地域イベントを実施していければと思います。</p>
-              <div class="post-meta">
-                <span>当初予定日：2026年6月27日（土）</span>
-                <span>会場：川島小学校 体育館</span>
-                <span>変更内容：6/27の実施は中止</span>
-                <span>今後の予定：秋頃に実施予定</span>
-                <span>更新日：2026年6月25日</span>
-                <span>掲載終了：2026年7月27日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="./events.html">行事予定を確認する</a>
-                <a class="button secondary" href="./contact.html">お問い合わせフォームへ</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="meisuikyo-dayori-202606" class="community-post" data-board="chonaikai" data-start="2026-06-25" data-expire="2026-07-25">
-            <span class="post-category">地域情報・選挙啓発</span>
-            <div class="post-body">
-              <h3>明推協だより 令和8年度6月号のトピックをご紹介します</h3>
-              <p>保土ケ谷区明るい選挙推進協議会より、<strong>令和8年度6月号の「明推協だより」</strong>が発行されています。町内会でも、地域の皆さまに選挙や地域での啓発活動を身近に知っていただくきっかけとして、主な内容をご紹介します。</p>
-              <p>今号では、保土ケ谷区内で行われている選挙啓発活動として、区民まつりでの啓発、ほどがやバンドバトルでの高校生向け啓発、小学生・高校生を対象にした出前授業、街頭啓発「ザ・イコット」、地域行事での啓発物品の配布などが紹介されています。</p>
-              <p>また、6月10日（水）に今井小学校で行われた出前授業では、小学6年生が選挙の仕組みやルールを学び、実際の投票用紙・投票箱・記載台・計数機などを使って模擬投票を体験したことが紹介されています。</p>
-              <p>そのほか、保土ケ谷区の選挙データ、指定施設投票における外部立会人への協力依頼、企画運営部会委員の募集なども掲載されています。詳しくは、下記リンクから明推協だよりをご確認ください。</p>
-              <div class="post-meta">
-                <span>資料：明推協だより 令和8年度6月号</span>
-                <span>発行：保土ケ谷区明るい選挙推進協議会</span>
-                <span>掲載開始：2026年6月25日</span>
-                <span>掲載終了：2026年7月25日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1xdgSBtVbjDiB5Cergoxbd-f605gvQtAW/view?usp=sharing" target="_blank" rel="noopener noreferrer">明推協だよりを見る</a>
-                <a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="wanpaku-takezaiku-20260621" class="community-post" data-board="chonaikai" data-start="2026-06-21" data-expire="2026-07-21">
-            <span class="post-category">活動報告</span>
-            <div class="post-body">
-              <h3>わんぱくっ子竹細工・木工細工教室が開催されました</h3>
-              <p><strong>2026年6月21日（日）</strong>、川島第四町内会館・横広場にて、<strong>わんぱくっ子竹細工・木工細工教室</strong>が開催されました。</p>
-              <p>当日は雨が少し心配されましたが、青少年指導員の皆さまをはじめ、地域の皆さまのご協力により、無事に楽しく実施することができました。</p>
-              <p>子どもたちは、竹や木に触れながら、ものづくりの楽しさを体験しました。地域の大人の皆さまに見守られながら、笑顔の多い時間となりました。</p>
-              <p>準備・運営にご協力いただいた青少年指導員の皆さま、地域の皆さま、ありがとうございました。</p>
-              <p>当日の様子は、下記の<strong>新井会長のX投稿</strong>からご覧いただけます。閲覧環境によっては、Xアカウントでのログインが必要になる場合があります。</p>
-              <div class="post-meta">
-                <span>開催日：2026年6月21日（日）</span>
-                <span>会場：川島第四町内会館・横広場</span>
-                <span>掲載開始：2026年6月21日</span>
-                <span>掲載終了：2026年7月21日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://x.com/yoshimi44444444/status/2068487423534002687?s=20" target="_blank" rel="noopener noreferrer">当日の様子を見る（X投稿1）</a>
-                <a class="button secondary" href="https://x.com/yoshimi44444444/status/2068486180845609417?s=20" target="_blank" rel="noopener noreferrer">当日の様子を見る（X投稿2）</a>
-                <a class="button secondary" href="https://x.com/i/flow/signup" target="_blank" rel="noopener noreferrer">Xアカウントを作成する</a>
-              </div>
-            </div>
-          </article>
-
-
-          <article id="monthly-meeting-202606" class="community-post" data-board="chonaikai" data-start="2026-06-28" data-expire="2026-07-28">
-            <span class="post-category">役員定例会資料</span>
-            <div class="post-body">
-              <h3>6月度 役員定例会資料を掲載しました</h3>
-              <p>6月度の役員定例会資料を掲載します。横浜市・保土ケ谷区からの防犯、防災、子育て、地域活動、区政運営など、町内会運営や地域生活に関わる情報がまとめられています。</p>
-              <p>住民の皆さまにも関係する内容として、特に<strong>防犯・交通安全、火災・救急、熱中症予防、子育て支援、地域の安全・安心教室</strong>などがあります。必要に応じて資料をご確認ください。</p>
-
-              <p><strong>主な内容の要約</strong></p>
-              <ul>
-                <li><strong>横浜グリーンエクスポ市出展ボランティア募集：</strong>プログラム運営補助、ツアーガイド、フィールドづくりのボランティア募集が案内されています。募集期間は2026年7月1日から8月14日までです。</li>
-                <li><strong>横浜市防犯のまちづくり：</strong>横浜市防犯のまちづくり推進条例の制定と、防犯のまちづくり推進プランの策定について報告されています。地域・市民・事業者が連携して安心安全なまちづくりを進める内容です。</li>
-                <li><strong>保土ケ谷区の治安状況：</strong>特殊詐欺やSNS型投資・ロマンス詐欺、自転車盗などへの注意喚起が含まれています。留守番電話設定や国際電話の不取扱い申込みなど、詐欺被害防止の呼びかけもあります。</li>
-                <li><strong>火災・救急状況：</strong>保土ケ谷区内の火災・救急状況が報告されています。暑くなる時期に向けて、のどが渇く前の水分補給、適切な室温管理、無理をしない行動など、熱中症予防が呼びかけられています。</li>
-                <li><strong>各種募金活動等に関する確認調査：</strong>赤い羽根共同募金や区社協世帯賛助会費に関する資材数などの確認調査について案内されています。</li>
-                <li><strong>西谷浄水場の再整備：</strong>浄水処理施設、排水処理施設、相模湖系導水路の再整備の進捗が報告されています。水道施設の耐震化や処理能力の増強を目的とした取組です。</li>
-                <li><strong>子育てサポート提供会員募集：</strong>横浜子育てサポートシステムで、子どもの預かり手となる提供会員の募集が案内されています。</li>
-                <li><strong>災害時要援護者名簿：</strong>災害時要援護者名簿の情報共有方式について、新規申込みや今後の流れが案内されています。</li>
-                <li><strong>ほどがや安全・安心教室：</strong>交通安全や特殊詐欺などの防犯対策について、警察官から説明を受けられる出前型の教室が案内されています。</li>
-                <li><strong>自治会町内会の情報発信出前講座：</strong>デジタルを活用した情報発信やLINE公式アカウント体験などの出前講座について案内されています。</li>
-                <li><strong>地区連合対抗綱引き大会：</strong>ほどがや区民まつりで開催される綱引き大会の参加チーム募集について案内されています。</li>
-              </ul>
-
-              <p>詳細は、下記のPDF資料をご確認ください。</p>
-              <div class="post-meta">
-                <span>資料：令和8年6月 保土ケ谷区連合町内会長連絡会 定例会資料</span>
-                <span>公開日：2026年6月28日</span>
-                <span>掲載開始：2026年6月28日</span>
-                <span>掲載終了：2026年7月28日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1GwXZ8YerFnI0RzbeoaBEfUV_4fusQKNj/view?usp=sharing" target="_blank" rel="noopener">資料PDFを見る（Googleドライブ）</a>
-              </div>
-            </div>
-          </article>
-
-
-
-
-          <article id="mizuhiroba-20260602" class="community-post" data-board="chonaikai" data-start="2026-06-17" data-expire="2026-09-30">
-            <span class="post-category">公園・水遊び</span>
-            <div class="post-body">
-              <h3>東川島水道みち公園「水のひろば」が利用できます</h3>
-              <a class="post-thumb-link" href="https://drive.google.com/drive/folders/1duxdNlUObXeJ36-DHbEeI3FfCD-XijbQ?usp=sharing" target="_blank" rel="noopener">
-                <img class="post-thumb" src="./thumbnails/mizuhiroba-20260602-thumb.jpg" alt="東川島水道みち公園 水のひろばの様子" />
-              </a>
-              <p>東川島水道みち公園の<strong>「水のひろば」</strong>では、今年も噴水を使った水遊びを楽しめます。暑い季節に、近くの公園で水しぶきを浴びながら遊べる、子どもたちにとってうれしい場所です。</p>
-              <p>水がふわっと広がるひろばは、見ているだけでも涼しく、親子でのお散歩や外遊びの途中にも立ち寄りやすいスポットです。犬のお散歩中に、少し涼を感じる場所としても楽しめます。</p>
-              <p><strong>利用できる期間は、2026年6月2日から9月30日まで、時間は10時から16時まで</strong>です。暑い日のお出かけ先として、ぜひご活用ください。</p>
-              <p><strong>遊ぶときの注意点</strong></p>
-              <ul>
-                <li>そばを通る人などに水がかからないようにしましょう。</li>
-                <li>小さいお子さまは、保護者の方と一緒に利用しましょう。</li>
-                <li>ボタンはそっと押しましょう。強く押したり、押し続けたりすると壊れてしまうことがあります。</li>
-                <li>熱中症予防のため、帽子・飲み物・タオルなども忘れずにご準備ください。</li>
-                <li>足元が濡れてすべりやすくなることがあります。走りすぎには注意しましょう。</li>
-              </ul>
-              <p>ルールを守りながら、地域の身近な水遊びスポットを楽しく使っていきましょう。</p>
-              <div class="post-meta">
-                <span>場所：東川島水道みち公園 水のひろば</span>
-                <span>利用期間：2026年6月2日〜9月30日</span>
-                <span>利用時間：10時〜16時</span>
-                <span>掲載開始：2026年6月17日</span>
-                <span>掲載終了：2026年9月30日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/drive/folders/1duxdNlUObXeJ36-DHbEeI3FfCD-XijbQ?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
-              </div>
-            </div>
-          </article>
-
-
-
-
-          <article id="disaster-plan-map-20260616" class="community-post" data-board="chonaikai" data-start="2026-06-16" data-expire="2026-07-16">
-            <span class="post-category">防災</span>
-            <div class="post-body">
-              <h3>地区防災計画・防災マップの回覧について</h3>
+<article class="community-post flyer-post" data-board="chonaikai" data-expire="2026-09-21" data-start="2026-09-01" id="sawayaka-cleaning-20260920">
+<span class="post-category">清掃活動</span>
+<div class="post-body">
+<h3>9月20日（日）さわやか清掃のお知らせ</h3>
+<p class="flyer-lead">町中のゴミをきれいに片づける「さわやか清掃」を実施します。子ども会・長寿会の皆さまも、ぜひご参加ください。</p>
+<a aria-label="9月20日 さわやか清掃の案内チラシをGoogleドライブで開く" class="post-thumb-link" href="https://drive.google.com/file/d/1r_5VBerm8Er38AndmuZ0_GpLryTbfUey/view?usp=sharing" rel="noopener" target="_blank">
+<img alt="令和8年9月20日 さわやか清掃のお知らせ" class="post-thumb" src="./sawayaka-cleaning-20260920.jpg" style="width:min(100%,520px);"/>
+</a>
+<div class="post-meta">
+<span>日時：2026年9月20日（日） 午前9:00～10:00</span>
+<span>集合：川島第四町内会館</span>
+<span>雨天：朝から雨が降っていた場合は中止</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<p>地域をきれいにしながら、ご近所同士の交流にもつながる活動です。無理のない範囲でご協力をお願いいたします。</p>
+<div class="post-actions">
+<a class="button button-primary" href="https://drive.google.com/file/d/1r_5VBerm8Er38AndmuZ0_GpLryTbfUey/view?usp=sharing" rel="noopener" target="_blank">案内チラシを大きく見る</a>
+<a class="button button-secondary" href="./about.html#cleaning">さわやか清掃について見る</a>
+</div>
+</div>
+</article>
+<article class="community-post kairan-post" data-board="chonaikai" data-expire="2026-09-04" data-start="2026-08-04" id="kairan-20260804">
+<span class="post-category">回覧板情報・町内会</span>
+<div class="post-body">
+<h3>8月 回覧板情報・町内会を掲載しました</h3>
+<p class="kairan-lead">8月の回覧板から、西谷地区センターだより、横浜市川島地域ケアプラザ広報誌「リーベル川島」などの主な内容を掲載します。詳しい内容は、下のボタンから回覧資料をご確認ください。</p>
+<div aria-label="8月回覧板情報プレビュー" class="flyer-preview">
+<iframe allow="autoplay" loading="lazy" src="https://drive.google.com/file/d/1vmngL54pSWJ9rnrBtV18qAIoSrqCXRB8/preview" title="8月 回覧板情報・町内会"></iframe>
+</div>
+<p class="flyer-note">プレビューが表示されない場合は、下の「8月回覧板情報を見る」ボタンからGoogleドライブでご確認ください。</p>
+<div aria-label="8月回覧板情報の概要" class="kairan-summary-row">
+<span>回覧日：2026年8月</span>
+<span>掲載期間：9月4日まで</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="kairan-topic-list">
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>1．西谷地区センターだより 8月のお知らせ</h4>
+<span class="kairan-topic-tag">地域情報・講座</span>
+</div>
+<p>西谷地区センターから、8月から9月にかけての講座、地域活動応援事業、センターニュース、新刊図書などが案内されています。</p>
+<ul class="kairan-point-list">
+<li>小学生向け、幼児親子向け、成人向けなど、幅広い講座が掲載されています</li>
+<li>地域活動応援事業として、こどものための「あったか食堂」の案内があります</li>
+<li>申込日、参加費、申込方法などの詳細は回覧資料をご確認ください</li>
+</ul>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>2．リーベル川島 175号</h4>
+<span class="kairan-topic-tag">川島地域ケアプラザ</span>
+</div>
+<p>横浜市川島地域ケアプラザから、避難訓練・救命講習、認知症カフェ「オレンジハニー」、8月定期開催自主事業などが案内されています。</p>
+<ul class="kairan-point-list">
+<li>避難訓練・救命講習：9月15日（火）14:00〜15:30</li>
+<li>認知症カフェ オレンジハニー：9月29日（火）10:00〜12:00</li>
+<li>8月の定期開催自主事業として、茶屋や水あそびなどの案内があります</li>
+</ul>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>3．地域ケアプラザからのお知らせ</h4>
+<span class="kairan-topic-tag">施設情報</span>
+</div>
+<p>地域ケアプラザの福祉・保健の窓口相談時間が、令和8年10月から変更になる案内が掲載されています。1階ホールのクールシェアスポットに関するお知らせもあります。</p>
+<ul class="kairan-point-list">
+<li>窓口相談時間の変更内容は、回覧資料をご確認ください</li>
+<li>来館相談は事前予約のお願いが案内されています</li>
+<li>駐車場利用についてのお願いも掲載されています</li>
+</ul>
+</section>
+</div>
+<div class="post-meta">
+<span>回覧日：2026年8月</span>
+<span>掲載開始：2026年8月4日</span>
+<span>掲載終了：2026年9月4日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1vmngL54pSWJ9rnrBtV18qAIoSrqCXRB8/view?usp=sharing" rel="noopener noreferrer" target="_blank">8月回覧板情報を見る</a>
+<a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+</div>
+</div>
+</article>
+<article class="community-post kairan-post" data-board="chonaikai" data-expire="2026-08-09" data-start="2026-07-09" id="hodogaya-security-news-20260709">
+<span class="post-category">防犯・地域安全</span>
+<div class="post-body">
+<h3>保土ケ谷防犯協会・保土ケ谷警察署からのお知らせを掲載しました</h3>
+<p class="kairan-lead">保土ケ谷区内でのオートバイ盗難被害への注意喚起と、「保土ケ谷だより」7月号の主な内容を掲載します。詳しい内容は、下のボタンからPDFをご確認ください。</p>
+<div aria-label="保土ケ谷防犯協会・保土ケ谷警察署からのお知らせプレビュー" class="flyer-preview">
+<iframe allow="autoplay" loading="lazy" src="https://drive.google.com/file/d/1ydaYiDe4p8q-mpkDwXZVs9xccACundmu/preview" title="保土ケ谷防犯協会・保土ケ谷警察署からのお知らせ"></iframe>
+</div>
+<p class="flyer-note">プレビューが表示されない場合は、下の「お知らせPDFを見る」ボタンからGoogleドライブでご確認ください。</p>
+<div aria-label="防犯情報の概要" class="kairan-summary-row">
+<span>掲載日：2026年7月9日</span>
+<span>掲載期間：8月9日まで</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="kairan-topic-list">
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>1．オートバイの盗難に注意</h4>
+<span class="kairan-topic-tag">防犯情報</span>
+</div>
+<p>保土ケ谷区内では、オートバイの盗難被害が発生しているとの注意喚起がありました。短時間でもキーを抜き、ハンドルロックをかけるなど、被害に遭わないための対策が案内されています。</p>
+<ul class="kairan-point-list">
+<li>オートバイから離れるときは、短時間でも必ずキーを抜き、ハンドルロックをかける</li>
+<li>U字ロックやワイヤーロックは、鉄柱やコンクリートブロックなどの固定物につなぐ</li>
+<li>自宅敷地内でも、なるべく他人の手が届きにくい場所で保管する</li>
+<li>不審者や不審車両を見かけたら、迷わず110番または保土ケ谷警察署へ通報する</li>
+</ul>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>2．保土ケ谷だより 7月号</h4>
+<span class="kairan-topic-tag">警察署からのお知らせ</span>
+</div>
+<p>保土ケ谷警察署100周年、ふれあい警察展、夏の交通事故防止運動などが案内されています。</p>
+<ul class="kairan-point-list">
+<li>ふれあい警察展：7月23日（木）・7月24日（金）にクイーンズスクエア横浜で開催予定</li>
+<li>夏の交通事故防止運動：7月11日（土）から7月20日（月）まで</li>
+<li>自転車の交通ルール、二輪車事故防止、高齢者・子どもを始めとする歩行者の安全確保が重点として案内されています</li>
+</ul>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>3．水難・山岳遭難の防止、採用試験、犯罪発生状況</h4>
+<span class="kairan-topic-tag">地域安全情報</span>
+</div>
+<p>夏場に向けた水難・山岳遭難防止、警察官採用試験の受付、保土ケ谷警察署管内の犯罪発生状況も掲載されています。</p>
+<ul class="kairan-point-list">
+<li>水辺ではライフジャケットの着用、子どもだけで遊ばせないことなどが呼びかけられています</li>
+<li>登山では無理な計画を立てず、登山アプリの活用や早めの出発・下山が案内されています</li>
+<li>令和8年5月の主な犯罪発生状況として、詐欺、自転車盗、器物損壊などが掲載されています</li>
+</ul>
+</section>
+</div>
+<div class="post-meta">
+<span>掲載日：2026年7月9日</span>
+<span>掲載終了：2026年8月9日</span>
+<span>区分：町内会からのお知らせ</span>
+<span>内容：防犯・交通安全・地域安全情報</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1ydaYiDe4p8q-mpkDwXZVs9xccACundmu/view?usp=sharing" rel="noopener noreferrer" target="_blank">お知らせPDFを見る</a>
+<a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+</div>
+</div>
+</article>
+<article class="community-post kairan-post" data-board="chonaikai" data-expire="2026-08-09" data-start="2026-07-09" id="kairan-20260709">
+<span class="post-category">回覧板情報・町内会</span>
+<div class="post-body">
+<h3>7月9日 回覧板情報を掲載しました</h3>
+<p class="kairan-lead">2026年7月9日の回覧板から、町内会からのお願いと西谷地区センターだよりの主な内容を掲載します。詳しい内容は、下のボタンから回覧板PDFをご確認ください。</p>
+<div aria-label="回覧板情報の概要" class="kairan-summary-row">
+<span>回覧日：2026年7月9日</span>
+<span>掲載期間：8月9日まで</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="kairan-topic-list">
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>1．敬老お祝いのつどい 該当者調査のお願い</h4>
+<span class="kairan-topic-tag">町内会からのお願い</span>
+</div>
+<p>町内にお住まいの70歳以上の方を対象に、敬老お祝い品および長寿のお祝いに関する該当者調査が案内されています。</p>
+<dl class="kairan-detail-list">
+<div><dt>対象</dt><dd>9月21日現在の満年齢で70歳以上の方</dd></div>
+<div><dt>お祝い品</dt><dd>70歳以上の方へ記念品としてお買い物カード1,000円分を予定</dd></div>
+<div><dt>提出先</dt><dd>川島第四町内会館 正面玄関脇の会館ポスト</dd></div>
+<div><dt>提出期限</dt><dd>7月31日（金）まで</dd></div>
+</dl>
+<p class="kairan-note-box">班内に70歳以上の方がいない場合も、報告書の投函が必要との案内があります。該当する方は、回覧板の記入欄をご確認ください。</p>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>2．西谷地区センターだより 7月のお知らせ</h4>
+<span class="kairan-topic-tag">地域情報・子ども向け</span>
+</div>
+<p>西谷地区センターから、夏休み期間の子ども向け講座やイベントが案内されています。</p>
+<ul class="kairan-point-list">
+<li>夏休み科学工作「万華鏡と光の科学 ビーズ万華鏡を作ろう！」：7月23日（木）10:00〜12:00、参加費600円</li>
+<li>夏休み西谷こどもデー：7月27日（日）9:00〜12:00、参加費300円、先着200名</li>
+<li>ボルダリング、工作、縁日、展示コーナー、カレー販売などの企画が案内されています</li>
+</ul>
+<p class="kairan-note-box">申込方法、対象、持ち物、追加材料費などの詳細は、回覧板PDFまたは西谷地区センターの案内をご確認ください。</p>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>3．西谷地区センターのセンターニュース</h4>
+<span class="kairan-topic-tag">施設情報</span>
+</div>
+<p>個人・団体の作品展示、サークル活動応援事業、新刊図書の案内、パソコン無料相談会、子育て相談なども掲載されています。</p>
+<ul class="kairan-point-list">
+<li>街のアーティスト応援事業：7月は川口塾の絵手紙を展示予定</li>
+<li>サークル活動応援事業：青竹リズム体操サークルの案内</li>
+<li>相談会や休館日などの施設情報も掲載されています</li>
+</ul>
+</section>
+</div>
+<div class="post-meta">
+<span>回覧日：2026年7月9日</span>
+<span>掲載開始：2026年7月9日</span>
+<span>掲載終了：2026年8月9日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/16Iro19roW2OFtE-dSrEOu7Fr1njvVKoN/view?usp=sharing" rel="noopener noreferrer" target="_blank">7/9回覧板PDFを見る</a>
+<a class="button secondary" href="https://nishiya.hodogaya-kumin.com/" rel="noopener noreferrer" target="_blank">西谷地区センター</a>
+<a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+</div>
+</div>
+</article>
+<article class="community-post flyer-post" data-board="chonaikai" data-expire="2026-09-14" data-start="2026-07-07" id="summer-festival-flyer-20260707">
+<span class="post-category">町内会行事・夏祭り</span>
+<div class="post-body">
+<h3>夏祭りフライヤーを公開しました</h3>
+<p class="flyer-lead">9月12日（土）・13日（日）開催の川島第四町内会 夏祭りフライヤーを公開しました。開催日、会場、夏祭りの雰囲気をぜひご確認ください。</p>
+<div aria-label="夏祭りフライヤープレビュー" class="flyer-preview">
+<iframe allow="autoplay" loading="lazy" src="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/preview" title="夏祭りフライヤー"></iframe>
+</div>
+<p class="flyer-note">プレビューが表示されない場合は、下の「フライヤーを開く」ボタンからGoogleドライブでご確認ください。閲覧には、ファイルの共有設定が「リンクを知っている全員が閲覧可」になっている必要があります。</p>
+<div class="post-meta">
+<span>掲載日：2026年7月7日</span>
+<span>開催日：2026年9月12日（土）・13日（日）</span>
+<span>掲載終了：2026年9月14日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1AYf6Hld1M5BQjaw84GhStpFgRVmxzwq4/view?usp=sharing" rel="noopener noreferrer" target="_blank">フライヤーを開く</a>
+<a class="button secondary" href="./summer-festival.html">夏祭り特設ページを見る</a>
+</div>
+</div>
+</article>
+<article class="community-post loghouse-slide-post" data-board="chonaikai" data-expire="2026-08-02" data-start="2026-07-02" id="loghouse-slide-20260702">
+<span class="post-category">地域情報・子ども向け</span>
+<div class="post-body">
+<h3>川島町公園こどもログハウスのすべり台が利用できるようになりました</h3>
+<div class="loghouse-hero-card">
+<b>7月2日（木）から、すべり台で遊べるようになりました。</b>
+<p>川島町公園こどもログハウスから、館内のすべり台が利用できるようになったとの案内がありました。お子さんと一緒に、雨の日や暑い日のお出かけ先としても利用しやすい地域の遊び場です。</p>
+</div>
+<div aria-label="ログハウスのおすすめポイント" class="loghouse-appeal-grid">
+<div class="loghouse-appeal-card"><span>室内で遊べる</span>天候に左右されにくく、親子で立ち寄りやすい遊び場です。</div>
+<div class="loghouse-appeal-card"><span>すべり台再開</span>子どもたちに人気のすべり台で、元気に遊べます。</div>
+<div class="loghouse-appeal-card"><span>イベント情報も確認</span>夏休みイベントなどの最新情報も公式ページで確認できます。</div>
+</div>
+<p>利用時間や休館日、イベント情報などは変更される場合があります。お出かけ前に、川島町公園こどもログハウスの公式お知らせをご確認ください。</p>
+<div class="post-meta">
+<span>掲載日：2026年7月2日</span>
+<span>利用開始案内：2026年7月2日（木）から</span>
+<span>掲載終了：2026年8月2日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://kawashima-log.hodogaya-kumin.com/smartphone/news.cgi" rel="noopener noreferrer" target="_blank">ログハウス公式お知らせを見る</a>
+<a class="button secondary" href="https://kawashima-log.hodogaya-kumin.com/smartphone/" rel="noopener noreferrer" target="_blank">川島町公園こどもログハウス</a>
+<a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+</div>
+</div>
+</article>
+<article class="community-post kairan-post" data-board="chonaikai" data-expire="2026-08-01" data-start="2026-07-01" id="kairan-20260701">
+<span class="post-category">回覧板情報・地域情報</span>
+<div class="post-body">
+<h3>7月1日 回覧板情報を掲載しました</h3>
+<p class="kairan-lead">2026年7月1日の回覧板から、地域の皆さまに関係する主な情報を4つに分けて掲載します。詳しい日程・申込方法・二次元コードは、回覧板PDFでご確認ください。</p>
+<div aria-label="回覧板情報の概要" class="kairan-summary-row">
+<span>回覧日：2026年7月1日</span>
+<span>掲載期間：8月1日まで</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="kairan-topic-list">
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>1．アドベンチャーつうしん</h4>
+<span class="kairan-topic-tag">川島町公園こどもログハウス</span>
+</div>
+<p>川島町公園こどもログハウスから、夏休み期間を中心にした子ども向けイベントが案内されています。</p>
+<ul class="kairan-point-list">
+<li>夏休みスタンプラリー、夏休み工作、おはなし会、親子リトミックなど</li>
+<li>まどにお絵かき、チャレンジタイム、秋まつりなども案内されています</li>
+<li>参加費無料のイベントもあります</li>
+</ul>
+<p class="kairan-note-box">イベントごとに開催日、対象、申込開始日が異なります。詳細は回覧板PDFまたはログハウスのホームページをご確認ください。</p>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>2．川島町こどもログハウス スタッフ募集</h4>
+<span class="kairan-topic-tag">スタッフ募集</span>
+</div>
+<p>川島町こどもログハウスでは、スタッフを若干名募集しています。子どもの遊びに関心がある方、近隣地域にお住まいで徒歩または自転車で通勤できる方、パソコンの基本操作ができる方などが対象です。</p>
+<dl class="kairan-detail-list">
+<div><dt>勤務時間帯</dt><dd>午前9時〜13時、または13時〜17時</dd></div>
+<div><dt>勤務体制</dt><dd>1日4時間・週3日程度の案内</dd></div>
+<div><dt>主な業務</dt><dd>受付・案内、施設清掃、遊具点検、イベント運営補助など</dd></div>
+<div><dt>問い合わせ</dt><dd>保土ケ谷区民利用施設協会事務局</dd></div>
+</dl>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>3．横浜市川島地域ケアプラザからのお知らせ</h4>
+<span class="kairan-topic-tag">地域情報</span>
+</div>
+<p>横浜市川島地域ケアプラザ広報誌「リーベル川島」から、次の情報が案内されています。</p>
+<ul class="kairan-point-list">
+<li>かわしまユースボランティアセミナー参加者募集</li>
+<li>貸室の空き状況確認・予約申し込みがオンラインでできるようになる予定</li>
+<li>川島文化祭は2026年11月29日（日）に開催予定</li>
+</ul>
+<p class="kairan-note-box">貸室のオンライン予約については、2026年1月の開始に向けて、9月下旬ごろに操作説明会も予定されているとの案内があります。</p>
+</section>
+<section class="kairan-topic-card">
+<div class="kairan-topic-head">
+<h4>4．かわしまユースボランティアセミナー 参加者募集</h4>
+<span class="kairan-topic-tag">中学生・高校生向け</span>
+</div>
+<p>中学生・高校生を対象に、川島文化祭で地域の人に喜んでもらえるブースを企画・出展・運営するボランティアセミナーが案内されています。</p>
+<dl class="kairan-detail-list">
+<div><dt>対象</dt><dd>中学生・高校生</dd></div>
+<div><dt>定員</dt><dd>20名</dd></div>
+<div><dt>参加費</dt><dd>無料</dd></div>
+<div><dt>その他</dt><dd>ボランティア活動証明書を発行</dd></div>
+</dl>
+<div aria-label="かわしまユースボランティアセミナー日程" class="kairan-schedule-list">
+<div class="kairan-schedule-item"><b>第1回：8月1日（土）</b><span>14:00〜16:30　オリエンテーション</span></div>
+<div class="kairan-schedule-item"><b>第2回：9月19日（土）</b><span>14:00〜16:30　イベント企画について</span></div>
+<div class="kairan-schedule-item"><b>第3回：10月10日（土）</b><span>14:00〜16:30　イベント企画立案</span></div>
+<div class="kairan-schedule-item"><b>第4回：11月7日（土）</b><span>14:00〜16:30　イベント企画立案</span></div>
+<div class="kairan-schedule-item"><b>第5回：11月29日（日）</b><span>9:30〜15:30　川島文化祭当日</span></div>
+</div>
+<p class="kairan-note-box">全回参加できなくても大丈夫との案内があります。興味のある方は、回覧板PDFの二次元コードまたは川島地域ケアプラザへお問い合わせください。</p>
+</section>
+</div>
+<div class="kairan-contact-box">
+<h4>問い合わせ先</h4>
+<ul>
+<li>川島町公園こどもログハウス：045-373-8566</li>
+<li>スタッフ募集：045-442-7571（平日10:00〜16:00）</li>
+<li>横浜市川島地域ケアプラザ：045-370-1550</li>
+</ul>
+</div>
+<div class="post-meta">
+<span>回覧日：2026年7月1日</span>
+<span>掲載開始：2026年7月1日</span>
+<span>掲載終了：2026年8月1日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1v902T0xBrGtjN-TDSRm4I4T7sf1BMqU3/view?usp=sharing" rel="noopener noreferrer" target="_blank">7/1回覧板PDFを見る</a>
+<a class="button secondary" href="https://kawashima-log.hodogaya-kumin.com/smartphone/" rel="noopener noreferrer" target="_blank">川島町公園こどもログハウス</a>
+<a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-27" data-start="2026-06-25" id="soft-volleyball-20260627">
+<span class="post-category">スポーツ・重要なお知らせ</span>
+<div class="post-body">
+<h3>【6/25更新】6/27 ソフトバレーボール大会は中止・秋頃実施予定へ変更となりました</h3>
+<p>第四町内会スポーツ推進委員担当者からのお知らせです。<strong>6月27日（土）に予定していたソフトバレーボール大会は、台風の影響を考慮し、安全面を優先して中止となりました。</strong></p>
+<p>参加・見学・応援をご予定いただいていた皆さまには申し訳ありませんが、ご理解くださいますようお願いいたします。</p>
+<p>大会は、<strong>秋頃の実施に向けてあらためて計画を調整する予定</strong>です。新しい日程や内容が決まりましたら、町内会ホームページや回覧等でお知らせします。</p>
+<p>今後も、試合参加だけでなく、見学・応援・親子での参加・少しだけのお手伝いなど、幅広く関わっていただける形で地域イベントを実施していければと思います。</p>
+<div class="post-meta">
+<span>当初予定日：2026年6月27日（土）</span>
+<span>会場：川島小学校 体育館</span>
+<span>変更内容：6/27の実施は中止</span>
+<span>今後の予定：秋頃に実施予定</span>
+<span>更新日：2026年6月25日</span>
+<span>掲載終了：2026年7月27日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="./events.html">行事予定を確認する</a>
+<a class="button secondary" href="./contact.html">お問い合わせフォームへ</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-25" data-start="2026-06-25" id="meisuikyo-dayori-202606">
+<span class="post-category">地域情報・選挙啓発</span>
+<div class="post-body">
+<h3>明推協だより 令和8年度6月号のトピックをご紹介します</h3>
+<p>保土ケ谷区明るい選挙推進協議会より、<strong>令和8年度6月号の「明推協だより」</strong>が発行されています。町内会でも、地域の皆さまに選挙や地域での啓発活動を身近に知っていただくきっかけとして、主な内容をご紹介します。</p>
+<p>今号では、保土ケ谷区内で行われている選挙啓発活動として、区民まつりでの啓発、ほどがやバンドバトルでの高校生向け啓発、小学生・高校生を対象にした出前授業、街頭啓発「ザ・イコット」、地域行事での啓発物品の配布などが紹介されています。</p>
+<p>また、6月10日（水）に今井小学校で行われた出前授業では、小学6年生が選挙の仕組みやルールを学び、実際の投票用紙・投票箱・記載台・計数機などを使って模擬投票を体験したことが紹介されています。</p>
+<p>そのほか、保土ケ谷区の選挙データ、指定施設投票における外部立会人への協力依頼、企画運営部会委員の募集なども掲載されています。詳しくは、下記リンクから明推協だよりをご確認ください。</p>
+<div class="post-meta">
+<span>資料：明推協だより 令和8年度6月号</span>
+<span>発行：保土ケ谷区明るい選挙推進協議会</span>
+<span>掲載開始：2026年6月25日</span>
+<span>掲載終了：2026年7月25日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1xdgSBtVbjDiB5Cergoxbd-f605gvQtAW/view?usp=sharing" rel="noopener noreferrer" target="_blank">明推協だよりを見る</a>
+<a class="button secondary" href="./community-info.html">町内会からのお知らせ一覧へ</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-21" data-start="2026-06-21" id="wanpaku-takezaiku-20260621">
+<span class="post-category">活動報告</span>
+<div class="post-body">
+<h3>わんぱくっ子竹細工・木工細工教室が開催されました</h3>
+<p><strong>2026年6月21日（日）</strong>、川島第四町内会館・横広場にて、<strong>わんぱくっ子竹細工・木工細工教室</strong>が開催されました。</p>
+<p>当日は雨が少し心配されましたが、青少年指導員の皆さまをはじめ、地域の皆さまのご協力により、無事に楽しく実施することができました。</p>
+<p>子どもたちは、竹や木に触れながら、ものづくりの楽しさを体験しました。地域の大人の皆さまに見守られながら、笑顔の多い時間となりました。</p>
+<p>準備・運営にご協力いただいた青少年指導員の皆さま、地域の皆さま、ありがとうございました。</p>
+<p>当日の様子は、下記の<strong>新井会長のX投稿</strong>からご覧いただけます。閲覧環境によっては、Xアカウントでのログインが必要になる場合があります。</p>
+<div class="post-meta">
+<span>開催日：2026年6月21日（日）</span>
+<span>会場：川島第四町内会館・横広場</span>
+<span>掲載開始：2026年6月21日</span>
+<span>掲載終了：2026年7月21日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://x.com/yoshimi44444444/status/2068487423534002687?s=20" rel="noopener noreferrer" target="_blank">当日の様子を見る（X投稿1）</a>
+<a class="button secondary" href="https://x.com/yoshimi44444444/status/2068486180845609417?s=20" rel="noopener noreferrer" target="_blank">当日の様子を見る（X投稿2）</a>
+<a class="button secondary" href="https://x.com/i/flow/signup" rel="noopener noreferrer" target="_blank">Xアカウントを作成する</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-28" data-start="2026-06-28" id="monthly-meeting-202606">
+<span class="post-category">役員定例会資料</span>
+<div class="post-body">
+<h3>6月度 役員定例会資料を掲載しました</h3>
+<p>6月度の役員定例会資料を掲載します。横浜市・保土ケ谷区からの防犯、防災、子育て、地域活動、区政運営など、町内会運営や地域生活に関わる情報がまとめられています。</p>
+<p>住民の皆さまにも関係する内容として、特に<strong>防犯・交通安全、火災・救急、熱中症予防、子育て支援、地域の安全・安心教室</strong>などがあります。必要に応じて資料をご確認ください。</p>
+<p><strong>主な内容の要約</strong></p>
+<ul>
+<li><strong>横浜グリーンエクスポ市出展ボランティア募集：</strong>プログラム運営補助、ツアーガイド、フィールドづくりのボランティア募集が案内されています。募集期間は2026年7月1日から8月14日までです。</li>
+<li><strong>横浜市防犯のまちづくり：</strong>横浜市防犯のまちづくり推進条例の制定と、防犯のまちづくり推進プランの策定について報告されています。地域・市民・事業者が連携して安心安全なまちづくりを進める内容です。</li>
+<li><strong>保土ケ谷区の治安状況：</strong>特殊詐欺やSNS型投資・ロマンス詐欺、自転車盗などへの注意喚起が含まれています。留守番電話設定や国際電話の不取扱い申込みなど、詐欺被害防止の呼びかけもあります。</li>
+<li><strong>火災・救急状況：</strong>保土ケ谷区内の火災・救急状況が報告されています。暑くなる時期に向けて、のどが渇く前の水分補給、適切な室温管理、無理をしない行動など、熱中症予防が呼びかけられています。</li>
+<li><strong>各種募金活動等に関する確認調査：</strong>赤い羽根共同募金や区社協世帯賛助会費に関する資材数などの確認調査について案内されています。</li>
+<li><strong>西谷浄水場の再整備：</strong>浄水処理施設、排水処理施設、相模湖系導水路の再整備の進捗が報告されています。水道施設の耐震化や処理能力の増強を目的とした取組です。</li>
+<li><strong>子育てサポート提供会員募集：</strong>横浜子育てサポートシステムで、子どもの預かり手となる提供会員の募集が案内されています。</li>
+<li><strong>災害時要援護者名簿：</strong>災害時要援護者名簿の情報共有方式について、新規申込みや今後の流れが案内されています。</li>
+<li><strong>ほどがや安全・安心教室：</strong>交通安全や特殊詐欺などの防犯対策について、警察官から説明を受けられる出前型の教室が案内されています。</li>
+<li><strong>自治会町内会の情報発信出前講座：</strong>デジタルを活用した情報発信やLINE公式アカウント体験などの出前講座について案内されています。</li>
+<li><strong>地区連合対抗綱引き大会：</strong>ほどがや区民まつりで開催される綱引き大会の参加チーム募集について案内されています。</li>
+</ul>
+<p>詳細は、下記のPDF資料をご確認ください。</p>
+<div class="post-meta">
+<span>資料：令和8年6月 保土ケ谷区連合町内会長連絡会 定例会資料</span>
+<span>公開日：2026年6月28日</span>
+<span>掲載開始：2026年6月28日</span>
+<span>掲載終了：2026年7月28日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1GwXZ8YerFnI0RzbeoaBEfUV_4fusQKNj/view?usp=sharing" rel="noopener" target="_blank">資料PDFを見る（Googleドライブ）</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-09-30" data-start="2026-06-17" id="mizuhiroba-20260602">
+<span class="post-category">公園・水遊び</span>
+<div class="post-body">
+<h3>東川島水道みち公園「水のひろば」が利用できます</h3>
+<a class="post-thumb-link" href="https://drive.google.com/drive/folders/1duxdNlUObXeJ36-DHbEeI3FfCD-XijbQ?usp=sharing" rel="noopener" target="_blank">
+<img alt="東川島水道みち公園 水のひろばの様子" class="post-thumb" src="./thumbnails/mizuhiroba-20260602-thumb.jpg"/>
+</a>
+<p>東川島水道みち公園の<strong>「水のひろば」</strong>では、今年も噴水を使った水遊びを楽しめます。暑い季節に、近くの公園で水しぶきを浴びながら遊べる、子どもたちにとってうれしい場所です。</p>
+<p>水がふわっと広がるひろばは、見ているだけでも涼しく、親子でのお散歩や外遊びの途中にも立ち寄りやすいスポットです。犬のお散歩中に、少し涼を感じる場所としても楽しめます。</p>
+<p><strong>利用できる期間は、2026年6月2日から9月30日まで、時間は10時から16時まで</strong>です。暑い日のお出かけ先として、ぜひご活用ください。</p>
+<p><strong>遊ぶときの注意点</strong></p>
+<ul>
+<li>そばを通る人などに水がかからないようにしましょう。</li>
+<li>小さいお子さまは、保護者の方と一緒に利用しましょう。</li>
+<li>ボタンはそっと押しましょう。強く押したり、押し続けたりすると壊れてしまうことがあります。</li>
+<li>熱中症予防のため、帽子・飲み物・タオルなども忘れずにご準備ください。</li>
+<li>足元が濡れてすべりやすくなることがあります。走りすぎには注意しましょう。</li>
+</ul>
+<p>ルールを守りながら、地域の身近な水遊びスポットを楽しく使っていきましょう。</p>
+<div class="post-meta">
+<span>場所：東川島水道みち公園 水のひろば</span>
+<span>利用期間：2026年6月2日〜9月30日</span>
+<span>利用時間：10時〜16時</span>
+<span>掲載開始：2026年6月17日</span>
+<span>掲載終了：2026年9月30日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/drive/folders/1duxdNlUObXeJ36-DHbEeI3FfCD-XijbQ?usp=sharing" rel="noopener" target="_blank">写真を見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-16" data-start="2026-06-16" id="disaster-plan-map-20260616">
+<span class="post-category">防災</span>
+<div class="post-body">
+<h3>地区防災計画・防災マップの回覧について</h3>
 <p>本日の町内会回覧板にて、<strong>川島第四町内会 地区防災計画</strong>および<strong>防災マップ</strong>について回覧されています。災害時の行動や避難ルートを考えるうえで、町内会にとって非常に重要な情報です。</p>
-              <p>防災マップには、災害時に通行に注意が必要な道、避難場所など、いざという時に役立つ情報が整理されています。ご家庭で保存し、家族で一度目を通していただくことをおすすめします。</p>
-              <p><strong>資料の要約</strong></p>
-              <ul>
-                <li>自然災害に備え、地域全体の防災力向上を目的として、地区防災計画と防災マップが作成されました。</li>
-                <li>防災マップには、災害時に適さない道や避難場所など、避難時に確認しておきたい情報が記載されています。</li>
-                <li>必要に応じて自由にコピー・印刷し、各ご家庭の保存用やご家族での確認に活用できます。</li>
-                <li>災害時のタイムライン、避難する場所、ご自宅周辺の危険箇所、避難ルートを家族で話し合うきっかけになります。</li>
-              </ul>
-              <p>「我が家の防災」を見直す良い機会です。地域の安全・安心のため、ぜひご確認ください。</p>
-              <p>詳しい防災情報や日頃の備えについては、<a href="./disaster-prevention.html">防災・防犯ページ</a>でもご確認いただけます。回覧資料とあわせて、日頃からの備えにご活用ください。</p>
-              <div class="post-meta">
-                <span>回覧日：2026年6月16日</span>
-                <span>資料：地区防災計画・防災マップ</span>
-                <span>掲載開始：2026年6月16日</span>
-                <span>掲載終了：2026年7月16日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/drive/folders/1SOFa0dyactGw6MbtyENPxqpRM8FEHgov?usp=sharing" target="_blank" rel="noopener">資料を見る</a>
-                <a class="button secondary" href="./disaster-prevention.html">防災・防犯ページを見る</a>
-              </div>
-            </div>
-          </article>
-
-
-          <article id="kawashima-school-letter-202606" class="community-post" data-board="chonaikai" data-start="2026-06-16" data-expire="2026-07-16">
-            <span class="post-category">学校情報</span>
-            <div class="post-body">
-              <h3>川島小学校だより 6月号のご案内</h3>
+<p>防災マップには、災害時に通行に注意が必要な道、避難場所など、いざという時に役立つ情報が整理されています。ご家庭で保存し、家族で一度目を通していただくことをおすすめします。</p>
+<p><strong>資料の要約</strong></p>
+<ul>
+<li>自然災害に備え、地域全体の防災力向上を目的として、地区防災計画と防災マップが作成されました。</li>
+<li>防災マップには、災害時に適さない道や避難場所など、避難時に確認しておきたい情報が記載されています。</li>
+<li>必要に応じて自由にコピー・印刷し、各ご家庭の保存用やご家族での確認に活用できます。</li>
+<li>災害時のタイムライン、避難する場所、ご自宅周辺の危険箇所、避難ルートを家族で話し合うきっかけになります。</li>
+</ul>
+<p>「我が家の防災」を見直す良い機会です。地域の安全・安心のため、ぜひご確認ください。</p>
+<p>詳しい防災情報や日頃の備えについては、<a href="./disaster-prevention.html">防災・防犯ページ</a>でもご確認いただけます。回覧資料とあわせて、日頃からの備えにご活用ください。</p>
+<div class="post-meta">
+<span>回覧日：2026年6月16日</span>
+<span>資料：地区防災計画・防災マップ</span>
+<span>掲載開始：2026年6月16日</span>
+<span>掲載終了：2026年7月16日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/drive/folders/1SOFa0dyactGw6MbtyENPxqpRM8FEHgov?usp=sharing" rel="noopener" target="_blank">資料を見る</a>
+<a class="button secondary" href="./disaster-prevention.html">防災・防犯ページを見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-16" data-start="2026-06-16" id="kawashima-school-letter-202606">
+<span class="post-category">学校情報</span>
+<div class="post-body">
+<h3>川島小学校だより 6月号のご案内</h3>
 <p>川島小学校より、<strong>学校だより「かわしま」6月号</strong>が発行されています。地域の子どもたちの学校生活や6月の予定を知ることができる内容ですので、あわせてご案内します。</p>
-              <p><strong>資料の要約</strong></p>
-              <ul>
-                <li>1ページ目では、運動会を通じて子どもたちが身に付けた力や成長の様子が紹介されています。今年度のスローガン「協力！51 ゆめっ子ドリーム」のもと、子どもたちが一生懸命取り組んだ様子が伝えられています。</li>
-                <li>2ページ目では、6月のお知らせとして、水泳学習、欠席連絡、交通安全・事故防止、授業参観・懇談会、学校カウンセラー来校日などが案内されています。</li>
-                <li>同じく2ページ目の児童支援専任からのお知らせでは、体力テストや家庭でのテレビ・ゲーム・スマートフォン利用時間について触れられています。</li>
-                <li>3ページ目の「ゆめっ子日記」では、1年生から6年生、個別支援学級等の活動の様子が写真付きで紹介されています。</li>
-                <li>4ページ目では、令和8年度6月の行事予定が掲載されています。授業日数、学年別の活動、下校時刻などを確認できます。</li>
-              </ul>
-              <p>詳しい内容は、資料をご確認ください。</p>
-              <div class="post-meta">
-                <span>資料：川島小学校だより 6月号</span>
-                <span>発行日：2026年5月29日</span>
-                <span>掲載開始：2026年6月16日</span>
-                <span>掲載終了：2026年7月16日</span>
-                <span>区分：町内会からのお知らせ</span>
-                <span>出典：横浜市立川島小学校</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1bPl0xb41xM221MHMwp00x92dZDoiF0xk/view?usp=sharing" target="_blank" rel="noopener">川島小学校だよりを見る</a>
-              </div>
-            </div>
-          </article>
-
-
-          <article id="dodgeball-20260614" class="community-post" data-board="chonaikai" data-start="2026-06-14" data-expire="2026-07-14">
-            <span class="post-category">活動報告</span>
-            <div class="post-body">
-              <h3>ドッジボール大会が開催されました</h3>
-              <a class="post-thumb-link" href="https://drive.google.com/drive/folders/1NsH4IZgv1LjQYtMrAGFYPbsnkdq6oX70?usp=sharing" target="_blank" rel="noopener">
-                <img class="post-thumb" src="./thumbnails/dodgeball-20260614-thumb.jpg" alt="2026年6月14日 ドッジボール大会の様子" />
-              </a>
-              <p><strong>2026年6月14日（土）</strong>、川島小学校体育館にて子どもドッジボール大会が開催されました。会場は元気な声と応援でいっぱいとなり、にぎやかで楽しい一日となりました。</p>
-              <p>第四町内会からは<strong>5人</strong>での参加となりましたが、少人数ながらも一生懸命にボールを追いかけ、笑顔いっぱいでプレーしていました。赤い第四Tシャツもよく映え、チーム一丸となって頑張る姿がとても印象的でした。</p>
-              <p>参加した子どもたちにとって、他町内会の皆さんとの交流や、仲間と力を合わせてプレーする時間は、楽しい思い出になったことと思います。応援に来てくださった皆さまもありがとうございました。</p>
-              <p>また、スポーツ推進委員の皆さまには、朝早くからの準備、当日の運営、そして片付けまでご対応いただき、ありがとうございました。おかげさまで、子どもたちが安心して楽しく参加できる大会となりました。</p>
-              <p><strong>大会結果</strong>は以下のとおりです。</p>
-              <ol>
-                <li>第一町内会Aチーム</li>
-                <li>第五町内会</li>
-                <li>第一町内会Bチーム</li>
-                <li>第四第六合同チーム</li>
-                <li>第二第三合同チーム</li>
-              </ol>
-              <p>当日の写真は、下記リンクからご覧いただけます。サムネイル画像をクリックしても写真一覧へ移動できます。</p>
-              <div class="post-meta">
-                <span>開催日：2026年6月14日（土）</span>
-                <span>会場：川島小学校 体育館</span>
-                <span>掲載開始：2026年6月14日</span>
-                <span>掲載終了：2026年7月14日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/drive/folders/1NsH4IZgv1LjQYtMrAGFYPbsnkdq6oX70?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
-              </div>
-            </div>
-          </article>
-
-
-
-
-          <article id="sawayaka-cleaning-20260628" class="community-post" data-board="chonaikai" data-start="2026-06-11" data-expire="2026-06-29">
-            <span class="post-category">清掃活動</span>
-            <div class="post-body">
-              <h3>6月28日（日）さわやか清掃のお知らせ</h3>
-              <p>川島第四町内会では、地域の環境美化活動として「さわやか清掃」を実施します。</p>
-              <p>日時は、<strong>2026年6月28日（日） 午前9時00分から10時00分まで</strong>です。集合場所は<strong>川島第四町内会館</strong>です。</p>
-              <p>こども会、長寿会の皆さまのご参加もお願いいたします。無理のない範囲でご協力いただけますと幸いです。</p>
-              <div class="post-meta">
-                <span>日時：2026年6月28日（日） 午前9時00分〜10時00分</span>
-                <span>集合：川島第四町内会館</span>
-                <span>掲載開始：2026年6月11日</span>
-                <span>掲載終了：2026年6月29日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1z3WA-UH22QaJxm_RiAPa1ufLlCYFdVoe/view?usp=sharing" target="_blank" rel="noopener">資料を見る</a>
-              </div>
-            </div>
-          </article>
-
-
-
-          <article id="police-news-202606" class="community-post" data-board="chonaikai" data-start="2026-06-05" data-expire="2026-07-06">
-            <span class="post-category">防犯・交通安全</span>
-            <div class="post-body">
-              <h3>保土ケ谷警察署からのお知らせを掲載しました</h3>
-              <a class="post-visual-link" href="https://drive.google.com/file/d/1S_9nHit7dmCBUok_9FFr0MbiBmUD_lys/view?usp=sharing" target="_blank" rel="noopener" aria-label="保土ケ谷警察署からのお知らせPDFをGoogleドライブで開く">
-                <img class="post-visual-thumb" src="./thumbnails/police-news-202606-thumb.jpg" alt="保土ケ谷警察署からのお知らせ" />
-                <span class="post-visual-caption">保土ケ谷警察署からのお知らせPDFを見る（Googleドライブ）</span>
-              </a>
-              <p>保土ケ谷警察署から、夏期レジャー事故防止、無施錠自転車の盗難防止、特殊詐欺被害防止などに関するお知らせが届いています。</p>
-              <p>海や川などで遊ぶ際は、指定場所での遊泳、子どもから目を離さないこと、天候が悪い日の遊泳・マリンレジャーを控えること、釣りやマリンレジャー時のライフジャケット着用などを心がけましょう。</p>
-              <p>また、駐輪中の自転車盗難が発生しています。短時間でも必ず鍵をかけ、複数の鍵を使用するなど防犯対策をお願いします。不審者を見かけた場合は、迷わず110番または保土ケ谷警察署へ通報してください。</p>
-              <p>特殊詐欺にもご注意ください。「オレオレ詐欺」「キャッシュカードの確認」「お金の話」など、不審な電話があった場合は一人で判断せず、家族や警察へ相談してください。</p>
-              <div class="post-meta">
-                <span>資料：令和8年6月 第1号 交番速報／保土ケ谷だより</span>
-                <span>掲載開始：2026年6月5日</span>
-                <span>掲載終了：2026年7月6日</span>
-                <span>区分：町内会からのお知らせ</span>
-                <span>出典：神奈川県保土ケ谷警察署</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/file/d/1S_9nHit7dmCBUok_9FFr0MbiBmUD_lys/view?usp=sharing" target="_blank" rel="noopener">資料を見る</a>
-              </div>
-            </div>
-          </article>
-
-
-
-          <article id="home-screen-app-20260603" class="community-post pwa-feature-post" data-board="chonaikai" data-start="2026-06-03" data-expire="2026-07-03">
-            <span class="post-category">注目</span>
-            <div class="post-body">
-              <h3>ホーム画面に追加して、アプリのように開けます</h3>
-              <div class="pwa-feature-layout">
-                <div class="pwa-feature-icon" aria-hidden="true">
-                  <img src="./icons/icon-192.png" alt="" />
-                </div>
-                <div>
-                  <p>川島第四町内会ホームページは、スマートフォンのホーム画面に追加できます。追加しておくと、回覧板を見逃したときや行事予定を確認したいときに、アイコンからすぐ開けます。</p>
-                  <div class="pwa-feature-steps" aria-label="ホーム画面への追加方法">
-                    <div class="pwa-feature-step">
-                      <b>iPhoneの場合</b>
+<p><strong>資料の要約</strong></p>
+<ul>
+<li>1ページ目では、運動会を通じて子どもたちが身に付けた力や成長の様子が紹介されています。今年度のスローガン「協力！51 ゆめっ子ドリーム」のもと、子どもたちが一生懸命取り組んだ様子が伝えられています。</li>
+<li>2ページ目では、6月のお知らせとして、水泳学習、欠席連絡、交通安全・事故防止、授業参観・懇談会、学校カウンセラー来校日などが案内されています。</li>
+<li>同じく2ページ目の児童支援専任からのお知らせでは、体力テストや家庭でのテレビ・ゲーム・スマートフォン利用時間について触れられています。</li>
+<li>3ページ目の「ゆめっ子日記」では、1年生から6年生、個別支援学級等の活動の様子が写真付きで紹介されています。</li>
+<li>4ページ目では、令和8年度6月の行事予定が掲載されています。授業日数、学年別の活動、下校時刻などを確認できます。</li>
+</ul>
+<p>詳しい内容は、資料をご確認ください。</p>
+<div class="post-meta">
+<span>資料：川島小学校だより 6月号</span>
+<span>発行日：2026年5月29日</span>
+<span>掲載開始：2026年6月16日</span>
+<span>掲載終了：2026年7月16日</span>
+<span>区分：町内会からのお知らせ</span>
+<span>出典：横浜市立川島小学校</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1bPl0xb41xM221MHMwp00x92dZDoiF0xk/view?usp=sharing" rel="noopener" target="_blank">川島小学校だよりを見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-14" data-start="2026-06-14" id="dodgeball-20260614">
+<span class="post-category">活動報告</span>
+<div class="post-body">
+<h3>ドッジボール大会が開催されました</h3>
+<a class="post-thumb-link" href="https://drive.google.com/drive/folders/1NsH4IZgv1LjQYtMrAGFYPbsnkdq6oX70?usp=sharing" rel="noopener" target="_blank">
+<img alt="2026年6月14日 ドッジボール大会の様子" class="post-thumb" src="./thumbnails/dodgeball-20260614-thumb.jpg"/>
+</a>
+<p><strong>2026年6月14日（土）</strong>、川島小学校体育館にて子どもドッジボール大会が開催されました。会場は元気な声と応援でいっぱいとなり、にぎやかで楽しい一日となりました。</p>
+<p>第四町内会からは<strong>5人</strong>での参加となりましたが、少人数ながらも一生懸命にボールを追いかけ、笑顔いっぱいでプレーしていました。赤い第四Tシャツもよく映え、チーム一丸となって頑張る姿がとても印象的でした。</p>
+<p>参加した子どもたちにとって、他町内会の皆さんとの交流や、仲間と力を合わせてプレーする時間は、楽しい思い出になったことと思います。応援に来てくださった皆さまもありがとうございました。</p>
+<p>また、スポーツ推進委員の皆さまには、朝早くからの準備、当日の運営、そして片付けまでご対応いただき、ありがとうございました。おかげさまで、子どもたちが安心して楽しく参加できる大会となりました。</p>
+<p><strong>大会結果</strong>は以下のとおりです。</p>
+<ol>
+<li>第一町内会Aチーム</li>
+<li>第五町内会</li>
+<li>第一町内会Bチーム</li>
+<li>第四第六合同チーム</li>
+<li>第二第三合同チーム</li>
+</ol>
+<p>当日の写真は、下記リンクからご覧いただけます。サムネイル画像をクリックしても写真一覧へ移動できます。</p>
+<div class="post-meta">
+<span>開催日：2026年6月14日（土）</span>
+<span>会場：川島小学校 体育館</span>
+<span>掲載開始：2026年6月14日</span>
+<span>掲載終了：2026年7月14日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/drive/folders/1NsH4IZgv1LjQYtMrAGFYPbsnkdq6oX70?usp=sharing" rel="noopener" target="_blank">写真を見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-06-29" data-start="2026-06-11" id="sawayaka-cleaning-20260628">
+<span class="post-category">清掃活動</span>
+<div class="post-body">
+<h3>6月28日（日）さわやか清掃のお知らせ</h3>
+<p>川島第四町内会では、地域の環境美化活動として「さわやか清掃」を実施します。</p>
+<p>日時は、<strong>2026年6月28日（日） 午前9時00分から10時00分まで</strong>です。集合場所は<strong>川島第四町内会館</strong>です。</p>
+<p>こども会、長寿会の皆さまのご参加もお願いいたします。無理のない範囲でご協力いただけますと幸いです。</p>
+<div class="post-meta">
+<span>日時：2026年6月28日（日） 午前9時00分〜10時00分</span>
+<span>集合：川島第四町内会館</span>
+<span>掲載開始：2026年6月11日</span>
+<span>掲載終了：2026年6月29日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1z3WA-UH22QaJxm_RiAPa1ufLlCYFdVoe/view?usp=sharing" rel="noopener" target="_blank">資料を見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-06" data-start="2026-06-05" id="police-news-202606">
+<span class="post-category">防犯・交通安全</span>
+<div class="post-body">
+<h3>保土ケ谷警察署からのお知らせを掲載しました</h3>
+<a aria-label="保土ケ谷警察署からのお知らせPDFをGoogleドライブで開く" class="post-visual-link" href="https://drive.google.com/file/d/1S_9nHit7dmCBUok_9FFr0MbiBmUD_lys/view?usp=sharing" rel="noopener" target="_blank">
+<img alt="保土ケ谷警察署からのお知らせ" class="post-visual-thumb" src="./thumbnails/police-news-202606-thumb.jpg"/>
+<span class="post-visual-caption">保土ケ谷警察署からのお知らせPDFを見る（Googleドライブ）</span>
+</a>
+<p>保土ケ谷警察署から、夏期レジャー事故防止、無施錠自転車の盗難防止、特殊詐欺被害防止などに関するお知らせが届いています。</p>
+<p>海や川などで遊ぶ際は、指定場所での遊泳、子どもから目を離さないこと、天候が悪い日の遊泳・マリンレジャーを控えること、釣りやマリンレジャー時のライフジャケット着用などを心がけましょう。</p>
+<p>また、駐輪中の自転車盗難が発生しています。短時間でも必ず鍵をかけ、複数の鍵を使用するなど防犯対策をお願いします。不審者を見かけた場合は、迷わず110番または保土ケ谷警察署へ通報してください。</p>
+<p>特殊詐欺にもご注意ください。「オレオレ詐欺」「キャッシュカードの確認」「お金の話」など、不審な電話があった場合は一人で判断せず、家族や警察へ相談してください。</p>
+<div class="post-meta">
+<span>資料：令和8年6月 第1号 交番速報／保土ケ谷だより</span>
+<span>掲載開始：2026年6月5日</span>
+<span>掲載終了：2026年7月6日</span>
+<span>区分：町内会からのお知らせ</span>
+<span>出典：神奈川県保土ケ谷警察署</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/file/d/1S_9nHit7dmCBUok_9FFr0MbiBmUD_lys/view?usp=sharing" rel="noopener" target="_blank">資料を見る</a>
+</div>
+</div>
+</article>
+<article class="community-post pwa-feature-post" data-board="chonaikai" data-expire="2026-07-03" data-start="2026-06-03" id="home-screen-app-20260603">
+<span class="post-category">注目</span>
+<div class="post-body">
+<h3>ホーム画面に追加して、アプリのように開けます</h3>
+<div class="pwa-feature-layout">
+<div aria-hidden="true" class="pwa-feature-icon">
+<img alt="" src="./icons/icon-192.png"/>
+</div>
+<div>
+<p>川島第四町内会ホームページは、スマートフォンのホーム画面に追加できます。追加しておくと、回覧板を見逃したときや行事予定を確認したいときに、アイコンからすぐ開けます。</p>
+<div aria-label="ホーム画面への追加方法" class="pwa-feature-steps">
+<div class="pwa-feature-step">
+<b>iPhoneの場合</b>
                       Safariでこのページを開き、共有ボタンから「ホーム画面に追加」を選んでください。
                     </div>
-                    <div class="pwa-feature-step">
-                      <b>Androidの場合</b>
+<div class="pwa-feature-step">
+<b>Androidの場合</b>
                       Chromeでこのページを開き、メニューから「ホーム画面に追加」または「アプリをインストール」を選んでください。
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="post-meta">
-                <span>掲載開始：2026年6月3日</span>
-                <span>掲載終了：2026年7月3日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="./index.html#home-screen-guide">トップページの案内を見る</a>
-              </div>
-            </div>
-          </article>
-
-
-          <article id="monthly-city-notices-202605" class="community-post" data-board="chonaikai" data-start="2026-06-01" data-expire="2026-07-01">
-            <span class="post-category">行政情報</span>
-            <div class="post-body">
-              <h3>2026年5月度 定例会配布資料からのお知らせを掲載しました</h3>
-              <p>5月度の町内会役員定例会で配布・共有された、横浜市・保土ケ谷区などからのお知らせを月別ページに整理しました。</p>
-              <p>今回は、保土ケ谷区制100周年記念事業、小児医療費助成の対象年齢拡大、家具転倒防止対策、感震ブレーカー等設置推進事業、よこはま防災研修、地域づくりに関する意見交換会などを掲載しています。</p>
-              <p>制度内容・申込方法・期限などは変更される場合があります。詳しくは回覧板・配布資料・横浜市や保土ケ谷区の公式情報をご確認ください。</p>
-              <div class="post-meta">
-                <span>対象資料：2026年5月度 町内会役員定例会配布資料</span>
-                <span>掲載開始：2026-06-01</span>
-                <span>掲載終了：2026年7月1日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="./monthly-notices.html#2026-05">月別お知らせを見る</a>
-              </div>
-            </div>
-          </article>
-          <article id="crime-prevention-20260523" class="community-post" data-board="chonaikai" data-start="2026-05-23" data-expire="2026-06-23">
-            <span class="post-category">防犯</span>
-            <div class="post-body">
-              <h3>警察官をかたる詐欺の電話にご注意ください</h3>
-              <a class="post-visual-link" href="https://drive.google.com/file/d/17hYo4MG23qF-qMtkxPVuZGxWylDNyses/view?usp=sharing" target="_blank" rel="noopener" aria-label="防犯啓発チラシをGoogleドライブで開く">
-                <img class="post-visual-thumb" src="./thumbnails/crime-prevention-20260523-thumb.jpg" alt="神奈川県警察 防犯啓発チラシ" />
-                <span class="post-visual-caption">防犯啓発チラシを見る（Googleドライブ）</span>
-              </a>
-              <p>保土ケ谷防犯協会からの注意喚起です。警察官や公的機関を名乗り、事件捜査や口座確認などを理由に、口座の作成、預金の移動、キャッシュカード・暗証番号の提出などを求める不審な電話にご注意ください。</p>
-              <p>警察官や公的機関が、電話だけで口座作成や預金移動、暗証番号の確認を求めることはありません。不審な電話を受けた場合は、すぐに応じず、いったん電話を切って、家族・警察署・公的窓口などに確認してください。</p>
-              <p>地域で声をかけ合い、被害を防ぎましょう。特に高齢のご家族やご近所の方にも、注意喚起をお願いします。</p>
-              <div class="post-meta">
-                <span>掲載開始：2026年5月23日</span>
-                <span>掲載終了：2026年6月23日</span>
-                <span>区分：町内会からのお知らせ</span>
-                <span>出典：保土ケ谷防犯協会・神奈川県警察防犯啓発チラシ</span>
-              </div>
-            </div>
-          </article>
-
-
-
-          <article id="softball-20260517" class="community-post" data-board="chonaikai" data-start="2026-05-17" data-expire="2026-06-17">
-            <span class="post-category">写真</span>
-            <div class="post-body">
-              <h3>ソフトボール大会の写真を掲載しました</h3>
-              <a class="post-thumb-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">
-                <img class="post-thumb" src="./thumbnails/softball-20260517-thumb.jpg" alt="ソフトボール大会の様子" />
-              </a>
-              <p>2026年5月17日に開催されたソフトボール大会では、川島第四町内会は惜しくも第3位となりました。当日は西谷中学校野球部から4名の皆さんが試合に参加してくれ、大活躍してくれました。町内会役員の皆さんも選手として奮闘し、会場からは温かい応援の声もたくさん寄せられました。地域の皆さんが一緒になって盛り上がる、楽しく一体感のある大会となりました。大会当日の写真をGoogleドライブでご覧いただけます。サムネイル画像をクリックしても写真一覧へ移動できます。</p>
-              <div class="post-meta">
-                <span>掲載開始：2026年5月17日</span>
-                <span>掲載終了：2026年6月17日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-              <div class="post-actions">
-                <a class="button" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" target="_blank" rel="noopener">写真を見る</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="sawayaka-cleaning-2026" class="community-post" data-board="chonaikai" data-start="2026-05-21" data-expire="2026-06-29">
-            <span class="post-category">清掃活動</span>
-            <div class="post-body">
-              <h3>さわやか清掃の実施日を更新しました</h3>
-              <p>さわやか清掃は日曜日9時から実施します。集合場所は川島第4町内会館です。雨天中止です。第1回は6月28日、第2回は9月20日、第3回は12月20日、第4回は3月21日を予定しています。</p>
-              <div class="post-meta">
-                <span>掲載開始：2026年5月21日</span>
-                <span>掲載終了：2026年6月29日</span>
-                <span>区分：町内会からのお知らせ</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="card empty-state" id="chonaikaiEmptyState">
-          <h3>現在、掲載中の町内会からのお知らせはありません。</h3>
-          <p>新しい情報が入り次第、こちらに掲載します。</p>
-        </div>
-      </div>
-
-      <div class="board-section" id="local-news">
-        <div class="board-section-head">
-          <div>
-            <span class="board-label">地域</span>
-            <h2>地域からのお知らせ</h2>
-            <p class="small-note">小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載対象としています。</p>
-          </div>
-          <span class="badge" id="localPostCount">確認中</span>
-        </div>
-
-        <div class="post-list" id="localPostList">
-
-        </div>
-
-        <div class="card empty-state" id="localEmptyState">
-          <h3>現在、掲載中の地域からのお知らせはありません。</h3>
-          <p>地域情報が入り次第、こちらに掲載します。</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>掲載の考え方</h2>
-      <div class="flow-grid">
-        <div class="flow-card"><b>1. 掲載依頼</b><span class="small-note">Googleフォームから掲載したい内容を依頼します。</span></div>
-        <div class="flow-card"><b>2. 内容確認</b><span class="small-note">町内会側で内容・個人情報・写真許可を確認します。</span></div>
-        <div class="flow-card"><b>3. 期間限定掲載</b><span class="small-note">原則1か月程度、必要に応じて調整します。</span></div>
-        <div class="flow-card"><b>4. 自動非表示</b><span class="small-note">掲載期限を過ぎたものは画面に表示しません。</span></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>© 川島第四町内会<br /><span class="site-updated">最終更新日：<time datetime="2026-10-24">2026-10-24</time></span><br /><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
-      <div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
-    </div>
-  </footer>
-
-  <script>
+</div>
+</div>
+</div>
+<div class="post-meta">
+<span>掲載開始：2026年6月3日</span>
+<span>掲載終了：2026年7月3日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="./index.html#home-screen-guide">トップページの案内を見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-07-01" data-start="2026-06-01" id="monthly-city-notices-202605">
+<span class="post-category">行政情報</span>
+<div class="post-body">
+<h3>2026年5月度 定例会配布資料からのお知らせを掲載しました</h3>
+<p>5月度の町内会役員定例会で配布・共有された、横浜市・保土ケ谷区などからのお知らせを月別ページに整理しました。</p>
+<p>今回は、保土ケ谷区制100周年記念事業、小児医療費助成の対象年齢拡大、家具転倒防止対策、感震ブレーカー等設置推進事業、よこはま防災研修、地域づくりに関する意見交換会などを掲載しています。</p>
+<p>制度内容・申込方法・期限などは変更される場合があります。詳しくは回覧板・配布資料・横浜市や保土ケ谷区の公式情報をご確認ください。</p>
+<div class="post-meta">
+<span>対象資料：2026年5月度 町内会役員定例会配布資料</span>
+<span>掲載開始：2026-06-01</span>
+<span>掲載終了：2026年7月1日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="./monthly-notices.html#2026-05">月別お知らせを見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-06-23" data-start="2026-05-23" id="crime-prevention-20260523">
+<span class="post-category">防犯</span>
+<div class="post-body">
+<h3>警察官をかたる詐欺の電話にご注意ください</h3>
+<a aria-label="防犯啓発チラシをGoogleドライブで開く" class="post-visual-link" href="https://drive.google.com/file/d/17hYo4MG23qF-qMtkxPVuZGxWylDNyses/view?usp=sharing" rel="noopener" target="_blank">
+<img alt="神奈川県警察 防犯啓発チラシ" class="post-visual-thumb" src="./thumbnails/crime-prevention-20260523-thumb.jpg"/>
+<span class="post-visual-caption">防犯啓発チラシを見る（Googleドライブ）</span>
+</a>
+<p>保土ケ谷防犯協会からの注意喚起です。警察官や公的機関を名乗り、事件捜査や口座確認などを理由に、口座の作成、預金の移動、キャッシュカード・暗証番号の提出などを求める不審な電話にご注意ください。</p>
+<p>警察官や公的機関が、電話だけで口座作成や預金移動、暗証番号の確認を求めることはありません。不審な電話を受けた場合は、すぐに応じず、いったん電話を切って、家族・警察署・公的窓口などに確認してください。</p>
+<p>地域で声をかけ合い、被害を防ぎましょう。特に高齢のご家族やご近所の方にも、注意喚起をお願いします。</p>
+<div class="post-meta">
+<span>掲載開始：2026年5月23日</span>
+<span>掲載終了：2026年6月23日</span>
+<span>区分：町内会からのお知らせ</span>
+<span>出典：保土ケ谷防犯協会・神奈川県警察防犯啓発チラシ</span>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-06-17" data-start="2026-05-17" id="softball-20260517">
+<span class="post-category">写真</span>
+<div class="post-body">
+<h3>ソフトボール大会の写真を掲載しました</h3>
+<a class="post-thumb-link" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" rel="noopener" target="_blank">
+<img alt="ソフトボール大会の様子" class="post-thumb" src="./thumbnails/softball-20260517-thumb.jpg"/>
+</a>
+<p>2026年5月17日に開催されたソフトボール大会では、川島第四町内会は惜しくも第3位となりました。当日は西谷中学校野球部から4名の皆さんが試合に参加してくれ、大活躍してくれました。町内会役員の皆さんも選手として奮闘し、会場からは温かい応援の声もたくさん寄せられました。地域の皆さんが一緒になって盛り上がる、楽しく一体感のある大会となりました。大会当日の写真をGoogleドライブでご覧いただけます。サムネイル画像をクリックしても写真一覧へ移動できます。</p>
+<div class="post-meta">
+<span>掲載開始：2026年5月17日</span>
+<span>掲載終了：2026年6月17日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+<div class="post-actions">
+<a class="button" href="https://drive.google.com/drive/folders/10TdFytaVpmk88NELCE2u5i-xOiVBM1AT?usp=sharing" rel="noopener" target="_blank">写真を見る</a>
+</div>
+</div>
+</article>
+<article class="community-post" data-board="chonaikai" data-expire="2026-06-29" data-start="2026-05-21" id="sawayaka-cleaning-2026">
+<span class="post-category">清掃活動</span>
+<div class="post-body">
+<h3>さわやか清掃の実施日を更新しました</h3>
+<p>さわやか清掃は日曜日9時から実施します。集合場所は川島第4町内会館です。雨天中止です。第1回は6月28日、第2回は9月20日、第3回は12月20日、第4回は3月21日を予定しています。</p>
+<div class="post-meta">
+<span>掲載開始：2026年5月21日</span>
+<span>掲載終了：2026年6月29日</span>
+<span>区分：町内会からのお知らせ</span>
+</div>
+</div>
+</article>
+</div>
+<div class="card empty-state" id="chonaikaiEmptyState">
+<h3>現在、掲載中の町内会からのお知らせはありません。</h3>
+<p>新しい情報が入り次第、こちらに掲載します。</p>
+</div>
+</div>
+<div class="board-section" id="local-news">
+<div class="board-section-head">
+<div>
+<span class="board-label">地域</span>
+<h2>地域からのお知らせ</h2>
+<p class="small-note">小学校・中学校のPTA、部活動、少年野球・サッカー・バスケなどの習い事、ゴルフコンペ・趣味の集まり・交流会、消防団、地域のお店、地域団体や住民の方から寄せられた情報など、地域に関係するお知らせを幅広く掲載対象としています。</p>
+</div>
+<span class="badge" id="localPostCount">確認中</span>
+</div>
+<div class="post-list" id="localPostList">
+</div>
+<div class="card empty-state" id="localEmptyState">
+<h3>現在、掲載中の地域からのお知らせはありません。</h3>
+<p>地域情報が入り次第、こちらに掲載します。</p>
+</div>
+</div>
+</section>
+<section>
+<h2>掲載の考え方</h2>
+<div class="flow-grid">
+<div class="flow-card"><b>1. 掲載依頼</b><span class="small-note">Googleフォームから掲載したい内容を依頼します。</span></div>
+<div class="flow-card"><b>2. 内容確認</b><span class="small-note">町内会側で内容・個人情報・写真許可を確認します。</span></div>
+<div class="flow-card"><b>3. 期間限定掲載</b><span class="small-note">原則1か月程度、必要に応じて調整します。</span></div>
+<div class="flow-card"><b>4. 自動非表示</b><span class="small-note">掲載期限を過ぎたものは画面に表示しません。</span></div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>© 川島第四町内会<br/><span class="site-updated">最終更新日：<time datetime="2026-11-03">2026-11-03</time></span><br/><span class="footer-links"><a href="./posting-guidelines.html">地域情報の掲載について</a><a href="./faq.html">よくある質問</a><a href="./search.html">サイト内検索</a><a href="./sitemap.html">サイトマップ</a><a href="./contact.html">お問い合わせ</a><a href="./privacy-policy.html">プライバシーポリシー</a><a href="./about.html">Foreign Languages</a></span></div>
+<div>横浜市保土ヶ谷区東川島町1番地より21番地までの区域</div>
+</div>
+</footer>
+<script>
     function parseDate(value, endOfDay = false) {
       if (!value) return null;
       const suffix = endOfDay ? 'T23:59:59' : 'T00:00:00';
@@ -2193,8 +2031,7 @@ footer { padding: 30px 0; color: var(--muted); font-size: 13px; }
 
     updateCommunityPosts();
   </script>
-
-  <script>
+<script>
     /*
       スプレッドシート連携設定
       Apps ScriptをWebアプリとしてデプロイしたあと、下のURLを実際のWebアプリURLに置き換えてください。
@@ -2339,16 +2176,12 @@ ${thumbnail}
 
     loadSpreadsheetNotices();
   </script>
-
-
-  <div class="floating-actions" aria-label="ページ内ナビゲーション">
-    <a class="seen-help" href="#seen-guide-note">😊 確認ボタンとは？</a>
-    <a href="#top">↑ トップへ戻る</a>
-    <a class="secondary" href="./index.html">ホームページへ戻る</a>
-  </div>
-
-
-  <script>
+<div aria-label="ページ内ナビゲーション" class="floating-actions">
+<a class="seen-help" href="#seen-guide-note">😊 確認ボタンとは？</a>
+<a href="#top">↑ トップへ戻る</a>
+<a class="secondary" href="./index.html">ホームページへ戻る</a>
+</div>
+<script>
     const CHONAIKAI_REACTION_API_URL = 'https://script.google.com/macros/s/AKfycbwbx30U7Ji-jvzRKE0-yswMXtrF1220NMDa4WmNnFLx-1smW_cyIUBNVJej_td_EOQ7/exec';
 
     function getReactionVisitorId() {
@@ -2551,18 +2384,15 @@ ${thumbnail}
       setupChonaikaiReactions();
     }
   </script>
-
-  <script>
+<script>
     // PWA / ホーム画面追加対応
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20261024_union_sports_cancelled_v30').catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20261103_november_archive_v31').catch(() => {});
       });
     }
   </script>
-
-
-  <script>
+<script>
     // ページ別アクセス集計
     const D4_PAGE_VIEW_API_URL = 'https://script.google.com/macros/s/AKfycbztknC16jHLHdGX39_km28jsiYcyZsNFZlooSOJWAFW2WgPUYckglbDQ4oqvpnZ0v_R/exec';
 
@@ -2616,6 +2446,5 @@ ${thumbnail}
       recordD4PageView();
     }
   </script>
-
 </body>
 </html>
