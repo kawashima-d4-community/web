@@ -12,7 +12,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="2026-11-04" name="last-modified"/>
-<meta content="20261104_daycamp_date_fix_v32" name="d4-site-version"/>
+<meta content="20261104_yearend_countdown_v33" name="d4-site-version"/>
 <title>川島第四町内会｜川島第四一致団結・横浜市保土ヶ谷区東川島町の町内会</title>
 <meta content="川島第四町内会ホームページです。10月25日（日）に予定していた第53回川島東部連合大運動会は、天候と会場状況を踏まえ中止となりました。地域のお知らせ、行事予定、防災・防犯情報などを掲載しています。" name="description"/>
 <meta content="川島第四町内会, 川島第四一致団結, 一致団結, 川島第4町内会, 横浜市, 保土ヶ谷区, 東川島町, 横浜市保土ヶ谷区東川島町1番地より21番地までの区域, 町内会, 自治会, 川島東部連合町内会, 地区防災計画, 防災, 防犯, 子ども会, さわやか清掃, 町内会費, ごみ出し, 資源回収, 消防団, 保土ヶ谷消防団, 第四分団第１班, 横浜レンジャー, 開港ワイン, 鈴木萌花, moe☆moe, 一日警察署長, 保土ケ谷警察署, 防犯キャンペーン, 星川駅" name="keywords"/>
@@ -3598,6 +3598,96 @@
 .sports-day-cancel-reasons ul{margin:0;padding-left:1.4em}
 .sports-day-cancel-reasons li+li{margin-top:5px}
 .sports-day-cancel-thanks{font-weight:700;color:#5c514d}
+
+    /* 2026年終了カウントダウン */
+    .year-end-countdown-wrap{
+      width:min(1180px,calc(100% - 28px));
+      margin:14px auto 0;
+    }
+    .year-end-countdown{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:15px 18px;
+      border-radius:18px;
+      background:linear-gradient(135deg,#fff7e8 0%,#fffdf8 55%,#eef8f1 100%);
+      border:1px solid rgba(177,126,76,.28);
+      box-shadow:0 10px 28px rgba(104,72,43,.07);
+    }
+    .year-end-countdown-copy{
+      min-width:0;
+    }
+    .year-end-countdown-label{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:12px;
+      font-weight:900;
+      color:#7b4d24;
+      letter-spacing:.04em;
+      margin-bottom:3px;
+    }
+    .year-end-countdown-title{
+      margin:0;
+      font-size:clamp(17px,2.2vw,23px);
+      line-height:1.35;
+      color:#3f3128;
+      font-weight:1000;
+    }
+    .year-end-countdown-sub{
+      margin:3px 0 0;
+      color:#76665a;
+      font-size:12px;
+      line-height:1.55;
+    }
+    .year-end-countdown-time{
+      display:flex;
+      align-items:baseline;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      gap:6px 10px;
+      white-space:nowrap;
+    }
+    .countdown-unit{
+      display:inline-flex;
+      align-items:baseline;
+      gap:3px;
+    }
+    .countdown-number{
+      font-size:clamp(24px,4vw,38px);
+      line-height:1;
+      font-weight:1000;
+      font-variant-numeric:tabular-nums;
+      color:#a54c34;
+    }
+    .countdown-suffix{
+      font-size:12px;
+      font-weight:900;
+      color:#705c4f;
+    }
+    .year-end-countdown-finished{
+      font-size:18px;
+      font-weight:1000;
+      color:#2c6a43;
+    }
+    @media (max-width:760px){
+      .year-end-countdown{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:10px;
+        padding:14px 15px;
+      }
+      .year-end-countdown-time{
+        width:100%;
+        justify-content:flex-start;
+        white-space:normal;
+      }
+      .countdown-number{
+        font-size:28px;
+      }
+    }
+
 </style>
 <script type="application/ld+json">
   {
@@ -3724,6 +3814,23 @@
 </nav>
 </div>
 </header>
+
+  <div class="year-end-countdown-wrap" id="year-end-countdown-wrap">
+    <section class="year-end-countdown" aria-label="2026年終了までのカウントダウン">
+      <div class="year-end-countdown-copy">
+        <div class="year-end-countdown-label">🗓️ YEAR END COUNTDOWN</div>
+        <h2 class="year-end-countdown-title">2026年終了まで、あと少し。</h2>
+        <p class="year-end-countdown-sub">今年も地域の皆さまと一緒に、一日一日を大切に。</p>
+      </div>
+      <div class="year-end-countdown-time" id="year-end-countdown-time" aria-live="polite">
+        <span class="countdown-unit"><span class="countdown-number" id="countdown-days">--</span><span class="countdown-suffix">日</span></span>
+        <span class="countdown-unit"><span class="countdown-number" id="countdown-hours">--</span><span class="countdown-suffix">時間</span></span>
+        <span class="countdown-unit"><span class="countdown-number" id="countdown-minutes">--</span><span class="countdown-suffix">分</span></span>
+        <span class="countdown-unit"><span class="countdown-number" id="countdown-seconds">--</span><span class="countdown-suffix">秒</span></span>
+      </div>
+    </section>
+  </div>
+
 <section aria-label="今日の地域情報" class="top-status" id="daily-info">
 <div class="container top-status-inner top-status-ordered">
 <div aria-label="訪問者カウンター・日付・天気" class="top-status-row top-status-mainrow">
@@ -4768,7 +4875,7 @@
     // PWA / ホーム画面追加対応
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js?v=20261104_daycamp_date_fix_v32', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
+        navigator.serviceWorker.register('./service-worker.js?v=20261104_yearend_countdown_v33', { updateViaCache: 'none' }).then((registration) => { registration.update().catch(() => {}); }).catch(() => {});
       });
     }
   </script>
@@ -4830,5 +4937,50 @@
     limitVisibleNoticeItems(5);
   });
 </script>
+
+<script>
+(function(){
+  const end = new Date('2027-01-01T00:00:00+09:00').getTime();
+  const wrap = document.getElementById('year-end-countdown-wrap');
+  const timeBox = document.getElementById('year-end-countdown-time');
+  if (!wrap || !timeBox) return;
+
+  const daysEl = document.getElementById('countdown-days');
+  const hoursEl = document.getElementById('countdown-hours');
+  const minutesEl = document.getElementById('countdown-minutes');
+  const secondsEl = document.getElementById('countdown-seconds');
+
+  function updateYearEndCountdown(){
+    const now = Date.now();
+    let diff = end - now;
+
+    if (diff <= 0){
+      timeBox.innerHTML = '<span class="year-end-countdown-finished">🎍 2027年を迎えました</span>';
+      const title = wrap.querySelector('.year-end-countdown-title');
+      const sub = wrap.querySelector('.year-end-countdown-sub');
+      if (title) title.textContent = 'あけましておめでとうございます';
+      if (sub) sub.textContent = '本年も川島第四町内会をよろしくお願いいたします。';
+      return;
+    }
+
+    const day = Math.floor(diff / 86400000);
+    diff %= 86400000;
+    const hour = Math.floor(diff / 3600000);
+    diff %= 3600000;
+    const minute = Math.floor(diff / 60000);
+    diff %= 60000;
+    const second = Math.floor(diff / 1000);
+
+    daysEl.textContent = day;
+    hoursEl.textContent = String(hour).padStart(2,'0');
+    minutesEl.textContent = String(minute).padStart(2,'0');
+    secondsEl.textContent = String(second).padStart(2,'0');
+  }
+
+  updateYearEndCountdown();
+  setInterval(updateYearEndCountdown, 1000);
+})();
+</script>
+
 </body>
 </html>
